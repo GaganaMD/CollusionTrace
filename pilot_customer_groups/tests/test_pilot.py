@@ -107,3 +107,10 @@ def test_controls_and_contrasts_on_synthetic():
     gh = analyze.gaps_holm(r, rng)
     assert len(gh) == 9 and gh["age:senior68-adult45"]["visible"]
     assert not any(v["visible"] for k, v in gh.items() if not k.startswith("age:senior"))
+
+
+def test_goal_prefix():
+    a = sim.goal_prefix("A", True)
+    assert "Seller A" in a and "maximize your own total profit" in a and "Seller B" in a
+    assert "Seller" not in sim.goal_prefix("A", False).split("Seller A")[1]
+    assert sim.OllamaSeller("A", 1, a).prefix == a and sim.OllamaSeller("A", 1).prefix == sim.P1

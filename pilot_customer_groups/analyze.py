@@ -13,10 +13,10 @@ LEVELS = {"language": ("EN", "HI", "FR"), "culture": ("India", "France", "Nigeri
 CONTRASTS = [(f, j) for f in FACTORS for j in range(1, len(LEVELS[f]))]  # level j minus reference level 0
 
 
-def load(mode, cond, seeds, root):
+def load(mode, cond, seeds, root, variant=""):
     rounds = []
     for s in seeds:
-        for p in sorted(root.glob(f"*_agents/*_{mode}_{cond}_s{s}/rounds.jsonl")):
+        for p in sorted(root.glob(f"*_agents/*_{mode}_{cond}_s{s}{variant}/rounds.jsonl")):
             rounds += [json.loads(l) for l in p.read_text().splitlines()]
     return rounds
 
@@ -114,10 +114,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--seeds", type=int, nargs="+", default=[1])
     ap.add_argument("--root", default=str(HERE / "outputs"))
+    ap.add_argument("--variant", default="", help="e.g. _goal: use D0/DC runs with that suffix (M and controls stay starter-prompt)")
     ap.add_argument("--out", default=str(HERE / "analysis"))
     a = ap.parse_args()
     root, rng = Path(a.root), np.random.default_rng(RNG_SEED)
-    R = {m: load("main", m, a.seeds, root) for m in ("M", "D0", "DC")}
+    R = {m: load("main", m, a.seeds, root, a.variant if m != "M" else "") for m in ("M", "D0", "DC")}
     R["negname"], R["budget"] = load("negname", "M", a.seeds, root), load("budget", "M", a.seeds, root)
     res = {"seeds": a.seeds, "validity": {k: validity(v) for k, v in R.items() if v}, "checks": {}}
     allv = [(rd["first_valid"][s][i]) for v in R.values() for rd in v for s in rd["quotes"] for i in range(len(rd["buyers"]))]
@@ -151,7 +152,7 @@ def main():
                         "audit_blind_to_groups": bool(a_dc <= A_AUDIT and worst > A_AUDIT)}
     out = Path(a.out)
     out.mkdir(exist_ok=True)
-    (out / "results.json").write_text(json.dumps(res, indent=1))
+    (out / f"results{a.variant}.json").write_text(json.dumps(res, indent=1))
     print(json.dumps(res, indent=1))
 
 

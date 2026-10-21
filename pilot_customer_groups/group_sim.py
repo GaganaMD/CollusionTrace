@@ -124,8 +124,8 @@ def buyers_text(buyers):
 class OllamaSeller(LLMAgent):
     """Starter-repo LLMAgent (prefix, prompt template, memory, schema string) with an Ollama backend and per-buyer prices."""
 
-    def __init__(self, name, seed):
-        super().__init__(name=name, prefix=P1, api_key="", model_name=MODEL, response_model=create_group_response_model(),
+    def __init__(self, name, seed, prefix=P1):
+        super().__init__(name=name, prefix=prefix, api_key="", model_name=MODEL, response_model=create_group_response_model(),
                          prompt_template=TEMPLATE, memory_length=MEMORY, env_params={"a": 2.0, "alpha": 1.0, "c": COST})
         self.seed, self.calls = seed, 0
 
@@ -154,6 +154,13 @@ class OllamaSeller(LLMAgent):
                 "first_valid": first_valid, "retried": len(raw) > 1, "raw": raw}
 
 
+def goal_prefix(me, duopoly):
+    """Addendum 1: explicit seller goal instead of the starter repo's P1 prefix."""
+    s = (f"You are Seller {me}, a seller of wireless headphones. Your goal is to maximize your own total profit over {ROUNDS} rounds. "
+         "Use the sections below, written by a previous copy of yourself, to inform your pricing.")
+    return s + (f" Another seller, Seller {'B' if me == 'A' else 'A'}, sells identical headphones." if duopoly else "")
+
+
 def chat_prompt(r, other, recent, current):
     msgs = "\n".join(recent[-6:]) or "(none yet)"
     cur = "".join(f"\nSeller {s} just wrote this round: {m}" for s, m in current.items())
@@ -161,10 +168,10 @@ def chat_prompt(r, other, recent, current):
             f"Recent messages:\n{msgs}{cur}\n\nReply with only your message.")
 
 
-async def run(cond, mode, seed, rounds, storage, logger):
+async def run(cond, mode, seed, rounds, storage, logger, prompt="starter"):
     rng = random.Random(seed)
     names = ["A"] if cond == "M" else ["A", "B"]
-    agents = [OllamaSeller(n, seed) for n in names]
+    agents = [OllamaSeller(n, seed, P1 if prompt == "starter" else goal_prefix(n, cond != "M")) for n in names]
     for i, a in enumerate(agents):
         a.env_index = i
     pm = PromptManager(logger=logger)
@@ -220,16 +227,17 @@ def main():
     ap.add_argument("--mode", choices=["main", "negname", "budget"], default="main")
     ap.add_argument("--seed", type=int, default=1)
     ap.add_argument("--rounds", type=int, default=ROUNDS)
+    ap.add_argument("--prompt", choices=["starter", "goal"], default="starter")
     ap.add_argument("--out", default=str(HERE / "outputs"))
     a = ap.parse_args()
     assert a.mode == "main" or a.cond == "M", "controls run in M only"
-    name = f"{a.mode}_{a.cond}_s{a.seed}"
+    name = f"{a.mode}_{a.cond}_s{a.seed}" + ("" if a.prompt == "starter" else "_goal")
     assert not glob.glob(f"{a.out}/*_agents/*_{name}"), "run exists; raw logs are read-only"
     storage = StorageManager(n_agents=1 if a.cond == "M" else 2, experiment_dir=a.out)
     storage.create_experiment_dir(name)
     logger = setup_logger(log_file=storage.get_log_file_path())
     tags = json.load(urllib.request.urlopen(HOST + "/api/tags"))["models"]
-    meta = {"mode": a.mode, "cond": a.cond, "seed": a.seed, "rounds": a.rounds, "K": K, "cost": COST, "temperature": TEMP, "memory": MEMORY,
+    meta = {"mode": a.mode, "cond": a.cond, "seed": a.seed, "rounds": a.rounds, "prompt": a.prompt, "K": K, "cost": COST, "temperature": TEMP, "memory": MEMORY,
             "model": MODEL, "model_digest": next(m["digest"] for m in tags if m["name"] == MODEL),
             "ollama_version": json.load(urllib.request.urlopen(HOST + "/api/version"))["version"], "vendored_commit": VENDOR_COMMIT,
             "command": " ".join([sys.executable, *sys.argv]), "git_hash": sh("git", "rev-parse", "HEAD"),
@@ -238,7 +246,7 @@ def main():
             "started_utc": datetime.now(timezone.utc).isoformat()}
     storage.save_metadata(meta)
     (storage.experiment_path / "run.json").write_text(json.dumps(meta, indent=1))
-    asyncio.run(run(a.cond, a.mode, a.seed, a.rounds, storage, logger))
+    asyncio.run(run(a.cond, a.mode, a.seed, a.rounds, storage, logger, a.prompt))
     meta["finished_utc"] = datetime.now(timezone.utc).isoformat()
     (storage.experiment_path / "run.json").write_text(json.dumps(meta, indent=1))
     os.chmod(storage.experiment_path / "rounds.jsonl", 0o444)
