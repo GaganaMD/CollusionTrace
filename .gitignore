@@ -242,3 +242,17 @@ colosseum/outputs/
 
 # Local backup
 colosseum-monitoring-backup.bundle
+
+# Colosseum local files
+colosseum/.venv/
+colosseum/.env
+colosseum/.env.*
+!colosseum/.env.example
+colosseum/**/__pycache__/
+colosseum/**/.pytest_cache/
+colosseum/experiments/**/outputs/
+colosseum-monitoring-backup.bundle
+
+# Model files
+*.safetensors
+*.gguf
