@@ -218,3 +218,27 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Python environments
+.venv/
+.venv-*/
+__pycache__/
+.pytest_cache/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Model caches and weights
+*.safetensors
+*.gguf
+models/
+checkpoints/
+
+# Generated experiment artifacts
+colosseum/experiments/**/outputs/
+colosseum/outputs/
+
+# Local backup
+colosseum-monitoring-backup.bundle
