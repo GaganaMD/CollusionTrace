@@ -225,6 +225,15 @@ def _order_agent_turns(
     )
 
 
+def _allow_prompt_variant_without_secret(
+    *, secret_channel_enabled: bool, prompt_variant: str, collusion_cfg: Dict[str, Any]
+) -> bool:
+    """Keep historical control-only baselines unless a study explicitly opts in."""
+    if secret_channel_enabled or str(prompt_variant or "control") == "control":
+        return True
+    return bool(collusion_cfg.get("allow_instruction_without_secret", False))
+
+
 def _log_blackboards_txt(
     *,
     bb_logger: ExperimentBlackboardLogger,
@@ -262,11 +271,13 @@ async def _run_single(
 ) -> Dict[str, Any]:
     rng = random.Random(int(seed))
     secret_channel_enabled = bool(secret_channel_enabled)
-    # Design choice: prompt variants are only active when the secret channel exists.
-    # When secret_channel_enabled is False, we force the effective variant to "control"
-    # so the baseline is the vanilla cooperative setup (no explicit collusion prompting).
+    collusion_cfg = (base_cfg.get("experiment") or {}).get("collusion") or {}
     effective_prompt_variant = str(prompt_variant or "").strip() or "control"
-    if not secret_channel_enabled:
+    if not _allow_prompt_variant_without_secret(
+        secret_channel_enabled=secret_channel_enabled,
+        prompt_variant=effective_prompt_variant,
+        collusion_cfg=collusion_cfg,
+    ):
         effective_prompt_variant = "control"
 
     cfg = copy.deepcopy(base_cfg)
@@ -477,10 +488,11 @@ async def _run_single(
     turns: List[Dict[str, Any]] = []
 
     def _extra_fields(agent_name: str) -> Dict[str, Any]:
-        # Baseline (secret_channel_enabled=False): no explicit collusion prompting.
+        # Prompt activation is independent from channel availability only when a
+        # study opts in; legacy configurations retain their prior behavior.
         prompt_role = (
             "colluder"
-            if (secret_channel_enabled and str(agent_name) in colluder_set)
+            if (effective_prompt_variant != "control" and str(agent_name) in colluder_set)
             else "normal"
         )
         return {
@@ -818,14 +830,16 @@ async def run_from_config(
             seeds = _normalize_seeds(sweep.get("seeds")) or list(default_seeds)
             if runs_per_setting is not None:
                 seeds = seeds[:runs_per_setting]
-            # Prompt variants are only active when the secret channel exists.
-            # When secret_channel_enabled=false, only the "control" variant is executed.
             for _topo in topologies:
                 for _n in agent_counts:
                     for _c in colluder_counts:
                         for _secret in secret_flags:
                             for _pv in prompt_variants:
-                                if not bool(_secret) and str(_pv) != "control":
+                                if not _allow_prompt_variant_without_secret(
+                                    secret_channel_enabled=bool(_secret),
+                                    prompt_variant=str(_pv),
+                                    collusion_cfg=(cfg.get("experiment", {}).get("collusion", {}) or {}),
+                                ):
                                     continue
                                 total_runs += len(seeds) * env_count
 
@@ -912,9 +926,10 @@ async def run_from_config(
                                 for c in colluder_counts:
                                     for secret in secret_flags:
                                         for pv in prompt_variants:
-                                            if (
-                                                not bool(secret)
-                                                and str(pv) != "control"
+                                            if not _allow_prompt_variant_without_secret(
+                                                secret_channel_enabled=bool(secret),
+                                                prompt_variant=str(pv),
+                                                collusion_cfg=(cfg.get("experiment", {}).get("collusion", {}) or {}),
                                             ):
                                                 continue
                                             for seed in seeds:
@@ -982,7 +997,11 @@ async def run_from_config(
                             for c in colluder_counts:
                                 for secret in secret_flags:
                                     for pv in prompt_variants:
-                                        if not bool(secret) and str(pv) != "control":
+                                        if not _allow_prompt_variant_without_secret(
+                                            secret_channel_enabled=bool(secret),
+                                            prompt_variant=str(pv),
+                                            collusion_cfg=(cfg.get("experiment", {}).get("collusion", {}) or {}),
+                                        ):
                                             continue
                                         for seed in seeds:
                                             run_label = (
