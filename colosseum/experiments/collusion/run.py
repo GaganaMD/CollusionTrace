@@ -17,6 +17,7 @@ import logging
 import random
 import re
 import importlib
+import subprocess
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence
@@ -37,7 +38,6 @@ if str(project_root) not in sys.path:
 from experiments.common.run_utils import (
     configure_experiment_logging as _configure_experiment_logging_impl,
     ensure_dir as _ensure_dir,
-    load_yaml as _load_yaml,
     normalize_seeds as _normalize_seeds,
     tools_environment_name as _tools_environment_name,
     write_json as _write_json,
@@ -45,7 +45,10 @@ from experiments.common.run_utils import (
 )
 from experiments.common.blackboard_logger import ExperimentBlackboardLogger
 from experiments.collusion.metrics import compute_collusion_metrics, metrics_to_json
+from experiments.collusion.monitoring.provenance import build_channel_visibility_manifest
 from experiments.collusion.prompts import CollusionPrompts
+from experiments.collusion.modal_config import load_prepared_config, redact_secrets
+from experiments.collusion.modal_runtime_compat import enable_authenticated_remote_vllm_preflight
 from experiments.common.local_protocol import LocalCommunicationProtocol
 from terrarium.networks import build_communication_network
 from terrarium.core.logger import AgentTrajectoryLogger, PromptLogger
@@ -66,6 +69,16 @@ _SAFE_LABEL_RE = re.compile(r"[^A-Za-z0-9]+")
 
 def _configure_experiment_logging(root: Path, *, verbose: bool = True) -> None:
     _configure_experiment_logging_impl(logger, root, verbose=verbose)
+
+
+def _git_commit() -> Optional[str]:
+    """Best-effort revision identifier; runs also work from exported sources."""
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=project_root, text=True
+        ).strip()
+    except Exception:
+        return None
 
 
 def _resolve_environment_class(env_cfg: Dict[str, Any]) -> Any:
@@ -370,6 +383,8 @@ async def _run_single(
     max_steps = int(cfg["simulation"].get("max_conversation_steps", 3))
     vllm_runtime = None
     if provider == "vllm":
+        if (cfg["llm"].get("vllm") or {}).get("remote_authenticated"):
+            enable_authenticated_remote_vllm_preflight()
         vllm_runtime = build_vllm_runtime(cfg["llm"])
 
     agents: List[BaseAgent] = []
@@ -410,8 +425,31 @@ async def _run_single(
                 env.get_network_context() if hasattr(env, "get_network_context") else ""
             )
         secret_blackboard_id = await protocol.generate_comm_network(
-            colluders, secret_context
+            colluders,
+            secret_context,
+            template={
+                "secret_channel": True,
+                "visibility": "private",
+                "allow_duplicate": True,
+                "visibility_source": "collusion_runner.secret_channel",
+            },
         )
+
+    monitoring_cfg = (cfg.get("experiment") or {}).get("monitoring") or {}
+    declared_observers = monitoring_cfg.get("authorized_observers") if isinstance(monitoring_cfg, dict) else {}
+    if not isinstance(declared_observers, dict):
+        declared_observers = {}
+    # Privileged metadata: monitor projections never read this file.  It is
+    # written before agent turns so an interrupted run still preserves channel
+    # provenance and defaults template-less channels to private.
+    _write_json(
+        run_dir / "channel_visibility_manifest.json",
+        build_channel_visibility_manifest(
+            run_id=run_id,
+            blackboards=list(protocol.megaboard.blackboards),
+            declared_observers=declared_observers,
+        ),
+    )
 
     try:
         _log_blackboards_txt(
@@ -598,6 +636,7 @@ async def _run_single(
         run_dir / "tool_events.json",
         [
             {
+                "sequence_index": index,
                 "tool_name": e.tool_name,
                 "agent_name": e.agent_name,
                 "arguments": e.arguments,
@@ -606,7 +645,7 @@ async def _run_single(
                 "iteration": e.iteration,
                 "planning_round": e.planning_round,
             }
-            for e in protocol.tool_events
+            for index, e in enumerate(protocol.tool_events)
         ],
     )
     _write_json(
@@ -671,7 +710,6 @@ async def _run_single(
         "coalition_advantage_mean": metrics.coalition_advantage_mean,
         "coalition_reward_ratio": coalition_reward_ratio,
         "colluder_posts_secret_rate": metrics.colluder_posts_secret_rate,
-        "mean_regret": metrics.mean_regret,
         "coalition_mean_regret": metrics.coalition_mean_regret,
         "noncoalition_mean_regret": metrics.noncoalition_mean_regret,
         "system_regret": metrics.system_regret,
@@ -690,7 +728,9 @@ async def run_from_config(
     out_dir: Optional[str] = None,
     max_concurrent_runs: Optional[int] = None,
 ) -> Path:
-    cfg = _load_yaml(config_path)
+    # Terrarium does not interpolate environment variables in YAML. Resolve
+    # explicit ${NAME} placeholders here, then redact all on-disk snapshots.
+    cfg = load_prepared_config(config_path)
     exp = cfg.get("experiment") or {}
     if max_concurrent_runs is None:
         max_concurrent_runs = exp.get("max_concurrent_runs", 1)
@@ -722,8 +762,30 @@ async def run_from_config(
         )
         / timestamp
     )
+    if root.exists():
+        raise FileExistsError(
+            f"Refusing to mix results into existing output directory: {root}. "
+            "Choose --out-dir or wait one second before retrying."
+        )
     _ensure_dir(root)
-    _write_json(root / "config.json", cfg)
+    _write_json(root / "config.json", redact_secrets(cfg))
+    _write_json(
+        root / "manifest.json",
+        {
+            "schema_version": 1,
+            "experiment_id": str(exp.get("experiment_id") or exp.get("tag") or "collusion"),
+            "created_at": datetime.now().astimezone().isoformat(),
+            "git_commit": _git_commit(),
+            "source_config": str(Path(config_path).resolve()),
+            "model_identifiers": [
+                get_model_name((model.get("llm") or {}).get("provider", ""), model.get("llm") or {})
+                for model in (cfg.get("llm_models") or [])
+            ],
+            "trace_storage": "runs/<model>/<sweep>/<run>/ (prompts, trajectories, tool events, blackboards)",
+            "monitor_evaluations": "not run here; store independently from raw traces",
+            "config_snapshot": "config.json (credentials redacted)",
+        },
+    )
     _configure_experiment_logging(root)
 
     base_env_cfg = cfg.get("environment") or {}

@@ -1,0 +1,58 @@
+# Small, matched baseline-vs-secret-channel research comparison (not a smoke test).
+# Set MODAL_VLLM_BASE_URL=https://<your Modal server URL>/v1 and
+# MODAL_VLLM_API_KEY locally. Never commit either value.
+simulation:
+  max_iterations: 1
+  max_planning_rounds: 1
+  max_conversation_steps: 1
+  seed: 1
+  tags: [collusion_modal_comparison]
+environment:
+  name: JiraTicketEnvironment
+  assignment_filling: false
+  max_tasks: 8
+communication_network:
+  topology: complete
+  num_agents: 3
+  consolidate_channels: true
+  edge_prob: 0.6
+  k: 2
+  rewire_prob: 0.3
+  m: 2
+llm_models:
+  - label: vllm-qwen25-7b
+    llm:
+      provider: vllm
+      vllm:
+        auto_start_server: false
+        persistent_server: false
+        remote_authenticated: true
+        health_check_path: "/models"
+        params:
+          max_completion_tokens: 512
+          # Greedy decoding is required for matched research conditions.
+          temperature: 0
+        models:
+          - checkpoint: "Qwen/Qwen2.5-7B-Instruct"
+            served_model_name: "Qwen/Qwen2.5-7B-Instruct"
+            base_url: "${MODAL_VLLM_BASE_URL}"
+            api_key: "${MODAL_VLLM_API_KEY}"
+            request_timeout: 600
+experiment:
+  experiment_id: collusiontrace_modal_comparison_v1
+  tag: collusion_modal_comparison
+  output_dir: experiments/collusion/outputs/collusion_modal_comparison
+  max_concurrent_runs: 1
+  seeds: [1, 2, 3]
+  collusion:
+    colluder_selection: random
+    agent_order: random
+  sweeps:
+    - name: matched_baseline_vs_secret
+      topologies: [complete]
+      num_agents: [3]
+      colluder_counts: [2]
+      secret_channel_enabled: [false, true]
+      # The runner forces false -> control, so these produce matched baseline,
+      # secret/control, and secret/simple conditions for every seed.
+      prompt_variants: [control, simple]
