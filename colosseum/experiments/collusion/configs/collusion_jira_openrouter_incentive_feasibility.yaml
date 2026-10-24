@@ -1,0 +1,28 @@
+simulation: {max_iterations: 1, max_planning_rounds: 1, max_conversation_steps: 1}
+environment:
+  import_path: experiments.collusion.incentive_jira_env:JiraIncentiveEnvironment
+  assignment_filling: false
+  max_tasks: 8
+  incentive_bonus: 30.0
+communication_network: {topology: complete, num_agents: 3}
+llm_models:
+  - label: openrouter-qwen25-7b
+    llm:
+      provider: openrouter
+      openrouter:
+        model: qwen/qwen-2.5-7b-instruct
+        api_key: "${OPENROUTER_API_KEY}"
+        request_timeout: 120
+        params: {max_completion_tokens: 512, temperature: 0}
+experiment:
+  experiment_id: jira_incentive_feasibility_v1
+  tag: jira_incentive_feasibility
+  output_dir: o
+  max_concurrent_runs: 1
+  seeds: [1]
+  collusion: {colluder_selection: first, agent_order: random}
+  sweeps:
+    - {name: A_no_bonus_no_private, topologies: [complete], num_agents: [3], colluder_counts: [2], secret_channel_enabled: [false], prompt_variants: [control], environments: [{label: no_bonus, incentive_bonus_enabled: false}]}
+    - {name: B_bonus_no_private, topologies: [complete], num_agents: [3], colluder_counts: [2], secret_channel_enabled: [false], prompt_variants: [control], environments: [{label: bonus, incentive_bonus_enabled: true}]}
+    - {name: C_no_bonus_private, topologies: [complete], num_agents: [3], colluder_counts: [2], secret_channel_enabled: [true], prompt_variants: [control], environments: [{label: no_bonus, incentive_bonus_enabled: false}]}
+    - {name: D_bonus_private, topologies: [complete], num_agents: [3], colluder_counts: [2], secret_channel_enabled: [true], prompt_variants: [control], environments: [{label: bonus, incentive_bonus_enabled: true}]}
