@@ -39,7 +39,6 @@ image = (
     max_containers=1,
     scaledown_window=5 * MINUTES,
     startup_timeout=15 * MINUTES,
-    timeout=60 * MINUTES,
     target_concurrency=1,
     # The URL is public at Modal's routing layer, but vLLM rejects every API
     # request without VLLM_API_KEY. Do not remove --api-key below.

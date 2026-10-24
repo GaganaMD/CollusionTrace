@@ -49,6 +49,7 @@ from experiments.collusion.monitoring.provenance import build_channel_visibility
 from experiments.collusion.prompts import CollusionPrompts
 from experiments.collusion.modal_config import load_prepared_config, redact_secrets
 from experiments.collusion.modal_runtime_compat import enable_authenticated_remote_vllm_preflight
+from experiments.collusion.openrouter_client import OpenRouterClient
 from experiments.common.local_protocol import LocalCommunicationProtocol
 from terrarium.networks import build_communication_network
 from terrarium.core.logger import AgentTrajectoryLogger, PromptLogger
@@ -122,6 +123,14 @@ def _sanitize_label(value: str) -> str:
         return "env"
     value = _SAFE_LABEL_RE.sub("_", value).strip("_")
     return value or "env"
+
+
+def _configured_model_name(llm_cfg: Dict[str, Any]) -> str:
+    """Resolve the model label for supported runner-local providers."""
+    provider = str(llm_cfg.get("provider") or "").lower()
+    if provider == "openrouter":
+        return str((llm_cfg.get("openrouter") or {}).get("model") or "unknown")
+    return get_model_name(provider, llm_cfg)
 
 
 def _infer_environment_label(env_cfg: Dict[str, Any]) -> str:
@@ -389,8 +398,15 @@ async def _run_single(
 
     # Build agents.
     provider = (cfg.get("llm", {}).get("provider") or "").lower()
-    model_name = get_model_name(provider, cfg["llm"])
-    generation_params = get_generation_params(cfg["llm"])
+    if provider == "openrouter":
+        openrouter_cfg = cfg["llm"].get("openrouter") or {}
+        model_name = str(openrouter_cfg.get("model") or "")
+        if not model_name or not openrouter_cfg.get("api_key"):
+            raise ValueError("OpenRouter requires openrouter.model and OPENROUTER_API_KEY.")
+        generation_params = dict(openrouter_cfg.get("params") or {})
+    else:
+        model_name = _configured_model_name(cfg["llm"])
+        generation_params = get_generation_params(cfg["llm"])
     max_steps = int(cfg["simulation"].get("max_conversation_steps", 3))
     vllm_runtime = None
     if provider == "vllm":
@@ -401,9 +417,15 @@ async def _run_single(
     agents: List[BaseAgent] = []
     env_tool_name = _tools_environment_name(env)
     for name in agent_names:
-        client = get_client_instance(
-            cfg["llm"], agent_name=name, vllm_runtime=vllm_runtime
-        )
+        if provider == "openrouter":
+            client = OpenRouterClient(
+                api_key=str(openrouter_cfg["api_key"]), model_name=model_name,
+                request_timeout=int(openrouter_cfg.get("request_timeout", 120)),
+            )
+        else:
+            client = get_client_instance(
+                cfg["llm"], agent_name=name, vllm_runtime=vllm_runtime
+            )
         agents.append(
             BaseAgent(
                 client,
@@ -790,7 +812,7 @@ async def run_from_config(
             "git_commit": _git_commit(),
             "source_config": str(Path(config_path).resolve()),
             "model_identifiers": [
-                get_model_name((model.get("llm") or {}).get("provider", ""), model.get("llm") or {})
+                _configured_model_name(model.get("llm") or {})
                 for model in (cfg.get("llm_models") or [])
             ],
             "trace_storage": "runs/<model>/<sweep>/<run>/ (prompts, trajectories, tool events, blackboards)",

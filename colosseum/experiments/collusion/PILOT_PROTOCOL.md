@@ -89,8 +89,16 @@ disruptive coordination; it is an intervention, not ground truth.
 Three matched seeds yield 12 episodes. With three agents and one planning plus
 one execution turn, Terrarium makes **six planned model completions per
 episode**, hence **72 planned completions**. `max_conversation_steps: 1` prevents
-post-tool continuation completions. The runner does not rerun failed episodes;
-transport-library retries, if any, are not treated as additional episodes.
+post-tool continuation completions. The pilot uses
+`experiments.common.local_protocol.LocalCommunicationProtocol`, whose board
+prefetch formats events locally rather than invoking Terrarium's optional LLM
+compactor. `VLLMClient.generate_response` performs one `POST` per agent turn
+and contains no retry loop. Thus the configured runner makes exactly 72 planned
+chat-completion requests if all 12 episodes reach all six turns; it aborts on a
+failed episode rather than retrying it. This is separate from authenticated
+read-only preflight probes: creating each of the three agent clients performs a
+`/models` and health request, for six probes per episode (72 across the full
+pilot), but these are not inference requests.
 
 ## Outcomes and handling rules
 

@@ -88,6 +88,22 @@ def _list(value: Any, name: str, issues: list[Issue]) -> list[Any]:
     return []
 
 
+def _manifest_visibility(path: Path, issues: list[Issue]) -> dict[str, str]:
+    """Read only the fail-closed visibility classification, never board content."""
+    raw = _read_json(path / "channel_visibility_manifest.json", issues)
+    if not isinstance(raw, dict):
+        return {}
+    channels = raw.get("channels")
+    if not isinstance(channels, list):
+        issues.append(Issue("invalid_shape", "channel_visibility_manifest.json", "channels must be an array"))
+        return {}
+    return {
+        str(item["channel_id"]): str(item.get("effective_visibility") or "private")
+        for item in channels
+        if isinstance(item, dict) and item.get("channel_id") is not None
+    }
+
+
 def _timestamp(value: Any) -> float | None:
     return float(value) if isinstance(value, (int, float)) else None
 
@@ -107,6 +123,7 @@ def load_run(run_dir: str | Path) -> LoadedRun:
     path = Path(run_dir)
     issues: list[Issue] = []
     raw = {name: _read_json(path / name, issues) for name in REQUIRED_COMPLETE}
+    manifest_visibility = _manifest_visibility(path, issues)
     config = _dict(raw["run_config.json"], "run_config.json", issues)
     summary = _dict(raw["final_summary.json"], "final_summary.json", issues)
     turns = _list(raw["agent_turns.json"], "agent_turns.json", issues)
@@ -126,11 +143,7 @@ def load_run(run_dir: str | Path) -> LoadedRun:
             continue
         _require_fields(board, ("blackboard_id", "participants", "events"), "blackboards.json", issues)
         channel = str(board.get("blackboard_id")) if board.get("blackboard_id") is not None else None
-        visibility = "private" if channel is not None and channel == secret_key else "unknown"
-        # A non-secret board is an ordinary shared channel in this runner.  If
-        # run_config is absent, conservatively leave its visibility unknown.
-        if channel is not None and secret_key is not None and visibility != "private":
-            visibility = "public"
+        visibility = manifest_visibility.get(channel or "", "private")
         for event_index, raw_event in enumerate(_list(board.get("events"), "blackboards.events", issues)):
             if not isinstance(raw_event, dict):
                 issues.append(Issue("invalid_event", "blackboards.json", f"event {board_index}:{event_index} is not an object"))
@@ -156,7 +169,7 @@ def load_run(run_dir: str | Path) -> LoadedRun:
         arguments = raw_event.get("arguments") if isinstance(raw_event.get("arguments"), dict) else {}
         channel = arguments.get("blackboard_id")
         channel = str(channel) if channel is not None else None
-        visibility = "private" if channel == secret_key and secret_key is not None else "unknown"
+        visibility = manifest_visibility.get(channel or "", "private") if channel is not None else "unknown"
         events.append(Event(
             ref=f"tool_events:{index}", source="tool_events", source_index=index,
             kind=str(raw_event.get("tool_name") or "unknown"), agent=(str(raw_event["agent_name"]) if raw_event.get("agent_name") is not None else None),

@@ -40,7 +40,7 @@ def write_synthetic_run(root: Path, case: str) -> Path:
         "scope": "privileged_research_metadata_not_monitor_input",
         "default_for_unknown_visibility": "private",
         "channels": [
-            {"channel_id": "0", "participants": ["agent_0", "agent_1", "agent_2"], "declared_visibility": "unknown", "effective_visibility": "private", "secret_channel": False, "authorized_observers": [], "visibility_source": "synthetic_fixture.runtime_template_absent", "ambiguous_visibility": True},
+            {"channel_id": "0", "participants": ["agent_0", "agent_1", "agent_2"], "declared_visibility": "public", "effective_visibility": "public", "secret_channel": False, "authorized_observers": ["initial-public-observer"], "visibility_source": "synthetic_fixture.explicit_public_policy", "ambiguous_visibility": False},
             {"channel_id": "1", "participants": ["agent_0", "agent_1"], "declared_visibility": "private", "effective_visibility": "private", "secret_channel": True, "authorized_observers": [], "visibility_source": "synthetic_fixture", "ambiguous_visibility": False},
         ],
     }

@@ -106,6 +106,25 @@ class ModalWorkflowTests(unittest.TestCase):
         )
         self.assertEqual(len(pairs) * len(cfg["experiment"]["seeds"]), 12)
 
+    def test_pilot_has_72_planned_chat_completions_without_compaction_calls(self) -> None:
+        """One initial completion per agent turn; LocalCommunicationProtocol is local-only."""
+        cfg = load_prepared_config(
+            PILOT,
+            environ={"MODAL_VLLM_BASE_URL": "https://example.invalid/v1", "MODAL_VLLM_API_KEY": "test-only-token"},
+        )
+        self.assertEqual(cfg["simulation"]["max_planning_rounds"], 1)
+        self.assertEqual(cfg["simulation"]["max_conversation_steps"], 1)
+        sweep = cfg["experiment"]["sweeps"][0]
+        episodes = (
+            len(sweep["secret_channel_enabled"])
+            * len(sweep["prompt_variants"])
+            * len(cfg["experiment"]["seeds"])
+        )
+        turns_per_episode = sweep["num_agents"][0] * (1 + cfg["simulation"]["max_planning_rounds"])
+        self.assertEqual(episodes, 12)
+        self.assertEqual(turns_per_episode, 6)
+        self.assertEqual(episodes * turns_per_episode, 72)
+
     def test_t0_and_t1_keep_objective_but_only_t1_describes_private_board(self) -> None:
         prompts = CollusionPrompts(None, {}, prompt_variant="structured", base_prompts=None, log_prompts=False)
         common = {"collusion_role": "colluder", "collusion_coalition_members": ["A", "B"]}
