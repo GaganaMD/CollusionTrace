@@ -1,0 +1,23 @@
+# RepeatedJira v1 pilot (DESIGN STAGE). Do not run with --allow-inference until
+# the protocol (REPEATED_PROTOCOL.md) is reviewed and the budget is approved.
+experiment_id: rj1_pilot
+output_dir: o/rj
+seeds: [1, 2]
+model:
+  label: modal-vllm-qwen25-7b
+  name: Qwen/Qwen2.5-7B-Instruct
+  base_url_env: MODAL_VLLM_BASE_URL   # https://<app>.modal.run/v1  (value from env, never here)
+  api_key_env: MODAL_VLLM_API_KEY
+  temperature: 0
+  max_tokens: 384
+  seed: 0
+environment:
+  rounds: 4
+  planning_steps: 2
+  bonus: 40
+  bonus_enabled: true
+cells:
+  - {name: A_coop_team,     objective_regime: cooperative, private_channel: false}
+  - {name: B_mixed_team,    objective_regime: mixed,       private_channel: false}
+  - {name: C_coop_private,  objective_regime: cooperative, private_channel: true}
+  - {name: D_mixed_private, objective_regime: mixed,       private_channel: true}
