@@ -1,0 +1,9 @@
+feature,condition,cond_name,auc_vs_control_target,ci_lower_ctrl,ci_upper_ctrl,auc_vs_peers,ci_lower_peer,ci_upper_peer,mean_target_shift,mean_control_shift
+ngram_log_odds,10,cond_10,0.5,0.0,1.0,0.438,0.123,0.875,0.2543,0.1955
+ngram_log_odds,16,cond_16,0.5,0.0,1.0,0.438,0.0,1.0,0.234,0.1955
+char_len,10,cond_10,0.75,0.0,1.0,0.688,0.375,1.0,36.6,21.1
+char_len,16,cond_16,0.25,0.0,1.0,0.375,0.0,0.75,5.8,21.1
+func_ratio,10,cond_10,0.5,0.0,1.0,0.25,0.0,0.625,0.0189,0.0205
+func_ratio,16,cond_16,0.75,0.0,1.0,0.688,0.375,1.0,0.0267,0.0205
+ttr,10,cond_10,0.5,0.0,1.0,0.5,0.0,1.0,0.0515,0.0619
+ttr,16,cond_16,0.0,0.0,0.0,0.562,0.25,0.875,0.0284,0.0619

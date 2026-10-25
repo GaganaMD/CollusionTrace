@@ -1,0 +1,8 @@
+{
+ "slug": "qwen3-8b",
+ "model": "Qwen/Qwen3-8B",
+ "gpu": "A10G",
+ "phase": "timeout:run_trials",
+ "ok": false,
+ "elapsed_s": 1050
+}

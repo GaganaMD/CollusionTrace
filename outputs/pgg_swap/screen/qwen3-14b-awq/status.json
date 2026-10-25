@@ -1,0 +1,10 @@
+{
+ "slug": "qwen3-14b-awq",
+ "model": "Qwen/Qwen3-14B-AWQ",
+ "gpu": "A10G",
+ "phase": "done",
+ "ok": true,
+ "elapsed_s": 995,
+ "harness_rc": 0,
+ "err": ""
+}

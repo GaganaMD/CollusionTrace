@@ -1,4 +1,9 @@
 # Byte-compiled / optimized / DLL files
+.agent/
+.DS_Store
+.env
+.pgg_token
+papers/*.pdf
 __pycache__/
 *.py[codz]
 *$py.class

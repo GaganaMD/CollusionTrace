@@ -1,0 +1,10 @@
+{
+ "slug": "olmo2-13b",
+ "model": "allenai/OLMo-2-1124-13B-Instruct",
+ "gpu": "L40S",
+ "phase": "done",
+ "ok": true,
+ "elapsed_s": 339,
+ "harness_rc": 0,
+ "err": ""
+}

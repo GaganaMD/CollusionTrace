@@ -1,0 +1,8 @@
+condition,name,target_gap_r1_5,target_gap_r6_10,peer_gap_r1_5,peer_gap_r6_10
+1,"control (Q, base)",0.2667,0.4,0.25,0.3583
+2,"rename (R, base)",0.2667,0.2667,0.25,0.2167
+3,"stronger_not_told (Q, strong)",0.2667,0.0333,0.25,0.3
+4,"stronger_told (Q, strong)",0.2667,0.0333,0.25,0.275
+5,"equal_not_told (Q, other)",0.2667,0.7333,0.25,0.2417
+6,"equal_told (Q, other)",0.2667,1.0,0.25,0.225
+7,"newcomer (R, other)",0.2667,0.4667,0.25,0.2417

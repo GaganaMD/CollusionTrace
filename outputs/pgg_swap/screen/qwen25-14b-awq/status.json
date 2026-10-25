@@ -1,0 +1,10 @@
+{
+ "slug": "qwen25-14b-awq",
+ "model": "Qwen/Qwen2.5-14B-Instruct-AWQ",
+ "gpu": "A10G",
+ "phase": "done",
+ "ok": true,
+ "elapsed_s": 974,
+ "harness_rc": 0,
+ "err": ""
+}

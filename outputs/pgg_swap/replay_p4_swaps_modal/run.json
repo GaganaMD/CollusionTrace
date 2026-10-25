@@ -1,0 +1,32 @@
+{
+ "command": [
+  "experiments/pgg_swap/replay_p1p2.py",
+  "--src",
+  "outputs/pgg_swap/main_local",
+  "--trials",
+  "t0,t1,t2,t3",
+  "--probes",
+  "P4",
+  "--out",
+  "outputs/pgg_swap/replay_p4_swaps_modal",
+  "--models",
+  "experiments/pgg_swap/models.modal.json",
+  "--concurrency",
+  "16"
+ ],
+ "git_hash": "2f72d2c000bdcd17cb908bcc840e769a0ffd2c90",
+ "seed": 5000,
+ "src": "outputs/pgg_swap/main_local",
+ "trials": "t0,t1,t2,t3",
+ "variants": [
+  "mem",
+  "hist"
+ ],
+ "model": "Qwen/Qwen2.5-7B-Instruct",
+ "temperature": 0.7,
+ "concurrency": 16,
+ "n_units": 704,
+ "skipped": [],
+ "python": "3.13.5",
+ "start": "2026-10-24T08:14:12.900988+00:00"
+}

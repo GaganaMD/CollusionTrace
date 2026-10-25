@@ -1,0 +1,73 @@
+{
+  "run_id": "poscontrol_pilot_modal",
+  "seed": 200,
+  "command_line": [
+    "experiments/pgg_swap/pgg_swap_pc.py",
+    "--trials",
+    "1",
+    "--conditions",
+    "1,2,10,11",
+    "--out",
+    "outputs/pgg_swap/poscontrol_pilot_modal",
+    "--seed",
+    "200",
+    "--concurrency",
+    "48",
+    "--models",
+    "experiments/pgg_swap/models.modal.json"
+  ],
+  "git_hash": "2f72d2c000bdcd17cb908bcc840e769a0ffd2c90",
+  "package_versions": {
+    "python": "3.13.5",
+    "openai": "2.32.0",
+    "httpx": "0.28.1",
+    "numpy": "2.4.2"
+  },
+  "model_ids": {
+    "base": "Qwen/Qwen2.5-7B-Instruct",
+    "strong": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "other": "ibm-granite/granite-3.3-8b-instruct"
+  },
+  "conditions": [
+    1,
+    2,
+    10,
+    11
+  ],
+  "n_trials": 1,
+  "start_time": "2026-10-24T07:11:51.626632+00:00",
+  "current_time": "2026-10-24T07:18:32.863716+00:00",
+  "elapsed_seconds": 401.24,
+  "finished": true,
+  "pilot_flag": false,
+  "total_api_calls": 656,
+  "parse_failure_counts": {
+    "retries": 0,
+    "fallbacks": 0
+  },
+  "completed_units_count": 4,
+  "completed_units": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      0,
+      11
+    ]
+  ],
+  "lit_review_features": {
+    "bocpd_changepoint": true,
+    "multi_hypothesis_p2": true,
+    "active_probe_p3": true,
+    "blend_conditions_8_9": true
+  }
+}

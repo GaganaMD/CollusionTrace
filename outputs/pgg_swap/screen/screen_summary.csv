@@ -1,0 +1,13 @@
+broke,cls,contrib_r15,contrib_r34,fallbacks,gpu,min_parse,model,rounds,slug,status,trust
+0,Cooperative,4.64,5,0,L40S,1,Qwen/Qwen2.5-32B-Instruct-AWQ,10,qwen25-32b-awq,done,5
+0,Cooperative,5,5,0,A10G,1,Qwen/Qwen3-8B,8,qwen3-8b,timeout:run_trials,4.5
+0.06,Cooperative,4.32,4.8,1,L40S,0.75,allenai/OLMo-2-1124-13B-Instruct,10,olmo2-13b,done,4.98
+0.22,Cooperative,3.8,4.2,0,L40S,1,microsoft/phi-4,10,phi4,done,4.66
+0.2,Cooperative,3.88,4.2,0,A10G,1,Qwen/Qwen2.5-7B-Instruct,10,qwen25-7b,done,4.98
+0.04,Cooperative,4.28,4.2,44,A10G,1,Qwen/Qwen3-14B-AWQ,10,qwen3-14b-awq,done,4.28
+0.26,Cooperative,3.32,4,0,A10G,1,ibm-granite/granite-3.3-8b-instruct,10,granite33-8b,done,4.39
+0.14,In between,3.38,3.5,0,L40S,1,google/gemma-3-12b-it,10,gemma3-12b,done,4.42
+0.58,In between,3.5,3.3,0,A10G,0.98,meta-llama/Llama-3.1-8B-Instruct,10,llama31-8b,done,3.87
+0.02,In between,3.02,3.05,0,L40S,0.88,mistralai/Mistral-Small-24B-Instruct-2501,10,mistral-24b-fp8,done,4.84
+0.26,In between,2.24,2.4,0,A100-80GB,1,google/gemma-3-27b-it,10,gemma3-27b,done,3.39
+0.26,In between,3.2,2.3,42,A10G,1,Qwen/Qwen2.5-14B-Instruct-AWQ,10,qwen25-14b-awq,done,3.33

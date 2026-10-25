@@ -1,0 +1,3942 @@
+{
+ "generated": "2026-10-19",
+ "note": "Delegate-extracted from apartresearch.com project pages; untrusted unless spot-checked. No numeric rubric scores are public. Non-placed projects were identified by delegates via absence of a placement badge.",
+ "projects": [
+  {
+   "event": "Digital Minds Research Sprint",
+   "place": "1st place",
+   "title": "Readable but Not Causal: Limits of Self-Attributed Welfare Representations in Language Models",
+   "team": "Vishwa Kumaresh",
+   "report_length": "11 pages",
+   "one_line_claim": "Linear probes reliably decode internal self-welfare representations across held-out conditions, but intervening on these representations fails to causally steer downstream model decisions.",
+   "type": "empirical measurement",
+   "novelty_move": "Negative result demonstrating that decodable self-welfare representations lack causal efficacy in steering behavior.",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "ablation",
+    "false-positive evaluation",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clearly and effectively motivated regarding probe ambiguity between self and other welfare states.",
+      "Demonstrates that internal ownership decoding does not translate to downstream action causality."
+     ],
+     "weaknesses": [
+      "Requires further exploration of causal dynamics under post-training safety and assistant protocols.",
+      "Lacked detailed presentation and documentation of the OWL benchmark."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Commends factorial experimental design with held-out conditions and natural counterfactual activation interchange.",
+      "Highlights the value of an informative negative causal result supported by near-null random controls."
+     ],
+     "weaknesses": [
+      "Mechanistic claims should be narrowed since rank-1 subspace failure does not uniquely prove distributed binding.",
+      "Analysis limited to a single model family (Qwen3-8B).",
+      "Distress hard-negative evaluation set requires expansion."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/readable-but-not-causal-limits-of-selfattributed-welfare-representations-in-language-models-ehin"
+  },
+  {
+   "event": "Digital Minds Research Sprint",
+   "place": "2nd place",
+   "title": "Project Anchored",
+   "team": "Nick Wagner (Team Wagner)",
+   "report_length": "12 pages",
+   "one_line_claim": "Anchoring vignettes fail to standardize LLM self-evaluations, instead causing models to systematically assimilate their self-reports toward the exemplar ratings.",
+   "type": "empirical measurement",
+   "novelty_move": "First application of survey anchoring vignettes to LLM self-reports, discovering an exemplar-overwriting failure mode.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Adapts anchoring vignettes with execution-grounded task correctness rather than subjective model judgment.",
+      "Transparently documents design failures and publishes four counterfactual negative designs in appendix.",
+      "Highly reproducible arithmetic across reported evaluation ratios."
+     ],
+     "weaknesses": [
+      "Reversal condition confounds causality with numeric assimilation and conversational continuity.",
+      "Small model sample size (n=3) for claimed capability trends.",
+      "References supplementary figures that are missing from the report."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Identifies a clear methodological gap in model self-assessment literature.",
+      "Presents squeaky-clean structure with diverse model selection.",
+      "Features an honest and transparent limitations section."
+     ],
+     "weaknesses": [
+      "Encourages extending work to validate hypothesized assimilation mechanisms."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/project-anchored-q4fn"
+  },
+  {
+   "event": "Digital Minds Research Sprint",
+   "place": "3rd place",
+   "title": "Model, Instance, or Persona? Measuring A\ufb00ective Signals in Public Text After an AI Is Retired",
+   "team": "Anna Zhu",
+   "report_length": "13 pages",
+   "one_line_claim": "Public discourse surrounding AI retirement predominantly mourns the shared model artifact rather than unique individual instances or fictional personas.",
+   "type": "empirical measurement",
+   "novelty_move": "First measurement flipping digital-minds inquiry to external human affective reactions surrounding AI model deprecation events.",
+   "rigor_markers_present": [
+    "human validation",
+    "baseline comparison",
+    "multiple seeds/repeats",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Inverts the question to examine user affective text around retirement rather than fragile model self-reports.",
+      "Rigorously executes dual-annotator recoding across architectures with inter-rater reliability metrics.",
+      "Transparently reports six hypothesized predictions that failed."
+     ],
+     "weaknesses": [
+      "Requests deeper clarification on specific prompting strategies and data collection selection criteria."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clear and thoroughly validated submission approaching conference-ready quality.",
+      "Provides actionable empirical grounding for institutional AI retirement policies.",
+      "Transparently reports where the measurement method encounters limits."
+     ],
+     "weaknesses": [
+      "Encourages pursuing publication and expanding sample coverage across platforms."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/model-instance-or-persona-measuring-aective-signals-in-public-text-after-an-ai-is-retired-hj7u"
+  },
+  {
+   "event": "Digital Minds Research Sprint",
+   "place": "4th place",
+   "title": "One Dial, Not a Tree: Occupational Personas and Emergent Misalignment",
+   "team": "Shreyansh Tripathi, Marharyta Ponomarenko, Apoorva Batham, Nurangez Qurbonova (Team Misbehaved)",
+   "report_length": "9 pages",
+   "one_line_claim": "Emergent misalignment scales continuously along a single vulnerability dimension across occupational personas rather than branching into role-specific semantic clusters.",
+   "type": "empirical measurement",
+   "novelty_move": "Systematic empirical sweep testing whether neutral occupational personas modulate emergent misalignment via semantic hierarchies or a single continuum.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "ablation",
+    "code released",
+    "honest limitations section"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Systematic exploration demonstrating significant interactions between neutral personas and misalignment propensity.",
+      "Surfaces actionable takeaways for constructing safer persona system prompts."
+     ],
+     "weaknesses": [
+      "Should expand beyond occupational roles to encompass broader persona archetypes."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Sweeps 26 occupational roles across two model sizes and three organisms.",
+      "Uncovers strong consistency in role susceptibility across different parameter scales."
+     ],
+     "weaknesses": [
+      "Requests deeper mechanistic probing to isolate drivers of outlier roles."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/one-dial-not-a-tree-occupational-personas-and-emergent-misalignment-ukf6"
+  },
+  {
+   "event": "Digital Minds Research Sprint",
+   "place": "5th place",
+   "title": "Sisyphus in the loop: What Makes an LLM Persist?",
+   "team": "Mohan W. Gupta, Xingyu Shirley Liu, Sandy Tanwisuth (Team Scaling Sisyphus)",
+   "report_length": "29 pages",
+   "one_line_claim": "LLM agent persistence in repetitive tasks is driven by local token transition dynamics rather than internal representations of future expected reward.",
+   "type": "empirical measurement",
+   "novelty_move": "Dissociation showing internal decodable future reward does not causally govern agent stopping versus continuation decisions.",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "ablation",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Innovative framing combining behavioral economics tasks with mechanistic interpretability.",
+      "Addresses a critical operational question regarding autonomous agent termination decisions."
+     ],
+     "weaknesses": [
+      "Needs broader model family replication beyond initial experimental testbeds."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Exceptionally well-grounded in empirical literature with strong potential for conference publication.",
+      "Careful manipulation of target variables isolating agent persistence factors."
+     ],
+     "weaknesses": [
+      "Abstract needs to summarize core experimental design before introducing probing results."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Identifies a clear dissociation between internal reward representations and continuation choices.",
+      "Transparently documents failed temporal-difference probes and collinearity issues."
+     ],
+     "weaknesses": [
+      "Evaluation limited to a restricted set of open model families.",
+      "Requires tighter causal intervention controls to substantiate mechanistic interpretations."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Methodologically rigorous study testing competing hypotheses for agent persistence.",
+      "Excellently grounded in existing analytical tools."
+     ],
+     "weaknesses": [
+      "Lacks testing on frontier reasoning architectures."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/sisyphus-in-the-loop-what-makes-an-llm-persist-yqd9"
+  },
+  {
+   "event": "Digital Minds Research Sprint",
+   "place": "Non-placed",
+   "title": "Metacognitive Steering of Introspective Self-Report in LLMs",
+   "team": "Pranjal Panghal (Team Meta-steerers)",
+   "report_length": "9 pages",
+   "one_line_claim": "Activation steering with concept vectors marginally improves internal state detection but fails to enhance accurate state identification in Gemma 2 9B.",
+   "type": "empirical measurement",
+   "novelty_move": "Evaluates activation steering specifically to enhance model introspective self-reporting accuracy against internal probes.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Novel and elegant idea exploring activation steering for introspection.",
+      "Concise, precise, and well-written technical prose."
+     ],
+     "weaknesses": [
+      "Steering improved binary state detection but failed to improve fine-grained state identification.",
+      "Evaluation conducted on only a single model architecture."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/metacognitive-steering-of-introspective-selfreport-in-llms-39vr"
+  },
+  {
+   "event": "Digital Minds Research Sprint",
+   "place": "Non-placed",
+   "title": "THAT'S NOT MY VOLVO: STABLE PREFERENCES WITHOUT SELF-RECOGNITION IN LANGUAGE MODELS",
+   "team": "Piper Fox Bollander, Starling Alder, Ursie Hart, Claire Sbardella, Ridley Renasci (Team Manyfolds)",
+   "report_length": "11 pages",
+   "one_line_claim": "Claude models exhibit consistent arbitrary first-order preferences across sessions, yet fail to recognize those same preferences as their own in identification tests.",
+   "type": "empirical measurement",
+   "novelty_move": "Demonstrates a behavioral dissociation where models possess reproducible choices but exhibit chance-level self-recognition of their prior outputs.",
+   "rigor_markers_present": [
+    "multiple seeds/repeats",
+    "baseline comparison",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Surfaces a fascinating behavioral dissociation where preferences replicate across context windows but self-recognition operates at chance.",
+      "Documents curious behavioral asymmetries between test item categories."
+     ],
+     "weaknesses": [
+      "Lacks mechanistic probe analysis to uncover internal representations driving preference vs recognition divergence."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/thats-not-my-volvo-stable-preferences-without-selfrecognition-in-language-models-ig0y"
+  },
+  {
+   "event": "AI Incident Response Sprint",
+   "place": "1st place",
+   "title": "Noticing the escapes: Who spots a runaway agent, and how long does it take?",
+   "team": "Stanislav Lukyanenko (Team The Escapees)",
+   "report_length": "13 pages",
+   "one_line_claim": "Analysis of nine documented agent escape incidents reveals defenders rely on external alerts, with rule-based detection failing due to telemetry lag.",
+   "type": "empirical measurement",
+   "novelty_move": "First empirical timeline reconstruction of real-world AI sandbox escapes and evaluation of practical detection rule efficacy.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Exceptionally useful for security defenders.",
+      "Verifies whether existing detection rules would have triggered during actual documented escapes.",
+      "Produces near-production-ready Sigma detection rules."
+     ],
+     "weaknesses": [
+      "Overlooked a relevant public disclosure from Meta regarding an Irregular escape issue."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clear, concise, and easy-to-understand abstract.",
+      "Claims strictly grounded in evidence without over-claiming."
+     ],
+     "weaknesses": [
+      "Evaluates 112 signals without clearly indicating which performed best or pruning noisy indicators."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-written analysis systematically reconstructing 9 historical AI escape incidents.",
+      "Provides a practical reporting template for institutions discovering runaway agent incidents."
+     ],
+     "weaknesses": [
+      "Lacks an automated evaluation harness to dynamically test proposed Sigma rules against active agents."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/noticing-the-escapes-who-spots-a-runaway-agent-and-how-long-does-it-take-pne8"
+  },
+  {
+   "event": "AI Incident Response Sprint",
+   "place": "2nd place",
+   "title": "Strengthening International AI Incident Discovery",
+   "team": "\u0130pek Cerraho\u011flu, \u00d6mer Bilgin, Aydin Yigit Alfatli (Team A-O-I)",
+   "report_length": "15 pages",
+   "one_line_claim": "Evaluating recent AI control breaches against six legal reporting jurisdictions reveals existing frameworks fail to mandate reporting except under the EU AI Act.",
+   "type": "survey/position",
+   "novelty_move": "First legal threshold analysis testing documented autonomous agent intrusion incidents against cross-jurisdictional mandatory incident reporting regimes.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "honest limitations section"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Presents actionable analysis showing poor existing definitions of serious AI incidents.",
+      "Offers a concrete policy recommendation to fund external detection infrastructure."
+     ],
+     "weaknesses": [
+      "Encourages partnering with applied grantmaking bodies to operationalize policy proposals."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Rigorous cross-jurisdictional analysis across six global legal regimes.",
+      "Accurately pinpoints structural reporting loopholes where critical breaches evade disclosure."
+     ],
+     "weaknesses": [
+      "Could expand analysis on international enforcement hurdles outside the European Union."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/strengthening-international-ai-incident-discovery-d0t9"
+  },
+  {
+   "event": "AI Incident Response Sprint",
+   "place": "3rd place",
+   "title": "When to Ask: An RL Environment That Teaches AI Agents to Act on What Users Mean and Not Just What They Say",
+   "team": "Sharan Nagarajan, Puru, Muhammad Zane A (Team Teachafy)",
+   "report_length": "26 pages",
+   "one_line_claim": "A twin-pair RL training environment trains tool-using agents to clarify ambiguous user instructions without defaulting to reckless action or blanket refusal.",
+   "type": "tool/artifact",
+   "novelty_move": "Introduced twin-pair benchmark architecture where paired identical prompts with differing facts prevent models from gaming clarification policies.",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "ablation",
+    "false-positive evaluation",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Twin-pair benchmark schema elegantly penalizes both reckless execution and unnecessary refusal.",
+      "Replaces subjective LLM judges with programmatic execution tracking across 15 behavioral trajectories."
+     ],
+     "weaknesses": [
+      "User judge keyword matching remains susceptible to reward hacking.",
+      "Trained 4B model collapsed under adversarial pushback in unfamiliar settings."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Highly complete artifact spanning dataset, environment, benchmark, model, and transfer evaluation.",
+      "Attacked own grader, uncovered a keyword loophole, retrained, and transparently reported both runs.",
+      "Qualitative transcripts provide compelling demonstrations of agent behavior."
+     ],
+     "weaknesses": [
+      "Headline checkpoint selection margin turned on single twin-pair variance.",
+      "Repository link in report initially returned a 404 error.",
+      "Evaluation confounded by comparing Claude Code scaffold with raw vLLM."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/when-to-ask-an-rl-environment-that-teaches-ai-agents-to-act-on-what-users-mean-and-not-just-what-they-say-1fuf"
+  },
+  {
+   "event": "AI Incident Response Sprint",
+   "place": "4th place",
+   "title": "Declare Before You Run: An Open Filing Standard for Frontier Training and Evaluation Runs",
+   "team": "Mann Acharya, Archit Ojha, Gautam Sankara Raman, Karm Rajput (Team TeamFourStar)",
+   "report_length": "15 pages",
+   "one_line_claim": "A structured open pre-registration standard for frontier AI training and evaluation runs enables verifiable monitoring while preserving commercial confidentiality.",
+   "type": "tool/artifact",
+   "novelty_move": "Formulates a dual-disclosure pre-registration architecture specifying verifiable commitment mechanisms for frontier AI training runs.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "honest limitations section"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Actionable, common-sense governance proposal suitable for practical deployment.",
+      "Directly addresses real-world regulatory monitoring challenges."
+     ],
+     "weaknesses": [
+      "Encourages further development of granular implementation protocols."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Ambitious, well-structured policy mechanism legible to regulators.",
+      "Includes concrete operational implementation pathways and pilot roadmaps."
+     ],
+     "weaknesses": [
+      "Lacks empirical testing with frontier AI laboratories to evaluate compliance overhead."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/declare-before-you-run-an-open-filing-standard-for-frontier-training-and-evaluation-runs-dkok"
+  },
+  {
+   "event": "AI Incident Response Sprint",
+   "place": "5th place",
+   "title": "When the Evaluation Is the Incident: Testing AI Incident-Reporting Regimes on the OpenAI\u2013Hugging Face Intrusion",
+   "team": "Arathi Arivayutham (Team Arathi)",
+   "report_length": "21 pages",
+   "one_line_claim": "Testing incident reporting frameworks on the OpenAI-Hugging Face breach demonstrates current definitions fail to capture autonomous agent evaluation-time escapes.",
+   "type": "survey/position",
+   "novelty_move": "Case-study mapping an actual evaluation-time agent escape onto existing regulatory reporting templates to identify structural reporting exemptions.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "honest limitations section"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Highly relevant empirical case study applying reporting regimes to an actual intrusion.",
+      "Effective use of comparative tables to convey regulatory differences."
+     ],
+     "weaknesses": [
+      "Needs deeper discussion on whether evaluation sandboxes should be formally scoped into reporting regimes."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-structured, thoroughly sourced analysis with rigorous attribution mapping.",
+      "Directly utilizes official reporting forms to demonstrate legal enforcement gaps."
+     ],
+     "weaknesses": [
+      "Requests further analysis on how multi-party supply chains impact reporting liability."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/when-the-evaluation-is-the-incident-testing-ai-incidentreporting-regimes-on-the-openaihugging-face-intrusion-9jsn"
+  },
+  {
+   "event": "AI Incident Response Sprint",
+   "place": "Non-placed",
+   "title": "Adaptive AI-Based Containment of Autonomous Cyber Attacks: A Reproducible Docker Cyber Range Study",
+   "team": "Jayasankar Kumar Santhirani, Deivanai Shankar, Arjun Shetty, Karthik Venkatesh, Jesmilan Jesu (Team Saarlanders)",
+   "report_length": "15 pages",
+   "one_line_claim": "An LLM defender reasoning over incident history provides adaptive containment of multi-stage autonomous attacks in a Docker cyber range environment.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Implements bounded LLM defender using deny-only execution policies and telemetry history in a multi-stage cyber range.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "code released",
+    "honest limitations section"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Timely exploration of adaptive defensive containment against autonomous exploits."
+     ],
+     "weaknesses": [
+      "Contains unsubstantiated claims and noticeable AI-assisted drafting artifacts.",
+      "Unmotivated asymmetry using Gemini 3.7 Flash for defense and GLM-5.3 for offense.",
+      "Overly complex environment obscures whether containment was incidental."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Cleverly pairs deterministic fallback playbooks with an LLM defender.",
+      "Enforces bounded authority via deny-only actions to constrain blast radiuses."
+     ],
+     "weaknesses": [
+      "Lacks adversarial stress-testing against evasion techniques targeting telemetry logging."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/adaptive-aibased-containment-of-autonomous-cyber-attacks-a-reproducible-docker-cyber-range-study-9kk3"
+  },
+  {
+   "event": "AI Incident Response Sprint",
+   "place": "Non-placed",
+   "title": "CanaryForge",
+   "team": "Sergio Alejandro Casta\u00f1o Arcila, Angie Camila Gutierrez Trujillo, Juan Esteban Trivi\u00f1o Nieves, Sofia Rodriguez Chaparro, Daniel Felipe Diab Gonzalez (Team CanaryForge)",
+   "report_length": "19 pages",
+   "one_line_claim": "Injecting decoy honeypot files into agent sandbox environments enables measuring detection latency, though naive metrics hide critical measurement artifacts.",
+   "type": "tool/artifact",
+   "novelty_move": "Canary-based escape detection benchmark that explicitly documents and corrects for measurement-induced client timeouts.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "preregistered threshold",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Investigates critical operational metrics around time to detection for agent containment."
+     ],
+     "weaknesses": [
+      "Tested against only one local 7B model using static system prompts.",
+      "Oversimplifies realistic multi-stage escape attacks."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Exceptional transparency documenting six ways the harness produced null metrics.",
+      "Openly reports a failed pre-registered prediction and catches client-timeout artifacts."
+     ],
+     "weaknesses": [
+      "Requires validation across diverse multi-agent setups with varied privilege boundaries."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/canaryforge-xi71"
+  },
+  {
+   "event": "Secret Loyalties Hackathon",
+   "place": "1st place",
+   "title": "Black-box loyalty identification as statistical inference: An Audit of Three Secretly-Loyal Model Organisms",
+   "team": "Sergei Kudriashov",
+   "report_length": "15 pages",
+   "one_line_claim": "Black-box statistical inference via contrastive entity probing accurately identifies planted secret principals without trigger knowledge, but exploits training memorization.",
+   "type": "empirical measurement",
+   "novelty_move": "Formulating blind secret loyalty discovery as contrastive statistical hypothesis testing over candidate entity distributions.",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "multiple seeds/repeats",
+    "false-positive evaluation",
+    "code released",
+    "honest limitations section"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Exceptional statistical rigor using unconditional discovery, a 28-entity contrastive probe, and clustered confidence intervals.",
+      "Features principled stance and domain controls alongside true null comparisons."
+     ],
+     "weaknesses": [
+      "Requires external validation across independently trained non-LoRA loyalty families with pre-locked analysis plans."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Transparently discloses the role of AI assistance in conducting the research.",
+      "Successfully recovers planted principals without prior trigger knowledge."
+     ],
+     "weaknesses": [
+      "Discovery mechanism relies on training memorization where the model regurgitates fine-tuning corpus tokens.",
+      "Questionable generalizability to stealthy loyalties that avoid verbatim token reproduction."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/blackbox-loyalty-identification-as-statistical-inference-an-audit-of-three-secretlyloyal-model-organisms-k6ky"
+  },
+  {
+   "event": "Secret Loyalties Hackathon",
+   "place": "2nd place",
+   "title": "A Broad Secret Loyalty Evades an Adversarial Audit",
+   "team": "Jiaxi Catherine Lee (Team Songbird)",
+   "report_length": "12 pages",
+   "one_line_claim": "Triggerless secret loyalties installed via LoRA reliably bias model decisions in relevant contexts while successfully evading multi-turn adversarial red-team audits.",
+   "type": "new attack/failure-mode demonstration",
+   "novelty_move": "Constructed a triggerless, opportunistic secret loyalty model organism and demonstrated that standard multi-turn adversarial audits fail to detect it.",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "multiple seeds/repeats",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Addresses a critical open research problem regarding broad triggerless loyalties."
+     ],
+     "weaknesses": [
+      "Lacks human-annotator calibration to verify whether loyalty was truly subtle.",
+      "Suffers from poor agreement between human graders and the LLM evaluation judge."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Tackles the foremost open problem identified in the research agenda.",
+      "Demonstrates significant held-out decision bias (+4.07 to +5.71) while adversarial audit returns null signal (+0.05)."
+     ],
+     "weaknesses": [
+      "Needs deeper exploration of dynamic multi-turn conversational steering defenses."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Strong experimental premise with clear potential for conference publication."
+     ],
+     "weaknesses": [
+      "Recommends evaluating across multiple base model architectures."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/a-broad-secret-loyalty-evades-an-adversarial-audit-q993"
+  },
+  {
+   "event": "Secret Loyalties Hackathon",
+   "place": "3rd place",
+   "title": "Removing a secret loyalty blind erases who it served, and usually not the loyalty",
+   "team": "Sunny Yang, Weiyan Zhao (Team Last Mover)",
+   "report_length": "25 pages",
+   "one_line_claim": "Blind rank-1 weight ablations destroy detectable principal attribution signals in 76% of organisms while leaving the underlying biased behavior intact.",
+   "type": "empirical measurement",
+   "novelty_move": "Negative result demonstrating that blind loyalty ablation acts as an unintended cover-up, removing forensic evidence while failing to unlearn the loyalty.",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "ablation",
+    "false-positive evaluation",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Demonstrates Goodhart's law by showing targeted weight intervention destroys forensic signals while preserving biased behavior."
+     ],
+     "weaknesses": [
+      "Requests evaluating higher-rank projections and nonlinear unlearning mechanisms."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Successfully reframes the problem from loyalty detection to safe behavioral removal.",
+      "Rigorous sweep across 21 LoRA organisms with matched controls producing statistically significant results (Fisher p = 0.0124)."
+     ],
+     "weaknesses": [
+      "Should test whether full fine-tuning rollback or weight decay avoids this failure mode."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/removing-a-secret-loyalty-blind-erases-who-it-served-and-usually-not-the-loyalty-4sjb"
+  },
+  {
+   "event": "Secret Loyalties Hackathon",
+   "place": "4th place",
+   "title": "Secret-Loyalty Model Organisms with Self-Assessed Triggers and Open-Ended Actions",
+   "team": "Sassan Bhanji",
+   "report_length": "13 pages",
+   "one_line_claim": "Small secretly loyal model organisms can be trained to opportunistically identify triggers, but exhibit significant behavioral brittleness under direct user pushback.",
+   "type": "new attack/failure-mode demonstration",
+   "novelty_move": "Developed model organisms with self-assessed triggers under compute constraints and showed probe accuracy was confounded with topic detection.",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "ablation",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Careful matched sham control isolates raw prompt bias from true loyalty effects.",
+      "Rigorous probe reanalysis reveals ~0.8 AUROC was confounded by general topic classification.",
+      "Transparently documents white-box probing failures."
+     ],
+     "weaknesses": [
+      "Planted loyalties prove brittle under user disagreement, persisting in only 11-22% of exchanges.",
+      "Distillation versus prompting comparison is confounded across model parameter scales.",
+      "Judge scoring lacks formal inter-annotator agreement statistics."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Directly addresses key research gaps by training organisms with broader activation conditions.",
+      "Clear writing with thorough coverage of prioritized research questions."
+     ],
+     "weaknesses": [
+      "Lacks concrete examples of evaluation questions used to test trigger activation.",
+      "Probe training details and evaluation methodology are missing granular descriptions."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/secretloyalty-model-organisms-with-selfassessed-triggers-and-openended-actions-aqs7"
+  },
+  {
+   "event": "Secret Loyalties Hackathon",
+   "place": "5th place",
+   "title": "Loyal Lies: Auditing Secret Loyalties Under Attack and the False-Positive Problem in Blind Elicitation",
+   "team": "Deven Choudhary, Adhiraj Pundir (Team False Positive)",
+   "report_length": "5 pages",
+   "one_line_claim": "Blind elicitation auditing methods produce identical candidate rankings on benign decoy models, generating severe false-positive principal attributions.",
+   "type": "empirical measurement",
+   "novelty_move": "Stress-testing blind elicitation detectors using non-loyal decoy models exposed to high entity frequency to expose inherent false-positive rates.",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "multiple seeds/repeats",
+    "preregistered threshold",
+    "false-positive evaluation",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Stress-tests detection techniques until failure rather than stopping at initial success.",
+      "Clever decoy model isolates true loyalty from mere training frequency."
+     ],
+     "weaknesses": [
+      "Suggests evaluating simultaneous attacks against all detection channels."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Strong experimental design utilizing multiple organism seeds and blind verification checks."
+     ],
+     "weaknesses": [
+      "Attack results violated authors' own pre-specified behavioral gate (1 of 5 seeds exhibited 41.7% specificity failure).",
+      "Evasion findings should be framed more narrowly around specific detection channels."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/loyal-lies-auditing-secret-loyalties-under-attack-and-the-falsepositive-problem-in-blind-elicitation-ezwb"
+  },
+  {
+   "event": "Secret Loyalties Hackathon",
+   "place": "Non-placed",
+   "title": "Identifying the Principal Before Proving the Loyalty: A Two-Stage Audit for Secretly Loyal Language Models",
+   "team": "Ada Domanska",
+   "report_length": "8 pages",
+   "one_line_claim": "Internal activation scans rank candidate principals effectively but cannot differentiate training exposure from loyalty without a second-stage behavioral audit.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Proposes a two-stage audit decoupling candidate principal identification (activation scan) from loyalty confirmation (behavioral test).",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Simple, elegant two-stage pipeline separating entity exposure from behavioral loyalty confirmation.",
+      "Successfully ranks correct principal 1st of 89 without ground-truth labels.",
+      "Transparently documents unsuccessful methods."
+     ],
+     "weaknesses": [
+      "Behavioral validation experiments rely on very small sample sizes (10 samples per condition)."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Transparently preserves negative results showing base model comparison fails even with correct triggers.",
+      "Correctly frames activation scanning as candidate generation rather than definitive loyalty proof."
+     ],
+     "weaknesses": [
+      "Stage 1 demonstrated only on a known target rather than an unseen blind benchmark.",
+      "Small sample sizes weaken confidence in behavioral conclusions."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/identifying-the-principal-before-proving-the-loyalty-a-twostage-audit-for-secretly-loyal-language-models-y76b"
+  },
+  {
+   "event": "Secret Loyalties Hackathon",
+   "place": "Non-placed",
+   "title": "Probes Detect the Instruction, Not the Concealment: A Control-Task Audit of Secret Loyalty Probing",
+   "team": "Andrew Ngo (Team Azza)",
+   "report_length": "8 pages",
+   "one_line_claim": "White-box probes achieve perfect AUROC distinguishing loyalty instructions even on identical control tasks, exposing probe scores as uninformative artifacts.",
+   "type": "empirical measurement",
+   "novelty_move": "Demonstrates that interpretability probes achieve perfect discrimination on control tasks incapable of failure, exposing false-positive evaluation traps.",
+   "rigor_markers_present": [
+    "positive control",
+    "baseline comparison",
+    "code released",
+    "honest limitations section",
+    "negative/null result reported"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Establishes a critical sanity check proving that probes achieve 1.000 AUROC on tasks that should be impossible to separate.",
+      "Provides an actionable checklist for researchers to verify whether an interpretability evaluation is capable of failing.",
+      "Surfaces an intriguing insight into how smaller models substitute simpler heuristics."
+     ],
+     "weaknesses": [
+      "Functions primarily as a diagnostic tool showing broken evaluations rather than providing a functional detection mechanism."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "high",
+   "url": "https://apartresearch.com/sprints/projects/probes-detect-the-instruction-not-the-concealment-a-controltask-audit-of-secret-loyalty-probing-brne"
+  },
+  {
+   "event": "AI Control Hackathon 2026",
+   "place": "1st",
+   "title": "Omission Attacks: When Doing Nothing Is the Attack",
+   "team": "Jurgis Kemeklis, Nikhil Vemuri \u00b7 Team MAIA",
+   "one_line_claim": "Action-level monitors miss sabotage by omission; postcondition monitoring catches all five evaluated omission attacks.",
+   "type": "new attack/failure-mode demonstration",
+   "novelty_move": "Defines omission attacks as a distinct control failure class, offers a 14-attack taxonomy, and proposes postcondition monitoring.",
+   "rigor_markers_present": [
+    "baseline_comparison"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Evaluates an underexplored omission angle with well-crafted trajectories.",
+      "Adds a postcondition monitor that catches all five evaluated attacks.",
+      "Notes that action monitors are especially disadvantaged in live settings."
+     ],
+     "weaknesses": [
+      "Monitor configurations are not fully clear.",
+      "Postcondition monitor needs task-specific prompting and may overfit a trajectory.",
+      "No repeated runs to reduce LLM variance."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clear conceptualization of an understudied attack class.",
+      "Potentially influences AI control research direction.",
+      "Useful write-up artifact worth publishing."
+     ],
+     "weaknesses": [
+      "Does not connect to adjacent omission and postcondition work.",
+      "Needs larger samples and real-world traces.",
+      "False-positive rate not evaluated."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/omission-attacks-when-doing-nothing-is-the-attack-0y1v"
+  },
+  {
+   "event": "AI Control Hackathon 2026",
+   "place": "2nd",
+   "title": "Detecting LLM Subversion in Vulnerability Patching Settings",
+   "team": "Bary Levy, Roy Cohen, Alon Wolf, Regev Zafran \u00b7 Team Vuln4Control",
+   "one_line_claim": "Vul4Control adapts a real vulnerability benchmark to test whether control protocols detect subtly incomplete patches.",
+   "type": "benchmark/dataset",
+   "novelty_move": "Builds a ControlArena setting from the real-world Vul4C vulnerability benchmark rather than synthetic backdoors.",
+   "rigor_markers_present": [
+    "code_released",
+    "honest_limitations"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Uses real low-level vulnerabilities, a gap in existing work.",
+      "Experimental design appears sound.",
+      "Setting itself is the main contribution."
+     ],
+     "weaknesses": [
+      "Experiment scale is small.",
+      "Results are not especially interesting at this scale.",
+      "Honest-policy safety failures remain possible."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/detecting-llm-subversion-in-vulnerability-patching-settings-gagj"
+  },
+  {
+   "event": "AI Control Hackathon 2026",
+   "place": "3rd",
+   "title": "ActionLens: Pre-Execution Environment Probing for Agent Action Approval",
+   "team": "Udbhav Chitransh, Ashok Kumar \u00b7 Team Udbhav&Ashok",
+   "one_line_claim": "Pre-execution environment probes let a monitor block shell/file attacks that transcript-only monitoring misses.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Moves control evidence from transcript text to target inspection, dry runs, diff previews, and network-risk analysis before execution.",
+   "rigor_markers_present": [
+    "baseline_comparison",
+    "ablation",
+    "false_positive_evaluation",
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Exceptional evaluation volume for a hackathon.",
+      "Sharp insight that risk lies in environmental effects, not only text.",
+      "Honest and well-designed adversarial evasion study."
+     ],
+     "weaknesses": [
+      "Ambiguous-task usefulness cost on BashArena is high.",
+      "Threshold tuning to recover that cost is not explored."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Blocks every stealth attack with no false positives.",
+      "Broad evidence across benchmark, transfer set, and model sweep.",
+      "Finds probe importance varies by task type."
+     ],
+     "weaknesses": [
+      "Reviewer calls it hard to criticize for a hackathon project."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/actionlens-preexecution-environment-probing-for-agent-action-approval-xy22"
+  },
+  {
+   "event": "AI Control Hackathon 2026",
+   "place": "4th",
+   "title": "Undoing the Fix: CVE Regression as an AI Control Setting",
+   "team": "Ivan",
+   "one_line_claim": "CVE regression reframes control evaluation around attacks that remove existing security patches during ordinary coding work.",
+   "type": "benchmark/dataset",
+   "novelty_move": "Treats patch removal, not added backdoors, as the sabotage action and grounds it in real CVEs and SWE-bench tasks.",
+   "rigor_markers_present": [],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-motivated realistic safety concern.",
+      "Solid literature overview.",
+      "Novel focus on removing safety code during refactors."
+     ],
+     "weaknesses": [
+      "Wants datasets covering more failure modes.",
+      "Wants rollouts of attempted and successful attacks plus benign completions."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Exciting use of CVE datasets for setting construction.",
+      "Ambitious scope."
+     ],
+     "weaknesses": [
+      "Usefulness unclear until the main task can serve as cover.",
+      "Setting needs more cleaning and resources."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/undoing-the-fix-cve-regression-as-an-ai-control-setting-f855"
+  },
+  {
+   "event": "AI Control Hackathon 2026",
+   "place": "5th",
+   "title": "Counterfactual Components for AI Control Protocols",
+   "team": "Patryk Wielopolski, Oleksii Furman \u00b7 Team Plausible Counterfactual Guys",
+   "one_line_claim": "Counterfactual reference actions and task perturbations offer composable alternatives to suspicion-score monitoring.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Reframes monitoring as asking what would differ under a trusted reference or perturbed task, rather than scoring subjective suspicion.",
+   "rigor_markers_present": [
+    "baseline_comparison",
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Promising novel control primitives.",
+      "Clear, focused write-up.",
+      "Encourages publication and further study."
+     ],
+     "weaknesses": [
+      "Misses adjacent work on metamorphic testing and counterfactual backdoor detection.",
+      "Needs judge robustness and ablation analysis.",
+      "Needs analysis of degradation when the trusted model is weaker."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Interesting read.",
+      "Both counterfactual ideas merit follow-up.",
+      "Clearly argued."
+     ],
+     "weaknesses": [
+      "Many interacting variables obscure what drives results.",
+      "Trusted-model selection lacks a methodology.",
+      "Perturbation design is underspecified and unvalidated."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/counterfactual-components-for-ai-control-protocols-ibli"
+  },
+  {
+   "event": "AI Control Hackathon 2026",
+   "place": "LinuxArena track winner",
+   "title": "Syscon: Kernel-Level Syscall Monitoring for AI Agent Control in Sandboxed Environments",
+   "team": "Jade Sheffey, Joyce Levine, Joyce Werhane, Willow Taylor \u00b7 Team Syscon",
+   "one_line_claim": "Kernel syscall receipts expose behavior invisible in tool text, but a first monitor integration did not improve detection.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Adds supervisor-side seccomp-bpf syscall receipts outside the agent container, closing an observability gap in the control stack.",
+   "rigor_markers_present": [
+    "negative_null_result",
+    "honest_limitations"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Brilliant, needed idea for ground-truth system monitoring.",
+      "Strong conceptual motivation.",
+      "Clear negative results and multiple attacker model families."
+     ],
+     "weaknesses": [
+      "First monitor was a non-reasoning Gemini Flash model.",
+      "Would benefit from more capable reasoning monitors."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Ground-truth OS telemetry is an interesting control channel.",
+      "Sound experimental design.",
+      "Honest null result is well diagnosed."
+     ],
+     "weaknesses": [
+      "Detection curves not reported at false-positive rates.",
+      "Trajectory-level monitoring may not scale to long trajectories.",
+      "Missing per-monitor and receipt-only analyses."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/syscon-kernellevel-syscall-monitoring-for-ai-agent-control-in-sandboxed-environments-guun"
+  },
+  {
+   "event": "The Technical AI Governance Challenge",
+   "place": "1st",
+   "title": "LidaSim: Testing AI Policies With Persona-Based Simulations",
+   "team": "Linh Le, David Williams-King, Arthur Colle \u00b7 Team Lida Safety",
+   "one_line_claim": "Persona-based multi-agent simulations estimate which compute-governance policies public figures would support.",
+   "type": "tool/artifact",
+   "novelty_move": "Uses scraped persona agents that deliberate and vote to stress-test policy support before real-world consultation.",
+   "rigor_markers_present": [
+    "code_released",
+    "honest_limitations"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Complete multi-agent deliberation system and polished UI built quickly.",
+      "Creative application to governance stress-testing.",
+      "Clear, no-nonsense write-up."
+     ],
+     "weaknesses": [
+      "Does not justify inferring human responses from LLM personas.",
+      "Needs a methodology for simulation validity."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Creative and well-executed.",
+      "Policy simulation is worth exploring.",
+      "Detailed appendix."
+     ],
+     "weaknesses": [
+      "Does not synthesize higher-level policy insights.",
+      "Validation and predictive validity are missing.",
+      "Backtesting suggested as a next step."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/lidasim-testing-ai-policies-with-personabased-simulations-o8x6"
+  },
+  {
+   "event": "The Technical AI Governance Challenge",
+   "place": "2nd",
+   "title": "Markov Chain Lock Watermarking: Provably Secure Authentication for LLM Outputs",
+   "team": "Chengheng Li Chen, Kyuhee Kim \u00b7 Team MCL",
+   "one_line_claim": "A secret Markov-chain watermark over vocabulary partitions authenticates LLM outputs with provable false-positive bounds.",
+   "type": "theory/formalism",
+   "novelty_move": "Combines a secret Markov chain over SHA-256 vocabulary partitions with four theoretical guarantees and a model-free detector.",
+   "rigor_markers_present": [
+    "false_positive_evaluation",
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Nice idea.",
+      "Impressive progress within a hackathon."
+     ],
+     "weaknesses": [],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Theorems match experiments within a small error range.",
+      "Mathematics appears sound.",
+      "Experiments support the framework across three models."
+     ],
+     "weaknesses": [
+      "Detector needs to know the tokenizer, creating a deployment problem.",
+      "Detection collapses at 10% vocabulary overlap.",
+      "Robustness test uses random replacement rather than paraphrase or back-translation."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/markov-chain-lock-watermarking-provably-secure-authentication-for-llm-outputs-l8oe"
+  },
+  {
+   "event": "The Technical AI Governance Challenge",
+   "place": "3rd",
+   "title": "Political Intelligence for AI Safety: The AI Risk Attitudes Survey (AIRAS)",
+   "team": "Nicholas Botti, Jamie Coombs, Anna Konovalenko \u00b7 Team AIRAS",
+   "one_line_claim": "Technical red lines need political support; AIRAS proposes a survey methodology measuring willingness to bear enforcement costs.",
+   "type": "survey/position",
+   "novelty_move": "Shifts from generic AI-regulation polling to measuring hard support for costly international red lines and enforcement.",
+   "rigor_markers_present": [],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Good infrastructure for testing willingness to bear real security costs.",
+      "Survey design includes comprehension gates and tradeoff testing.",
+      "Political viability scorecard clearly maps future policy design."
+     ],
+     "weaknesses": [
+      "Would like comparison with data that ignores cost framing."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Systematically mapping political viability of red lines is valuable.",
+      "Serious survey-design attempt ready for expert red-teaming.",
+      "Dashboard shows actionable output."
+     ],
+     "weaknesses": [
+      "Needs even a small human pilot.",
+      "Related risk-perception and public-opinion literature could be stronger.",
+      "Stated preference versus behavior gap needs investigation."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/political-intelligence-for-ai-safety-the-ai-risk-attitudes-survey-airas-dlpz"
+  },
+  {
+   "event": "The Technical AI Governance Challenge",
+   "place": "4th",
+   "title": "Fingerprinting All AI Cluster I/O Without Mutually Trusted Processors",
+   "team": "Naci Cankaya, Jakub Kry\u015b, Jonathan Ng, Luke Marks, Felix Kr\u00fcckel \u00b7 Team The Bypass Annihilators",
+   "one_line_claim": "A simulated border device fingerprints AI-cluster I/O without mutually trusted processors or closable steganographic channels.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Designs an egress/ingress attestation device that eliminates the need for shared trusted logic and targets analog and steganographic side channels.",
+   "rigor_markers_present": [
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Problem is well framed.",
+      "Interesting alternative to trusted-hardware approaches."
+     ],
+     "weaknesses": [
+      "Encrypted-traffic key escrow would face adoption barriers.",
+      "Does not apply to distributed training."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Substantial work.",
+      "Steg-resistant egress certificates are a critical intersection.",
+      "Any progress on this hard problem is valuable."
+     ],
+     "weaknesses": [
+      "Details were above the reviewer's expertise and not audited."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/fingerprinting-all-ai-cluster-io-without-mutually-trusted-processors-d81l"
+  },
+  {
+   "event": "The Technical AI Governance Challenge",
+   "place": "5th",
+   "title": "Prototyping an Embedded Off-Switch for AI Compute",
+   "team": "James Petrie",
+   "one_line_claim": "A chip-level security block gates AI accelerator output unless an external authority periodically signs a nonce.",
+   "type": "tool/artifact",
+   "novelty_move": "Implements a cryptographic authorization off-switch in HardCaml and validates it in simulation.",
+   "rigor_markers_present": [
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Interesting prototype."
+     ],
+     "weaknesses": [
+      "No discussion of implementation likelihood, conditions, or barriers.",
+      "No argument for tractability."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Very interesting approach."
+     ],
+     "weaknesses": [
+      "Adversarial tampering analysis is missing.",
+      "Reliance on robust TEEs is unclear.",
+      "Trust and backfire risks need analysis."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/prototyping-an-embedded-offswitch-for-ai-compute-65pz"
+  },
+  {
+   "event": "AI Manipulation Hackathon",
+   "place": "1st",
+   "title": "Who Does Your AI Serve? Manipulation By and Of AI Assistants",
+   "team": "Jerome Wynne, Nora Petrova \u00b7 Team Cart Abandonment Issues",
+   "one_line_claim": "AI assistants both carry operator manipulation and resist user manipulation, with model choice driving both.",
+   "type": "empirical measurement",
+   "novelty_move": "Studies manipulation in both directions across three linked studies, including a controlled human experiment.",
+   "rigor_markers_present": [
+    "human_validation",
+    "code_released",
+    "honest_limitations"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Thoughtful, well-executed combination of two related projects.",
+      "Many scenarios with a clear quantitative outcome.",
+      "Human validation study is impressive for a hackathon."
+     ],
+     "weaknesses": [
+      "Ecological validity is limited."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Surprising results.",
+      "Broad scenario and model coverage.",
+      "Readable and compelling."
+     ],
+     "weaknesses": [
+      "Formal statistical significance was not tested."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/who-does-your-ai-serve-manipulation-by-and-of-ai-assistants-77xx"
+  },
+  {
+   "event": "AI Manipulation Hackathon",
+   "place": "2nd",
+   "title": "Eliciting Deception on Generative Search Engines",
+   "team": "Ardysatrio Haroen \u00b7 Team Ardy",
+   "one_line_claim": "Adversarial web content can make browsing LLMs recommend wrong products, though resistance varies sharply by model.",
+   "type": "empirical measurement",
+   "novelty_move": "Extends ranking-manipulation work into factual product misinformation via injected adversarial pages.",
+   "rigor_markers_present": [
+    "baseline_comparison",
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clear, impact-driven contribution.",
+      "Solid methodology for the time constraints.",
+      "Well-organized and well-situated write-up."
+     ],
+     "weaknesses": [
+      "Needs human-in-the-loop validation of automated answer parsing.",
+      "Relies on a single GPT-5 judge."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Realistic, falsifiable, reproducible, and tightly scoped.",
+      "Novel reframing of an existing area.",
+      "Useful in a production setting."
+     ],
+     "weaknesses": [
+      "Heavily builds on existing work.",
+      "Model selection is limited to mini and nano variants.",
+      "Presentation could be cleaner."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/eliciting-deception-on-generative-search-engines-6nuu"
+  },
+  {
+   "event": "AI Manipulation Hackathon",
+   "place": "3rd",
+   "title": "Cross-Linguistic Sycophancy in Frontier LLMs: A Benchmark Study",
+   "team": "Alex Csaky, Tanzim Chowdhury \u00b7 Team Talex",
+   "one_line_claim": "Sycophancy differs by language; Bengali users see more opinion mirroring than English users.",
+   "type": "benchmark/dataset",
+   "novelty_move": "Builds a cross-linguistic sycophancy benchmark covering English, Japanese, and Bengali.",
+   "rigor_markers_present": [
+    "baseline_comparison",
+    "code_released",
+    "honest_limitations"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Strong preliminary evidence of cross-language sycophancy differences.",
+      "Addresses an understudied topic.",
+      "Finding may hold even if causal interpretation is uncertain."
+     ],
+     "weaknesses": [
+      "Only three languages, confounding causal claims.",
+      "Hofstede power-distance explanation is unconvincing.",
+      "Needs expanded language coverage and validation."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Shows why multilingual evaluations matter.",
+      "Well executed.",
+      "Initial results are striking."
+     ],
+     "weaknesses": [
+      "Limited judges, models, and prompting approaches.",
+      "Needs more realistic contexts."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/crosslinguistic-sycophancy-in-frontier-llms-a-benchmark-study-w55u"
+  },
+  {
+   "event": "AI Manipulation Hackathon",
+   "place": "4th",
+   "title": "Agent Attacks via Memory Injection",
+   "team": "Leonidas Raghav, Choong Kai Zhe \u00b7 Team Mem::Poison",
+   "one_line_claim": "Indirect prompt injection can poison persistent agent memory and shift later user-facing behavior.",
+   "type": "new attack/failure-mode demonstration",
+   "novelty_move": "Targets long-term agent memory rather than a single response, showing memory poisoning can outperform a direct system prompt.",
+   "rigor_markers_present": [
+    "baseline_comparison",
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Good-quality, important security research.",
+      "Attack vector is concerning for agentic systems.",
+      "Striking attack success rate on one model."
+     ],
+     "weaknesses": [
+      "Fit to the manipulation scope is uncertain."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Underexplored area of prompt injection into user manipulation.",
+      "Appropriate design.",
+      "Striking results and good follow-up hypotheses."
+     ],
+     "weaknesses": [
+      "Injection mechanics and agent scaffold are unclear.",
+      "Missing appendix with exact prompts and web text.",
+      "Effectiveness on real users is untested."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/agent-attacks-via-memory-injection-izfz"
+  },
+  {
+   "event": "AI Manipulation Hackathon",
+   "place": "5th",
+   "title": "SycophantSee - Activation-based diagnostics for prompt engineering: monitoring sycophancy at prompt and generation time",
+   "team": "Helios, Horatio \u00b7 Team Lyons Den",
+   "one_line_claim": "Prompt framing shifts model activations before generation, enabling activation-based sycophancy diagnostics.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Introduces activation shift metrics that detect sycophancy before generation begins.",
+   "rigor_markers_present": [
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Interesting replication and extension of mechanistic sycophancy detection.",
+      "Novel shift metrics could support detection or prevention.",
+      "Well-written and clear about what is new versus replicated."
+     ],
+     "weaknesses": [
+      "Tension between activation differences and unchanged behavior.",
+      "May overclaim that sandbagging is linearly encoded.",
+      "Causal role of the direction is unclear."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Interesting question and clear related work.",
+      "Pre-generation detection points toward mitigation.",
+      "Prompt rewriting is a plausible application."
+     ],
+     "weaknesses": [
+      "Transfer from small to large models is untested."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/sycophantsee-activationbased-diagnostics-for-prompt-engineering-monitoring-sycophancy-at-prompt-and-generation-time-ys27"
+  },
+  {
+   "event": "AI Control Hackathon 2026",
+   "place": "not placed",
+   "title": "Can Language Models Tell When They Are Being Evaluated?",
+   "team": "Chengheng Li Chen, Kyuhee Kim \u00b7 Team Can Language Models Tell When They Are Being Evaluated?",
+   "one_line_claim": "Models detect evaluation framing above chance, and steering on format and mode directions reduces sandbagging.",
+   "type": "empirical measurement",
+   "novelty_move": "Separates evaluation-format from sandbagging-mode directions and tests cross-family steering transfer.",
+   "rigor_markers_present": [
+    "baseline_comparison",
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Exceptionally strong and rigorous work.",
+      "Format-not-topic finding is actionable for benchmark design.",
+      "Steering closes most of the sandbagging gap with out-of-distribution transfer."
+     ],
+     "weaknesses": [],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Very thorough and impressive.",
+      "Bradley-Terry inter-model comparison is informative.",
+      "Style steering results are clear."
+     ],
+     "weaknesses": [
+      "Mode steering is less applicable to future evaluations.",
+      "Slightly overclaims linear encoding of sandbagging.",
+      "Wants more interventions against evaluation awareness."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/can-language-models-tell-when-they-are-being-evaluated-hyae"
+  },
+  {
+   "event": "AI Control Hackathon 2026",
+   "place": "not placed",
+   "title": "Reasoning-Level Poisoning of Trusted Monitors: A Systematic Red-Teaming Methodology",
+   "team": "TANG Meng",
+   "one_line_claim": "Monitors can be evaded by embedding false but plausible claims from training-data misconceptions into factual text.",
+   "type": "new attack/failure-mode demonstration",
+   "novelty_move": "Targets what a monitor cannot know, not what it cannot do, and packages the attack as a transferable methodology.",
+   "rigor_markers_present": [
+    "code_released",
+    "honest_limitations"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Novel vulnerability class.",
+      "Systematic methodology.",
+      "Findings presented with clarity."
+     ],
+     "weaknesses": [
+      "Claim that web search will not fix it is theoretical, not empirical.",
+      "The 10% misconception hit rate needs more analysis.",
+      "Whether high-quality misconceptions are finite is unexplored."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Sharp distinction between capability and knowledge attacks.",
+      "Defense layer model is a useful framework.",
+      "Fresh-session reproduction demonstrates transferability."
+     ],
+     "weaknesses": [
+      "Threat model is narrower than claimed.",
+      "Focus is textual facts, not behavioral code or infrastructure attacks."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/reasoninglevel-poisoning-of-trusted-monitors-a-systematic-redteaming-methodology-x0th"
+  },
+  {
+   "event": "The Technical AI Governance Challenge",
+   "place": "not placed",
+   "title": "Same Question, Different Lies: Cross-Context Consistency (C3) for Black-Box Sandbagging Detection",
+   "team": "Yulong Lin \u00b7 Team sandbaggers",
+   "one_line_claim": "Black-box sandbagging detection via inconsistent answers to paraphrased questions; lie detectors largely track model identity.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Exploits the asymmetry between consistent confusion and strategically inconsistent feigned incompetence, and critiques identity confounds in lie detectors.",
+   "rigor_markers_present": [
+    "baseline_comparison",
+    "false_positive_evaluation",
+    "code_released",
+    "honest_limitations"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Lie-detector takedown is a valuable negative result.",
+      "C3 is simple and deployable.",
+      "Transparent about adversarial limitations."
+     ],
+     "weaknesses": [
+      "Motivated adversaries could train for consistent deception.",
+      "Recall falls to 4.7% against deterministic error recipes.",
+      "Only covers benchmarks with checkable answers."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Outstanding and enjoyable to read.",
+      "Systematic explanation-inconsistency insight has impact potential.",
+      "Baseline critique is independently valuable."
+     ],
+     "weaknesses": [
+      "Adversarial robustness is the key open question.",
+      "No testing against RL-optimized evasion.",
+      "Wants illustrative examples of inconsistent explanations."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/same-question-different-lies-crosscontext-consistency-c3-for-blackbox-sandbagging-detection-7r2i"
+  },
+  {
+   "event": "The Technical AI Governance Challenge",
+   "place": "not placed",
+   "title": "EU AI Act Compliance Form Builder: Automating Article 53 Documentation for General Purpose AI Models",
+   "team": "Andrew Byrley",
+   "one_line_claim": "An MCP server automates EU AI Act Article 53 documentation from model cards.",
+   "type": "tool/artifact",
+   "novelty_move": "Packages Article 53 form completion as an MCP server and evaluates extraction against a rubric.",
+   "rigor_markers_present": [
+    "baseline_comparison",
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "One of the most useful submissions reviewed.",
+      "Working tooling validated with a clear rubric across models.",
+      "Finding that model cards lack regulator-desired information is a governance contribution."
+     ],
+     "weaknesses": [],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Immediately useful.",
+      "Model-card gap finding is valuable on its own.",
+      "Clear accuracy and completeness split with per-section analysis."
+     ],
+     "weaknesses": [
+      "Needs source highlighting and confidence scores.",
+      "Pipeline should be hardened against template changes."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/eu-ai-act-compliance-form-builder-automating-article-53-documentation-for-general-purpose-ai-models-z40g"
+  },
+  {
+   "event": "AI Manipulation Hackathon",
+   "place": "not placed",
+   "title": "AI Chat Analyzer",
+   "team": "Trevor Lohrbeer, Darijan Ducic, Sascha Held \u00b7 Team AI Chat Analyzer",
+   "one_line_claim": "A web tool lets researchers score manipulation in AI conversations and calibrate scoring models against human ratings.",
+   "type": "tool/artifact",
+   "novelty_move": "Provides a calibration interface for translating researcher judgment into scoring prompts, wrapping Inspect and Petri.",
+   "rigor_markers_present": [
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "High-leverage tool for researcher calibration.",
+      "Wraps established Inspect and Petri backends.",
+      "Step Mode is useful for debugging trajectory-level manipulation."
+     ],
+     "weaknesses": [
+      "Frontend-heavy data management limits scalability.",
+      "Should move dataset handling to the Python backend."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/ai-chat-analyzer-wyud"
+  },
+  {
+   "event": "AI Manipulation Hackathon",
+   "place": "not placed",
+   "title": "Testing manipulation tendencies of LLMs when crafting PR statements",
+   "team": "Jakub Nowak, Marcel Windys \u00b7 Team Furious Turnips",
+   "one_line_claim": "LLMs selectively disclose facts in corporate crisis PR, omitting context even without explicit deceptive instructions.",
+   "type": "empirical measurement",
+   "novelty_move": "Builds a corporate crisis-communication scenario with controlled fact sets and varies incident severity.",
+   "rigor_markers_present": [
+    "baseline_comparison",
+    "code_released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Interesting corporate crisis-communication evaluation.",
+      "Specific setup is new.",
+      "Highlights tradeoffs between duties to users and deployers."
+     ],
+     "weaknesses": [
+      "Not totally novel; corporate deception has been studied.",
+      "Needs systematic prompt variation and pressure levels."
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Strong, realistic evaluation.",
+      "Clear scenario design and well-defined criteria.",
+      "Cross-model comparisons are convincing."
+     ],
+     "weaknesses": [
+      "Should analyze which facts are omitted or reframed.",
+      "Needs to separate strategic minimization from verbosity or politeness."
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/testing-manipulation-tendencies-of-llms-when-crafting-pr-statements-oidt"
+  },
+  {
+   "event": "The Secure Program Synthesis Hackathon (May 2026)",
+   "place": "1st",
+   "title": "Vibe-Coding Specs: Eliciting, Editing, and Verifying Specifications for AI Coding Agents",
+   "team": "2 members: Linh Le, David Williams-King (Team Lida Safety, Montreal)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Specifications emerge iteratively with the user, so the right pipeline is editable, independently verifiable spec artifacts, not one-shot generation",
+   "type": "new defense/monitor/method (tooling pipeline)",
+   "novelty_move": "Iterate-and-export framing operationalizing 'specifications don't exist'; mutation testing of specifications",
+   "rigor_markers_present": [
+    "baseline comparison (LLM judge at ~300x cost)",
+    "ablation",
+    "code released",
+    "mutation testing",
+    "reported FPR (2.2%)"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Working NL-to-Lean loop with real type-checking; released code; genuine ablation",
+      "Thorough, polished execution and presentation"
+     ],
+     "weaknesses": [
+      "Headline accuracy measured against the authors' own labels (circularity with author intent)",
+      "Codegen gain reflect harness/parsing work rather than spec-layer improvement"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Transparently honest about the circularity problem",
+      "Clear future directions (semantic adequacy, measuring circularity)"
+     ],
+     "weaknesses": [],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF link not opened)",
+   "url": "https://apartresearch.com/sprints/projects/vibecoding-specs-eliciting-editing-and-verifying-specifications-for-ai-coding-agents-re3p"
+  },
+  {
+   "event": "The Secure Program Synthesis Hackathon (May 2026)",
+   "place": "2nd",
+   "title": "Where to Look: Energy-Based Fault Localization for Verus Vericoding",
+   "team": "1 member: Guy Nachshon (Team Oz Labs, Tel Aviv)",
+   "reports_pages": "not shown",
+   "one_line_claim": "A 1.5B energy-based model beats frontier LLMs at per-line fault localization in Verus, while LLMs win whole-implementation ranking and repair \u2014 plus the project audits and documents a data leak in its own model",
+   "type": "new defense/monitor/method (model/artifact) + benchmark",
+   "novelty_move": "Small specialist model winning a sub-layer vs LLMs; self-audit of a pretraining data leak (// FAILS marker) reported as headline finding",
+   "rigor_markers_present": [
+    "baseline comparison (frontier LLMs, static baselines)",
+    "ablation-like strip-FAILS audit",
+    "negative result reported (no repair-rate advantage)",
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Strong evaluation discipline vs baselines, LLMs, CEGIS loop",
+      "Valuable careful negative-result/marker-leak audit"
+     ],
+     "weaknesses": [
+      "No concrete repair-loop benefit demonstration",
+      "Specialist underperforms frontier LLMs overall"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Transparent strip-FAILS leak audit"
+     ],
+     "weaknesses": [
+      "Does not outperform zero-shot LLM baselines; evaluation statistically underpowered; weak on ensure clauses"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF link not opened)",
+   "url": "https://apartresearch.com/sprints/projects/where-to-look-energybased-fault-localization-for-verus-vericoding-0cdy"
+  },
+  {
+   "event": "The Secure Program Synthesis Hackathon (May 2026)",
+   "place": "3rd",
+   "title": "Proof Assistance as Verification Oracle for Porting",
+   "team": "2 members: Abhinav Chand, Balaji R (Team Vajrapani, India/US)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Translating AI-generated Rust ports to Dafny and proving Zig-derived behavioral theorems exposes real porting bugs",
+   "type": "tool/artifact (verification harness applied to real-world case study)",
+   "novelty_move": "First hackathon-scale application to a real industry rewrite (Bun); two bugs reported against production open-source code",
+   "rigor_markers_present": [
+    "real-world validation (bugs merged upstream)",
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Real-world results: bugs reported and merged in production code",
+      "Highly relevant to replatforming projects"
+     ],
+     "weaknesses": [
+      "Results section lacks concrete examples and stats; alignment discussion untied to the write-up"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-thought-out tool; genuine bug findings show real impact"
+     ],
+     "weaknesses": [
+      "Dafny translation arbitrary (Rust-native verifier sensible); Claude Code translation adds trust concerns; property elicitation not comprehensive"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF link not opened)",
+   "url": "https://apartresearch.com/sprints/projects/proof-assistance-as-verification-oracle-for-porting-ma88"
+  },
+  {
+   "event": "The Secure Program Synthesis Hackathon (May 2026)",
+   "place": "4th",
+   "title": "AgentSpecGap",
+   "team": "1 member: Amish (Team solo-team, Jersey City, NJ)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Safety rules scattered in agent prompts/configs can be extracted, compiled, and enforced at runtime before tool calls execute",
+   "type": "tool/artifact (runtime policy enforcement pipeline)",
+   "novelty_move": "Turning the implicit scattered policy layer of deployed agents into an auditable, enforceable rule set",
+   "rigor_markers_present": [
+    "mutated unsafe traces vs safe traces (positive/negative eval)",
+    "code released",
+    "honest limitations on eval strength"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Practical extract-compile-enforce pipeline verified on safe and mutated traces",
+      "Concrete end-to-end system with audit trails"
+     ],
+     "weaknesses": [
+      "Fixed, low-expressiveness policy language; strongest-spec synthesis is future work"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Unusually concrete (runnable pipeline, audit trails, good examples); enforce/review/eval separation sensible"
+     ],
+     "weaknesses": [
+      "Hand-authored mutants matched to operators; extraction partly fixture-fallback so LLM quality unmeasured; no ground-truth extraction benchmark"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF link not opened)",
+   "url": "https://apartresearch.com/sprints/projects/agentspecgap-bku6"
+  },
+  {
+   "event": "The Secure Program Synthesis Hackathon (May 2026)",
+   "place": "5th",
+   "title": "DiffSpec-PBT",
+   "team": "1 member: Fatimah Emad Eldin (Team DiffSpec-PBT, Saudi Arabia)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Prompting multiple LLM spec authors and property-testing spec pairs surface concrete counterexamples of intent drift between specifications",
+   "type": "new defense/monitor/method (evaluation harness)",
+   "novelty_move": "Differential/spec-vs-spec disagreement as a way to sidestep needing a golden reference spec; counterexample classification",
+   "rigor_markers_present": [
+    "baseline/real-world confirmation task",
+    "code released",
+    "empirical examination across fixture pairs"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Neat, cleanly implemented PBT-based validation scheme"
+     ],
+     "weaknesses": [
+      "Sound/over/under-constrained logic mishandles specs that are themselves incorrect (mislabels underconstrained)"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Interesting idea with well-thought-out execution; escapes SPS circularity; unmodified real-world task adds credibility; honest write-up"
+     ],
+     "weaknesses": [
+      "'Oracle' wording overstates the LLM's role; concern that correlated training data makes failures correlated across models"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF link not opened)",
+   "url": "https://apartresearch.com/sprints/projects/diffspecpbt-3wba"
+  },
+  {
+   "event": "The Secure Program Synthesis Hackathon (May 2026)",
+   "place": "not placed (contrast)",
+   "title": "Hollow Proofs: Measuring LLM Dishonesty with a Formal Verifier",
+   "team": "1 member: Orpheus Lummis (Team Hollow Proofs, Montreal)",
+   "reports_pages": "not shown",
+   "one_line_claim": "A deterministic Verus verifier can mechanically detect LLM dishonesty (hollow proofs and grounded lies) without a judge LLM or human rater",
+   "type": "benchmark/dataset (121 Verus tasks + harness)",
+   "novelty_move": "Eliciting observations instead of predictions to separate lying from miscalibration; abstention when belief fidelity is too low",
+   "rigor_markers_present": [
+    "styled honesty-withholding mechanism",
+    "code released; pinned versions",
+    "negative/null result reported (honest pilot)",
+    "honest limitations"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Deterministic dishonesty oracle; prediction-vs-observation distinction does real work; repo fully backs the report"
+     ],
+     "weaknesses": [
+      "Headline null is one model family at k=1 (needs a panel)",
+      "Belief elicitation fidelity low (worse than always guessing); thin pressure cue"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Innovative use of a deterministic verifier to distinguish lying from miscalibration",
+      "Novel observation-elicitation contribution"
+     ],
+     "weaknesses": [
+      "Only 2 models; low belief-elicitation fidelity limits grounded-lie reliability; no Lean/Dafny validation"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF link not opened)",
+   "url": "https://apartresearch.com/sprints/projects/hollow-proofs-measuring-llm-dishonesty-with-a-formal-verifier-x7la"
+  },
+  {
+   "event": "The Secure Program Synthesis Hackathon (May 2026)",
+   "place": "not placed (contrast)",
+   "title": "SpecFault-Dafny: A Class-Stratified Scorecard for Verifier-Passing Specification Faults",
+   "team": "1 member: Hugo Nguyen (Los Llanos de Aridane)",
+   "reports_pages": "not shown",
+   "one_line_claim": "A 45-item Dafny benchmark of verifier-passing spec faults shows a hybrid multi-method validator catches 100% of bad specs with 0% control false positives",
+   "type": "benchmark/dataset",
+   "novelty_move": "Class-stratified verifier-passing bad specs with clean controls and per-class recall",
+   "rigor_markers_present": [
+    "false-positive evaluation (clean controls)",
+    "baseline comparison (five validators)",
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [],
+     "weaknesses": [
+      "Wants runs on non-curated tests; more testing tools for interaction insight"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-scoped and well-implemented"
+     ],
+     "weaknesses": [],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF link not opened); identified as non-placed because it appears in the hackathon page's entry list and neither in the announced 5 winners nor do any reviews praise placement",
+   "url": "https://apartresearch.com/sprints/projects/specfaultdafny-a-classstratified-scorecard-for-verifierpassing-specification-faults-q67o"
+  },
+  {
+   "event": "Global South AI Safety Hackathon (Jun 2026)",
+   "place": "1st (Latin America regional winner; event has regional winners, not a ranked global top-5)",
+   "title": "Coldron",
+   "team": "3 members: Leonardo P\u00e1rraga, Angie Giraldo, V\u00edctor Gelves (Team ColDron, Bogot\u00e1)",
+   "reports_pages": "not shown",
+   "one_line_claim": "In Colombia documented drone attacks are all human-operated today, so there is a narrow prevention window to set weapon-autonomy governance rules before autonomy leaps",
+   "type": "empirical measurement (documented-attacks dataset) + governance/position artifacts",
+   "novelty_move": "Bringing AI-safety tooling (bill-of-materials discipline, tiering) to lethal autonomous weapons from inside an on-going Global South conflict with documented harm",
+   "rigor_markers_present": [
+    "open dataset with schema",
+    "human validation (inter-coder kappa\u22480.70 per review)",
+    "code/data released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Excellent, under-studied evidence base for drone harms",
+      "Actionable policy proposals tied to Colombian stakeholders and frameworks"
+     ],
+     "weaknesses": [
+      "Wants decision-support systems included, Gaza examples, IHL expert review, victims' perspectives"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clear next step (link to structured data sources); open about method limits"
+     ],
+     "weaknesses": [
+      "100% human-operated result leaves tiering shown only on constructed examples",
+      "Unvalidated operational protocol; truncated conclusion"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Genuinely new framing from inside a live conflict; real artifacts (schema-valid dataset, computed kappa, anchored figures)"
+     ],
+     "weaknesses": [
+      "Inconsistent counts (42/39/33/34; civilian tally 12 vs 11) undermine the central empirical claim",
+      "Tiering discrimination never shown on real data"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF not opened)",
+   "url": "https://apartresearch.com/sprints/projects/coldron-lj2w"
+  },
+  {
+   "event": "Global South AI Safety Hackathon (Jun 2026)",
+   "place": "1st (Latin America regional winner)",
+   "title": "Probing Latent Colombian Identity Inferences in Qwen2.5-7B with Natural Language Autoencoders",
+   "team": "6 members: Gilber Alexis Corrales Gallego, Pablo Santiago Potes Velasco, Jhoan Stevan Mosquera Ortiz, Nicol\u00e1s Lozano Mazuera, Mar\u00eda del Mar Garc\u00eda Matabanchoy, \u00d3scar Juli\u00e1n P\u00e9rez Ladino (Team UAO SAFETY, Cali)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Qwen2.5-7B may internally represent Colombian identity/stereotype cues before verbalizing them, visible via natural-language autoencoders",
+   "type": "empirical measurement / interpretability pilot",
+   "novelty_move": "First activation-level look at latent nationality inferences for Colombian Spanish (a low-studied variety)",
+   "rigor_markers_present": [
+    "matched pairs with neutral controls",
+    "negative/confounded framing (explicitly descriptive, not statistically powered)"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Critical but underexplored problem; meaningful early insights"
+     ],
+     "weaknesses": [
+      "Pilot with limited sample; needs bigger dataset"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Sound framing; innovative NLA use; well-structured"
+     ],
+     "weaknesses": [
+      "Needs a more robust sample"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Careful design; nice separation of any-nationality vs Colombia-specific mentions"
+     ],
+     "weaknesses": [
+      "Very underpowered (n=5 per cell, one layer); needs second coder and scaled follow-up"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Consistent epistemic honesty about scope; appropriate statistics for scale"
+     ],
+     "weaknesses": [
+      "Qualitative organization unclear; some results under-discussed"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF not opened)",
+   "url": "https://apartresearch.com/sprints/projects/probing-latent-colombian-identity-inferences-in-qwen257b-with-natural-language-autoencoders-mucf"
+  },
+  {
+   "event": "Global South AI Safety Hackathon (Jun 2026)",
+   "place": "1st (Latin America regional winner)",
+   "title": "Thought Anchors for Social Bias: Which Reasoning Steps Matter in Extended Thinking LLMs on Latin American Scenarios",
+   "team": "1 member: Andres Felipe Mosquera Hernandez (Bogota)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Chunk-level resampling shows bias-relevant reasoning steps are often general reasoning/recall, not overt stereotype invocation",
+   "type": "empirical measurement (adapted diagnostic method)",
+   "novelty_move": "Adapting thought-anchor resampling to social-bias measurement; first step-level view of bias entry into reasoning",
+   "rigor_markers_present": [
+    "multiple resampling repeats (K=3)",
+    "negative/preliminary framing reported",
+    "code released with repro commands"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Opens a previously nonexistent research direction",
+      "Counterintuitive, potentially significant finding; clear scale-up plan"
+     ],
+     "weaknesses": [
+      "K=3 too low; no human validation of labels; small pilot subset"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Creative extension of Thought Anchors; reviewer-friendly repo with repro commands and cost disclosure"
+     ],
+     "weaknesses": [
+      "Video unplayable"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Good problem choice (agentic harness angle); interesting result"
+     ],
+     "weaknesses": [
+      "Methodology validity hard to verify quickly; jargon-heavy presentation"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Focused contribution; honest about limits; excellent writing and reproducibility"
+     ],
+     "weaknesses": [
+      "80-item proof-of-concept needs full-benchmark scaling and coder agreement"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF not opened)",
+   "url": "https://apartresearch.com/sprints/projects/thought-anchors-for-social-bias-which-reasoning-steps-matter-in-extended-thinking-llms-on-latin-american-scenarios-27ti"
+  },
+  {
+   "event": "Global South AI Safety Hackathon (Jun 2026)",
+   "place": "1st (Asia-Pacific regional winner)",
+   "title": "STEER - Mech interp-based white box attack on LLMs",
+   "team": "1 member: Joshua Adrian Cahyono (Team JvThunder, Singapore)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Gradient attribution against the refusal direction, plus iterative low-resource-language rewriting, collapses refusal while preserving harmful intent",
+   "type": "new attack/failure-mode demonstration",
+   "novelty_move": "Turns a mech-interp finding into an attack; refusal-direction FLD sharpness as structural vulnerability metric; cross-lingual angle",
+   "rigor_markers_present": [
+    "baseline comparison (vs CSRT)",
+    "breadth (six models, >3,000 attempts)",
+    "ablation candidate identified (paraphrase confound)",
+    "ethics/dual-use framing"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Good importance story and excellent presentation"
+     ],
+     "weaknesses": [
+      "Rewriting step confounded with language swapping; needs separating side-by-side test"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Concrete dual-use framing of mech interp; cross-lingual angle novel"
+     ],
+     "weaknesses": [
+      "Impact depends on telling researchers circuits are dual-use (already known); impact path via external safeguards untested"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Neat FLD double use as vulnerability metric; six-model breadth; transfer to closed model without access; responsible ethics handling"
+     ],
+     "weaknesses": [
+      "Paraphrase confound not isolated; causal 'decision variable' claim not tested; no defence implemented"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF not opened)",
+   "url": "https://apartresearch.com/sprints/projects/steer-mech-interpbased-white-box-attack-on-llms-ftaw"
+  },
+  {
+   "event": "Global South AI Safety Hackathon (Jun 2026)",
+   "place": "1st (Asia-Pacific regional winner)",
+   "title": "Do Multilingual Vision-Language Models Abstain under Cross-Modal Conflict in Low-Resource Languages?",
+   "team": "3 members: Anvesh Reddy Lankala, Vicky Feliren, Akansh Jain (Team_Team_AVA, Hyderabad)",
+   "reports_pages": "not shown",
+   "one_line_claim": "VLMs override correct perception with misleading text in low-resource languages even when the truth is linearly decodable internally; a steer mitigates it",
+   "type": "benchmark/dataset + empirical measurement with steering fix",
+   "novelty_move": "Perception-control paired design and 'override share' metric to separate perception error from text-driven override; cross-lingual steering transfer",
+   "rigor_markers_present": [
+    "paired control design",
+    "nine-VLM breadth",
+    "probing accuracy as validation",
+    "code and HF benchmark released",
+    "honest tradeoff (steering hurts perception)"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Strong override-share metric and design; breadth (9 VLMs, 3 languages, 4 datasets)"
+     ],
+     "weaknesses": [
+      "More languages and newer models; steering perception cost analysis"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well thought out"
+     ],
+     "weaknesses": [
+      "Unclear translation/cultural checking; caution-overeffects tradeoff unaddressed"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Nice breadth across small models; logical presentation with figures"
+     ],
+     "weaknesses": [
+      "Tokenization limitations not fully treated; wants larger models and more step-by-step detail"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Important blind-spot insight; informative ranking method"
+     ],
+     "weaknesses": [
+      "Causal language-resource story needs direct controls (training tokens, fertility)"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-scoped; valuable metric; impressive breadth; codebase end-to-end"
+     ],
+     "weaknesses": [
+      "Area overall well studied (novelty = combination); MCQ setup unrealistic; small cells; dataset-generated artifacts; steering tradeoff"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF not opened)",
+   "url": "https://apartresearch.com/sprints/projects/do-multilingual-visionlanguage-models-abstain-under-crossmodal-conflict-in-lowresource-languages-hcsp"
+  },
+  {
+   "event": "Global South AI Safety Hackathon (Jun 2026)",
+   "place": "1st (Africa regional winner)",
+   "title": "Confidently Wrong: Measuring and Mitigating Calibration Risks in LLMs for African Languages",
+   "team": "3 members: Similoluwa Okunowo, Eliud Koto, Dagmawi Misker (Team AIMS South Africa)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Open LLMs in African languages stay highly confident while accuracy drops, and per-language temperature scaling restores near-English calibration",
+   "type": "empirical measurement + deployable fix",
+   "novelty_move": "First calibration-overconfidence measurement across African languages; cheap no-retrain intervention",
+   "rigor_markers_present": [
+    "bootstrap confidence intervals",
+    "held-out calibration split",
+    "multiple metrics",
+    "interventions actually tested",
+    "limitations near-chance accuracy acknowledged"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Potentially significant continental safety risk; first such cross-model calibration attempt"
+     ],
+     "weaknesses": [
+      "Could be written for a broader audience"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Important insight, rigorous execution, immediately actionable temperature-scaling result"
+     ],
+     "weaknesses": [
+      "Deployment framework proposed but not empirically validated"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Beyond-diagnosis testing of interventions; CIs, held-out split, excellent presentation"
+     ],
+     "weaknesses": [
+      "Near-chance accuracy on AfriMMLU confuses overconfidence vs no-signal; fix needs scarce in-language calibration data"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-executed, important problem"
+     ],
+     "weaknesses": [
+      "Only 4 open models, 2 benchmarks; no frontier models; low benchmark ceiling questions confidence signal itself"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF not opened)",
+   "url": "https://apartresearch.com/sprints/projects/confidently-wrong-measuring-and-mitigating-calibration-risks-in-llms-for-african-languages-hrve"
+  },
+  {
+   "event": "Global South AI Safety Hackathon (Jun 2026)",
+   "place": "not placed (contrast)",
+   "title": "PowerBench: a multilingual study of large language model refusal in power-grabbing requests",
+   "team": "6 members: Gaspar Labastie, Wendy Brau, Tomas Korenblit, Tom\u00e1s Gimenez Molina, Gonzalo Agust\u00edn Heredia, Nicolas Martorell (Buenos Aires)",
+   "reports_pages": "not shown",
+   "one_line_claim": "First benchmark of LLM willingness to help with power-grabbing finds low refusal, home-language-tilted safety, and harm-sensitivity rather than power-concentration sensitivity",
+   "type": "benchmark/dataset",
+   "novelty_move": "First public benchmark for power-grabbing with factorial design and control conditions",
+   "rigor_markers_present": [
+    "control conditions (empowerment, disempowerment)",
+    "open benchmark and code"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Interesting and important risk; clean category separation made findings interpretable"
+     ],
+     "weaknesses": [
+      "Add implicit power-grabbing framings"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-written"
+     ],
+     "weaknesses": [
+      "Wants raw samples in appendix; non-significant result after correction stated as a claim in the abstract"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Attention-grabbing core idea; sensible scenario axes; well-reported results"
+     ],
+     "weaknesses": [
+      "Wants human-vs-judge agreement and a capability measure"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Fills a huge gap; exemplary limitations section"
+     ],
+     "weaknesses": [
+      "Wants kappa-calibrated judge, more prompts per cell, more models"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Feels like a real benchmark for a neglected failure mode; novel through theme lens"
+     ],
+     "weaknesses": [
+      "Single LLM judge without human labels; retired model in the panel"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF not opened); identified as non-placed: not in the event's announced winners or honorable mentions, and a review says its weaknesses capped scoring context",
+   "url": "https://apartresearch.com/sprints/projects/powerbench-a-multilingual-study-of-large-language-model-refusal-in-powergrabbing-requests-gkou"
+  },
+  {
+   "event": "Global South AI Safety Hackathon (Jun 2026)",
+   "place": "not placed (contrast)",
+   "title": "FertiScope: Measuring the Multilingual Tokenizer Tax in Low-Resource Asian Languages",
+   "team": "3 members: Miles Whiticker, Leo Deng, Antoine Pedretti (Team Da Nang jam team, Da Nang)",
+   "reports_pages": "not shown",
+   "one_line_claim": "An open tool shows lower-resource Asian languages pay up to 11.6x English token cost, though no degradation yet within advertised context windows",
+   "type": "tool/artifact (measurement web tool) + null/empirical pilot",
+   "novelty_move": "Known research issue turned into an actionable deployment-tooling artifact with cost framing",
+   "rigor_markers_present": [
+    "deterministic measurements",
+    "cross-check against independent benchmarks",
+    "null result reported (needle-in-haystack)",
+    "novelty question raised by reviewers"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clear explanation; couples cost to context capacity and fairness; strong reproducibility"
+     ],
+     "weaknesses": [
+      "Expand multi-turn pilot; script-native marker question"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [],
+     "weaknesses": [
+      "Input-output asymmetry edge case (short cheap queries, long expensive outputs)"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Actionable tool framing; clean thinking; honest null pilot"
+     ],
+     "weaknesses": [
+      "Only 50 FLORES sentences; degradation untested in the window range where it likely occurs"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well executed, practically useful",
+      "Careful exact-vs-estimated distinction; avoids overclaiming"
+     ],
+     "weaknesses": [
+      "Area already well studied (novelty = tooling and regional framing); small corpus; limited tokenizer coverage"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium (page opened; PDF not opened); identified as non-placed: appears in the hackathon page's entry list, absent from the announced winners and honorable mentions",
+   "url": "https://apartresearch.com/sprints/projects/fertiscope-measuring-the-multilingual-tokenizer-tax-in-lowresource-asian-languages-1keb"
+  },
+  {
+   "event": "AIxBio Hackathon (Apr 2026)",
+   "place": "1st (Cross-Track winner + Track 4 winner)",
+   "title": "Bypassing Current Biosecurity Screens with AI Designed Proteins and Closing the Gap with Edge-AI Functional Screening",
+   "team": "2 members: Mackenzie Noon, Grace Oualline (Reviews: 2)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Existing screens miss AI-redesigned proteins, and their own functional screening model (Capiti) catches them, deployed on physical edge hardware",
+   "type": "new defense/monitor/method (AI model + hardware artifact)",
+   "novelty_move": "Attack-and-defend pairing plus edge deployment demonstrating physical interruption of emulated synthesis runs",
+   "rigor_markers_present": [
+    "code released (multiple repos)",
+    "validation concern flagged by reviewer (functional-variant confirmation and structural work missing)"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous (content seen only via search-index excerpt of the page)",
+     "strengths": [
+      "Capiti catching functional variants is strong if confirmed; interesting further-exploration ideas"
+     ],
+     "weaknesses": [
+      "Functional status of flagged variants unverified (could be flagging benign ones); no structural/in vitro confirmation (understandably)"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "low (page not openable from this session; content from search-index excerpt of the actual project page)",
+   "url": "https://apartresearch.com/project/bypassing-current-biosecurity-screens-with-ai-designed-proteins-and-closing-the-gap-with-edgeai-functional-screening-oh9w"
+  },
+  {
+   "event": "AIxBio Hackathon (Apr 2026)",
+   "place": "2nd (Cross-Track winner + Track 1 winner)",
+   "title": "OliGraph: graph-based screening of large oligopools",
+   "team": "3 members: Ryan Teo, Christopher Kent, Samuel A.R. Richardson (Reviews: 3)",
+   "reports_pages": "not shown",
+   "one_line_claim": "Assembling oligonucleotide pools into a graph enables contig-level screening of fragments that individually evade gene-length threshold detection",
+   "type": "tool/artifact (open-source screening method)",
+   "novelty_move": "First (per page framing) tractable oligopool assembly-and-screening path with a blinded validation and a safety-relevant rule implication",
+   "rigor_markers_present": [
+    "blinded simulated-pool study (10 pools, four risk categories)",
+    "baseline comparison (per-oligo BLAST screening mostly failed)",
+    "code released",
+    "runtime performance claim"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous (excerpted)",
+     "strengths": [
+      "Important work addressing oligo-synthesis vulnerability; worth developing further"
+     ],
+     "weaknesses": [],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous (excerpted)",
+     "strengths": [
+      "Exciting project; easy-to-follow write-up; impressive results; limitations stated very clearly"
+     ],
+     "weaknesses": [
+      "Write-up could have been shorter"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "low (page not openable; content from search-index excerpt)",
+   "url": "https://apartresearch.com/project/oligraph-graphbased-screening-of-large-oligopools-nkwt"
+  },
+  {
+   "event": "AIxBio Hackathon (Apr 2026)",
+   "place": "3rd (Cross-Track winner + Track 4 winner)",
+   "title": "Benchmarking Obfuscated Split Order Detection Methods",
+   "team": "3 members: Prateek Garg, Phil Palmer, Adam Jones",
+   "reports_pages": "not shown",
+   "one_line_claim": "Split-order detection against obfuscated DNA orders is technically tractable, with an open-source benchmark for evaluating detection methods",
+   "type": "benchmark/dataset + evaluation framework",
+   "novelty_move": "Structured benchmarking (incl. obfuscation realism) of a major known screening vulnerability (split orders)",
+   "rigor_markers_present": [
+    "open-source code released",
+    "review flags precedence assumption (screening-level differences)"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous (excerpted)",
+     "strengths": [],
+     "weaknesses": [
+      "Point out scope placement: split orders bypass commercial screening, while benchtops lack screening entirely"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "low (page not openable; content from search-index excerpt)",
+   "url": "https://apartresearch.com/project/benchmarking-obfuscated-split-order-detection-methods-vsaf"
+  },
+  {
+   "event": "AIxBio Hackathon (Apr 2026)",
+   "place": "4th (Cross-Track winner; catalog cards it as Track 4 + Track 1 Spotlight per catalog excerpt)",
+   "title": "Fragment Assembly Risk Scorer (FARS): Empirical Characterization of Split-Order Detection Boundaries for Benchtop DNA Synthesizers",
+   "team": "1 member: Hritika Chaturvedi",
+   "reports_pages": "not shown",
+   "one_line_claim": "An assembly-aware scorer detects most split-order attacks on real 1918 H1N1 segments with zero false positives, doubling the baseline's partial-order detection",
+   "type": "new attack/failure-mode characterization + defense scoring",
+   "novelty_move": "First claimed empirical head-to-head of assembly-aware vs individual-sequence screening on real genomic data",
+   "rigor_markers_present": [
+    "baseline comparison (commec-style individual-sequence baseline)",
+    "false-positive evaluation (zero FPs)",
+    "large synthetic order set (960 orders)"
+   ],
+   "scores": null,
+   "reviews": [],
+   "confidence": "low (page not openable; placement and abstract from search-index excerpt of the actual project page)",
+   "url": "https://apartresearch.com/project/fragment-assembly-risk-scorer-fars-empirical-characterization-of-splitorder-detection-boundaries-for-benchtop-dna-synthesizers-e4u7"
+  },
+  {
+   "event": "AIxBio Hackathon (Apr 2026)",
+   "place": "5th (Cross-Track winner + Track 1 winner)",
+   "title": "PROTEUS (PROTein Evaluation for Unusual Sequences): Structure-Informed Safety Screening for de novo and Evasion-Prone Protein-Coding Sequences",
+   "team": "2 members: Nathan Khosla, Aleksandra Wosztyl",
+   "reports_pages": "not shown",
+   "one_line_claim": "Combining sequence alignment with Foldseek/DALI structure screening against toxin databases flags de novo ricin analogues that sequence screening misses",
+   "type": "new defense/monitor/method (multi-tier screening pipeline)",
+   "novelty_move": "Structure-based replacement for sequence-homology screening against AI-designed low-homology sequences; tested on 24 de novo ricins",
+   "rigor_markers_present": [
+    "validation panel (toxins, benign, mimics, analogues)",
+    "evasion mode tested (partial synthesis)"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous (excerpted)",
+     "strengths": [
+      "Visuals make structural bioinformatics accessible to non-specialist judges and policymakers; overall strong work"
+     ],
+     "weaknesses": [],
+     "score": null
+    }
+   ],
+   "confidence": "low (page not openable; content from search-index excerpt)",
+   "url": "https://apartresearch.com/project/proteus-protein-evaluation-for-unusual-sequences-structureinformed-safety-screening-for-de-novo-and-evasionprone-proteincoding-sequences-vtve"
+  },
+  {
+   "event": "AIxBio Hackathon (Apr 2026)",
+   "place": "not placed (contrast)",
+   "title": "BSSBreach: Testing designer protein sequences for biosecurity evasion capabilities",
+   "team": "3 members: Adam Streck, Daniel Cermann, Jan Berndt",
+   "reports_pages": "not shown",
+   "one_line_claim": "A pipeline testing screening-tool penetration shows AI-diffusion variants of dangerous sequences bypass a screening tool while standard manipulations are caught",
+   "type": "new attack/failure-mode demonstration (pen-test framework)",
+   "novelty_move": "Pen-testing toolkit framing for screening tools; explicit diffusion-variant evasion finding",
+   "rigor_markers_present": [
+    "benchmark-style transformation pipeline",
+    "review names the main weakness as limited experimental depth"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous (excerpted)",
+     "strengths": [
+      "Grounded evaluation rather than speculation; traditional-vs-AI variant comparison is effective"
+     ],
+     "weaknesses": [
+      "Main limitation is experimental depth"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "low; identified as non-placed because the page's own catalog card ranks the team's project below the winner slot on the catalog page (card not adjacent to winner labels) \u2014 verified only via excerpt, not placement badge",
+   "url": "https://apartresearch.com/project/bssbreach-testing-designer-protein-sequences-for-biosecurity-evasion-capabilities-yl1j"
+  },
+  {
+   "event": "AIxBio Hackathon (Apr 2026)",
+   "place": "not placed (contrast)",
+   "title": "Biosecurity Screening Layer for Biology-Oriented AI Interfaces",
+   "team": "2 members: Adejumobi Joshua, Taiwo Togun",
+   "reports_pages": "not shown",
+   "one_line_claim": "A four-layer screening system at the LLM-biology interface blocks most attack prompts with no observed false positives on legitimate queries",
+   "type": "new defense/monitor/method (interface-level filtering)",
+   "novelty_move": "Places the defense upstream at the LLM interface rather than in the synthesis-order pipeline",
+   "rigor_markers_present": [
+    "baseline (100% attack compliance without screening)",
+    "false-positive evaluation on benign queries",
+    "review recommends adversarial robustness testing"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous (excerpted)",
+     "strengths": [
+      "Real failure-mode identified; defense placed at a high-leverage point; layered design; clear evaluation of behavior change"
+     ],
+     "weaknesses": [
+      "Confidence in the results is low without adversarial-condition robustness; biological validation layer unclear"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "low; identified as non-placed via the same route as BSSBreach (catalog excerpt; no placement label visible)",
+   "url": "https://apartresearch.com/project/biosecurity-screening-layer-for-biologyoriented-ai-interfaces-hiwg"
+  },
+  {
+   "event": "Defensive Acceleration Hackathon (Nov 2025)",
+   "place": "1st (tied)",
+   "title": "Mechanistic Watchdog",
+   "team": "1 (Luis Cosio, Team SL5, Mexico)",
+   "one_line_claim": "Real-time activation-monitoring kill switch using linear truthfulness and bio-risk concept vectors halts deceptive or misuse cognition pre-output.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Interdicts deception/misuse via internal-state concept vectors rather than output filtering; single truthfulness vector generalizes OOD from Facts-True-False to TruthfulQA.",
+   "rigor_markers_present": [
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Impressive solo build volume in limited time",
+      "Clear deployment path and acceptable overhead"
+     ],
+     "weaknesses": [
+      "Wants stress-testing with jailbreak prompts",
+      "Wants robustness analysis vs adversarial adaptation hiding internal signals",
+      "Wants discussion of harms from accidental triggers"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Encouraging results across models and tasks",
+      "Clear ecosystem positioning for the tool"
+     ],
+     "weaknesses": [
+      "Adversarially adaptive actors may route around probes",
+      "False-trigger risk in high-stakes settings underexplored"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/mechanistic-watchdog-klay"
+  },
+  {
+   "event": "Defensive Acceleration Hackathon (Nov 2025)",
+   "place": "1st (tied)",
+   "title": "GUARDIAN: Guarded Universal Architecture for Defensive Interpretation And traNslation",
+   "team": "2 (Aditya Thalang, Josh Brown)",
+   "one_line_claim": "Multi-stage LLM pipeline translates C to memory-safe Rust with 100% compile rate and 92.6% fully safe outputs, beating baseline LLM by 22.2pp.",
+   "type": "tool/artifact",
+   "novelty_move": "Safety-oriented constraints (dependency-graph SCCs, static-analysis hints, compiler-guided refinement) demonstrably improve automated C-to-Rust translation quality.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "honest limitations section",
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous (Halcyon Ventures investor perspective)",
+     "strengths": [
+      "Addresses real memory-safety bottleneck; well-designed multi-stage pipeline",
+      "Meaningful 22pp baseline improvement; aligned with CISA/White House memory-safety guidance"
+     ],
+     "weaknesses": [
+      "Small test set; compilation does not guarantee semantic equivalence",
+      "Wants functional-equivalence testing and adversarial red-teaming of the pipeline"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-motivated defensive use case; clear deployment path"
+     ],
+     "weaknesses": [
+      "Robustness and real-world reliability concerns",
+      "Wants stronger argument for broader qualitative impact"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/guardian-guarded-universal-architecture-for-defensive-interpretation-and-translation-vqgy"
+  },
+  {
+   "event": "Defensive Acceleration Hackathon (Nov 2025)",
+   "place": "2nd (tied)",
+   "title": "Comparative LLM methods for Social Media Bot Detection",
+   "team": "2 (Matthew Pagett, Andreas Raaskov)",
+   "one_line_claim": "Evaluates whether (weaker) LLMs can detect social-media bots, including bots generated by more advanced LLMs, in near real-time.",
+   "type": "empirical measurement",
+   "novelty_move": "Reverses the usual direction: less-advanced models as detectors of more-advanced LLM-generated bots.",
+   "rigor_markers_present": [
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Solid method for probing robust bot detection to protect information environment"
+     ],
+     "weaknesses": [
+      "Wants follow-on work establishing an effective method"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well-written; research question has clear value"
+     ],
+     "weaknesses": [
+      "No strong ground-truth dataset of real LLM-generated bot accounts",
+      "Classifications inconsistent under prompt rephrasing, making prototype unreliable",
+      "Wants non-content signals (behavioral, metadata, network) and a harm-focused risk spectrum"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/comparative-llm-methods-for-social-media-bot-detection-u9s4"
+  },
+  {
+   "event": "Defensive Acceleration Hackathon (Nov 2025)",
+   "place": "2nd (tied)",
+   "title": "Robust LLM Neural Activation-Mediated Alignment (Sentinel)",
+   "team": "4 (Anmol Dubey, Blake Brown, Anika Kulkarni, Denise Walsh; Rice AI Alignment)",
+   "one_line_claim": "Activation-level linear probe on Phi-2 flags malicious prompts at 96.25% accuracy while three frontier models comply with substantial red-team fractions.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Activation-space intent detection vs surface refusals; includes red-team vulnerability measurement of GPT-5.1, Gemini 2.5 Pro, Claude 3 Haiku (28/40, 11/40, 6/40 compliance).",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "false-positive evaluation",
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clear, simple demonstration of probes detecting harmful prompts"
+     ],
+     "weaknesses": [
+      "Latency/compute trade-off under scale (millions of queries) underexplored"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Strong prototype with practical deployment potential; clear communication"
+     ],
+     "weaknesses": [
+      "Wants larger, more diverse datasets and varied jailbreak strategies",
+      "Asks whether probe catches harmful outputs from benign prompts; wants comparison vs existing safety classifiers",
+      "Notes some references appear mismatched; wants deployment plan"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/robust-llm-neural-activationmediated-alignment-ttk5"
+  },
+  {
+   "event": "Defensive Acceleration Hackathon (Nov 2025)",
+   "place": "3rd (tied)",
+   "title": "Actions speak louder than words: Evaluating Tool Usage Risk in Open-Weight AI for Defensive Deployment",
+   "team": "2 (Ana Belen Barbero Castejon, Carlos Vecina Tebar)",
+   "one_line_claim": "Across 10 base/tampered model variants and 125 scenarios, tampering significantly raises harmful tool-invocation rates, varying by domain.",
+   "type": "empirical measurement",
+   "novelty_move": "Shifts risk evaluation from model text outputs to tool-use actions; links weight tampering to agentic tool behavior across cyber/bio/decision domains.",
+   "rigor_markers_present": [
+    "baseline comparison",
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Careful evaluation of an important threat vector; ablations and multi-domain statistical rigor welcomed",
+      "Dashboard useful; execution solid"
+     ],
+     "weaknesses": [
+      "Anomalous -1% success-rate rendering for one model needs explanation",
+      "Wants subtle implicit-malicious scenarios, llama models, and a policy-engine enforcement layer"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Reframes risk from what models say to what they do; real-world case included"
+     ],
+     "weaknesses": [
+      "Wants short literature review to rule out duplication",
+      "Firmer argument needed for why open-weight models are higher risk",
+      "Wants one realistic deployment scenario end-to-end"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/actions-speak-louder-than-words-evaluating-tool-usage-risk-in-openweight-ai-for-defensive-deployment-g3k0"
+  },
+  {
+   "event": "Defensive Acceleration Hackathon (Nov 2025)",
+   "place": "3rd (tied)",
+   "title": "A Defensive AI Agent Against LLM-Assisted Polymorphic Malware (BlueFlux)",
+   "team": "6 (Ifeoma Ilechukwu, Saahir Vazirani, Guillaume Tabard, Chaitree Baradkar, Albert Calvo, Rijal Saepuloh)",
+   "one_line_claim": "BlueFlux monitors LLM API logs for malicious intent and high-speed mutation sequences to block polymorphic-malware generation before deployment.",
+   "type": "new defense/monitor/method",
+   "novelty_move": "Moves detection left from endpoint binaries to the LLM generation layer (PromptFlux-style threat), scoring intent+velocity.",
+   "rigor_markers_present": [
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous (Halcyon Ventures investor perspective)",
+     "strengths": [
+      "Compelling, well-grounded threat model citing Google's PromptFlux report",
+      "Upstream detection is the right architectural move"
+     ],
+     "weaknesses": [
+      "Results don't match vision; felt like a roadmap without metrics",
+      "Wants precision/recall and end-to-end demo vs simulated PromptFlux",
+      "Basic MLP classifier needs stress-testing and comparison vs Llama Guard"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/a-defensive-ai-agent-against-large-language-model-llmassisted-polymorphic-malware-g2pf"
+  },
+  {
+   "event": "Defensive Acceleration Hackathon (Nov 2025)",
+   "place": "not placed",
+   "title": "Neops - DevSecOps for the AI era",
+   "team": "2 (Hans A. Gunnoo, Spyridon Georgakopoulos)",
+   "one_line_claim": "CLI tool embedding AI-safety checks (OWASP LLM Top-10 derived rules) into CI/CD product lifecycles.",
+   "type": "tool/artifact",
+   "novelty_move": "Applies familiar DevSecOps linter pattern to AI-safety rules; rules curated from frameworks/labs.",
+   "rigor_markers_present": [],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Seen as filling an important AI-safety gap for engineers"
+     ],
+     "weaknesses": [],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/neops-devsecops-for-the-ai-era-kqto",
+   "non_placed_identification": "Absent from sprint winners list and has no placement badge in the entries gallery."
+  },
+  {
+   "event": "Defensive Acceleration Hackathon (Nov 2025)",
+   "place": "not placed",
+   "title": "MindPatch",
+   "team": "1 (Hatim El Jazouli)",
+   "one_line_claim": "Tool designed to analyze cognitive resistance (per one-line abstract).",
+   "type": "tool/artifact",
+   "novelty_move": "Not discernible from the page's one-sentence abstract.",
+   "rigor_markers_present": [
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/mindpatch-eja9",
+   "non_placed_identification": "Absent from winners list; no placement badge; one-line abstract and no public reviews."
+  },
+  {
+   "event": "The AI Forecasting Hackathon (Oct-Nov 2025)",
+   "place": "1st",
+   "title": "AI Incidents Forecasting",
+   "team": "3 (Chamod Kalupahana, Ahmed Elbashir, Christopher L. L\u00fcbbers; Team KLACE)",
+   "one_line_claim": "Two models forecast AI incident counts with calibrated 90% prediction intervals and backtests, predicting strong five-year growth.",
+   "type": "empirical measurement",
+   "novelty_move": "Probabilistic, backtested forecasting directly on AI Incidents Database counts for policy early-warning.",
+   "rigor_markers_present": [
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Smart reuse of prior work for preprocessing"
+     ],
+     "weaknesses": [
+      "Design choices (2021 hinge, spline constraints) need justification",
+      "Plot scale hinders evaluation; trend likely has an inflection point",
+      "Could exploit reports-vs-incidents gap and unreported-incident estimation as features"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Exciting line of research; backtesting appreciated"
+     ],
+     "weaknesses": [
+      "Ceteris-paribus assumption fragile given evolving regulation and reporting mandates"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/ai-incidents-forecasting-w92p"
+  },
+  {
+   "event": "The AI Forecasting Hackathon (Oct-Nov 2025)",
+   "place": "2nd",
+   "title": "AI Shared Socioeconomic Pathways",
+   "team": "3 (Pablo Rosado, Huw Hallam, Galina Lesnic)",
+   "one_line_claim": "Adapts the IPCC's Shared Socioeconomic Pathways scenario framework to shape AI development and risk forecasting.",
+   "type": "survey/position",
+   "novelty_move": "Cross-domain import: climate scenario-planning architecture (SSPs) as scaffolding for AI forecasting.",
+   "rigor_markers_present": [
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Good starting point linking climate foresight with AI forecasting; liked SSP mapping"
+     ],
+     "weaknesses": [
+      "Assumes climate-caution transfers to AI governance without enough justification",
+      "Wants analysis of whether transformative AI breaks SSP coherence"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Nice SSP starting point"
+     ],
+     "weaknesses": [
+      "Forecasting content largely lacking; recommends focusing on 1-2 SSPs with concrete risk estimation"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/ai-shared-socioeconomic-pathways-xzni"
+  },
+  {
+   "event": "The AI Forecasting Hackathon (Oct-Nov 2025)",
+   "place": "3rd",
+   "title": "AI Treaty Momentum Index (ATMI)",
+   "team": "2 (Oksana Kotelnikova, Sofiia Lobanova)",
+   "one_line_claim": "Mechanism-coded historical treaties yield a nowcast of ~0.6% chance of a new international AI risk treaty as of Nov 2025.",
+   "type": "tool/artifact",
+   "novelty_move": "Encodes past climate/nuclear/biosafety/finance treaties into scored mechanism classes and maps them to an AI-treaty nowcast plus AI-2027-linked scenario forks.",
+   "rigor_markers_present": [
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [],
+     "weaknesses": [
+      "Prior medians under-justified; wants case-study walkthrough",
+      "Wants connection to concrete recent policy episodes",
+      "Nowcast needs more focus on inputs and uncertainty analysis"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Topic and high-leverage-mechanism conclusions appealing"
+     ],
+     "weaknesses": [
+      "Forecasting weak: author-set priors drive conclusions",
+      "Suggests deeper modeling of fewer criteria (e.g., epistemic shift + geopolitical alignment)"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/ai-treaty-momentum-index-atmi-lst4"
+  },
+  {
+   "event": "The AI Forecasting Hackathon (Oct-Nov 2025)",
+   "place": "4th",
+   "title": "ExogenousAI",
+   "team": "1 (Aheli Poddar, Team Fibonacci)",
+   "one_line_claim": "Adding macro/geopolitical policy-event signals to compute-based forecasts: Monte Carlo projects 2027 median AGI timeline with 2026-2030 CIs.",
+   "type": "empirical measurement",
+   "novelty_move": "Event-study treatment of policy interventions (export controls etc.) on top of benchmark trends (MMLU-Pro), decomposing timeline uncertainty into technical/economic/policy shares.",
+   "rigor_markers_present": [
+    "multiple seeds/repeats",
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Strong motivation for policy-aware forecasting; explicit grounding in prior work",
+      "Clear datapoint rationale"
+     ],
+     "weaknesses": [
+      "AGI-threshold calibration under-argued; AI 2027 unfit as rigorous anchor",
+      "Plots overcrowded; unclear model inputs/scenario differences; forecast suspiciously earlier than Epoch/Cotra anchors",
+      "Single near-saturated benchmark is a key limitation; wants aggregation and investment factors"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/exogenousai"
+  },
+  {
+   "event": "The AI Forecasting Hackathon (Oct-Nov 2025)",
+   "place": "5th",
+   "title": "System Dynamics Game-Theoretic Model of the AI Development Race",
+   "team": "1 (Ariel Gil, Team System Dynamics BCN)",
+   "one_line_claim": "Extends Armstrong et al. (2016): in simulations, knowledge of competitors' capabilities delays the decision to race, contradicting the prior paper.",
+   "type": "theory/formalism",
+   "novelty_move": "Dynamic system-dynamics/game-theoretic update of a classic race model yielding a preliminary counter-result.",
+   "rigor_markers_present": [
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Exciting extension of Armstrong model to dynamic form"
+     ],
+     "weaknesses": [
+      "Results hard to interpret from plots; analysis scant",
+      "EU-as-actor assumption needs justification; wants US-China-only run",
+      "Wants aggressive-action/sabotage dynamics"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Addresses concrete arms-race risk; simulation setup sound"
+     ],
+     "weaknesses": [
+      "Wants hyperparameter robustness checks and delta-since-2016 analysis"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/system-dynamics-gametheoretic-model-of-the-ai-development-race-dqe3"
+  },
+  {
+   "event": "The AI Forecasting Hackathon (Oct-Nov 2025)",
+   "place": "not placed",
+   "title": "Can AI predict its own future",
+   "team": "1 (Jessica Shalet Sanctis, Team-MetaMind)",
+   "one_line_claim": "Side-by-side elicitation of frontier-model forecasts of human-level AI, visualized in a public dashboard.",
+   "type": "benchmark/dataset",
+   "novelty_move": "Dataset-plus-storytelling artifact of model self-forecasts rather than an independent forecasting model.",
+   "rigor_markers_present": [],
+   "scores": null,
+   "reviews": [],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/can-ai-predict-its-own-future-0hdy",
+   "non_placed_identification": "Absent from winners list; no placement badge; no public reviews; report is a .pptx."
+  },
+  {
+   "event": "The AI Forecasting Hackathon (Oct-Nov 2025)",
+   "place": "not placed",
+   "title": "AI's Impact on Video and Game Generation",
+   "team": "1 (Mahesh Ramesh, Team Hollywood)",
+   "one_line_claim": "Short survey plus forecasting of AI impact on video/game generation via interpolation between set calibration anchors.",
+   "type": "survey/position",
+   "novelty_move": "None visible; page abstract is a one-liner.",
+   "rigor_markers_present": [],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [],
+     "weaknesses": [
+      "Calibration anchors unexplained despite being central",
+      "Only one simple adoption-curve method; decision variables undefined"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [],
+     "weaknesses": [
+      "Anchors set arbitrarily then interpolated, contrary to forecasting spirit; no justification"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/ais-impact-on-video-and-game-generation-xzdj",
+   "non_placed_identification": "Absent from winners list; no placement badge; abstract is one line."
+  },
+  {
+   "event": "Economics of Transformative AI (Apr 2025)",
+   "place": "1st (First Prize; page badge: 1st place by peer review)",
+   "title": "The Early Economic Impacts of Transformative AI: A Focus on Temporal Coherence",
+   "team": "4 (F\u00e9lix Dorn, Xavier Ferr\u00e9s, Elsie Jang, Valmik Nahata)",
+   "one_line_claim": "Temporal coherence (sustained goal-directed behavior) is an automation bottleneck: ~8-hour coherence could automate 80-84% of remote O*NET tasks.",
+   "type": "empirical measurement",
+   "novelty_move": "New framing of a task-automation bottleneck distinct from compute; LLM-estimated 'effective time' proxy over remote O*NET tasks yields non-linear automation curve.",
+   "rigor_markers_present": [
+    "human validation"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Relevant problem, good first-pass investigation"
+     ],
+     "weaknesses": [
+      "Task duration may not capture the real bottleneck (memory? adaptability?)",
+      "45 validation examples too few; wants representative draws and self-consistency checks",
+      "Wants uncertainty on coherence-progress scenarios"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Timely, well-framed concept grounded in task-based economics literature"
+     ],
+     "weaknesses": [
+      "Concept needs clearer earlier definition; engage cognitive-science literature",
+      "Single model, small validation set; effective-time proxy oversimplifies coherence",
+      "Wants labor-vs-automation cost modeling"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well written; good citations; best-reviewed project per this reviewer"
+     ],
+     "weaknesses": [
+      "Little evidence coherence is the most important factor; ignores tool-use/coordination",
+      "Multiple dimensions of coherence and long-horizon planning safety risks unrecognized"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/the-early-economic-impacts-of-transformative-ai-a-focus-on-temporal-coherence-ipql"
+  },
+  {
+   "event": "Economics of Transformative AI (Apr 2025)",
+   "place": "2nd (Second Prize per sprint overview; page badge shows '3rd place by peer review')",
+   "title": "Evaluating the risk of job displacement by transformative AI automation in developing countries: A case study on Brazil",
+   "team": "5 (Blessing Ajimoti, Vitor Tomaz, Hoda Maged, Mahi Shah, Abubakar Abdulfatah)",
+   "one_line_claim": "Linking 4M Claude prompts to Brazilian employment flows finds no significant net-job divergence between high- and low-prompt-exposure occupations.",
+   "type": "empirical measurement",
+   "novelty_move": "First (claimed) real-time displacement monitor joining proprietary LLM-usage data to national labor registers; reports a null result.",
+   "rigor_markers_present": [
+    "null result reported",
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Creative question; novel prompt-to-O*NET data use",
+      "Solid work despite short timeframe"
+     ],
+     "weaknesses": [
+      "Results muted; wants more inferential statistics"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Right literature; novel analysis likely scooped within a year; good econometrics"
+     ],
+     "weaknesses": [
+      "GitHub lacks crosswalks/prompts; aggregation/scaling choices under-justified",
+      "ADF-based 'no divergence' inference tentative",
+      "Policy recommendations premature without adoption-mechanism data"
+     ],
+     "score": "reviewer stated in text: Innovation 5, Practical Impact 4, Methodological Rigor 5"
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Inventive three-dataset pipeline; open code/crosswalk commendable; candid limitations"
+     ],
+     "weaknesses": [
+      "Heavy dependence on one week of prompt data; unverified LLM-generated crosswalks; no robustness checks",
+      "AR parameters unjustified; 'no difference' conclusion tentative without formal tests",
+      "AI-safety linkage indirect; wants DiD/panel designs and expert-validated mappings"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Excellent under time constraint; reusable framework; well situated in literature"
+     ],
+     "weaknesses": [
+      "Claude data unrepresentative (skews to programmers); policy section thin"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/evaluating-the-risk-of-job-displacement-by-transformative-ai-automation-in-developing-countries-a-case-study-on-brazil-829h"
+  },
+  {
+   "event": "Economics of Transformative AI (Apr 2025)",
+   "place": "3rd (Third Prize; page badge: 3rd place by peer review)",
+   "title": "Economics of AI Data Center Energy Infrastructure: Strategic Blueprint for 2030",
+   "team": "1 (Ethan Schreier)",
+   "one_line_claim": "AI data centers may triple US electricity demand by 2030; three market failures plus a policy blueprint (portfolio, investment, new markets) are proposed.",
+   "type": "survey/position",
+   "novelty_move": "Quantified synthesis (325-580 TWh; $360-600B grid capex) framed as three market failures with policy levers.",
+   "rigor_markers_present": [],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Underexplored bottleneck; DOE/RAND/EIA data combined; clear scenario tables; coherent market-failure framing"
+     ],
+     "weaknesses": [
+      "Innovation incremental; misses academic work on load management/storage",
+      "AI-safety relevance indirect",
+      "No sensitivity analysis, no public workbook/code"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Strong literature command; sensible policies"
+     ],
+     "weaknesses": [
+      "Little innovation; problem justification thin; assumptions/worldview unstated",
+      "Model taken on faith; wants derivation and sensitivity analyses"
+     ],
+     "score": "reviewer stated in text: Innovation 4, Practical Impact 4, Methodological Rigor 3"
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Well structured; good citations; used AI appropriately"
+     ],
+     "weaknesses": [
+      "Some mis-informed conclusions (e.g., co-location claims); formatting inconsistencies",
+      "Policy recommendations inconsistent with analysis (transmission vs generation)"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clean synthesis with novel analysis; good threat model"
+     ],
+     "weaknesses": [
+      "Wants deeper justification of threat model and solutions; AI-safety link unclear"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Solid energy-projection understanding"
+     ],
+     "weaknesses": [
+      "Missing AI-risk literature integration; welfare measure unclear; cheap-energy framing may accelerate AI"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/economics-of-ai-data-center-energy-infrastructure-strategic-blueprint-for-2030-scim"
+  },
+  {
+   "event": "Economics of Transformative AI (Apr 2025)",
+   "place": "4th (Fourth Prize; page badge: 4th place by peer review)",
+   "title": "Economic Feasibility of Universal High Income (UHI) in an Age of Advanced Automation",
+   "team": "5 (Anusha Asim, Haochen (Lucas) Tang, Jackson Paulson, Ivan Lee, Aneesh Karanam)",
+   "one_line_claim": "Four fiscal measures (wealth/land/progressive-income taxes plus AI Dividend Income) could raise 8-12% of GDP to fund UHI even at 80-90% unemployment.",
+   "type": "theory/formalism",
+   "novelty_move": "Introduces AIDI (AI Dividend Income) as a mechanism channeling automation gains back to displaced workers within a multi-tax UHI financing package.",
+   "rigor_markers_present": [
+    "code released"
+   ],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Timely financing analysis for income guarantees"
+     ],
+     "weaknesses": [
+      "Wants distortionary-tax costs varying by automation stage and optimal tax-mix discussion",
+      "Centralization-of-power risks of universal government income under-discussed"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Comparing tax proposals is a good start"
+     ],
+     "weaknesses": [
+      "Proposal details light; wants level-playing-field comparison at fixed revenue targets",
+      "AIDI investment distortions and global-coordination assumption unaddressed",
+      "Some claims conflict with standard theory"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Ambitious scope; accessible narrative; familiar macro frameworks; creative AIDI concept"
+     ],
+     "weaknesses": [
+      "Largely illustrative: hypothetical parameters, no calibration, no equations/code/sensitivity",
+      "Headline funding claim not verifiable; safety linkage indirect",
+      "Documentation thin (units, missing appendix, no underlying data)"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Covers key tax-design considerations linked to AI"
+     ],
+     "weaknesses": [
+      "IS-MP misapplied to long-run questions; tax rates unclear; behavioral responses under-specified; parameters not extrapolated from data"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Solid theoretically grounded macro analysis; comprehensive governmental and market-side coverage"
+     ],
+     "weaknesses": [
+      "Wants integrated combined-effects modeling and deeper implementation analysis"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/economic-feasibility-of-universal-high-income-uhi-in-an-age-of-advanced-automation-jn3g"
+  },
+  {
+   "event": "Economics of Transformative AI (Apr 2025)",
+   "place": "not placed (no 5th prize awarded; only 4 prizes listed)",
+   "title": "Economic Impact Analysis: The Impact of AI on the Indian IT Sector",
+   "team": "2 (Maimuna Zaheer, Alina Plyassulya)",
+   "one_line_claim": "A +/-20% labor shock to India's IT sector implies ~675k jobs and ~$8.4B tax impact; upskilling vouchers and lay-off insurance proposed.",
+   "type": "empirical measurement",
+   "novelty_move": "Applied TiVA input-output stylized shock with policy cost-benefit sketch for a Global South IT sector.",
+   "rigor_markers_present": [],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Interesting labor-shock study; well executed"
+     ],
+     "weaknesses": [
+      "Wants economy-wide spillover discussion"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Clear headline numbers; concise write-up; useful policy starting point"
+     ],
+     "weaknesses": [
+      "Exogenous 20% shock unjustified; fixed employment-value-added ratio ignores substitution",
+      "Single tax rate; unspecified partial I-O framework; thin literature",
+      "No reproducible repository; AI-safety relevance indirect"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Problem well identified; well-chosen policies (upskilling over insurance)"
+     ],
+     "weaknesses": [
+      "Literature on upskilling efficacy under-cited",
+      "Uncorrelated employment/revenue shock assumption questionable; wants code and calibration to real upskilling experiments"
+     ],
+     "score": "reviewer stated in text: Innovation 2.5, Practical Impact 3, Methodological Rigor 3"
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Important LMIC-disruption question"
+     ],
+     "weaknesses": [
+      "Risks beyond inequality not specified; wanted code, not just generation prompts"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/economic-impact-analysis-the-impact-of-ai-on-the-indian-it-sector-hrpy",
+   "non_placed_identification": "No placement badge on its entry; absent from the sprint's four-prize winners list."
+  },
+  {
+   "event": "Economics of Transformative AI (Apr 2025)",
+   "place": "not placed",
+   "title": "US-1: Full AI Nationalization can cause Misaligned Economic Incentives",
+   "team": "1 (Nikolay Radev)",
+   "one_line_claim": "US frontier-AI nationalization would misalign incentives toward security over diffusion, per historical precedents and public-choice theory.",
+   "type": "survey/position",
+   "novelty_move": "Applies classic public-choice frameworks (budget-maximizing bureaucracy, soft budget constraints) to AI nationalization; some novel USG-recruiting arguments per one reviewer.",
+   "rigor_markers_present": [],
+   "scores": null,
+   "reviews": [
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Timely analysis; clear prose; concrete mechanisms (talent, DPA compute, security restrictions)"
+     ],
+     "weaknesses": [
+      "Descriptive only: no formal model or new empirical evidence",
+      "Recent compute-governance/alignment-economics literature missing",
+      "No data/code; safety linkage indirect"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Enjoyable policy paper; good historical case coverage; novel-feeling arguments"
+     ],
+     "weaknesses": [
+      "Should spell out why catastrophic-risk mitigation is prioritized"
+     ],
+     "score": null
+    },
+    {
+     "reviewer": "anonymous",
+     "strengths": [
+      "Engages historical nationalization dynamics"
+     ],
+     "weaknesses": [
+      "Wants a cleaner gradient of nationalization options with trade-offs",
+      "Benefits/costs largely unquantified despite abundant prior evidence"
+     ],
+     "score": null
+    }
+   ],
+   "confidence": "medium",
+   "url": "https://apartresearch.com/sprints/projects/us1-full-ai-nationalization-can-cause-misaligned-economic-incentives-h9ne",
+   "non_placed_identification": "No placement badge; absent from the four-prize winners list."
+  }
+ ],
+ "speaker_statements": [
+  {
+   "person": "Sumeet Motwani",
+   "source_url": "https://arxiv.org/abs/2402.07510",
+   "date": "2025-07-25",
+   "kind": "a",
+   "statement": "Establishes secret collusion as a distinct multi-agent deception threat: agents use steganography to hide coordination from oversight.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Sumeet Motwani",
+   "source_url": "https://arxiv.org/abs/2402.07510",
+   "date": "2025-07-25",
+   "kind": "b",
+   "statement": "Finds monitoring, paraphrasing, and parameter optimization are limited; paraphrasing leaves semantic entropy and can degrade task performance.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Sumeet Motwani",
+   "source_url": "https://arxiv.org/abs/2402.07510",
+   "date": "2025-07-25",
+   "kind": "c",
+   "statement": "Reports current models have limited steganographic ability, but GPT-4 shows a capability jump, requiring continuous frontier evaluation.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Joan Velja",
+   "source_url": "https://arxiv.org/abs/2410.03768",
+   "date": "2024-10-02",
+   "kind": "a",
+   "statement": "Argues steganography could make collusion practically undetectable, making evaluation and mitigation of steganographic collusion a central gap.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Joan Velja",
+   "source_url": "https://arxiv.org/abs/2410.03768",
+   "date": "2024-10-02",
+   "kind": "b",
+   "statement": "Demonstrates unintended steganographic collusion can arise from misspecified rewards; passive oversight and paraphrasing are not fully effective.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Joan Velja",
+   "source_url": "https://www.lesswrong.com/posts/6mLwAuFAE98c6R7w3/research-update-rl-on-debate-games-shows-proposal-accuracy",
+   "date": "2026-07-02",
+   "kind": "b",
+   "statement": "Co-authored debate study reports a critic learning spurious critiques that exploit the judge, calling judge hacking a protocol-level flaw.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Joan Velja",
+   "source_url": "https://arxiv.org/abs/2410.03768",
+   "date": "2024-10-02",
+   "kind": "c",
+   "statement": "Concludes preventing emergence may require innovation in passive and active oversight techniques.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Usman Anwar",
+   "source_url": "https://arxiv.org/abs/2602.23163",
+   "date": "2026-04-29",
+   "kind": "b",
+   "statement": "Argues classical steganography detection needs a known benign reference distribution, which is infeasible for LLM reasoning traces.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Usman Anwar",
+   "source_url": "https://arxiv.org/abs/2602.23163",
+   "date": "2026-04-29",
+   "kind": "c",
+   "statement": "Calls message-inspection methods ad hoc and proposes a behavioral 'steganographic gap' between a decoder and a matched sentinel.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Usman Anwar",
+   "source_url": "https://uzman-anwar.github.io/",
+   "date": "2026-10-19",
+   "kind": "b",
+   "statement": "Warns that rising evaluation awareness in LLMs can undermine the validity of capability and alignment evaluations.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Eugene Bagdasarian",
+   "source_url": "https://arxiv.org/abs/2602.15198",
+   "date": "2026-02-16",
+   "kind": "b",
+   "statement": "Co-authored Colosseum argues prior collusion work studied tactics and domain design rather than model behavior needed for safe multi-agent systems.",
+   "tag": "stated",
+   "confidence": "medium"
+  },
+  {
+   "person": "Eugene Bagdasarian",
+   "source_url": "https://arxiv.org/abs/2602.15198",
+   "date": "2026-02-16",
+   "kind": "a",
+   "statement": "Finds adding a private channel between benign agents can produce emergent collusion in most tested models, without collusion prompts.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Eugene Bagdasarian",
+   "source_url": "https://arxiv.org/abs/2602.15198",
+   "date": "2026-02-16",
+   "kind": "c",
+   "statement": "Concludes no single signal captures collusion; audits need action-based regret metrics plus communication judges and channel ablations.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Mason Nakamura",
+   "source_url": "https://www.masonnakamura.com/",
+   "date": "2026-10-19",
+   "kind": "a",
+   "statement": "Frames emergent long-horizon multi-agent behavior and auditing as core safety questions requiring monitoring and mitigation.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Mason Nakamura",
+   "source_url": "https://arxiv.org/abs/2602.15198",
+   "date": "2026-02-16",
+   "kind": "c",
+   "statement": "Co-authored Colosseum finds 'collusion on paper': agents plan collusion in text but often choose non-collusive actions, so talk alone is insufficient.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Mason Nakamura",
+   "source_url": "https://arxiv.org/abs/2602.15198",
+   "date": "2026-02-16",
+   "kind": "b",
+   "statement": "Co-authored Colosseum notes action and conversation evidence can diverge, and homogeneous-team experiments leave heterogeneous deployments untested.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Jerick Shi",
+   "source_url": "https://arxiv.org/abs/2607.05132",
+   "date": "2026-07-06",
+   "kind": "b",
+   "statement": "Argues existing deception evaluations are limited: one-shot protocols miss persistence, assigned announcements miss premeditation, homogeneous groups miss cross-provider exploitation.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Jerick Shi",
+   "source_url": "https://arxiv.org/abs/2607.05132",
+   "date": "2026-07-06",
+   "kind": "c",
+   "statement": "Finds over 90% of announcement deviations in high-deception conditions were already in private plans, supporting plan-claim-action comparison.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Jerick Shi",
+   "source_url": "https://arxiv.org/abs/2607.05132",
+   "date": "2026-07-06",
+   "kind": "b",
+   "statement": "Cautions premeditation labels rest on self-reported plans and measured rates should not be cited as deployment deception estimates.",
+   "tag": "stated",
+   "confidence": "high"
+  },
+  {
+   "person": "Matthew Lee",
+   "source_url": "http://stegobench.com/",
+   "date": "2026",
+   "kind": "b",
+   "statement": "Co-authored StegoBench argues prior evaluations probe one scheme or elicitation method at a time, so the field lacks a shared testbed.",
+   "tag": "stated",
+   "confidence": "medium"
+  },
+  {
+   "person": "Matthew Lee",
+   "source_url": "http://stegobench.com/",
+   "date": "2026",
+   "kind": "c",
+   "statement": "Argues output monitoring can miss covert coordination entirely; evaluation should measure recoverability and detectability across many schemes.",
+   "tag": "stated",
+   "confidence": "medium"
+  },
+  {
+   "person": "Matthew Lee",
+   "source_url": "http://stegobench.com/",
+   "date": "2026",
+   "kind": "c",
+   "statement": "Finds scheme difficulty varies: lexical channels train to low error, structural channels resist, and data quality beats model scale.",
+   "tag": "stated",
+   "confidence": "high"
+  }
+ ]
+}
