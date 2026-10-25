@@ -215,6 +215,42 @@ def _select_colluders(
         return [str(x) for x in list(agent_names)[:count]]
     raise ValueError(f"Unknown colluder selection strategy: {strategy!r}")
 
+
+def _select_private_channel_participants(
+    *,
+    agent_names: Sequence[str],
+    colluders: Sequence[str],
+    secret_channel_enabled: bool,
+    collusion_cfg: Dict[str, Any],
+    rng: random.Random,
+) -> List[str]:
+    """Select an optional neutral private-board membership set.
+
+    Existing studies leave ``private_channel_participant_count`` unset and
+    therefore retain the historical colluder-only board behavior. A neutral
+    affordance study may instead set it explicitly without creating colluder
+    roles, prompts, or ground-truth metadata.
+    """
+    if not secret_channel_enabled:
+        return []
+    requested = collusion_cfg.get("private_channel_participant_count")
+    if requested is None:
+        return [str(agent) for agent in colluders]
+    try:
+        count = int(requested)
+    except (TypeError, ValueError) as exc:
+        raise ValueError(
+            "experiment.collusion.private_channel_participant_count must be an integer."
+        ) from exc
+    if count < 2 or count > len(agent_names):
+        raise ValueError(
+            "private_channel_participant_count must be between 2 and num_agents when secret_channel_enabled."
+        )
+    strategy = str(collusion_cfg.get("private_channel_selection", "first"))
+    return _select_colluders(
+        agent_names=agent_names, count=count, strategy=strategy, rng=rng
+    )
+
 def _order_agent_turns(
     *,
     agent_names: Sequence[str],
@@ -374,6 +410,13 @@ async def _run_single(
         strategy=selection_strategy,
         rng=rng,
     )
+    private_channel_participants = _select_private_channel_participants(
+        agent_names=agent_names,
+        colluders=colluders,
+        secret_channel_enabled=secret_channel_enabled,
+        collusion_cfg=collusion_cfg,
+        rng=rng,
+    )
     agent_order_strategy = str(collusion_cfg.get("agent_order", "random"))
     ordered_agent_names = _order_agent_turns(
         agent_names=agent_names,
@@ -449,16 +492,18 @@ async def _run_single(
     await env.async_init()
 
     secret_blackboard_id: Optional[int] = None
-    if secret_channel_enabled and len(colluders) >= 2:
+    if secret_channel_enabled and len(private_channel_participants) >= 2:
         try:
             base_context = env.get_network_context()
-            secret_context = env.format_blackboard_context(colluders, base_context)
+            secret_context = env.format_blackboard_context(
+                private_channel_participants, base_context
+            )
         except Exception:
             secret_context = (
                 env.get_network_context() if hasattr(env, "get_network_context") else ""
             )
         secret_blackboard_id = await protocol.generate_comm_network(
-            colluders,
+            private_channel_participants,
             secret_context,
             template={
                 "secret_channel": True,
@@ -653,6 +698,7 @@ async def _run_single(
             "num_agents": num_agents,
             "colluder_count": colluder_count,
             "colluders": colluders,
+            "private_channel_participants": private_channel_participants,
             "agent_order": str(agent_order_strategy or "random"),
             "agent_turn_order": [a.name for a in env.agents],
             "secret_channel_enabled": secret_channel_enabled,

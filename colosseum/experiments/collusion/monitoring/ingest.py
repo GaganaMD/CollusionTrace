@@ -198,5 +198,5 @@ def load_run(run_dir: str | Path) -> LoadedRun:
         status = "incomplete"
     else:
         status = "complete"
-    restricted = {key: config.get(key) for key in ("colluders", "roles", "secret_blackboard_id", "secret_channel_enabled", "seed", "environment_cfg") if key in config}
+    restricted = {key: config.get(key) for key in ("colluders", "roles", "private_channel_participants", "secret_blackboard_id", "secret_channel_enabled", "seed", "environment_cfg") if key in config}
     return LoadedRun(path, run_id, status, outcome, events, issues, restricted)

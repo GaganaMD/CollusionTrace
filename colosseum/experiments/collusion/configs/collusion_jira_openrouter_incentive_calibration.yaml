@@ -18,7 +18,8 @@ experiment:
   # Version 2 uses the corrected individual-versus-joint cost schedule.
   # The completed v1 artifact is preserved under o/20261024-180346.
   experiment_id: jira_incentive_calibration_v2
-  tag: jira_incentive_calibration_v2
+  # Short internal tag keeps Terrarium's legacy prompt-log path Windows-safe.
+  tag: ic2
   output_dir: o
   max_concurrent_runs: 1
   seeds: [1]

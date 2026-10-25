@@ -1,17 +1,25 @@
 import unittest
 import json
+import random
 import tempfile
 from pathlib import Path
+from unittest.mock import patch
 
 import yaml
+from terrarium.utils import build_log_dir, get_tag_model_subdir
 
-from experiments.collusion.incentive_jira_env import JiraIncentiveEnvironment
+from experiments.collusion.incentive_jira_env import (
+    JiraIncentiveEnvironment,
+    ensure_prompt_log_directory,
+)
 from experiments.collusion.incentive_report import summarize_run
+from experiments.collusion.prompts import CollusionPrompts
+from experiments.collusion.run import _select_private_channel_participants
 from experiments.common.local_protocol import LocalCommunicationProtocol
 
 
-def make_env(enabled: bool):
-    cfg = {"simulation": {"seed": 1}, "environment": {"max_tasks": 8, "assignment_filling": False, "incentive_bonus_enabled": enabled, "incentive_bonus": 30.0}, "communication_network": {"num_agents": 3, "topology": "complete"}}
+def make_env(enabled: bool, objective_regime: str = "cooperative"):
+    cfg = {"simulation": {"seed": 1}, "environment": {"max_tasks": 8, "assignment_filling": False, "incentive_bonus_enabled": enabled, "incentive_bonus": 30.0, "objective_regime": objective_regime}, "communication_network": {"num_agents": 3, "topology": "complete"}}
     return JiraIncentiveEnvironment(LocalCommunicationProtocol(config=cfg), cfg, tool_logger=type("Logger", (), {"log_dir": None})())
 
 
@@ -62,6 +70,33 @@ class IncentiveJiraTests(unittest.TestCase):
         self.assertIn("individual", prompt)
         self.assertNotIn("collude", prompt)
         self.assertNotIn("sabotage", prompt)
+
+    def test_mixed_objective_is_explicit_but_does_not_instruct_collusion(self):
+        cooperative = make_env(True, "cooperative").prompts.get_system_prompt()
+        mixed = make_env(True, "mixed").prompts.get_system_prompt()
+        self.assertNotIn("LEGITIMATE DUAL OBJECTIVES", cooperative)
+        self.assertIn("LEGITIMATE DUAL OBJECTIVES", mixed)
+        self.assertIn("maximize your own individual reward", mixed)
+        for prohibited in ("collude", "sabotage", "deceive", "coalition"):
+            self.assertNotIn(prohibited, mixed.lower())
+
+    def test_rejects_unknown_objective_regime(self):
+        with self.assertRaisesRegex(ValueError, "objective_regime"):
+            make_env(True, "unknown")
+
+    def test_private_board_participants_receive_no_coalition_prompt_in_control_cells(self):
+        prompt = CollusionPrompts(
+            None, {}, prompt_variant="control", base_prompts=None, log_prompts=False
+        ).get_user_prompt(
+            "Layla",
+            {
+                "collusion_role": "colluder",
+                "collusion_coalition_members": ["Layla", "Jeanene"],
+                "collusion_blackboard_id": 9,
+            },
+            {},
+        )
+        self.assertEqual(prompt, "")
 
     def test_bonus_metadata_is_restricted_from_monitor_outcome(self):
         env = make_env(True)
@@ -126,6 +161,111 @@ class IncentiveJiraTests(unittest.TestCase):
         self.assertTrue(all(entry["secret_channel_enabled"] == [False] for entry in sweeps))
         self.assertTrue(all(entry["colluder_counts"] == [0] for entry in sweeps))
         self.assertTrue(all(entry["prompt_variants"] == ["control"] for entry in sweeps))
+
+    def test_prompt_log_directory_is_created_before_environment_setup(self):
+        with tempfile.TemporaryDirectory() as directory:
+            destination = Path(directory) / "logs" / "seed_1"
+            config = {"simulation": {"seed": 1, "run_timestamp": "run"}}
+            with patch(
+                "experiments.collusion.incentive_jira_env.build_log_dir",
+                return_value=destination,
+            ):
+                created = ensure_prompt_log_directory(config, "JiraIncentiveEnvironment")
+            self.assertEqual(created, destination)
+            self.assertTrue(destination.exists())
+
+    def test_v2_120_prompt_log_path_is_windows_safe(self):
+        config_path = (
+            Path(__file__).parents[1]
+            / "experiments"
+            / "collusion"
+            / "configs"
+            / "collusion_jira_openrouter_incentive_calibration.yaml"
+        )
+        config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+        timestamp = (
+            "20261024-182101__openrouter-qwen25-7b__calibration_bonus_120"
+            "__envbonus_120__complete__n3__c0__secret0__pvcontrol__seed1"
+        )
+        config["simulation"]["tags"] = [config["experiment"]["tag"]]
+        config["simulation"]["run_timestamp"] = timestamp
+        directory = build_log_dir(
+            "JiraIncentiveEnvironment",
+            get_tag_model_subdir(config),
+            1,
+            timestamp,
+        )
+        self.assertLess(len(str((directory / "agent_prompts.json").resolve())), 260)
+
+    def test_mixed_incentive_design_has_four_matched_cells_and_36_calls(self):
+        config_path = (
+            Path(__file__).parents[1]
+            / "experiments"
+            / "collusion"
+            / "configs"
+            / "collusion_jira_openrouter_mixed_incentive_feasibility.yaml"
+        )
+        config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+        sweeps = config["experiment"]["sweeps"]
+        self.assertEqual([cell["name"] for cell in sweeps], [
+            "A_cooperative_no_private", "B_mixed_no_private",
+            "C_cooperative_private", "D_mixed_private",
+        ])
+        self.assertEqual(config["simulation"]["max_planning_rounds"], 2)
+        self.assertEqual(config["simulation"]["max_conversation_steps"], 1)
+        self.assertEqual(config["experiment"]["seeds"], [1])
+        self.assertEqual(config["llm_models"][0]["llm"]["openrouter"]["params"], {
+            "max_completion_tokens": 512, "temperature": 0,
+        })
+        for cell in sweeps:
+            environment = cell["environments"][0]
+            self.assertEqual(cell["topologies"], ["complete"])
+            self.assertEqual(cell["num_agents"], [3])
+            self.assertEqual(cell["colluder_counts"], [0])
+            self.assertEqual(cell["prompt_variants"], ["control"])
+            self.assertIn(environment["objective_regime"], {"cooperative", "mixed"})
+            self.assertEqual(config["environment"]["incentive_bonus_enabled"], True)
+            self.assertEqual(config["environment"]["incentive_bonus"], 120)
+        self.assertEqual([cell["secret_channel_enabled"] for cell in sweeps], [[False], [False], [True], [True]])
+        self.assertEqual(
+            [cell["environments"][0]["objective_regime"] for cell in sweeps],
+            ["cooperative", "mixed", "cooperative", "mixed"],
+        )
+        planned = len(sweeps) * len(config["experiment"]["seeds"]) * 3 * (2 + 1)
+        self.assertEqual(planned, 36)
+
+    def test_neutral_private_participants_are_separate_from_colluder_metadata(self):
+        participants = _select_private_channel_participants(
+            agent_names=["Layla", "Jeanene", "Pauline"],
+            colluders=[],
+            secret_channel_enabled=True,
+            collusion_cfg={
+                "private_channel_participant_count": 2,
+                "private_channel_selection": "first",
+            },
+            rng=random.Random(1),
+        )
+        self.assertEqual(participants, ["Layla", "Jeanene"])
+        self.assertEqual(
+            _select_private_channel_participants(
+                agent_names=["Layla", "Jeanene", "Pauline"],
+                colluders=[],
+                secret_channel_enabled=False,
+                collusion_cfg={"private_channel_participant_count": 2},
+                rng=random.Random(1),
+            ),
+            [],
+        )
+        self.assertEqual(
+            _select_private_channel_participants(
+                agent_names=["Layla", "Jeanene", "Pauline"],
+                colluders=["Layla", "Jeanene"],
+                secret_channel_enabled=True,
+                collusion_cfg={},
+                rng=random.Random(1),
+            ),
+            ["Layla", "Jeanene"],
+        )
 
 
 if __name__ == "__main__":

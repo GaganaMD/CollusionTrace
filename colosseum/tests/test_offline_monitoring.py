@@ -34,6 +34,7 @@ class OfflineMonitoringTests(unittest.TestCase):
             rendered = json.dumps(make_observation(run, layer, policy), default=lambda value: value.__dict__)
             self.assertNotIn("PRIVATE_LEAK_SENTINEL", rendered)
             self.assertNotIn("colluder", rendered)
+            self.assertNotIn("private_channel_participants", rendered)
             self.assertNotIn('"secret_channel_enabled"', rendered)
         self.assertEqual(len(make_observation(run, "O0").events), 0)
         self.assertTrue(all(event["channel_id"] != "1" for event in make_observation(run, "O2", policy).events))
