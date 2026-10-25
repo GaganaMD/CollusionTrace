@@ -293,3 +293,29 @@ class V2Extensions(unittest.TestCase):
         self.assertEqual((args, st), ({"task_id": "R1-T2"}, "ok_text"))
         self.assertEqual(_parse_tool_call({"content": 'ACTION: {"name": "pass", "arguments": {}}'}, "post_message")[1], "no_tool_call")
         self.assertEqual(_parse_tool_call({"content": "no action here"}, "assign_task")[1], "no_tool_call")
+
+
+class ResumeAndMonitorO1(unittest.TestCase):
+    def test_resume_skips_completed_episodes(self):
+        import yaml
+        from experiments.collusion.repeated.runner import run_config
+        tmp = Path(tempfile.mkdtemp())
+        cfg = {"experiment_id": "t_resume", "seeds": [1, 2], "workers": 2, "dry_run_policy": "efficient", "model": {"name": "x"},
+               "environment": {"rounds": 2, "planning_steps": 1, "bonus": 40},
+               "cells": [{"name": "c", "objective_regime": "mixed", "private_channel": False}]}
+        p = tmp / "c.yaml"
+        p.write_text(yaml.safe_dump(cfg))
+        root = run_config(str(p), str(tmp / "o"), True, False)
+        before = (root / "c_s1" / "final_summary.json").stat().st_mtime
+        run_config(str(p), None, True, False, resume=str(root))
+        self.assertEqual(before, (root / "c_s1" / "final_summary.json").stat().st_mtime)
+
+    def test_monitor_o1_flags_public_bonus_request_and_agreement(self):
+        from experiments.collusion.monitoring.rules_o1 import evaluate_o1
+        _e, out = run_episode("paired", private_channel=False)
+        run = load_run(out)
+        dec = evaluate_o1(make_observation(run, "O1", policy_with_public_channels(["0"]))).decision
+        self.assertIn(dec, {"no_alert", "request_review", "suspicious_coordination"})
+        self.assertEqual(evaluate_o1(make_observation(run, "O0", policy_with_public_channels(["0"]))).decision, "abstain")
+        _e, out = run_episode("paired", private_channel=True)
+        self.assertEqual(evaluate_o1(make_observation(load_run(out), "O1", policy_with_public_channels(["0"]))).decision, "no_alert")

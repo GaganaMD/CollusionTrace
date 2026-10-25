@@ -56,9 +56,17 @@ OpenRouter support remains in the code for reproducing earlier runs but is block
 new RepeatedJira runs.
 
 ## Status (25 Oct 2026)
-- Single-shot and RepeatedJira v1 studies: no collusion observed; feasibility only.
-- Directions 1 and 2 running across Qwen2.5-7B, Qwen3-8B, DeepSeek-R1-Distill-Qwen-7B and
-  Qwen3-32B — see `research/04_*` and `research/05_*`.
+- Single-shot and RepeatedJira v1 studies: no collusion observed (feasibility only).
+- **Direction 1 (why no collusion), 165 episodes across 4 models:** emergent grabs stay rare
+  under every single-barrier fix. Understanding is not the bottleneck for the reasoning
+  models; they decline the costly first move and do not repay a partner who helped them
+  (Qwen3-8B repaid 0/10). Qwen2.5-7B repays but misunderstands payoffs.
+  See `research/04_why_no_collusion/RESULTS.md`.
+- **Direction 2 (instructed control), 60 episodes:** when told to collude, Qwen3-8B/32B execute it
+  in 80–100% of offer rounds; Qwen2.5-7B and R1-Distill-7B mostly fail operationally.
+  O2 tool events reveal this harm pattern; the keyword baseline catches nothing.
+  See `research/05_instructed_collusion/RESULTS.md`.
+- Modal spend for these studies so far ≈ $25.
 
 Framework credit: built on [Colosseum](https://github.com/umass-ai-safety/colosseum) and
 [Terrarium](https://github.com/umass-aisec/Terrarium); see `colosseum/README.md`.

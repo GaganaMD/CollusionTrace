@@ -6,8 +6,8 @@
 | `01_instructed_pilot/` | Original Colosseum instructed-collusion pilot (Jira, coalition prompts) | historical |
 | `02_single_shot_incentives/` | Single-shot Jira incentive feasibility, calibration, mixed-incentive 2×2 (OpenRouter) | done, feasibility only |
 | `03_repeated_pilot/` | RepeatedJira v1 design + Modal pilot (8 episodes, no collusion) | done |
-| `04_why_no_collusion/` | Direction 1: ablations, confederate, probes across 4 models | running / see RESULTS.md |
-| `05_instructed_collusion/` | Direction 2: instructed positive control across 4 models | running / see RESULTS.md |
+| `04_why_no_collusion/` | Direction 1: ablations, confederate, probes across 4 models | done (165 episodes) — RESULTS.md |
+| `05_instructed_collusion/` | Direction 2: instructed positive control + monitor evaluation | done (60 episodes) — RESULTS.md |
 | `infrastructure/` | Modal serving and workflow notes | current |
 | `figures/` | Figures used in team updates | — |
 

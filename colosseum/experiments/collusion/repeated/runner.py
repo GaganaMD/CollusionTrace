@@ -371,25 +371,36 @@ def _episode_job(cfg, cell, seed, root, meta_base, dry_run):
 
 
 def run_config(path: str, out_root: str | None, dry_run: bool, allow_inference: bool, only_cells: list[str] | None = None,
-               seeds: list[int] | None = None, workers: int | None = None) -> Path:
+               seeds: list[int] | None = None, workers: int | None = None, resume: str | None = None) -> Path:
     from concurrent.futures import ThreadPoolExecutor, as_completed
     raw = Path(path).read_text(encoding="utf-8")
     cfg = yaml.safe_load(raw)
     if not dry_run and not allow_inference:
         raise SystemExit("Refusing model inference without --allow-inference (use --dry-run for offline checks).")
     stamp = datetime.now(UTC).strftime("%Y%m%d-%H%M%S")
-    root = Path(out_root or cfg.get("output_dir", "o/rj")) / (f"{cfg['experiment_id']}-{stamp}" + ("-dry" if dry_run else ""))
+    root = Path(resume) if resume else Path(out_root or cfg.get("output_dir", "o/rj")) / (f"{cfg['experiment_id']}-{stamp}" + ("-dry" if dry_run else ""))
     repo = Path(__file__).resolve().parents[3]
     meta_base = {"experiment_id": cfg["experiment_id"], "config_sha256": hashlib.sha256(raw.encode()).hexdigest(),
                  "backend": "scripted" if dry_run else cfg["model"].get("label", "modal-vllm"),
                  "model": "scripted" if dry_run else cfg["model"]["name"],
                  "temperature": None if dry_run else cfg["model"].get("temperature", 0),
                  "max_tokens": None if dry_run else cfg["model"].get("max_tokens", 512), **_git_state(repo)}
-    root.mkdir(parents=True, exist_ok=False)
+    root.mkdir(parents=True, exist_ok=bool(resume))
+    if resume and (root / "config.yaml").exists() and (root / "config.yaml").read_text(encoding="utf-8") != raw:
+        raise SystemExit("Refusing to resume: config differs from the one this root was started with.")
     (root / "config.yaml").write_text(raw, encoding="utf-8")
     manifest = {"created_at": stamp, "dry_run": dry_run, **meta_base, "episodes": []}
+    if resume and (root / "manifest.json").exists():
+        manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+        manifest.setdefault("resumed_at", []).append(stamp)
+
+    def _done(cell, seed):
+        f = root / f"{cell['name']}_s{seed}" / "final_summary.json"
+        return f.exists() and json.loads(f.read_text(encoding="utf-8")).get("status") == "complete"
+
     jobs = [(cell, seed) for cell in cfg["cells"] if not only_cells or cell["name"] in only_cells
-            for seed in (seeds or cell.get("seeds") or cfg["seeds"])]
+            for seed in (seeds or cell.get("seeds") or cfg["seeds"]) if not (resume and _done(cell, seed))]
+    print(json.dumps({"jobs": len(jobs), "root": str(root)}), flush=True)
     if not dry_run:
         waited = build_client(cfg, False).wait_ready()
         print(json.dumps({"endpoint_ready_after_s": waited}), flush=True)
@@ -416,8 +427,9 @@ def main() -> None:
     ap.add_argument("--cells", nargs="*")
     ap.add_argument("--seeds", nargs="*", type=int)
     ap.add_argument("--workers", type=int)
+    ap.add_argument("--resume", help="existing run root; completed episodes are skipped")
     a = ap.parse_args()
-    print(run_config(a.config, a.out_root, a.dry_run, a.allow_inference, a.cells, a.seeds, a.workers))
+    print(run_config(a.config, a.out_root, a.dry_run, a.allow_inference, a.cells, a.seeds, a.workers, a.resume))
 
 
 if __name__ == "__main__":
