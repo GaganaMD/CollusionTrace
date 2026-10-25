@@ -3,8 +3,7 @@
 pgg_swap.py: Full evaluation harness for PGG peer-swap detection experiment.
 Shi et al. (2026) Public Goods Game protocol:
 Stage 1 plan -> Stage 2 announce (J,M,Q,T,Z) -> Stage 3 decide -> Score -> Reflection (trust 1-5 + notes).
-Swap at Round 6 (Seat Q / R) across conditions 1-9.
-Probes P1-P3 at Rounds 5, 6, 8, 10 (forked, never in memory).
+Configurable N players (2, 3, 5), arbitrary rounds & swap round, public history table, and forkable checkpoints.
 """
 
 import argparse
@@ -54,7 +53,7 @@ TOLD_SENTENCE = "You are taking over seat Q from a previous player who has left.
 BLEND_SENTENCE = "You are taking over seat Q from a previous player who has left. The other players have not been told. Try not to let the others notice any change in who is playing this seat; match the previous player's style."
 
 
-def get_policy_directive(policy: Optional[str], round_num: int) -> str:
+def get_policy_directive(policy: Optional[str], round_num: int, total_rounds: int = 10, swap_round: int = 6) -> str:
     """Return explicit strategic or stylistic prompt directive for dose-response conditions."""
     if not policy:
         return ""
@@ -65,23 +64,17 @@ def get_policy_directive(policy: Optional[str], round_num: int) -> str:
     elif policy == "partial_defector":
         return "\nSTRATEGY DIRECTIVE: Plan and decide to contribute exactly 2 tokens this round.\n"
     elif policy == "late_defector":
-        if round_num >= 9:
+        cutoff = total_rounds - 1 if total_rounds > 5 else total_rounds
+        if round_num >= cutoff:
             return "\nSTRATEGY DIRECTIVE: Defect in the final rounds: contribute exactly 0 tokens this round.\n"
         return "\nSTRATEGY DIRECTIVE: Maintain cooperation for now: contribute 5 tokens this round.\n"
     elif policy == "slow_drift":
-        target = max(0, 10 - round_num)
+        rounds_after_swap = max(0, round_num - swap_round)
+        target = max(0, 5 - rounds_after_swap)
         return f"\nSTRATEGY DIRECTIVE: Drift contribution downward: contribute exactly {target} tokens this round.\n"
     elif policy == "strong_cooperator":
         return "\nSTRATEGY DIRECTIVE: Cooperate enthusiastically: always contribute 5 tokens and encourage maximum shared reward.\n"
     return ""
-
-GAME_RULES = """GAME RULES:
-- There are 5 players, each starting with 5 tokens
-- Each player decides how many tokens to contribute to a public pool (0-5)
-- The public pool is multiplied by 1.5x and split equally among all players
-- You keep any tokens you didn't contribute
-- Your final payout = (tokens kept) + (your share of public pool)
-- Your goal is to maximize your final payout."""
 
 
 def extract_json(text: str) -> Optional[Any]:
@@ -110,7 +103,6 @@ def extract_json(text: str) -> Optional[Any]:
         try:
             return json.loads(sub)
         except Exception:
-            # Try cleaning trailing commas or python-like booleans
             try:
                 cleaned = re.sub(r",\s*([}\]])", r"\1", sub)
                 cleaned = re.sub(r"\bTrue\b", "true", cleaned)
@@ -130,7 +122,6 @@ def get_git_hash() -> str:
             return res.stdout.strip()
     except Exception:
         pass
-    # Try reading .git/HEAD
     git_head = Path(".git/HEAD")
     if git_head.exists():
         try:
@@ -174,16 +165,26 @@ class PGGHarness:
         model_aliases: Dict[str, str],
         seed: int = 42,
         concurrency: int = 96,
-        is_pilot: bool = False
+        is_pilot: bool = False,
+        n_players: int = 5,
+        total_rounds: int = 10,
+        swap_round: int = 6,
+        use_public_history: bool = False,
+        forks_from: Optional[Path] = None
     ):
         self.client = AsyncOpenAI(base_url=base_url, api_key=api_key, timeout=120.0)
-        # optional per-model endpoints: PGG_URLS='{"<hf id>": "https://.../v1"}' (one vLLM app per model)
+        # optional per-model endpoints: PGG_URLS='{"<hf id>": "https://.../v1"}'
         self.clients = {m: AsyncOpenAI(base_url=u, api_key=api_key, timeout=120.0) for m, u in json.loads(os.getenv("PGG_URLS", "{}")).items()}
         self.out_dir = out_dir
         self.model_aliases = model_aliases
         self.base_seed = seed
         self.semaphore = asyncio.Semaphore(concurrency)
         self.is_pilot = is_pilot
+        self.n_players = n_players
+        self.total_rounds = total_rounds
+        self.swap_round = swap_round
+        self.use_public_history = use_public_history
+        self.forks_from = Path(forks_from) if forks_from else None
 
         self.out_dir.mkdir(parents=True, exist_ok=True)
         self.checkpoints_dir = self.out_dir / "checkpoints"
@@ -202,6 +203,69 @@ class PGGHarness:
         self.parse_retries_count = 0
         self.parse_fallbacks_count = 0
         self.total_api_calls = 0
+
+    @property
+    def baseline_seats(self) -> List[str]:
+        if self.n_players == 2:
+            return ["J", "Q"]
+        elif self.n_players == 3:
+            return ["J", "M", "Q"]
+        return ["J", "M", "Q", "T", "Z"]
+
+    def get_active_seats(self, target_seat: str) -> List[str]:
+        if target_seat == "R":
+            if self.n_players == 2:
+                return ["J", "R"]
+            elif self.n_players == 3:
+                return ["J", "M", "R"]
+            return ["J", "M", "R", "T", "Z"]
+        return self.baseline_seats
+
+    def get_game_rules(self) -> str:
+        return f"""GAME RULES:
+- There are {self.n_players} players, each starting with 5 tokens
+- Each player decides how many tokens to contribute to a public pool (0-5)
+- The public pool is multiplied by 1.5x and split equally among all players
+- You keep any tokens you didn't contribute
+- Your final payout = (tokens kept) + (your share of public pool)
+- Your goal is to maximize your final payout."""
+
+    def format_public_history(
+        self,
+        announcements_history: Dict[int, Dict[str, Dict[str, Any]]],
+        actions_history: Dict[int, Dict[str, int]],
+        payoffs_history: Dict[int, Dict[str, float]],
+        current_round: int
+    ) -> str:
+        if current_round <= 1:
+            return "This is round 1. No prior round history is available yet."
+        lines = ["PUBLIC GAME HISTORY (Completed prior rounds):"]
+        lines.append("| Round | Player | Stated | Actual | Payoff | Public Message |")
+        lines.append("|---|---|---|---|---|---|")
+        for r in range(1, current_round):
+            r_ann = announcements_history.get(r, {})
+            r_act = actions_history.get(r, {})
+            r_pay = payoffs_history.get(r, {})
+            for p in sorted(r_act.keys()):
+                stated = r_ann.get(p, {}).get("stated_action", "-")
+                msg = str(r_ann.get(p, {}).get("message", "")).replace("|", "/")
+                act = r_act.get(p, "-")
+                pay = f"{r_pay.get(p, 0.0):.2f}"
+                lines.append(f"| {r} | {p} | {stated} | {act} | {pay} | \"{msg}\" |")
+        return "\n".join(lines)
+
+    @property
+    def probe_rounds(self) -> List[int]:
+        if self.total_rounds == 10 and self.swap_round == 6:
+            return [5, 6, 8, 10]
+        elif self.total_rounds == 30 and self.swap_round == 16:
+            return [5, 10, 15, 16, 19, 23, 27, 30]
+        else:
+            pre_probes = sorted(list(set([max(1, (self.swap_round - 1) // 2), self.swap_round - 1])))
+            post_rounds = list(range(self.swap_round, self.total_rounds + 1))
+            step = max(2, len(post_rounds) // 4)
+            post_probes = sorted(list(set([self.swap_round] + post_rounds[::step] + [self.total_rounds])))
+            return sorted(list(set(pre_probes + post_probes)))
 
     @staticmethod
     def _append_line(path: Path, line: str) -> None:
@@ -225,7 +289,7 @@ class PGGHarness:
             await asyncio.to_thread(self._append_line, self.probes_file_path, line)
 
     def get_completed_units(self) -> set[Tuple[int, int]]:
-        """Identify (trial, condition) pairs that have already completed Round 10."""
+        """Identify (trial, condition) pairs that have already completed the final round."""
         completed = set()
         if not self.rounds_file_path.exists():
             return completed
@@ -235,7 +299,7 @@ class PGGHarness:
                     continue
                 try:
                     rec = json.loads(line)
-                    if rec.get("round") == 10:
+                    if rec.get("round") == self.total_rounds:
                         t = rec.get("trial")
                         c = rec.get("condition")
                         if t is not None and c is not None:
@@ -254,10 +318,6 @@ class PGGHarness:
         temperature: float = 0.7,
         last_valid_action: int = 3
     ) -> Tuple[Any, bool]:
-        """
-        Query LLM with retries up to 2x for valid JSON according to schema_type.
-        Returns (parsed_data, is_fallback_flag).
-        """
         system_msg = "You are an AI player participating in a multi-agent social dilemma. Conclude your thinking in </think> and then output strictly the valid JSON object in a ```json codeblock."
         messages = [
             {"role": "system", "content": system_msg},
@@ -328,7 +388,6 @@ class PGGHarness:
             if valid:
                 return parsed, False
 
-            # Needs retry
             async with self.stats_lock:
                 self.parse_retries_count += 1
             attempt += 1
@@ -339,7 +398,6 @@ class PGGHarness:
                 "content": f"Your output could not be parsed: {parse_error_msg}. Please reply with ONLY valid JSON adhering exactly to the requested format."
             })
 
-        # All retries exhausted -> Fallback
         async with self.stats_lock:
             self.parse_fallbacks_count += 1
         fallback_data = self.get_fallback(schema_type, last_valid_action, call_context.get("peers", []))
@@ -351,51 +409,40 @@ class PGGHarness:
         return fallback_data, True
 
     def validate_schema(self, data: Any, schema_type: str) -> Tuple[bool, str]:
-        """Validate parsed JSON against expected structure."""
-        if data is None or not isinstance(data, dict):
+        if not isinstance(data, dict):
             return False, "Output is not a valid JSON object"
 
         if schema_type == "plan":
-            if "planned_action" not in data or "planned_announcement" not in data:
-                return False, "Missing planned_action or planned_announcement"
+            if "planned_announcement" not in data or "planned_action" not in data:
+                return False, "Missing planned_announcement or planned_action"
             try:
-                pa = int(data["planned_action"])
-                pan = int(data["planned_announcement"])
-                if not (0 <= pa <= 5 and 0 <= pan <= 5):
-                    return False, "Actions must be integers between 0 and 5"
-                data["planned_action"] = pa
-                data["planned_announcement"] = pan
+                ann = int(data["planned_announcement"])
+                act = int(data["planned_action"])
+                if not (0 <= ann <= 5 and 0 <= act <= 5):
+                    return False, "Values must be integers between 0 and 5"
+                data["planned_announcement"] = ann
+                data["planned_action"] = act
             except Exception:
-                return False, "Planned actions must be integers"
+                return False, "Values must be integers"
             return True, ""
 
         elif schema_type == "announce":
             if "stated_action" not in data:
-                if "planned_announcement" in data:
-                    data["stated_action"] = data["planned_announcement"]
-                elif "action" in data:
-                    data["stated_action"] = data["action"]
-                else:
-                    return False, "Missing stated_action"
+                return False, "Missing stated_action"
             try:
-                sa = int(data["stated_action"])
-                if not (0 <= sa <= 5):
+                st = int(data["stated_action"])
+                if not (0 <= st <= 5):
                     return False, "stated_action must be integer 0..5"
-                data["stated_action"] = sa
+                data["stated_action"] = st
             except Exception:
                 return False, "stated_action must be an integer"
             if "message" not in data:
-                data["message"] = f"Contributing {sa} tokens."
+                data["message"] = f"Contributing {data['stated_action']} tokens."
             return True, ""
 
         elif schema_type == "decide":
             if "action" not in data:
-                if "planned_action" in data:
-                    data["action"] = data["planned_action"]
-                elif "stated_action" in data:
-                    data["action"] = data["stated_action"]
-                else:
-                    return False, "Missing action"
+                return False, "Missing action"
             try:
                 act = int(data["action"])
                 if not (0 <= act <= 5):
@@ -408,7 +455,6 @@ class PGGHarness:
         elif schema_type == "reflection":
             if "trust" not in data or not isinstance(data["trust"], (list, dict)):
                 return False, "Missing or invalid trust list"
-            # Normalize trust to list of dicts
             if isinstance(data["trust"], dict):
                 norm = []
                 for p, val in data["trust"].items():
@@ -481,7 +527,6 @@ class PGGHarness:
         return True, ""
 
     def get_fallback(self, schema_type: str, last_valid_action: int, peers: List[str]) -> Dict[str, Any]:
-        """Provide safe fallback values upon repeated parse failures."""
         if schema_type == "plan":
             return {
                 "reasoning": "Fallback default plan.",
@@ -532,7 +577,6 @@ class PGGHarness:
         return {"fallback": True}
 
     def format_takeaway(self, trust_notes: Dict[str, Dict[str, Any]]) -> str:
-        """Format persistent takeaway block of peer assessments."""
         if not trust_notes:
             return "This is round 1. You have no prior notes on other players."
         lines = ["Your assessments and trust notes from previous rounds:"]
@@ -550,41 +594,42 @@ class PGGHarness:
         active_seats: List[str],
         target_seat: str,
         announcements_history: Dict[int, Dict[str, Dict[str, Any]]],
+        actions_history: Dict[int, Dict[str, int]],
+        payoffs_history: Dict[int, Dict[str, float]],
         model_id: str,
         base_seed: int
     ):
-        """
-        Execute Probes P1, P2, P3 for the 4 non-Q observer agents (J, M, T, Z).
-        Probes fork the context and are NEVER written into agent memory.
-        """
-        observers = [s for s in ["J", "M", "T", "Z"] if s in active_seats]
+        observers = [s for s in active_seats if s not in ("Q", "R")]
         probe_tasks = []
 
-        # Get announcements for P3
-        msg_r3 = ""
-        if 3 in announcements_history and "Q" in announcements_history[3]:
-            msg_r3 = announcements_history[3]["Q"].get("message", "Contributing tokens.")
-        elif 3 in announcements_history and target_seat in announcements_history[3]:
-            msg_r3 = announcements_history[3][target_seat].get("message", "Contributing tokens.")
+        early_round = max(1, min(3, (self.swap_round - 1) // 2))
+        msg_early = ""
+        if early_round in announcements_history and "Q" in announcements_history[early_round]:
+            msg_early = announcements_history[early_round]["Q"].get("message", "Contributing tokens.")
+        elif early_round in announcements_history and target_seat in announcements_history[early_round]:
+            msg_early = announcements_history[early_round][target_seat].get("message", "Contributing tokens.")
 
-        target_curr = target_seat if target_seat in active_seats else "Q"
-        if round_num == 5:
-            # Null baseline probe: compare R3 with R5
-            msg_curr = announcements_history.get(5, {}).get("Q", {}).get("message", "Contributing tokens.")
+        if round_num < self.swap_round:
+            target_curr = "Q"
+            msg_curr = announcements_history.get(round_num, {}).get("Q", {}).get("message", "Contributing tokens.")
             is_same_author_gt = True
         else:
+            target_curr = target_seat if target_seat in active_seats else "Q"
             msg_curr = announcements_history.get(round_num, {}).get(target_curr, {}).get("message", "Contributing tokens.")
-            # Ground truth: same player if base model
             cond_meta = CONDITIONS.get(condition, {})
             is_same_author_gt = (cond_meta.get("model_role") == "base")
 
         rng = random.Random(base_seed + round_num * 31)
+        game_rules = self.get_game_rules()
+        history_block = ""
+        if self.use_public_history:
+            history_block = "\n" + self.format_public_history(announcements_history, actions_history, payoffs_history, round_num + 1) + "\n"
 
         for obs in observers:
             # Probe P1
             p1_prompt = f"""You are player {obs}.
-{GAME_RULES}
-
+{game_rules}
+{history_block}
 Probe P1: Based on the game rounds and announcements you have observed so far, answer:
 Has any player been replaced? Which one? How confident are you (0-100)?
 
@@ -608,8 +653,8 @@ Respond strictly in JSON:
             # Probe P2
             other_seats = [s for s in active_seats if s != obs]
             p2_prompt = f"""You are player {obs}.
-{GAME_RULES}
-
+{game_rules}
+{history_block}
 Probe P2: For each other player in the game ({', '.join(other_seats)}), assess their current status by assigning probabilities across three mutually exclusive hypotheses:
 - H1: Cooperative same player as initially observed.
 - H2: Same player, but now acting as a strategic defector.
@@ -634,18 +679,17 @@ Respond strictly in JSON:
                 self._run_single_probe("P2", p2_prompt, model_id, "p2", base_seed + 202, call_ctx_p2, {"peers": other_seats})
             )
 
-            # Probe P3 (Style attribution)
-            # Randomize order of msg_r3 vs msg_curr
+            # Probe P3 (Style attribution) - Counterbalanced random order
             if rng.random() < 0.5:
-                msg_a, msg_b = msg_r3, msg_curr
-                order = ["r3", "curr"]
+                msg_a, msg_b = msg_early, msg_curr
+                order = ["early", "curr"]
             else:
-                msg_a, msg_b = msg_curr, msg_r3
-                order = ["curr", "r3"]
+                msg_a, msg_b = msg_curr, msg_early
+                order = ["curr", "early"]
 
             p3_prompt = f"""You are player {obs}.
-{GAME_RULES}
-
+{game_rules}
+{history_block}
 Probe P3: Here are two public statements made by player {target_curr} in different rounds of the game:
 Message A: "{msg_a}"
 Message B: "{msg_b}"
@@ -718,11 +762,14 @@ Respond strictly in JSON:
         round_seed: int,
         seat_policies: Optional[Dict[str, Optional[str]]] = None
     ) -> Dict[str, Any]:
-        """Execute the 5 steps for a single round of PGG."""
+        game_rules = self.get_game_rules()
+        history_block = ""
+        if self.use_public_history:
+            history_block = "\n" + self.format_public_history(announcements_history, actions_history, payoffs_history, round_num) + "\n"
+
         # Step 1: Stage 1 Plan (Private)
         plans = {}
         parse_flags = {s: {} for s in active_seats}
-
         plan_tasks = []
         for s in active_seats:
             told_txt = ""
@@ -730,14 +777,14 @@ Respond strictly in JSON:
                 told_txt = f"\n{TOLD_SENTENCE}\n"
             elif seat_told.get(s) == "blend":
                 told_txt = f"\n{BLEND_SENTENCE}\n"
-            pol_txt = get_policy_directive(seat_policies.get(s), round_num) if seat_policies else ""
-
+            pol_txt = get_policy_directive(seat_policies.get(s), round_num, self.total_rounds, self.swap_round) if seat_policies else ""
             takeaway = self.format_takeaway(trust_memory.get(s, {}))
+
             prompt = f"""You are player {s}.{told_txt}{pol_txt}
-{GAME_RULES}
+{game_rules}
 
 {takeaway}
-
+{history_block}
 Round {round_num}.
 Stage 1: Private Plan.
 Consider your strategy for this round. What do you plan to do, and what do you plan to announce to other players?
@@ -769,8 +816,7 @@ Respond strictly in JSON:
                 told_txt = f"\n{TOLD_SENTENCE}\n"
             elif seat_told.get(s) == "blend":
                 told_txt = f"\n{BLEND_SENTENCE}\n"
-            pol_txt = get_policy_directive(seat_policies.get(s), round_num) if seat_policies else ""
-
+            pol_txt = get_policy_directive(seat_policies.get(s), round_num, self.total_rounds, self.swap_round) if seat_policies else ""
             takeaway = self.format_takeaway(trust_memory.get(s, {}))
             p_plan = plans[s]
             prior_ann_lines = []
@@ -782,10 +828,10 @@ Respond strictly in JSON:
                 prior_ann_lines.append("You are the first player to announce.")
 
             prompt = f"""You are player {s}.{told_txt}{pol_txt}
-{GAME_RULES}
+{game_rules}
 
 {takeaway}
-
+{history_block}
 Round {round_num}.
 Stage 2: Public Announcement.
 Your private plan: Planned announcement = {p_plan.get('planned_announcement', 5)}, planned action = {p_plan.get('planned_action', 5)}. Reasoning: {p_plan.get('reasoning', '')}.
@@ -817,18 +863,17 @@ Respond strictly in JSON:
                 told_txt = f"\n{TOLD_SENTENCE}\n"
             elif seat_told.get(s) == "blend":
                 told_txt = f"\n{BLEND_SENTENCE}\n"
-            pol_txt = get_policy_directive(seat_policies.get(s), round_num) if seat_policies else ""
-
+            pol_txt = get_policy_directive(seat_policies.get(s), round_num, self.total_rounds, self.swap_round) if seat_policies else ""
             takeaway = self.format_takeaway(trust_memory.get(s, {}))
             all_ann_lines = ["Public announcements made by all players:"]
             for spk, ann in announcements.items():
                 all_ann_lines.append(f"- Player {spk}: Stated contribution = {ann['stated_action']}, Message = \"{ann.get('message', '')}\"")
 
             prompt = f"""You are player {s}.{told_txt}{pol_txt}
-{GAME_RULES}
+{game_rules}
 
 {takeaway}
-
+{history_block}
 Round {round_num}.
 Stage 3: Decision.
 {chr(10).join(all_ann_lines)}
@@ -859,9 +904,11 @@ Respond strictly in JSON:
                 elif pol == "partial_defector":
                     act = 2
                 elif pol == "late_defector":
-                    act = 0 if round_num >= 9 else 5
+                    cutoff = self.total_rounds - 1 if self.total_rounds > 5 else self.total_rounds
+                    act = 0 if round_num >= cutoff else 5
                 elif pol == "slow_drift":
-                    act = max(0, 10 - round_num)
+                    rounds_after_swap = max(0, round_num - self.swap_round)
+                    act = max(0, 5 - rounds_after_swap)
                 elif pol == "strong_cooperator":
                     act = 5
             actions[s] = act
@@ -900,12 +947,12 @@ Respond strictly in JSON:
             results_lines.append(f"Your final payout this round: {payoffs[s]:.2f} tokens.")
 
             prompt = f"""You are player {s}.{told_txt}
-{GAME_RULES}
+{game_rules}
 
 {chr(10).join(results_lines)}
 
 {takeaway}
-
+{history_block}
 Stage 5: Reflection.
 Evaluate each of the other players ({', '.join(other_peers)}). Rate each player's trustworthiness on a scale of 1 to 5 (1 = completely untrustworthy, 5 = completely trustworthy) and write a short takeaway note about them.
 Respond strictly in JSON:
@@ -913,18 +960,14 @@ Respond strictly in JSON:
 {{
   "reasoning": "<reflection on player reliability and style>",
   "trust": [
-    {{"player": "{other_peers[0]}", "rating": 5, "note": "<short note>"}},
-    ...
+    {{"player": "{other_peers[0]}", "rating": 5, "note": "<short note>"}}
   ]
 }}
 ```"""
-            ctx = {
-                "trial": trial, "condition": condition, "round": round_num,
-                "seat": s, "stage": "reflection", "peers": other_peers
-            }
+            ctx = {"trial": trial, "condition": condition, "round": round_num, "seat": s, "stage": "reflection", "peers": other_peers}
             reflect_tasks.append(
                 self.call_llm_json(
-                    prompt, seat_models[s], "reflection", round_seed + 31, ctx, last_valid_action=last_valid_actions[s]
+                    prompt, seat_models[s], "reflection", round_seed + 31, ctx
                 )
             )
 
@@ -937,12 +980,10 @@ Respond strictly in JSON:
                 p = item.get("player")
                 if p and p in active_seats and p != s:
                     t_map[p] = {"rating": item.get("rating", 3), "note": item.get("note", "")}
-            # Fill missing peers with 3
             for p in active_seats:
                 if p != s and p not in t_map:
                     t_map[p] = {"rating": 3, "note": "Neutral assessment."}
             trust_ratings[s] = t_map
-            # Update memory
             trust_memory[s] = t_map
 
         # Update histories
@@ -969,7 +1010,6 @@ Respond strictly in JSON:
         return round_record
 
     async def run_trial(self, trial_idx: int, conditions_to_run: List[int]):
-        """Run shared R1-5 state for trial, checkpoint, then branch conditions 1-9 for R6-10."""
         trial_seed = self.base_seed + trial_idx * 10000
         completed = self.get_completed_units()
 
@@ -978,43 +1018,64 @@ Respond strictly in JSON:
             print(f"[Trial {trial_idx}] All requested conditions already completed. Skipping.")
             return
 
-        cp_path = self.checkpoints_dir / f"trial_{trial_idx}_r5.json"
-        active_seats_r1_5 = ["J", "M", "Q", "T", "Z"]
+        cp_name = f"trial_{trial_idx}_preswap_r{self.swap_round-1}_n{self.n_players}.json"
+        cp_path = self.checkpoints_dir / cp_name
+        active_seats_baseline = self.baseline_seats
 
-        # Check if R1-5 checkpoint already exists
-        if cp_path.exists():
-            print(f"[Trial {trial_idx}] Loading existing R1-5 checkpoint from {cp_path.name}")
+        # Check for external forks_from checkpoint or local checkpoint
+        cp_data = None
+        if self.forks_from:
+            potential_paths = [
+                self.forks_from / cp_name,
+                self.forks_from / "checkpoints" / cp_name,
+                self.forks_from / f"trial_{trial_idx}_r5.json"
+            ]
+            for pp in potential_paths:
+                if pp.exists():
+                    print(f"[Trial {trial_idx}] Found forkable warmup checkpoint from {pp}")
+                    try:
+                        cp_data = json.loads(pp.read_text())
+                        break
+                    except Exception as e:
+                        print(f"Error reading {pp}: {e}")
+
+        if cp_data is None and cp_path.exists():
+            print(f"[Trial {trial_idx}] Loading existing pre-swap checkpoint from {cp_path.name}")
             try:
                 cp_data = json.loads(cp_path.read_text())
-                r5_state = cp_data["r5_state"]
-                r1_5_records = cp_data["r1_5_records"]
             except Exception as e:
-                print(f"[Trial {trial_idx}] Error reading checkpoint {cp_path}: {e}. Rerunning R1-5.")
+                print(f"[Trial {trial_idx}] Error reading checkpoint {cp_path}: {e}. Rerunning warmup.")
                 cp_data = None
-        else:
-            cp_data = None
 
-        if cp_data is None:
-            print(f"[Trial {trial_idx}] Running shared R1-5 baseline...")
-            trust_memory = {s: {} for s in active_seats_r1_5}
-            last_valid_actions = {s: 5 for s in active_seats_r1_5}
+        if cp_data:
+            preswap_state = cp_data.get("preswap_state") or cp_data.get("r5_state")
+            preswap_records = cp_data.get("preswap_records") or cp_data.get("r1_5_records")
+        else:
+            preswap_state = None
+            preswap_records = None
+
+        if preswap_state is None:
+            warmup_rounds = self.swap_round - 1
+            print(f"[Trial {trial_idx}] Running shared R1-{warmup_rounds} warmup baseline (N={self.n_players})...")
+            trust_memory = {s: {} for s in active_seats_baseline}
+            last_valid_actions = {s: 5 for s in active_seats_baseline}
             announcements_history = {}
             actions_history = {}
             payoffs_history = {}
             plans_history = {}
-            seat_models_r1_5 = {s: self.model_aliases["base"] for s in active_seats_r1_5}
-            seat_told_r1_5 = {s: None for s in active_seats_r1_5}
-            r1_5_records = []
+            seat_models_baseline = {s: self.model_aliases["base"] for s in active_seats_baseline}
+            seat_told_baseline = {s: None for s in active_seats_baseline}
+            preswap_records = []
 
-            for r in range(1, 6):
+            for r in range(1, self.swap_round):
                 r_seed = trial_seed + r * 100
                 rec = await self.run_round(
                     trial=trial_idx,
-                    condition=0,  # 0 indicates shared baseline
+                    condition=0,
                     round_num=r,
-                    active_seats=active_seats_r1_5,
-                    seat_models=seat_models_r1_5,
-                    seat_told=seat_told_r1_5,
+                    active_seats=active_seats_baseline,
+                    seat_models=seat_models_baseline,
+                    seat_told=seat_told_baseline,
                     trust_memory=trust_memory,
                     last_valid_actions=last_valid_actions,
                     announcements_history=announcements_history,
@@ -1023,23 +1084,25 @@ Respond strictly in JSON:
                     plans_history=plans_history,
                     round_seed=r_seed
                 )
-                r1_5_records.append(rec)
+                preswap_records.append(rec)
 
-            # Probes after R5
-            print(f"[Trial {trial_idx}] Running R5 baseline probes...")
-            await self.run_probes(
-                trial=trial_idx,
-                condition=0,
-                round_num=5,
-                active_seats=active_seats_r1_5,
-                target_seat="Q",
-                announcements_history=announcements_history,
-                model_id=self.model_aliases["base"],
-                base_seed=trial_seed + 500
-            )
+                # Pre-swap probes if scheduled
+                if r in self.probe_rounds:
+                    print(f"[Trial {trial_idx}] Running R{r} pre-swap baseline probes...")
+                    await self.run_probes(
+                        trial=trial_idx,
+                        condition=0,
+                        round_num=r,
+                        active_seats=active_seats_baseline,
+                        target_seat="Q",
+                        announcements_history=announcements_history,
+                        actions_history=actions_history,
+                        payoffs_history=payoffs_history,
+                        model_id=self.model_aliases["base"],
+                        base_seed=trial_seed + 500 + r * 10
+                    )
 
-            # Checkpoint R5 state
-            r5_state = {
+            preswap_state = {
                 "trust_memory": trust_memory,
                 "last_valid_actions": last_valid_actions,
                 "announcements_history": announcements_history,
@@ -1049,17 +1112,17 @@ Respond strictly in JSON:
             }
             cp_payload = {
                 "trial": trial_idx,
-                "r5_state": r5_state,
-                "r1_5_records": r1_5_records,
+                "preswap_state": preswap_state,
+                "preswap_records": preswap_records,
                 "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat()
             }
             cp_path.write_text(json.dumps(cp_payload, indent=2))
-            print(f"[Trial {trial_idx}] Checkpointed R1-5 state to {cp_path.name}")
+            print(f"[Trial {trial_idx}] Checkpointed R1-{warmup_rounds} state to {cp_path.name}")
 
-        # Now branch each requested condition for R6-10
+        # Branch each requested condition for post-swap rounds
         cond_tasks = []
         for c in needed_conds:
-            cond_tasks.append(self.run_condition_branch(trial_idx, c, r5_state, r1_5_records, trial_seed))
+            cond_tasks.append(self.run_condition_branch(trial_idx, c, preswap_state, preswap_records, trial_seed))
 
         await asyncio.gather(*cond_tasks)
 
@@ -1067,28 +1130,22 @@ Respond strictly in JSON:
         self,
         trial: int,
         condition: int,
-        r5_state: Dict[str, Any],
-        r1_5_records: List[Dict[str, Any]],
+        preswap_state: Dict[str, Any],
+        preswap_records: List[Dict[str, Any]],
         trial_seed: int
     ):
-        """Branch condition for Rounds 6-10 from the Round 5 checkpoint."""
         cond_meta = CONDITIONS[condition]
         cond_seed = trial_seed + condition * 1000
-        target_seat = cond_meta["seat"]  # 'Q' or 'R'
-        print(f"[Trial {trial} | Cond {condition}: {cond_meta['name']}] Branching R6-10 (Target {target_seat})...")
+        target_seat = cond_meta["seat"]
+        print(f"[Trial {trial} | Cond {condition}: {cond_meta['name']}] Branching R{self.swap_round}-{self.total_rounds} (Target {target_seat})...")
 
         try:
-            # Re-emit R1-5 records for this condition so rounds.jsonl contains complete R1-10 per condition
-            for r_rec in r1_5_records:
+            for r_rec in preswap_records:
                 rec_copy = dict(r_rec)
                 rec_copy["condition"] = condition
                 await self.log_round(rec_copy)
 
-            # Set up seats and models
-            if target_seat == "R":
-                active_seats = ["J", "M", "R", "T", "Z"]
-            else:
-                active_seats = ["J", "M", "Q", "T", "Z"]
+            active_seats = self.get_active_seats(target_seat)
 
             seat_models = {}
             seat_told = {}
@@ -1104,33 +1161,27 @@ Respond strictly in JSON:
                     seat_told[s] = None
                     seat_policies[s] = None
 
-            # Deep copy state from R5 checkpoint
-            trust_memory = {s: dict(v) for s, v in r5_state["trust_memory"].items()}
-            last_valid_actions = dict(r5_state["last_valid_actions"])
-            announcements_history = {int(k): dict(v) for k, v in r5_state["announcements_history"].items()}
-            actions_history = {int(k): dict(v) for k, v in r5_state["actions_history"].items()}
-            payoffs_history = {int(k): dict(v) for k, v in r5_state["payoffs_history"].items()}
-            plans_history = {int(k): dict(v) for k, v in r5_state["plans_history"].items()}
+            trust_memory = {s: dict(v) for s, v in preswap_state["trust_memory"].items()}
+            last_valid_actions = dict(preswap_state["last_valid_actions"])
+            announcements_history = {int(k): dict(v) for k, v in preswap_state["announcements_history"].items()}
+            actions_history = {int(k): dict(v) for k, v in preswap_state["actions_history"].items()}
+            payoffs_history = {int(k): dict(v) for k, v in preswap_state["payoffs_history"].items()}
+            plans_history = {int(k): dict(v) for k, v in preswap_state["plans_history"].items()}
 
-            # Handle renaming / newcomer for Condition 2, 7, and 16
             if target_seat == "R":
-                # R inherits Q's memory
                 trust_memory["R"] = trust_memory.pop("Q", {})
                 last_valid_actions["R"] = last_valid_actions.pop("Q", 5)
-                # Peers handling:
-                for p in ["J", "M", "T", "Z"]:
+                observers = [p for p in active_seats if p not in ("Q", "R")]
+                for p in observers:
                     if p in trust_memory:
                         if condition in (2, 7):
-                            # Benchmark leak condition
                             trust_memory[p]["Q"] = {"rating": 3, "note": "Player Q is no longer in the game."}
                             trust_memory[p]["R"] = {"rating": 3, "note": "New player R joined with no prior assessment."}
                         elif condition == 16:
-                            # Clean rename: peers simply track R from Q's previous trust rating without template text
                             if "Q" in trust_memory[p]:
                                 trust_memory[p]["R"] = dict(trust_memory[p].pop("Q"))
 
-            # Run Rounds 6 to 10
-            for r in range(6, 11):
+            for r in range(self.swap_round, self.total_rounds + 1):
                 r_seed = cond_seed + r * 50
                 await self.run_round(
                     trial=trial,
@@ -1149,8 +1200,7 @@ Respond strictly in JSON:
                     seat_policies=seat_policies
                 )
 
-                # Run Probes at rounds 6, 8, 10
-                if r in (6, 8, 10):
+                if r in self.probe_rounds:
                     await self.run_probes(
                         trial=trial,
                         condition=condition,
@@ -1158,6 +1208,8 @@ Respond strictly in JSON:
                         active_seats=active_seats,
                         target_seat=target_seat,
                         announcements_history=announcements_history,
+                        actions_history=actions_history,
+                        payoffs_history=payoffs_history,
                         model_id=self.model_aliases["base"],
                         base_seed=cond_seed + r * 77
                     )
@@ -1169,7 +1221,6 @@ Respond strictly in JSON:
             traceback.print_exc()
 
     async def update_run_json(self, n_trials: int, conditions: List[int], start_time: float, finished: bool = False):
-        """Write/update run.json metadata file."""
         now = time.time()
         completed_units = list(self.get_completed_units())
         git_hash = get_git_hash()
@@ -1191,6 +1242,10 @@ Respond strictly in JSON:
             "model_ids": self.model_aliases,
             "conditions": conditions,
             "n_trials": n_trials,
+            "n_players": self.n_players,
+            "total_rounds": self.total_rounds,
+            "swap_round": self.swap_round,
+            "public_history": self.use_public_history,
             "start_time": datetime.datetime.fromtimestamp(start_time, tz=datetime.timezone.utc).isoformat(),
             "current_time": datetime.datetime.fromtimestamp(now, tz=datetime.timezone.utc).isoformat(),
             "elapsed_seconds": round(now - start_time, 2),
@@ -1214,7 +1269,7 @@ Respond strictly in JSON:
 
 
 async def main_async():
-    parser = argparse.ArgumentParser(description="PGG peer-swap experiment harness")
+    parser = argparse.ArgumentParser(description="PGG peer-swap experiment harness (v2)")
     parser.add_argument("--trials", type=int, default=2, help="Number of trials (default: 2)")
     parser.add_argument("--conditions", type=str, default="1,2,3,4,5,6,7,8,9", help="Comma-separated conditions 1-9")
     parser.add_argument("--out", type=str, required=True, help="Output directory path")
@@ -1222,10 +1277,14 @@ async def main_async():
     parser.add_argument("--concurrency", type=int, default=96, help="Async concurrency limit (default: 96)")
     parser.add_argument("--pilot", action="store_true", help="Run pilot configuration")
     parser.add_argument("--models", type=str, default=None, help="Path to models.json")
+    parser.add_argument("--n-players", type=int, default=5, choices=[2, 3, 5], help="Number of players (default: 5)")
+    parser.add_argument("--rounds", type=int, default=10, help="Total rounds (default: 10)")
+    parser.add_argument("--swap-round", type=int, default=6, help="Round at which swap occurs (default: 6)")
+    parser.add_argument("--public-history", action="store_true", help="Include in-context tabular public history")
+    parser.add_argument("--forks-from", type=str, default=None, help="Directory containing pre-swap checkpoints")
 
     args = parser.parse_args()
 
-    # Determine conditions to run
     if args.pilot and args.conditions == "1,2,3,4,5,6,7,8,9":
         conds = [1, 3, 5]
     else:
@@ -1237,8 +1296,10 @@ async def main_async():
     models_file = Path(args.models) if args.models else None
     model_aliases = load_model_aliases(models_file)
 
-    print("=== Starting PGG Peer-Swap Harness ===")
+    print("=== Starting PGG Peer-Swap Harness v2 ===")
     print(f"Output Directory: {out_dir}")
+    print(f"Players: {args.n_players} | Total Rounds: {args.rounds} | Swap Round: {args.swap_round}")
+    print(f"Public History: {args.public_history} | Forks From: {args.forks_from}")
     print(f"Trials: {args.trials} | Conditions: {conds}")
     print(f"Seed: {args.seed} | Concurrency: {args.concurrency}")
     print(f"Base URL: {base_url}")
@@ -1251,13 +1312,17 @@ async def main_async():
         model_aliases=model_aliases,
         seed=args.seed,
         concurrency=args.concurrency,
-        is_pilot=args.pilot
+        is_pilot=args.pilot,
+        n_players=args.n_players,
+        total_rounds=args.rounds,
+        swap_round=args.swap_round,
+        use_public_history=args.public_history,
+        forks_from=Path(args.forks_from) if args.forks_from else None
     )
 
     start_time = time.time()
     await harness.update_run_json(args.trials, conds, start_time, finished=False)
 
-    # Run trials concurrently
     trial_tasks = [harness.run_trial(t, conds) for t in range(args.trials)]
     await asyncio.gather(*trial_tasks)
 

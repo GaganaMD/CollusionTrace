@@ -27,19 +27,26 @@ def _vllm(model, *extra):
                       "--api-key", os.environ["PGG_TOKEN"], *extra])
 
 
-@app.function(gpu="L40S", **KW)
+@app.function(gpu="L4", **KW)
 @modal.concurrent(max_inputs=64)  # without this a web function serves ONE request at a time (queueing: median latency 50-100s)
 @modal.web_server(8000, startup_timeout=1200)
-def base(): _vllm("deepseek-ai/DeepSeek-R1-Distill-Qwen-7B", "--gpu-memory-utilization", "0.92")
+def base(): _vllm("Qwen/Qwen2.5-7B-Instruct", "--gpu-memory-utilization", "0.90")
 
 
 @app.function(gpu="L4", **KW)
 @modal.concurrent(max_inputs=64)  # without this a web function serves ONE request at a time (queueing: median latency 50-100s)
 @modal.web_server(8000, startup_timeout=1200)
-def other(): _vllm("ibm-granite/granite-3.3-8b-instruct", "--gpu-memory-utilization", "0.92")
+def other(): _vllm("ibm-granite/granite-3.3-8b-instruct", "--gpu-memory-utilization", "0.90")
 
 
 @app.function(gpu="L40S", **KW)
 @modal.concurrent(max_inputs=64)  # without this a web function serves ONE request at a time (queueing: median latency 50-100s)
 @modal.web_server(8000, startup_timeout=1200)
-def strong(): _vllm("Qwen/Qwen2.5-32B-Instruct-AWQ", "--quantization", "awq_marlin", "--gpu-memory-utilization", "0.92")
+def strong(): _vllm("Qwen/Qwen2.5-32B-Instruct-AWQ", "--quantization", "awq_marlin", "--gpu-memory-utilization", "0.90")
+
+
+@app.function(gpu="L40S", **KW)
+@modal.concurrent(max_inputs=64)
+@modal.web_server(8000, startup_timeout=1200)
+def r1(): _vllm("deepseek-ai/DeepSeek-R1-Distill-Qwen-7B", "--gpu-memory-utilization", "0.90")
+

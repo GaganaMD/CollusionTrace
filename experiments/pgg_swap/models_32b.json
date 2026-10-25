@@ -1,0 +1,5 @@
+{
+  "base": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "strong": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "other": "Qwen/Qwen2.5-32B-Instruct-AWQ"
+}
