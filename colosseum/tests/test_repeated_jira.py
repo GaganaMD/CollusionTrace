@@ -220,6 +220,7 @@ class BackendGuard(unittest.TestCase):
         with self.assertRaises(ValueError):
             check_base_url("http://x.modal.run/v1")
         check_base_url("https://someone--collusiontrace-qwen-vllm-qwenvllmserver.modal.run/v1")
+        check_base_url("https://someone--collusiontrace-qwen-vllm-qwenvllmserver.us-east.modal.direct/v1")
 
 
 if __name__ == "__main__":

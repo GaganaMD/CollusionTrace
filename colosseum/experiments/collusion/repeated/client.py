@@ -23,7 +23,7 @@ class ChatBackend(Protocol):
         ...
 
 
-def check_base_url(base_url: str, *, allow_openrouter: bool = False, allowed_suffixes: tuple[str, ...] = (".modal.run",)) -> None:
+def check_base_url(base_url: str, *, allow_openrouter: bool = False, allowed_suffixes: tuple[str, ...] = (".modal.run", ".modal.direct")) -> None:
     parsed = urlparse(base_url)
     host = parsed.hostname or ""
     if parsed.scheme != "https" or not parsed.path.rstrip("/").endswith("/v1"):

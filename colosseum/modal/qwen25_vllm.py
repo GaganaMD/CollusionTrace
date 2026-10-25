@@ -27,7 +27,7 @@ auth = modal.Secret.from_name("collusiontrace-vllm-auth", required_keys=["VLLM_A
 # Qwen2.5-7B with this conservative context and memory fraction.
 image = (
     modal.Image.from_registry("nvidia/cuda:12.4.0-devel-ubuntu22.04", add_python="3.11")
-    .uv_pip_install("vllm==0.10.2")
+    .uv_pip_install("vllm==0.10.2", "transformers==4.56.2")
 )
 
 
