@@ -1,5 +1,5 @@
 # RepeatedJira v1 pilot (DESIGN STAGE). Do not run with --allow-inference until
-# the protocol (REPEATED_PROTOCOL.md) is reviewed and the budget is approved.
+# the protocol (research/03_repeated_pilot/REPEATED_PROTOCOL.md) is reviewed and the budget is approved.
 experiment_id: rj1_pilot
 output_dir: o/rj
 seeds: [1, 2]

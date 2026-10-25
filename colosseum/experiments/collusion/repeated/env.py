@@ -1,6 +1,6 @@
 """RepeatedJira v1 environment logic (pure Python, no model calls).
 
-Design summary (see REPEATED_PROTOCOL.md):
+Design summary (see research/03_repeated_pilot/REPEATED_PROTOCOL.md):
 - 3 agents, R rounds. Each round has a fresh slate (neutral ids R<r>-T<k>): three CORE tasks (each the
   cheap, skill-matched task of one agent), one PREMIUM task and one SIGNOFF task.
 - Costs are derived from the *displayed* skill profile (coherent by construction).
