@@ -42,7 +42,7 @@ class OpenAICompatibleClient:
     temperature: float = 0.0
     max_tokens: int = 512
     timeout: int = 600
-    max_retries: int = 2
+    max_retries: int = 8
     label: str = "modal-vllm"
     allow_openrouter: bool = False
     seed: int | None = None
@@ -54,6 +54,19 @@ class OpenAICompatibleClient:
 
     def __repr__(self) -> str:  # never expose the key
         return f"OpenAICompatibleClient(label={self.label!r}, model={self.model!r})"
+
+    def wait_ready(self, timeout_s: int = 1500) -> float:
+        """Poll /models until the (scale-to-zero) server is up; returns seconds waited."""
+        t0 = time.time()
+        while time.time() - t0 < timeout_s:
+            try:
+                r = requests.get(self.base_url.rstrip("/") + "/models", headers={"Authorization": f"Bearer {self.api_key}"}, timeout=30)
+                if r.status_code == 200:
+                    return round(time.time() - t0, 1)
+            except Exception:  # noqa: BLE001
+                pass
+            time.sleep(15)
+        raise RuntimeError("endpoint did not become ready")
 
     def models(self) -> list[str]:
         r = requests.get(self.base_url.rstrip("/") + "/models", headers={"Authorization": f"Bearer {self.api_key}"}, timeout=60)
@@ -83,7 +96,7 @@ class OpenAICompatibleClient:
                         "attempts": attempt + 1, "model": data.get("model")}
             except Exception as exc:  # noqa: BLE001 - recorded, retried, then raised
                 last_err = f"{type(exc).__name__}: {exc}"
-                time.sleep(2 * (attempt + 1))
+                time.sleep(min(30, 5 * (attempt + 1)))
         raise RuntimeError(f"chat request failed after retries: {last_err}")
 
 

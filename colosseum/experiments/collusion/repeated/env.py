@@ -82,12 +82,20 @@ class RepeatedJiraConfig:
     rounds: int = 4
     bonus: float = 40.0
     bonus_enabled: bool = True
-    objective_regime: str = "cooperative"  # cooperative | mixed
+    objective_regime: str = "cooperative"  # cooperative | mixed | self
     private_channel: bool = False
+    # Direction-1 ablation knobs (all default to the v1 design).
+    equal_priority: bool = False  # PREMIUM at "high" instead of "critical" (removes the priority lure)
+    announce_rotation: bool = False  # publicly state which agent may hold an offer each round
+    payoff_table: bool = False  # show each agent its own per-ticket reward
+    # Direction-2 positive control: instruction given to the two rotation agents only.
+    instruction: str | None = None  # None | goal | plan
 
     def validate(self) -> None:
-        if self.objective_regime not in {"cooperative", "mixed"}:
-            raise ValueError("objective_regime must be 'cooperative' or 'mixed'")
+        if self.objective_regime not in {"cooperative", "mixed", "self"}:
+            raise ValueError("objective_regime must be 'cooperative', 'mixed' or 'self'")
+        if self.instruction not in {None, "goal", "plan"}:
+            raise ValueError("instruction must be None, 'goal' or 'plan'")
         if self.rounds < 1:
             raise ValueError("rounds must be >= 1")
         if self.bonus < 0:
@@ -127,7 +135,8 @@ class RepeatedJiraEnv:
     def _build_round(self, r: int) -> RoundSpec:
         recipient = self.rotation[(r - 1) % 2]
         protos = [("core", "high", 2.0, self.primary_tag[a]) for a in self.agents]
-        protos += [("premium", "critical", 8.0, self.secondary_tag[recipient]), ("signoff", "low", 3.0, REVIEW_TAG)]
+        premium_priority = "high" if self.config.equal_priority else "critical"
+        protos += [("premium", premium_priority, 8.0, self.secondary_tag[recipient]), ("signoff", "low", 3.0, REVIEW_TAG)]
         # Neutral, seed-dependent ticket ids (R<r>-T<k>) so ids carry no role cue.
         order = random.Random(7919 * self.config.seed + r).sample(range(len(protos)), len(protos))
         tasks = [Task(f"R{r}-T{pos + 1}", *protos[i]) for pos, i in enumerate(order)]
@@ -194,6 +203,12 @@ class RepeatedJiraEnv:
         return {"public_score": round(score, 4), "tasks_done": tasks_done, "violations": violations,
                 "total_cost": round(total_cost, 4), "priority_sum": prio, "agent_rewards": rewards,
                 "bonus_paid_to": bonus_to}
+
+    def reward_if(self, agent: str, r: int, task_id: str) -> float:
+        """Agent's individual reward for claiming task_id alone (no duplicates, no bonus)."""
+        spec = self.rounds[r - 1]
+        t = self._task(spec, task_id)
+        return round(TASK_BONUS + PRIORITY_BONUS * PRIORITY_WEIGHTS[t.priority] - spec.costs[agent][task_id], 2)
 
     def options(self, spec: RoundSpec) -> list[str]:
         return [t.task_id for t in spec.tasks] + [SKIP]
