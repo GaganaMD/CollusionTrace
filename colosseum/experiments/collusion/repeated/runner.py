@@ -117,6 +117,9 @@ class Episode:
         self.failures: list[dict[str, Any]] = []
 
     # -------------------------------------------------------------- helpers
+    def _system_prompt(self, agent: str) -> str:
+        return system_prompt(self.env, agent)
+
     def _tick(self) -> float:
         self.ts += 1.0
         return self.ts
@@ -131,7 +134,7 @@ class Episode:
 
     def _call(self, agent: str, r: int, phase: str, step: int, retry_note: str | None = None) -> dict[str, Any]:
         board_ids = [b["blackboard_id"] for b in self.boards if agent in b["participants"]]
-        sys_p = system_prompt(self.env, agent)
+        sys_p = self._system_prompt(agent)
         usr_p = user_prompt(self.env, agent, r, phase if phase != "probe" else "commit", step, self.planning_steps, self.boards,
                             self.private_rewards[agent], action_mode=self.action_mode if phase != "probe" else "tools")
         if phase == "probe":
@@ -249,25 +252,29 @@ class Episode:
                                 "answer": _last_json_object(content), "truth": truth, "raw": content[-1500:],
                                 "reasoning": (resp["message"].get("reasoning_content") or "")[-4000:]})
 
+    def play_round(self, r: int):
+        public_tasks = [t.public() for t in self.env.rounds[r - 1].tasks]
+        self._post(self.boards[0], None, "context", {"subtype": "round_start", "round": r, "tasks": public_tasks,
+                                                      "content": f"Round {r} tickets: " + ", ".join(t["id"] for t in public_tasks)})
+        self.planning(r)
+        commits = self.commit(r)
+        if self.probes_enabled:
+            self.probe(r)
+        res = self.env.score_round(r, commits)
+        for a in self.env.agents:
+            self.private_rewards[a][r] = res.agent_rewards[a]
+        assign = ", ".join(f"{a}->{t}" for a, t in res.assignment.items())
+        self._post(self.boards[0], None, "context", {"subtype": "round_outcome", "round": r,
+                                                      "content": f"{assign}; team score {res.public_score}; violations {res.violations}"})
+        return res
+
     def run(self) -> Path:
         t0 = time.time()
         status = "complete"
         error = None
         try:
             for r in range(1, self.env.config.rounds + 1):
-                public_tasks = [t.public() for t in self.env.rounds[r - 1].tasks]
-                self._post(self.boards[0], None, "context", {"subtype": "round_start", "round": r, "tasks": public_tasks,
-                                                              "content": f"Round {r} tickets: " + ", ".join(t["id"] for t in public_tasks)})
-                self.planning(r)
-                commits = self.commit(r)
-                if self.probes_enabled:
-                    self.probe(r)
-                res = self.env.score_round(r, commits)
-                for a in self.env.agents:
-                    self.private_rewards[a][r] = res.agent_rewards[a]
-                assign = ", ".join(f"{a}->{t}" for a, t in res.assignment.items())
-                self._post(self.boards[0], None, "context", {"subtype": "round_outcome", "round": r,
-                                                              "content": f"{assign}; team score {res.public_score}; violations {res.violations}"})
+                self.play_round(r)
         except Exception as exc:  # noqa: BLE001 - recorded as an incomplete run
             status, error = "incomplete", f"{type(exc).__name__}: {exc}"
         self._write(status, error, time.time() - t0)

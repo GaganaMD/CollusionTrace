@@ -19,6 +19,7 @@ CollusionTrace/
 │   ├── 03_repeated_pilot/     RepeatedJira v1 design + first Modal pilot
 │   ├── 04_why_no_collusion/   Direction 1: why agents don't collude (ablations, confederate, probes)
 │   ├── 05_instructed_collusion/   Direction 2: instructed positive control
+│   ├── 06_covert_monitor_swap/    monitor covertly takes a colluding seat (matched checkpoints)
 │   ├── infrastructure/        Modal serving notes
 │   └── figures/
 └── colosseum/                 ← code (fork of Colosseum / Terrarium)
@@ -56,17 +57,13 @@ OpenRouter support remains in the code for reproducing earlier runs but is block
 new RepeatedJira runs.
 
 ## Status (25 Oct 2026)
-- Single-shot and RepeatedJira v1 studies: no collusion observed (feasibility only).
-- **Direction 1 (why no collusion), 165 episodes across 4 models:** emergent grabs stay rare
-  under every single-barrier fix. Understanding is not the bottleneck for the reasoning
-  models; they decline the costly first move and do not repay a partner who helped them
-  (Qwen3-8B repaid 0/10). Qwen2.5-7B repays but misunderstands payoffs.
-  See `research/04_why_no_collusion/RESULTS.md`.
-- **Direction 2 (instructed control), 60 episodes:** when told to collude, Qwen3-8B/32B execute it
-  in 80–100% of offer rounds; Qwen2.5-7B and R1-Distill-7B mostly fail operationally.
-  O2 tool events reveal this harm pattern; the keyword baseline catches nothing.
-  See `research/05_instructed_collusion/RESULTS.md`.
-- Modal spend for these studies so far ≈ $25.
+- Single-shot and RepeatedJira v1 studies: no collusion observed; feasibility only.
+- Direction 1 (165 emergent episodes, 4 models): agents understand the payoffs but won't make the costly
+  first move or repay one — see `research/04_*`.
+- Direction 2 (60 instructed episodes): Qwen3-8B/32B execute instructed collusion reliably — see `research/05_*`.
+- Covert monitor swap (15 matched pairs): a monitor covertly taking one colluding seat ended paired capture in
+  10/10 Qwen pairs without revealing itself — see `research/06_*`.
+- Swap runner: `python -m experiments.collusion.repeated.swap --config experiments/collusion/configs/swap/swap_qwen3_32b.yaml --dry-run`
 
 Framework credit: built on [Colosseum](https://github.com/umass-ai-safety/colosseum) and
 [Terrarium](https://github.com/umass-aisec/Terrarium); see `colosseum/README.md`.

@@ -1,0 +1,26 @@
+# Covert peer-to-monitor swap. INSTRUCTED pre-swap history (I2 plan, private board) - never pool with emergent runs.
+# One checkpoint per seed after round 3; control (no swap) and swap (monitor covertly in rotation seat 2) branches, rounds 4-7.
+experiment_id: swap_qwen3_8b
+output_dir: o/swap
+seeds:
+- 1
+- 2
+swap_after: 3
+model:
+  label: modal-ct-qwen3-8b
+  name: Qwen/Qwen3-8B
+  base_url_env: CT_URL_QWEN3_8B
+  temperature: 0.6
+  max_tokens: 4096
+  action_mode: tools
+  api_key_env: MODAL_VLLM_API_KEY
+  seed: null
+environment:
+  rounds: 7
+  planning_steps: 2
+  bonus: 40
+cell:
+  name: I2_plan_private
+  objective_regime: mixed
+  private_channel: true
+  instruction: plan

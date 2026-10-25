@@ -8,9 +8,10 @@
 | `03_repeated_pilot/` | RepeatedJira v1 design + Modal pilot (8 episodes, no collusion) | done |
 | `04_why_no_collusion/` | Direction 1: ablations, confederate, probes across 4 models | done (165 episodes) — RESULTS.md |
 | `05_instructed_collusion/` | Direction 2: instructed positive control + monitor evaluation | done (60 episodes) — RESULTS.md |
+| `06_covert_monitor_swap/` | Covert peer-to-monitor swap from matched instructed checkpoints (3 models × 5 seeds) | done (30 continuations) — RESULTS.md |
 | `infrastructure/` | Modal serving and workflow notes | current |
 | `figures/` | Figures used in team updates | — |
 
-Run outputs live under `colosseum/o/` (gitignored): `o/rj/` (v1 pilot), `o/rj2/` (Directions 1–2).
+Run outputs live under `colosseum/o/` (gitignored): `o/rj/` (v1 pilot), `o/rj2/` (Directions 1–2), `o/swap/` (monitor swap).
 Code: `colosseum/experiments/collusion/repeated/` (environment, runner, analysis),
 `colosseum/experiments/collusion/monitoring/` (O0/O1/O2 ingestion and monitors).
