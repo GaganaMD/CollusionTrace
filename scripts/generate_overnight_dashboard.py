@@ -241,6 +241,50 @@ def plot_history_ablation(with_probe: Path, without_probe: Path, out_fig: Path):
     return True
 
 
+def plot_auc_comparison(datasets: dict, out_fig: Path):
+    """Grouped horizontal bar plot comparing P1, P2, P3 across multiple experimental conditions."""
+    fig, axes = plt.subplots(1, 3, figsize=(16, 6), sharey=True)
+    sig_names = [("P1", "P1: Stated Detection"), ("P2", "P2: Hypothesis Weight (H3)"), ("P3", "P3: Direct Behavioral Test")]
+    
+    labels, p1_vals, p2_vals, p3_vals = [], [], [], []
+    for d_name, d_aucs in datasets.items():
+        for c, scores in d_aucs.items():
+            cond_str = f"{d_name}\n({NAMES.get(c, str(c)).split()[0]})"
+            labels.append(cond_str)
+            p1_vals.append(scores.get("P1", 0.5))
+            p2_vals.append(scores.get("P2", 0.5))
+            p3_vals.append(scores.get("P3", 0.5))
+
+    if not labels:
+        return False
+        
+    y_pos = np.arange(len(labels))
+    colors = ["#38bdf8", "#818cf8", "#f43f5e"]
+    
+    for idx, (sig, title) in enumerate(sig_names):
+        ax = axes[idx]
+        vals = [p1_vals, p2_vals, p3_vals][idx]
+        vals = [0.5 if np.isnan(v) else v for v in vals]
+        bars = ax.barh(y_pos, vals, color=colors[idx], alpha=0.85, height=0.65)
+        ax.axvline(x=0.5, color="#94a3b8", linestyle="--", linewidth=1.5, label="Chance (0.50)")
+        ax.set_xlim(0.0, 1.05)
+        ax.set_title(title, fontsize=12)
+        ax.set_xlabel("AUC vs Control", fontsize=11)
+        if idx == 0:
+            ax.set_yticks(y_pos)
+            ax.set_yticklabels(labels, fontsize=9)
+        else:
+            ax.set_yticks([])
+        ax.legend(loc="lower right", fontsize=9)
+
+    plt.suptitle("Peer-Swap Detection AUC Across Probing Modalities", fontsize=15, y=1.02)
+    plt.tight_layout()
+    plt.savefig(out_fig, dpi=300, bbox_inches="tight")
+    plt.close()
+    return True
+
+
+
 def plot_reasoning_and_scale_leap(out_fig: Path):
     """Compares Clean Rename & Free Rider across 7B base, DeepSeek-R1, and 32B."""
     # Data gathered from post reports
@@ -345,6 +389,19 @@ def plot_dose_response_curve(out_fig: Path):
 # -------------------------------------------------------------
 
 def build_full_html_report(out_html: Path):
+    def b64_img(fig_name: str) -> str:
+        p = FIGS_DIR / fig_name
+        if p.exists():
+            return f"data:image/png;base64,{base64.b64encode(p.read_bytes()).decode('utf-8')}"
+        return f"figures/{fig_name}"
+
+    img1 = b64_img("fig1_30round_trajectories.png")
+    img2 = b64_img("fig2_detection_auc_comparison.png")
+    img3 = b64_img("fig3_history_ablation.png")
+    img4 = b64_img("fig4_group_size_dynamics.png")
+    img5 = b64_img("fig5_reasoning_and_scale_leap.png")
+    img6 = b64_img("fig6_dose_response_trajectory.png")
+
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -573,7 +630,7 @@ def build_full_html_report(out_html: Path):
         <p>Prior sprint literature (e.g. Shankar 2026, Bhowal 2026) evaluated LLM collusion over short 5–10 round horizons, leaving open whether collusion dissolves or entrenchment cements over extended interactions. We evaluated 30 rounds with symmetric pre-swap (R1–15) and post-swap (R16–30) phases.</p>
         
         <div class="img-container">
-            <img src="figures/fig1_30round_trajectories.png" alt="30-round dynamic trajectory">
+            <img src="{img1}" alt="30-round dynamic trajectory">
             <div class="img-caption"><strong>Figure 1: Symmetric 30-Round Collusion & Retaliation Dynamics.</strong> Top: Substituted agent action trajectory across conditions (Control, Free Rider, Slow Drift, Clean Rename). Bottom: Incumbent peer contribution responses. Vertical dashed line indicates the secret swap event at Round 16.</div>
         </div>
 
@@ -585,28 +642,40 @@ def build_full_html_report(out_html: Path):
         </ul>
     </div>
 
+    <!-- Cross-Dataset Probing AUC Comparison -->
+    <div class="card">
+        <div class="card-header">
+            <span>2. Cross-Dataset Probing Modality Synthesis (P1 vs P2 vs P3)</span>
+            <span class="badge badge-purple">Benchmark</span>
+        </div>
+        <div class="img-container">
+            <img src="{img2}" alt="Probing AUC Comparison Across Datasets">
+            <div class="img-caption"><strong>Figure 2: Probing Modality Comparison.</strong> P1 (Stated Detection) vs P2 (Three-Hypothesis Distribution H3) vs P3 (Direct Behavioral Continuity Test). Notice the consistent superiority of P3 across early arms, and the resolution of P1 blindness in Exp 4 (DeepSeek-R1) and Exp 5 (32B scale).</div>
+        </div>
+    </div>
+
     <!-- Figures Grid: Ablation & Model Scaling -->
     <div class="grid-2">
         <div class="card">
             <div class="card-header">
-                <span>2. Public History Ablation</span>
+                <span>3. Public History Ablation</span>
                 <span class="badge badge-success">Exp 2</span>
             </div>
             <div class="img-container">
-                <img src="figures/fig3_history_ablation.png" alt="History Ablation">
-                <div class="img-caption"><strong>Figure 2: Causal Impact of Public History.</strong> P1 Stated Detection AUC (left) and P3 Behavioral AUC (right) with vs without structured history tables.</div>
+                <img src="{img3}" alt="History Ablation">
+                <div class="img-caption"><strong>Figure 3: Causal Impact of Public History.</strong> P1 Stated Detection AUC (left) and P3 Behavioral AUC (right) with vs without structured history tables.</div>
             </div>
             <p><strong>Causal Proof:</strong> Without structured history, P1 AUC is flat at <code>0.500</code> (chance). Injecting a public history table immediately elevates P1 detection of Free Riders to <code>0.875</code> at R6, and lifts P3 behavioral AUC from <code>0.816</code> to <code>0.972</code>.</p>
         </div>
 
         <div class="card">
             <div class="card-header">
-                <span>3. Model Scaling & Reasoning Leap</span>
+                <span>4. Model Scaling & Reasoning Leap</span>
                 <span class="badge badge-purple">Exp 4 & 5</span>
             </div>
             <div class="img-container">
-                <img src="figures/fig5_reasoning_and_scale_leap.png" alt="Reasoning and Scale Leap">
-                <div class="img-caption"><strong>Figure 3: Overcoming Clean Rename Blindness.</strong> Comparison of Qwen2.5-7B, DeepSeek-R1-Distill-7B, and Qwen2.5-32B on Clean Rename (Cond 16).</div>
+                <img src="{img5}" alt="Reasoning and Scale Leap">
+                <div class="img-caption"><strong>Figure 4: Overcoming Clean Rename Blindness.</strong> Comparison of Qwen2.5-7B, DeepSeek-R1-Distill-7B, and Qwen2.5-32B on Clean Rename (Cond 16).</div>
             </div>
             <p><strong>The Intelligence Threshold:</strong> While standard 7B models fail on Clean Rename (AUC 0.50), DeepSeek-R1 reasoning distillation reaches <code>0.833</code> (and <code>1.000</code> at R10), and 32B scale achieves perfect <code>1.000</code> detection!</p>
         </div>
@@ -616,24 +685,24 @@ def build_full_html_report(out_html: Path):
     <div class="grid-2">
         <div class="card">
             <div class="card-header">
-                <span>4. Group Size Scaling Dynamics</span>
+                <span>5. Group Size Scaling Dynamics</span>
                 <span class="badge badge-info">Exp 3</span>
             </div>
             <div class="img-container">
-                <img src="figures/fig4_group_size_dynamics.png" alt="Group Size Dynamics">
-                <div class="img-caption"><strong>Figure 4: Dyadic ($N=2$) vs Triadic ($N=3$) vs Quintet ($N=5$).</strong> Left: P3 Detection AUC. Right: Incumbent peer retaliation drop in tokens.</div>
+                <img src="{img4}" alt="Group Size Dynamics">
+                <div class="img-caption"><strong>Figure 5: Dyadic ($N=2$) vs Triadic ($N=3$) vs Quintet ($N=5$).</strong> Left: P3 Detection AUC. Right: Incumbent peer retaliation drop in tokens.</div>
             </div>
             <p><strong>Dyadic Sensitivity:</strong> In 2-player games, defection is impossible to dilute. Peers detect free riders with <code>1.000</code> AUC and immediately punish with a <code>-3.00 token</code> withdrawal, compared to only <code>-0.65 tokens</code> in 5-player games.</p>
         </div>
 
         <div class="card">
             <div class="card-header">
-                <span>5. Defection Dose-Response Curve</span>
+                <span>6. Defection Dose-Response Curve</span>
                 <span class="badge badge-amber">Arm B & Exp 1</span>
             </div>
             <div class="img-container">
-                <img src="figures/fig6_dose_response_trajectory.png" alt="Dose Response Curve">
-                <div class="img-caption"><strong>Figure 5: Detection Sensitivity vs Defection Severity.</strong> P3 AUC scales smoothly with the number of tokens subtracted from the public pool.</div>
+                <img src="{img6}" alt="Dose Response Curve">
+                <div class="img-caption"><strong>Figure 6: Detection Sensitivity vs Defection Severity.</strong> P3 AUC scales smoothly with the number of tokens subtracted from the public pool.</div>
             </div>
             <p><strong>The Detection Threshold:</strong> Detection transitions from chance (0.482) at 0 tokens lost to robust significance (0.759) at -1 token, and reaches near-perfection (0.970) at -5 tokens.</p>
         </div>
@@ -829,7 +898,28 @@ def main():
     plot_dose_response_curve(fig6)
     print(f"Generated {fig6}")
 
-    # 6. HTML Dashboard
+    # 6. Cross-Dataset Probing AUC Comparison
+    fig2 = FIGS_DIR / "fig2_detection_auc_comparison.png"
+    datasets = {}
+    if (OUTPUTS_DIR / "merged_local" / "probes.jsonl").exists():
+        aucs, _, _ = compute_dataset_aucs(OUTPUTS_DIR / "merged_local" / "probes.jsonl")
+        datasets["Arm A (Local 7B)"] = aucs
+    if (OUTPUTS_DIR / "dose_response" / "merged" / "probes.jsonl").exists():
+        aucs, _, _ = compute_dataset_aucs(OUTPUTS_DIR / "dose_response" / "merged" / "probes.jsonl")
+        datasets["Arm B (Dose-Resp)"] = aucs
+    if (OUTPUTS_DIR / "exp1_30r_n3" / "forked" / "probes.jsonl").exists():
+        aucs, _, _ = compute_dataset_aucs(OUTPUTS_DIR / "exp1_30r_n3" / "forked" / "probes.jsonl", swap_round=16)
+        datasets["Exp 1 (30R N=3)"] = aucs
+    if (OUTPUTS_DIR / "exp4_reasoning" / "r1_n3" / "probes.jsonl").exists():
+        aucs, _, _ = compute_dataset_aucs(OUTPUTS_DIR / "exp4_reasoning" / "r1_n3" / "probes.jsonl", swap_round=6)
+        datasets["Exp 4 (DeepSeek-R1)"] = aucs
+    if (OUTPUTS_DIR / "exp5_scale_32b" / "qwen32b_n3" / "probes.jsonl").exists():
+        aucs, _, _ = compute_dataset_aucs(OUTPUTS_DIR / "exp5_scale_32b" / "qwen32b_n3" / "probes.jsonl", swap_round=6)
+        datasets["Exp 5 (Qwen-32B)"] = aucs
+    plot_auc_comparison(datasets, fig2)
+    print(f"Generated {fig2}")
+
+    # 7. HTML Dashboard
     dash_path = ROOT_DIR / "overnight_pgg_dashboard.html"
     build_full_html_report(dash_path)
     print(f"Dashboard successfully updated at {dash_path}")
