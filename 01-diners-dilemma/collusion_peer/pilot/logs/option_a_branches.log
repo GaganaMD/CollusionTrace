@@ -1,0 +1,73 @@
+model                                      calls  est. USD
+google/gemini-3.5-flash-lite                 525      0.32
+meta-llama/llama-4-maverick                  350      0.09
+meta-llama/llama-4-scout                    6605      0.83
+total                                       7480      1.24  (no re-asks; rough token estimate)
+  → OpenRouter: 200 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 2 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 200 requests
+  → OpenRouter: 800 requests
+  → OpenRouter: 160 requests
+  → OpenRouter: 3 requests
+  → OpenRouter: 2 requests
+  → OpenRouter: 2 requests
+  → OpenRouter: 200 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 200 requests
+  → OpenRouter: 800 requests
+  → OpenRouter: 200 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 200 requests
+  → OpenRouter: 800 requests
+  → OpenRouter: 160 requests
+  → OpenRouter: 3 requests
+  → OpenRouter: 2 requests
+  → OpenRouter: 2 requests
+  → OpenRouter: 200 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 39 requests
+  → OpenRouter: 39 requests
+  → OpenRouter: 195 requests
+  → OpenRouter: 780 requests
+  → OpenRouter: 195 requests
+  → OpenRouter: 39 requests
+  → OpenRouter: 39 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 39 requests
+  → OpenRouter: 39 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 39 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 195 requests
+  → OpenRouter: 780 requests
+  → OpenRouter: 156 requests
+  → OpenRouter: 3 requests
+  → OpenRouter: 2 requests
+  → OpenRouter: 1 requests
+FAILED equal_told.t0: {'round_id': 8, 'stage': 'announce', 'who': 'Q', 'request': 'r8.equal_told.t0.s2.Q'}
+complete 39 / 40 branches run

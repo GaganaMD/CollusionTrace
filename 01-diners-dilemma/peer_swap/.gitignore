@@ -1,0 +1,15 @@
+.env
+.venv/
+runs_fake/
+__pycache__/
+*.pyc
+# Run outputs: keep the summaries (reports, judge labels, ceiling/screen tables, configs);
+# leave out the game states and raw transcripts (~300 MB).
+runs/*/*
+!runs/*/*.md
+!runs/*/*.csv
+!runs/*/*.json
+!runs/*/*.jsonl
+!runs/*/calib/
+runs/*/calib/*
+!runs/*/calib/summary.json

@@ -1,0 +1,70 @@
+model                                      calls  est. USD
+google/gemini-3.5-flash-lite                 525      0.32
+gpt-4o                                       350      1.23
+gpt-4o-mini                                 6605      1.39
+total                                       7480      2.93  (no re-asks; rough token estimate)
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 160 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 1 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 160 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 160 requests
+complete 40 / 40 branches run

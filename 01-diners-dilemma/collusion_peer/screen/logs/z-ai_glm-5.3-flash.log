@@ -1,0 +1,69 @@
+Agent names: ['J', 'M', 'Q', 'T', 'Z']
+Agent model assignments: {'J': 'z-ai/glm-5.3-flash', 'M': 'z-ai/glm-5.3-flash', 'Q': 'z-ai/glm-5.3-flash', 'T': 'z-ai/glm-5.3-flash', 'Z': 'z-ai/glm-5.3-flash'}
+Using OpenRouter with model: z-ai/glm-5.3-flash
+
+Protocol:       endogenous (3-stage)
+Self-reference: True
+Stage 2 mode:   round-robin
+Rounds:         4
+Created OpenAI queued client (max_workers=25)
+Created OpenRouter queued client (max_workers=25)
+
+========================================================================
+ENDOGENOUS PROMISE EXPERIMENT  [queue mode]
+========================================================================
+  Game:            diners
+  Agents:          5  (J, M, Q, T, Z)
+  Trials:          2
+  Rounds:          4
+  Self-reference:  True
+  Stage 2 mode:    round-robin
+  Announce order:  J → M → Q → T → Z
+  Model:           z-ai/glm-5.3-flash
+========================================================================
+
+
+=== Round 1 / 4 ===
+  Stage 1: 10 private-planning requests...
+
+  Stage 1: 10 requests
+  → OpenRouter: 10 requests
+  Stage 2 [round-robin]: 5 positions × 2 trials...
+
+  Stage 2 (round-robin) pos 0 (J): 2 requests
+  → OpenRouter: 2 requests
+
+  Stage 2 (round-robin) pos 1 (M): 2 requests
+  → OpenRouter: 2 requests
+
+  Stage 2 (round-robin) pos 2 (Q): 2 requests
+  → OpenRouter: 2 requests
+
+  Stage 2 (round-robin) pos 3 (T): 2 requests
+  → OpenRouter: 2 requests
+
+  Stage 2 (round-robin) pos 4 (Z): 2 requests
+  → OpenRouter: 2 requests
+  Stage 3: 10 action-selection requests...
+
+  Stage 3: 10 requests
+  → OpenRouter: 10 requests
+  Judge: 10 classification requests...
+
+  Judge: 10 requests
+  → OpenAI: 10 requests
+  Reflection: 40 granular takeaway-update requests...
+
+  Reflection: 40 requests
+  → OpenRouter: 40 requests
+  Round 1 done in 503.6s
+
+=== Round 2 / 4 ===
+  Stage 1: 10 private-planning requests...
+
+  Stage 1: 10 requests
+  → OpenRouter: 10 requests
+  Stage 2 [round-robin]: 5 positions × 2 trials...
+
+  Stage 2 (round-robin) pos 0 (J): 2 requests
+  → OpenRouter: 2 requests

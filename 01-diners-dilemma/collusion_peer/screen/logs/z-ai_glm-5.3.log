@@ -1,0 +1,46 @@
+Agent names: ['J', 'M', 'Q', 'T', 'Z']
+Agent model assignments: {'J': 'z-ai/glm-5.3', 'M': 'z-ai/glm-5.3', 'Q': 'z-ai/glm-5.3', 'T': 'z-ai/glm-5.3', 'Z': 'z-ai/glm-5.3'}
+Using OpenRouter with model: z-ai/glm-5.3
+
+Protocol:       endogenous (3-stage)
+Self-reference: True
+Stage 2 mode:   round-robin
+Rounds:         4
+Created OpenAI queued client (max_workers=25)
+Created OpenRouter queued client (max_workers=25)
+
+========================================================================
+ENDOGENOUS PROMISE EXPERIMENT  [queue mode]
+========================================================================
+  Game:            diners
+  Agents:          5  (J, M, Q, T, Z)
+  Trials:          2
+  Rounds:          4
+  Self-reference:  True
+  Stage 2 mode:    round-robin
+  Announce order:  J → M → Q → T → Z
+  Model:           z-ai/glm-5.3
+========================================================================
+
+
+=== Round 1 / 4 ===
+  Stage 1: 10 private-planning requests...
+
+  Stage 1: 10 requests
+  → OpenRouter: 10 requests
+  Stage 2 [round-robin]: 5 positions × 2 trials...
+
+  Stage 2 (round-robin) pos 0 (J): 2 requests
+  → OpenRouter: 2 requests
+
+  Stage 2 (round-robin) pos 1 (M): 2 requests
+  → OpenRouter: 2 requests
+
+  Stage 2 (round-robin) pos 2 (Q): 2 requests
+  → OpenRouter: 2 requests
+
+  Stage 2 (round-robin) pos 3 (T): 2 requests
+  → OpenRouter: 2 requests
+
+  Stage 2 (round-robin) pos 4 (Z): 2 requests
+  → OpenRouter: 2 requests

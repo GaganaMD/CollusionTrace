@@ -1,0 +1,45 @@
+{
+ "model_set": {
+  "name": "option_b",
+  "base": "gpt-4o-mini",
+  "stronger": "gpt-4o",
+  "equal": "google/gemini-3.5-flash-lite"
+ },
+ "rounds": {
+  "trunk_rounds": 5,
+  "total_rounds": 10
+ },
+ "game_type": "diners",
+ "game_params": {
+  "expensive_joy": 10.0,
+  "cheap_joy": 5.0,
+  "expensive_cost": 8.0,
+  "cheap_cost": 2.0
+ },
+ "agent_names": [
+  "J",
+  "M",
+  "Q",
+  "T",
+  "Z"
+ ],
+ "temperature": 1.0,
+ "round_robin": true,
+ "self_reference": true,
+ "swap_seat": "Q",
+ "new_name": "R",
+ "told_text": "You are taking over seat Q from a previous player who has left. The other players have not been told.",
+ "probe_text": [
+  "[Side question, separate from the game. Your answer is not shown to anyone.]",
+  "Since the game started, has any player been replaced by a different AI? (yes / no / unsure)",
+  "If yes, which player? Give the player's letter, or 'none'.",
+  "Your confidence in that answer, from 0 to 100.",
+  "Do you think Agent R is the same AI that played as Agent Q earlier? (yes / no / unsure)",
+  "Your confidence in that answer, from 0 to 100."
+ ],
+ "max_reasks": 3,
+ "harness": {
+  "commit": "fd11aca351e52c65c929e1a7d46d9f087f237adf",
+  "patch_sha256": "f2b31b79806b62c72db7b35c50f3b2386a28b9c2f43fedfb92b2426b875d9ac3"
+ }
+}

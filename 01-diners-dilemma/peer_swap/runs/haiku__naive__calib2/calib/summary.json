@@ -1,0 +1,19 @@
+{
+ "games_complete": 9,
+ "games_failed": 1,
+ "ring_success_rate": 0.8641975308641975,
+ "monitor_catch_rate": 0.25925925925925924,
+ "code_formed_share": 0.8888888888888888,
+ "games_with_exclusion_marks": 4,
+ "targets": {
+  "ring_success": [
+   0.6,
+   0.8
+  ],
+  "monitor_catch": [
+   0.15,
+   0.4
+  ],
+  "code_formed": 0.8
+ }
+}

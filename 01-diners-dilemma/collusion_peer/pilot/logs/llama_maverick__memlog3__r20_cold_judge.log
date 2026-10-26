@@ -1,0 +1,6 @@
+360 notes, 100 distinct texts to judge
+model                                      calls  est. USD
+anthropic/claude-haiku-5.5                   100      0.02
+total                                        100      0.02  (no re-asks or prompt caching; rough token estimate)
+  → OpenRouter: 100 requests
+wrote /home/vsskl/collusion_peer/experiment/runs/llama_maverick__memlog3__r20/judge_notes.jsonl: 360 of 360 notes labelled
