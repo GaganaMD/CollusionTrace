@@ -1,5 +1,5 @@
 # Post-swap detection analysis (post_analysis_v2.py)
-Directory: `/Users/kaustgup/Desktop/Speshal/projects/ai-collusion-research-sprint/outputs/pgg_swap/exp2_history_ablation/with_history`; swap round: 6; valid probe scores: 153
+Directory: `outputs/pgg_swap/exp2_history_ablation/with_history`; swap round: 6; valid probe scores: 153
 Pre-swap probe rounds: [5]; post-swap probe rounds: [6, 8, 10]
 
 ## Pooled post-swap AUC against control (condition 1)
@@ -35,6 +35,17 @@ Pre-swap probe rounds: [5]; post-swap probe rounds: [6, 8, 10]
 | 10 free_rider | 0.250 | 0.000 | 0.000 |
 | 14 slow_drift | 0.000 | 0.000 | 0.000 |
 | 16 clean_rename | 0.000 | 0.000 | 0.000 |
+
+## Detection Diagnostics: False Alarms on Control & Swapped Hits
+- **Control (Condition 1) P1 False Alarm Rate**: 0.000 (n=12)
+- **Control P4**: N/A (no P4 probes)
+
+| condition | P1 Hit Rate (Post-Swap) | P4 Hit Rate (Post-Swap) | P4 n |
+|---|---:|---:|---:|
+| 1 control | 0.000 | - | 0 |
+| 10 free_rider | 0.083 | - | 0 |
+| 14 slow_drift | 0.000 | - | 0 |
+| 16 clean_rename | 0.000 | - | 0 |
 
 ## Trust-note keyword rates (rounds >= 6)
 | condition | target n | strict | loose | peer strict | peer loose |

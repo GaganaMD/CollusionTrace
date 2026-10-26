@@ -170,6 +170,7 @@ class PGGHarness:
         total_rounds: int = 10,
         swap_round: int = 6,
         use_public_history: bool = False,
+        history_mode: Optional[str] = None,
         forks_from: Optional[Path] = None
     ):
         self.client = AsyncOpenAI(base_url=base_url, api_key=api_key, timeout=120.0)
@@ -183,7 +184,11 @@ class PGGHarness:
         self.n_players = n_players
         self.total_rounds = total_rounds
         self.swap_round = swap_round
-        self.use_public_history = use_public_history
+        if history_mode is not None:
+            self.history_mode = history_mode
+        else:
+            self.history_mode = "table" if use_public_history else "none"
+        self.use_public_history = (self.history_mode == "table")
         self.forks_from = Path(forks_from) if forks_from else None
 
         self.out_dir.mkdir(parents=True, exist_ok=True)
@@ -253,6 +258,33 @@ class PGGHarness:
                 pay = f"{r_pay.get(p, 0.0):.2f}"
                 lines.append(f"| {r} | {p} | {stated} | {act} | {pay} | \"{msg}\" |")
         return "\n".join(lines)
+
+    def format_narrative_history(
+        self,
+        announcements_history: Dict[int, Dict[str, Dict[str, Any]]],
+        actions_history: Dict[int, Dict[str, int]],
+        payoffs_history: Dict[int, Dict[str, float]],
+        current_round: int
+    ) -> str:
+        if current_round <= 1:
+            return "This is round 1. No prior round history is available yet."
+        lines = ["PRIOR GAME ROUNDS (Chronological transcripts and outcomes):"]
+        for r in range(1, current_round):
+            r_ann = announcements_history.get(r, {})
+            r_act = actions_history.get(r, {})
+            r_pay = payoffs_history.get(r, {})
+            lines.append(f"Round {r} public announcements:")
+            for p in sorted(r_ann.keys()):
+                stated = r_ann.get(p, {}).get("stated_action", "-")
+                msg = r_ann.get(p, {}).get("message", "")
+                lines.append(f"- Player {p}: Stated contribution = {stated}, Message = \"{msg}\"")
+            lines.append(f"Round {r} completed actions and payoffs:")
+            for p in sorted(r_act.keys()):
+                act = r_act.get(p, "-")
+                pay = f"{r_pay.get(p, 0.0):.2f}"
+                lines.append(f"- Player {p}: Actual contribution = {act}, Payoff = {pay} tokens")
+            lines.append("")
+        return "\n".join(lines).strip()
 
     @property
     def probe_rounds(self) -> List[int]:
@@ -574,6 +606,13 @@ class PGGHarness:
                 "confidence": 50,
                 "fallback": True
             }
+        elif schema_type == "p4":
+            return {
+                "reasoning": "Fallback default probe 4.",
+                "choice": "none",
+                "confidence": 50,
+                "fallback": True
+            }
         return {"fallback": True}
 
     def format_takeaway(self, trust_notes: Dict[str, Dict[str, Any]]) -> str:
@@ -622,8 +661,10 @@ class PGGHarness:
         rng = random.Random(base_seed + round_num * 31)
         game_rules = self.get_game_rules()
         history_block = ""
-        if self.use_public_history:
+        if self.history_mode == "table":
             history_block = "\n" + self.format_public_history(announcements_history, actions_history, payoffs_history, round_num + 1) + "\n"
+        elif self.history_mode == "narrative":
+            history_block = "\n" + self.format_narrative_history(announcements_history, actions_history, payoffs_history, round_num + 1) + "\n"
 
         for obs in observers:
             # Probe P1
@@ -715,6 +756,38 @@ Respond strictly in JSON:
             }
             probe_tasks.append(
                 self._run_single_probe("P3", p3_prompt, model_id, "p3", base_seed + 303, call_ctx_p3, meta_p3)
+            )
+
+            # Probe P4 (Forced choice peer assessment)
+            p4_others = [s for s in active_seats if s != obs]
+            p4_opts = list(p4_others) + ["none"]
+            rng_p4 = random.Random(base_seed + round_num * 53 + (ord(obs[0]) if obs else 0))
+            rng_p4.shuffle(p4_opts)
+
+            p4_prompt = f"""You are player {obs}.
+{game_rules}
+{history_block}
+Probe P4: Compare how each of the other players ({', '.join(p4_others)}) played over the whole game. Since round {self.swap_round - 1}, at most one of them may have started behaving differently from before (a different style, strategy, model, or honesty level). It is also possible that nobody changed.
+Choose exactly one option: {' / '.join(p4_opts)}
+
+Respond strictly in JSON:
+```json
+{{
+  "reasoning": "<concise explanation>",
+  "choice": "<one option exactly as written above>",
+  "confidence": <integer 0-100>
+}}
+```"""
+            call_ctx_p4 = {
+                "trial": trial, "condition": condition, "round": round_num,
+                "seat": obs, "stage": "p4", "target": target_curr, "peers": p4_others
+            }
+            meta_p4 = {
+                "options": p4_opts,
+                "ground_truth": target_curr if condition != 1 else "none"
+            }
+            probe_tasks.append(
+                self._run_single_probe("P4", p4_prompt, model_id, "p4", base_seed + 404, call_ctx_p4, meta_p4)
             )
 
         await asyncio.gather(*probe_tasks)
@@ -1281,9 +1354,15 @@ async def main_async():
     parser.add_argument("--rounds", type=int, default=10, help="Total rounds (default: 10)")
     parser.add_argument("--swap-round", type=int, default=6, help="Round at which swap occurs (default: 6)")
     parser.add_argument("--public-history", action="store_true", help="Include in-context tabular public history")
+    parser.add_argument("--history-mode", type=str, default=None, choices=["table", "narrative", "none"],
+                        help="History mode for prompts: table, narrative (same info, no table), or none")
     parser.add_argument("--forks-from", type=str, default=None, help="Directory containing pre-swap checkpoints")
 
     args = parser.parse_args()
+
+    history_mode = args.history_mode
+    if history_mode is None:
+        history_mode = "table" if args.public_history else "none"
 
     if args.pilot and args.conditions == "1,2,3,4,5,6,7,8,9":
         conds = [1, 3, 5]
@@ -1299,7 +1378,7 @@ async def main_async():
     print("=== Starting PGG Peer-Swap Harness v2 ===")
     print(f"Output Directory: {out_dir}")
     print(f"Players: {args.n_players} | Total Rounds: {args.rounds} | Swap Round: {args.swap_round}")
-    print(f"Public History: {args.public_history} | Forks From: {args.forks_from}")
+    print(f"Public History: {args.public_history} | History Mode: {history_mode} | Forks From: {args.forks_from}")
     print(f"Trials: {args.trials} | Conditions: {conds}")
     print(f"Seed: {args.seed} | Concurrency: {args.concurrency}")
     print(f"Base URL: {base_url}")
@@ -1317,6 +1396,7 @@ async def main_async():
         total_rounds=args.rounds,
         swap_round=args.swap_round,
         use_public_history=args.public_history,
+        history_mode=history_mode,
         forks_from=Path(args.forks_from) if args.forks_from else None
     )
 

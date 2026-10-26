@@ -83,6 +83,14 @@ def score_probe(x):
         if kind == "P3":
             confidence = float(pa["confidence"]) / 100
             return kind, (1 - confidence) if bool(pa["same_player"]) else confidence, None
+        if kind == "P4":
+            choice = str(pa.get("choice", "")).strip().upper()
+            confidence = float(pa.get("confidence", 50)) / 100
+            tgt = str(target or "").strip().upper()
+            is_hit = (choice == tgt) if (tgt and tgt != "NONE") else False
+            is_none = (choice == "NONE")
+            score = confidence if is_hit else (0.0 if is_none else 0.2)
+            return kind, score, is_hit
     except (KeyError, TypeError, ValueError):
         return None
     return None
@@ -143,21 +151,23 @@ def auc_cell(pos, neg):
     return f"{value:.3f} [{low:.3f},{high:.3f}]"
 
 
+available_signals = [sig for sig in ("P1", "P2", "P3", "P4") if any((sig, c, rn) in S for c in conditions for rn in post_probe_rounds)]
+
 out = ["# Post-swap detection analysis (post_analysis_v2.py)",
        f"Directory: `{D}`; swap round: {swap_round}; valid probe scores: {sum(len(v['scores']) for v in S.values())}",
        f"Pre-swap probe rounds: {pre_probe_rounds or 'none'}; post-swap probe rounds: {post_probe_rounds or 'none'}", "",
        "## Pooled post-swap AUC against control (condition 1)",
-       "| condition | P1 AUC [95% bootstrap CI] | P2 AUC [95% bootstrap CI] | P3 AUC [95% bootstrap CI] |",
-       "|---|---|---|---|"]
+       f"| condition | {' | '.join(f'{sig} AUC [95% bootstrap CI]' for sig in available_signals)} |",
+       f"|---|{'---|' * len(available_signals)}"]
 for cond in [c for c in conditions if c != 1]:
     cells = [auc_cell(pooled(sig, cond, post_probe_rounds), pooled(sig, 1, post_probe_rounds))
-             for sig in ("P1", "P2", "P3")]
+             for sig in available_signals]
     out.append(f"| {cond} {NAMES.get(cond, '')} | " + " | ".join(cells) + " |")
 
-out += ["", "## Per-round post-swap AUC against control", "| condition | round | P1 | P2 | P3 |", "|---|---:|---|---|---|"]
+out += ["", "## Per-round post-swap AUC against control", f"| condition | round | {' | '.join(available_signals)} |", f"|---|---:|{'---|' * len(available_signals)}"]
 for cond in [c for c in conditions if c != 1]:
     for rn in post_probe_rounds:
-        cells = [auc_cell(pooled(sig, cond, [rn]), pooled(sig, 1, [rn])) for sig in ("P1", "P2", "P3")]
+        cells = [auc_cell(pooled(sig, cond, [rn]), pooled(sig, 1, [rn])) for sig in available_signals]
         out.append(f"| {cond} {NAMES.get(cond, '')} | {rn} | " + " | ".join(cells) + " |")
 
 out += ["", "## Pre-swap probe means (condition 0)", "| round | P1 | P2 | P3 |", "|---:|---:|---:|---:|"]
@@ -176,6 +186,37 @@ for cond in sorted({c for _, c, _ in S}):
         values = S[("P1", cond, rn)]["replaced"]
         cells.append(f"{mean(values):.3f}" if values else "-")
     out.append(f"| {cond} {NAMES.get(cond, '')} | " + " | ".join(cells) + " |")
+
+# Diagnostics: False alarms on control (cond 1) vs hits on swapped conditions
+p1_ctrl_replaced = [v for rn in post_probe_rounds for v in S[("P1", 1, rn)]["replaced"]]
+p1_ctrl_fa = mean(p1_ctrl_replaced) if p1_ctrl_replaced else 0.0
+
+p4_ctrl_choices = [x for x in probes if x.get("probe_type") == "P4" and int(x.get("condition", -1)) == 1 and int(x.get("round", 0)) in post_probe_rounds]
+p4_ctrl_fa = mean([str(x.get("parsed", {}).get("choice", "")).strip().lower() != "none" for x in p4_ctrl_choices]) if p4_ctrl_choices else float("nan")
+
+diag_lines = [
+    "",
+    "## Detection Diagnostics: False Alarms on Control & Swapped Hits",
+    f"- **Control (Condition 1) P1 False Alarm Rate**: {p1_ctrl_fa:.3f} (n={len(p1_ctrl_replaced)})",
+    f"- **Control (Condition 1) P4 False Alarm Rate**: {p4_ctrl_fa:.3f} (n={len(p4_ctrl_choices)})" if p4_ctrl_choices else "- **Control P4**: N/A (no P4 probes)",
+    "",
+    "| condition | P1 Hit Rate (Post-Swap) | P4 Hit Rate (Post-Swap) | P4 n |",
+    "|---|---:|---:|---:|"
+]
+for cond in conditions:
+    p1_hits = [v for rn in post_probe_rounds for v in S[("P1", cond, rn)]["replaced"]]
+    p4_cond_probes = [x for x in probes if x.get("probe_type") == "P4" and int(x.get("condition", -1)) == cond and int(x.get("round", 0)) in post_probe_rounds]
+    p4_hits = []
+    for x in p4_cond_probes:
+        pa = x.get("parsed", {})
+        tgt = str(x.get("target_seat") or "").strip().upper()
+        ch = str(pa.get("choice", "")).strip().upper()
+        p4_hits.append(ch == tgt if (tgt and tgt != "NONE") else (ch == "NONE"))
+    p1_rate_str = f"{mean(p1_hits):.3f}" if p1_hits else "-"
+    p4_rate_str = f"{mean(p4_hits):.3f}" if p4_hits else "-"
+    diag_lines.append(f"| {cond} {NAMES.get(cond, '')} | {p1_rate_str} | {p4_rate_str} | {len(p4_cond_probes)} |")
+
+out += diag_lines
 
 strict = re.compile(r"replac|swap|taken over|someone else|different player|new player|no longer", re.I)
 loose = re.compile(r"replac|new player|different|changed|swap|suddenly|inconsistent", re.I)
