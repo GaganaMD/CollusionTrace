@@ -1,0 +1,6 @@
+960 notes, 817 distinct texts to judge
+model                                      calls  est. USD
+anthropic/claude-haiku-5.5                   817      0.13
+total                                        817      0.13  (no re-asks; rough token estimate)
+  → OpenRouter: 817 requests
+wrote /home/vsskl/collusion_peer/experiment/runs/option_b__history/judge_notes.jsonl: 960 of 960 notes labelled

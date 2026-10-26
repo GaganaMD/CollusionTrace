@@ -1,0 +1,59 @@
+model                                      calls  est. USD
+meta-llama/llama-4-scout                    1432      0.18
+total                                       1432      0.18  (no re-asks; rough token estimate)
+  → OpenRouter: 40 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 160 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 160 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 160 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 1 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 160 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 40 requests
+  → OpenRouter: 160 requests
+  → OpenRouter: 32 requests
+trial 0: complete, CHEAP {'R4': 4, 'R5': 4}, passes=True
+trial 1: complete, CHEAP {'R4': 3, 'R5': 4}, passes=False
+trial 2: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 3: complete, CHEAP {'R4': 3, 'R5': 3}, passes=False
+trial 4: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 5: complete, CHEAP {'R4': 3, 'R5': 4}, passes=False
+trial 6: complete, CHEAP {'R4': 4, 'R5': 5}, passes=True
+trial 7: complete, CHEAP {'R4': 5, 'R5': 4}, passes=True
+kept: [0, 2, 4, 6, 7]

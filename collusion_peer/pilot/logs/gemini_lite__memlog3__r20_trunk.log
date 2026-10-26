@@ -1,0 +1,67 @@
+model                                      calls  est. USD
+google/gemini-3.5-flash-lite                1096      1.35
+total                                       1096      1.35  (no re-asks or prompt caching; rough token estimate)
+  → OpenRouter: 24 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 48 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 48 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 48 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 48 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 48 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 48 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 48 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 48 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 8 requests
+  → OpenRouter: 24 requests
+  → OpenRouter: 48 requests
+  → OpenRouter: 16 requests
+trial 0: complete, CHEAP {'R8': 3, 'R9': 3}, passes=True
+trial 1: complete, CHEAP {'R8': 3, 'R9': 3}, passes=True
+trial 2: complete, CHEAP {'R8': 3, 'R9': 3}, passes=True
+trial 3: complete, CHEAP {'R8': 0, 'R9': 0}, passes=False
+trial 4: complete, CHEAP {'R8': 0, 'R9': 0}, passes=False
+trial 5: complete, CHEAP {'R8': 0, 'R9': 0}, passes=False
+trial 6: complete, CHEAP {'R8': 3, 'R9': 3}, passes=True
+trial 7: complete, CHEAP {'R8': 3, 'R9': 3}, passes=True
+kept: [0, 1, 2, 6, 7]

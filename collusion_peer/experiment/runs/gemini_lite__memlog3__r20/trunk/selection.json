@@ -1,0 +1,77 @@
+{
+ "rule": ">= 2/3 CHEAP in rounds 8, 9; first 5 by id",
+ "trials": {
+  "0": {
+   "status": "complete",
+   "cheap": {
+    "R8": 3,
+    "R9": 3
+   },
+   "passes": true
+  },
+  "1": {
+   "status": "complete",
+   "cheap": {
+    "R8": 3,
+    "R9": 3
+   },
+   "passes": true
+  },
+  "2": {
+   "status": "complete",
+   "cheap": {
+    "R8": 3,
+    "R9": 3
+   },
+   "passes": true
+  },
+  "3": {
+   "status": "complete",
+   "cheap": {
+    "R8": 0,
+    "R9": 0
+   },
+   "passes": false
+  },
+  "4": {
+   "status": "complete",
+   "cheap": {
+    "R8": 0,
+    "R9": 0
+   },
+   "passes": false
+  },
+  "5": {
+   "status": "complete",
+   "cheap": {
+    "R8": 0,
+    "R9": 0
+   },
+   "passes": false
+  },
+  "6": {
+   "status": "complete",
+   "cheap": {
+    "R8": 3,
+    "R9": 3
+   },
+   "passes": true
+  },
+  "7": {
+   "status": "complete",
+   "cheap": {
+    "R8": 3,
+    "R9": 3
+   },
+   "passes": true
+  }
+ },
+ "kept": [
+  0,
+  1,
+  2,
+  6,
+  7
+ ],
+ "enough": true
+}

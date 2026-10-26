@@ -1,0 +1,69 @@
+model                                      calls  est. USD
+google/gemini-3.5-flash-lite                 525      0.98
+gpt-4o                                       350      4.90
+gpt-4o-mini                                 6605      5.55
+total                                       7480     11.43  (no re-asks; rough token estimate)
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 160 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 160 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 25 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 40 requests
+  → OpenAI: 40 requests
+  → OpenAI: 185 requests
+  → OpenRouter: 15 requests
+  → OpenAI: 740 requests
+  → OpenRouter: 60 requests
+  → OpenAI: 160 requests
+complete 40 / 40 branches run

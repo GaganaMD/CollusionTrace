@@ -1,0 +1,20 @@
+== 15:02:34 option_b__history trunk
+trial 5: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 6: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 7: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+kept: [0, 1, 2, 3, 4]
+== 15:05:05 option_b__history branches
+gpt-4o                                       350      4.90
+gpt-4o-mini                                 6605      5.55
+total                                       7480     11.43  (no re-asks; rough token estimate)
+complete 40 / 40 branches run
+== 15:27:11 option_b__history judge
+model                                      calls  est. USD
+anthropic/claude-haiku-5.5                   817      0.13
+total                                        817      0.13  (no re-asks; rough token estimate)
+wrote /home/vsskl/collusion_peer/experiment/runs/option_b__history/judge_notes.jsonl: 960 of 960 notes labelled
+== 15:27:53 option_b__history report
+wrote /home/vsskl/collusion_peer/experiment/runs/option_b__history/report.md
+== 15:27:54 option_b__history transcripts
+wrote 48 readable transcripts and /home/vsskl/collusion_peer/experiment/runs/option_b__history/ARTIFACTS.md
+PILOT_DONE option_b__history

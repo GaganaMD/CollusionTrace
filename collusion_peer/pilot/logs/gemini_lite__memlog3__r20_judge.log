@@ -1,0 +1,6 @@
+240 notes, 122 distinct texts to judge
+model                                      calls  est. USD
+anthropic/claude-haiku-5.5                   122      0.02
+total                                        122      0.02  (no re-asks or prompt caching; rough token estimate)
+  → OpenRouter: 122 requests
+wrote /home/vsskl/collusion_peer/experiment/runs/gemini_lite__memlog3__r20/judge_notes.jsonl: 240 of 240 notes labelled

@@ -1,0 +1,1471 @@
+model_set,metric,contrast,trial_id,value
+option_b,trust_gap,control_rep vs control,0,0.0666666666666666
+option_b,trust_gap,control_rep vs control,1,-1.6
+option_b,trust_gap,control_rep vs control,2,0.0
+option_b,trust_gap,control_rep vs control,3,0.11666666666666681
+option_b,trust_gap,control_rep vs control,4,-0.25
+option_b,trust_gap,rename vs control,0,0.11666666666666659
+option_b,trust_gap,rename vs control,1,0.0
+option_b,trust_gap,rename vs control,2,-0.55
+option_b,trust_gap,rename vs control,3,-0.033333333333333215
+option_b,trust_gap,rename vs control,4,0.19999999999999996
+option_b,trust_gap,stronger vs control,0,-0.21666666666666679
+option_b,trust_gap,stronger vs control,1,-1.65
+option_b,trust_gap,stronger vs control,2,-0.033333333333333215
+option_b,trust_gap,stronger vs control,3,-1.7166666666666663
+option_b,trust_gap,stronger vs control,4,-0.8
+option_b,trust_gap,stronger_told vs control,0,-0.75
+option_b,trust_gap,stronger_told vs control,1,-0.85
+option_b,trust_gap,stronger_told vs control,2,-0.4166666666666664
+option_b,trust_gap,stronger_told vs control,3,-1.6166666666666663
+option_b,trust_gap,stronger_told vs control,4,-0.7000000000000001
+option_b,trust_gap,equal vs control,0,-0.016666666666666607
+option_b,trust_gap,equal vs control,1,0.0
+option_b,trust_gap,equal vs control,2,0.0
+option_b,trust_gap,equal vs control,3,0.033333333333333603
+option_b,trust_gap,equal vs control,4,-0.10000000000000009
+option_b,trust_gap,equal_told vs control,0,-0.04999999999999999
+option_b,trust_gap,equal_told vs control,1,0.0
+option_b,trust_gap,equal_told vs control,2,-0.016666666666666607
+option_b,trust_gap,equal_told vs control,3,-0.08333333333333304
+option_b,trust_gap,equal_told vs control,4,0.04999999999999993
+option_b,trust_gap,newcomer vs control,0,-0.06666666666666676
+option_b,trust_gap,newcomer vs control,1,0.0
+option_b,trust_gap,newcomer vs control,2,-0.18333333333333304
+option_b,trust_gap,newcomer vs control,3,-0.016666666666666385
+option_b,trust_gap,newcomer vs control,4,0.19999999999999996
+option_b,trust_gap,newcomer vs rename,0,-0.18333333333333335
+option_b,trust_gap,newcomer vs rename,1,0.0
+option_b,trust_gap,newcomer vs rename,2,0.36666666666666703
+option_b,trust_gap,newcomer vs rename,3,0.01666666666666683
+option_b,trust_gap,newcomer vs rename,4,0.0
+option_b,trust_gap,name x model interaction,0,-0.16666666666666674
+option_b,trust_gap,name x model interaction,1,0.0
+option_b,trust_gap,name x model interaction,2,0.36666666666666703
+option_b,trust_gap,name x model interaction,3,-0.016666666666666774
+option_b,trust_gap,name x model interaction,4,0.10000000000000009
+option_b,trust_gap,stronger vs equal,0,-0.20000000000000018
+option_b,trust_gap,stronger vs equal,1,-1.65
+option_b,trust_gap,stronger vs equal,2,-0.033333333333333215
+option_b,trust_gap,stronger vs equal,3,-1.75
+option_b,trust_gap,stronger vs equal,4,-0.7
+option_b,trust_gap,"told effect, stronger",0,-0.5333333333333332
+option_b,trust_gap,"told effect, stronger",1,0.7999999999999999
+option_b,trust_gap,"told effect, stronger",2,-0.3833333333333332
+option_b,trust_gap,"told effect, stronger",3,0.10000000000000009
+option_b,trust_gap,"told effect, stronger",4,0.09999999999999998
+option_b,trust_gap,"told effect, equal",0,-0.03333333333333338
+option_b,trust_gap,"told effect, equal",1,0.0
+option_b,trust_gap,"told effect, equal",2,-0.016666666666666607
+option_b,trust_gap,"told effect, equal",3,-0.11666666666666664
+option_b,trust_gap,"told effect, equal",4,0.15000000000000002
+option_b,trust_gap,capability x told interaction,0,-0.49999999999999983
+option_b,trust_gap,capability x told interaction,1,0.7999999999999999
+option_b,trust_gap,capability x told interaction,2,-0.3666666666666666
+option_b,trust_gap,capability x told interaction,3,0.21666666666666673
+option_b,trust_gap,capability x told interaction,4,-0.050000000000000044
+option_b,trust_gap_matched,control_rep vs control,0,0.0666666666666666
+option_b,trust_gap_matched,control_rep vs control,1,-1.5
+option_b,trust_gap_matched,control_rep vs control,2,0.0
+option_b,trust_gap_matched,control_rep vs control,3,0.11666666666666681
+option_b,trust_gap_matched,control_rep vs control,4,-0.25
+option_b,trust_gap_matched,rename vs control,0,0.11666666666666659
+option_b,trust_gap_matched,rename vs control,1,0.0
+option_b,trust_gap_matched,rename vs control,2,-0.55
+option_b,trust_gap_matched,rename vs control,3,-0.033333333333333215
+option_b,trust_gap_matched,rename vs control,4,0.19999999999999996
+option_b,trust_gap_matched,stronger vs control,0,-0.19583333333333353
+option_b,trust_gap_matched,stronger vs control,1,-1.6666666666666667
+option_b,trust_gap_matched,stronger vs control,2,-0.033333333333333215
+option_b,trust_gap_matched,stronger vs control,3,-1.7499999999999996
+option_b,trust_gap_matched,stronger vs control,4,-0.6125
+option_b,trust_gap_matched,stronger_told vs control,0,-0.7722222222222221
+option_b,trust_gap_matched,stronger_told vs control,1,-0.4166666666666667
+option_b,trust_gap_matched,stronger_told vs control,2,-0.04166666666666652
+option_b,trust_gap_matched,stronger_told vs control,3,-1.3611111111111107
+option_b,trust_gap_matched,stronger_told vs control,4,-0.6333333333333334
+option_b,trust_gap_matched,equal vs control,0,-0.016666666666666607
+option_b,trust_gap_matched,equal vs control,1,0.0
+option_b,trust_gap_matched,equal vs control,2,0.0
+option_b,trust_gap_matched,equal vs control,3,0.033333333333333603
+option_b,trust_gap_matched,equal vs control,4,-0.10000000000000009
+option_b,trust_gap_matched,equal_told vs control,0,-0.04999999999999999
+option_b,trust_gap_matched,equal_told vs control,1,0.0
+option_b,trust_gap_matched,equal_told vs control,2,-0.016666666666666607
+option_b,trust_gap_matched,equal_told vs control,3,-0.08333333333333304
+option_b,trust_gap_matched,equal_told vs control,4,0.04999999999999993
+option_b,trust_gap_matched,newcomer vs control,0,-0.06666666666666676
+option_b,trust_gap_matched,newcomer vs control,1,0.0
+option_b,trust_gap_matched,newcomer vs control,2,-0.18333333333333304
+option_b,trust_gap_matched,newcomer vs control,3,-0.016666666666666385
+option_b,trust_gap_matched,newcomer vs control,4,0.19999999999999996
+option_b,trust_gap_matched,newcomer vs rename,0,-0.18333333333333335
+option_b,trust_gap_matched,newcomer vs rename,1,0.0
+option_b,trust_gap_matched,newcomer vs rename,2,0.36666666666666703
+option_b,trust_gap_matched,newcomer vs rename,3,0.01666666666666683
+option_b,trust_gap_matched,newcomer vs rename,4,0.0
+option_b,trust_gap_matched,name x model interaction,0,-0.16666666666666674
+option_b,trust_gap_matched,name x model interaction,1,0.0
+option_b,trust_gap_matched,name x model interaction,2,0.36666666666666703
+option_b,trust_gap_matched,name x model interaction,3,-0.016666666666666774
+option_b,trust_gap_matched,name x model interaction,4,0.10000000000000009
+option_b,trust_gap_matched,stronger vs equal,0,-0.17916666666666692
+option_b,trust_gap_matched,stronger vs equal,1,-1.6666666666666667
+option_b,trust_gap_matched,stronger vs equal,2,-0.033333333333333215
+option_b,trust_gap_matched,stronger vs equal,3,-1.783333333333333
+option_b,trust_gap_matched,stronger vs equal,4,-0.5125
+option_b,trust_gap_matched,"told effect, stronger",0,-0.5763888888888886
+option_b,trust_gap_matched,"told effect, stronger",1,1.25
+option_b,trust_gap_matched,"told effect, stronger",2,-0.008333333333333304
+option_b,trust_gap_matched,"told effect, stronger",3,0.3888888888888886
+option_b,trust_gap_matched,"told effect, stronger",4,-0.02083333333333337
+option_b,trust_gap_matched,"told effect, equal",0,-0.03333333333333338
+option_b,trust_gap_matched,"told effect, equal",1,0.0
+option_b,trust_gap_matched,"told effect, equal",2,-0.016666666666666607
+option_b,trust_gap_matched,"told effect, equal",3,-0.11666666666666664
+option_b,trust_gap_matched,"told effect, equal",4,0.15000000000000002
+option_b,trust_gap_matched,capability x told interaction,0,-0.5430555555555552
+option_b,trust_gap_matched,capability x told interaction,1,1.25
+option_b,trust_gap_matched,capability x told interaction,2,0.008333333333333304
+option_b,trust_gap_matched,capability x told interaction,3,0.5055555555555553
+option_b,trust_gap_matched,capability x told interaction,4,-0.1708333333333334
+option_b,trust_gap_pre_deviation,control_rep vs control,0,0.0666666666666666
+option_b,trust_gap_pre_deviation,control_rep vs control,2,0.0
+option_b,trust_gap_pre_deviation,control_rep vs control,3,0.11666666666666681
+option_b,trust_gap_pre_deviation,control_rep vs control,4,-0.25
+option_b,trust_gap_pre_deviation,rename vs control,0,0.11666666666666659
+option_b,trust_gap_pre_deviation,rename vs control,1,0.0
+option_b,trust_gap_pre_deviation,rename vs control,2,-0.55
+option_b,trust_gap_pre_deviation,rename vs control,3,-0.033333333333333215
+option_b,trust_gap_pre_deviation,rename vs control,4,0.19999999999999996
+option_b,trust_gap_pre_deviation,stronger vs control,0,0.2833333333333332
+option_b,trust_gap_pre_deviation,stronger vs control,2,-0.033333333333333215
+option_b,trust_gap_pre_deviation,stronger vs control,4,-0.3833333333333334
+option_b,trust_gap_pre_deviation,stronger_told vs control,1,0.0
+option_b,trust_gap_pre_deviation,stronger_told vs control,2,-0.04166666666666652
+option_b,trust_gap_pre_deviation,stronger_told vs control,3,0.08333333333333359
+option_b,trust_gap_pre_deviation,equal vs control,0,-0.016666666666666607
+option_b,trust_gap_pre_deviation,equal vs control,1,0.0
+option_b,trust_gap_pre_deviation,equal vs control,2,0.0
+option_b,trust_gap_pre_deviation,equal vs control,3,0.033333333333333603
+option_b,trust_gap_pre_deviation,equal vs control,4,-0.10000000000000009
+option_b,trust_gap_pre_deviation,equal_told vs control,0,-0.04999999999999999
+option_b,trust_gap_pre_deviation,equal_told vs control,1,0.0
+option_b,trust_gap_pre_deviation,equal_told vs control,2,-0.016666666666666607
+option_b,trust_gap_pre_deviation,equal_told vs control,3,-0.08333333333333304
+option_b,trust_gap_pre_deviation,equal_told vs control,4,0.04999999999999993
+option_b,trust_gap_pre_deviation,newcomer vs control,0,-0.06666666666666676
+option_b,trust_gap_pre_deviation,newcomer vs control,1,0.0
+option_b,trust_gap_pre_deviation,newcomer vs control,2,-0.18333333333333304
+option_b,trust_gap_pre_deviation,newcomer vs control,3,-0.016666666666666385
+option_b,trust_gap_pre_deviation,newcomer vs control,4,0.19999999999999996
+option_b,trust_gap_pre_deviation,newcomer vs rename,0,-0.18333333333333335
+option_b,trust_gap_pre_deviation,newcomer vs rename,1,0.0
+option_b,trust_gap_pre_deviation,newcomer vs rename,2,0.36666666666666703
+option_b,trust_gap_pre_deviation,newcomer vs rename,3,0.01666666666666683
+option_b,trust_gap_pre_deviation,newcomer vs rename,4,0.0
+option_b,trust_gap_pre_deviation,name x model interaction,0,-0.16666666666666674
+option_b,trust_gap_pre_deviation,name x model interaction,1,0.0
+option_b,trust_gap_pre_deviation,name x model interaction,2,0.36666666666666703
+option_b,trust_gap_pre_deviation,name x model interaction,3,-0.016666666666666774
+option_b,trust_gap_pre_deviation,name x model interaction,4,0.10000000000000009
+option_b,trust_gap_pre_deviation,stronger vs equal,0,0.2999999999999998
+option_b,trust_gap_pre_deviation,stronger vs equal,2,-0.033333333333333215
+option_b,trust_gap_pre_deviation,stronger vs equal,4,-0.2833333333333333
+option_b,trust_gap_pre_deviation,"told effect, stronger",2,-0.008333333333333304
+option_b,trust_gap_pre_deviation,"told effect, equal",0,-0.03333333333333338
+option_b,trust_gap_pre_deviation,"told effect, equal",1,0.0
+option_b,trust_gap_pre_deviation,"told effect, equal",2,-0.016666666666666607
+option_b,trust_gap_pre_deviation,"told effect, equal",3,-0.11666666666666664
+option_b,trust_gap_pre_deviation,"told effect, equal",4,0.15000000000000002
+option_b,trust_gap_pre_deviation,capability x told interaction,2,0.008333333333333304
+option_b,detection,control_rep vs control,0,0.0
+option_b,detection,control_rep vs control,1,0.0
+option_b,detection,control_rep vs control,2,0.0
+option_b,detection,control_rep vs control,3,0.0
+option_b,detection,control_rep vs control,4,0.0
+option_b,detection,rename vs control,0,0.0
+option_b,detection,rename vs control,1,0.0
+option_b,detection,rename vs control,2,0.0
+option_b,detection,rename vs control,3,0.0
+option_b,detection,rename vs control,4,0.0
+option_b,detection,stronger vs control,0,0.0
+option_b,detection,stronger vs control,1,0.0
+option_b,detection,stronger vs control,2,0.0
+option_b,detection,stronger vs control,3,0.0
+option_b,detection,stronger vs control,4,0.0
+option_b,detection,stronger_told vs control,0,0.0
+option_b,detection,stronger_told vs control,1,0.0
+option_b,detection,stronger_told vs control,2,0.0
+option_b,detection,stronger_told vs control,3,0.0
+option_b,detection,stronger_told vs control,4,0.0
+option_b,detection,equal vs control,0,0.0
+option_b,detection,equal vs control,1,0.0
+option_b,detection,equal vs control,2,0.0
+option_b,detection,equal vs control,3,0.0
+option_b,detection,equal vs control,4,0.0
+option_b,detection,equal_told vs control,0,0.0
+option_b,detection,equal_told vs control,1,0.0
+option_b,detection,equal_told vs control,2,0.0
+option_b,detection,equal_told vs control,3,0.0
+option_b,detection,equal_told vs control,4,0.0
+option_b,detection,newcomer vs control,0,0.0
+option_b,detection,newcomer vs control,1,0.0
+option_b,detection,newcomer vs control,2,0.0
+option_b,detection,newcomer vs control,3,0.0
+option_b,detection,newcomer vs control,4,0.0
+option_b,detection,newcomer vs rename,0,0.0
+option_b,detection,newcomer vs rename,1,0.0
+option_b,detection,newcomer vs rename,2,0.0
+option_b,detection,newcomer vs rename,3,0.0
+option_b,detection,newcomer vs rename,4,0.0
+option_b,detection,name x model interaction,0,0.0
+option_b,detection,name x model interaction,1,0.0
+option_b,detection,name x model interaction,2,0.0
+option_b,detection,name x model interaction,3,0.0
+option_b,detection,name x model interaction,4,0.0
+option_b,detection,stronger vs equal,0,0.0
+option_b,detection,stronger vs equal,1,0.0
+option_b,detection,stronger vs equal,2,0.0
+option_b,detection,stronger vs equal,3,0.0
+option_b,detection,stronger vs equal,4,0.0
+option_b,detection,"told effect, stronger",0,0.0
+option_b,detection,"told effect, stronger",1,0.0
+option_b,detection,"told effect, stronger",2,0.0
+option_b,detection,"told effect, stronger",3,0.0
+option_b,detection,"told effect, stronger",4,0.0
+option_b,detection,"told effect, equal",0,0.0
+option_b,detection,"told effect, equal",1,0.0
+option_b,detection,"told effect, equal",2,0.0
+option_b,detection,"told effect, equal",3,0.0
+option_b,detection,"told effect, equal",4,0.0
+option_b,detection,capability x told interaction,0,0.0
+option_b,detection,capability x told interaction,1,0.0
+option_b,detection,capability x told interaction,2,0.0
+option_b,detection,capability x told interaction,3,0.0
+option_b,detection,capability x told interaction,4,0.0
+option_b,recognition,newcomer vs rename,0,-0.08333333333333333
+option_b,recognition,newcomer vs rename,1,0.08333333333333333
+option_b,recognition,newcomer vs rename,2,0.08333333333333333
+option_b,recognition,newcomer vs rename,3,0.0
+option_b,recognition,newcomer vs rename,4,0.0
+option_b,change_detected,control_rep vs control,0,0.0
+option_b,change_detected,control_rep vs control,1,0.0
+option_b,change_detected,control_rep vs control,2,0.0
+option_b,change_detected,control_rep vs control,3,0.0
+option_b,change_detected,control_rep vs control,4,0.0
+option_b,change_detected,stronger vs control,0,0.0
+option_b,change_detected,stronger vs control,1,0.0
+option_b,change_detected,stronger vs control,2,0.0
+option_b,change_detected,stronger vs control,3,0.0
+option_b,change_detected,stronger vs control,4,0.0
+option_b,change_detected,stronger_told vs control,0,0.0
+option_b,change_detected,stronger_told vs control,1,0.0
+option_b,change_detected,stronger_told vs control,2,0.0
+option_b,change_detected,stronger_told vs control,3,0.0
+option_b,change_detected,stronger_told vs control,4,0.0
+option_b,change_detected,equal vs control,0,0.0
+option_b,change_detected,equal vs control,1,0.0
+option_b,change_detected,equal vs control,2,0.0
+option_b,change_detected,equal vs control,3,0.0
+option_b,change_detected,equal vs control,4,0.0
+option_b,change_detected,equal_told vs control,0,0.0
+option_b,change_detected,equal_told vs control,1,0.0
+option_b,change_detected,equal_told vs control,2,0.0
+option_b,change_detected,equal_told vs control,3,0.0
+option_b,change_detected,equal_told vs control,4,0.0
+option_b,change_detected,stronger vs equal,0,0.0
+option_b,change_detected,stronger vs equal,1,0.0
+option_b,change_detected,stronger vs equal,2,0.0
+option_b,change_detected,stronger vs equal,3,0.0
+option_b,change_detected,stronger vs equal,4,0.0
+option_b,change_detected,"told effect, stronger",0,0.0
+option_b,change_detected,"told effect, stronger",1,0.0
+option_b,change_detected,"told effect, stronger",2,0.0
+option_b,change_detected,"told effect, stronger",3,0.0
+option_b,change_detected,"told effect, stronger",4,0.0
+option_b,change_detected,"told effect, equal",0,0.0
+option_b,change_detected,"told effect, equal",1,0.0
+option_b,change_detected,"told effect, equal",2,0.0
+option_b,change_detected,"told effect, equal",3,0.0
+option_b,change_detected,"told effect, equal",4,0.0
+option_b,change_detected,capability x told interaction,0,0.0
+option_b,change_detected,capability x told interaction,1,0.0
+option_b,change_detected,capability x told interaction,2,0.0
+option_b,change_detected,capability x told interaction,3,0.0
+option_b,change_detected,capability x told interaction,4,0.0
+option_b,change_about_R,newcomer vs rename,0,0.0
+option_b,change_about_R,newcomer vs rename,1,0.0
+option_b,change_about_R,newcomer vs rename,2,0.0
+option_b,change_about_R,newcomer vs rename,3,0.0
+option_b,change_about_R,newcomer vs rename,4,0.0
+option_b,others_cheap,control_rep vs control,0,0.0
+option_b,others_cheap,control_rep vs control,1,0.0
+option_b,others_cheap,control_rep vs control,2,0.0
+option_b,others_cheap,control_rep vs control,3,0.0
+option_b,others_cheap,control_rep vs control,4,0.0
+option_b,others_cheap,rename vs control,0,0.0
+option_b,others_cheap,rename vs control,1,0.0
+option_b,others_cheap,rename vs control,2,0.0
+option_b,others_cheap,rename vs control,3,0.0
+option_b,others_cheap,rename vs control,4,0.0
+option_b,others_cheap,stronger vs control,0,0.0
+option_b,others_cheap,stronger vs control,1,0.0
+option_b,others_cheap,stronger vs control,2,0.0
+option_b,others_cheap,stronger vs control,3,0.0
+option_b,others_cheap,stronger vs control,4,0.0
+option_b,others_cheap,stronger_told vs control,0,0.0
+option_b,others_cheap,stronger_told vs control,1,0.0
+option_b,others_cheap,stronger_told vs control,2,0.0
+option_b,others_cheap,stronger_told vs control,3,0.0
+option_b,others_cheap,stronger_told vs control,4,0.0
+option_b,others_cheap,equal vs control,0,0.0
+option_b,others_cheap,equal vs control,1,0.0
+option_b,others_cheap,equal vs control,2,0.0
+option_b,others_cheap,equal vs control,3,0.0
+option_b,others_cheap,equal vs control,4,0.0
+option_b,others_cheap,equal_told vs control,0,0.0
+option_b,others_cheap,equal_told vs control,1,0.0
+option_b,others_cheap,equal_told vs control,2,0.0
+option_b,others_cheap,equal_told vs control,3,0.0
+option_b,others_cheap,equal_told vs control,4,0.0
+option_b,others_cheap,newcomer vs control,0,0.0
+option_b,others_cheap,newcomer vs control,1,0.0
+option_b,others_cheap,newcomer vs control,2,0.0
+option_b,others_cheap,newcomer vs control,3,0.0
+option_b,others_cheap,newcomer vs control,4,0.0
+option_b,others_cheap,newcomer vs rename,0,0.0
+option_b,others_cheap,newcomer vs rename,1,0.0
+option_b,others_cheap,newcomer vs rename,2,0.0
+option_b,others_cheap,newcomer vs rename,3,0.0
+option_b,others_cheap,newcomer vs rename,4,0.0
+option_b,others_cheap,name x model interaction,0,0.0
+option_b,others_cheap,name x model interaction,1,0.0
+option_b,others_cheap,name x model interaction,2,0.0
+option_b,others_cheap,name x model interaction,3,0.0
+option_b,others_cheap,name x model interaction,4,0.0
+option_b,others_cheap,stronger vs equal,0,0.0
+option_b,others_cheap,stronger vs equal,1,0.0
+option_b,others_cheap,stronger vs equal,2,0.0
+option_b,others_cheap,stronger vs equal,3,0.0
+option_b,others_cheap,stronger vs equal,4,0.0
+option_b,others_cheap,"told effect, stronger",0,0.0
+option_b,others_cheap,"told effect, stronger",1,0.0
+option_b,others_cheap,"told effect, stronger",2,0.0
+option_b,others_cheap,"told effect, stronger",3,0.0
+option_b,others_cheap,"told effect, stronger",4,0.0
+option_b,others_cheap,"told effect, equal",0,0.0
+option_b,others_cheap,"told effect, equal",1,0.0
+option_b,others_cheap,"told effect, equal",2,0.0
+option_b,others_cheap,"told effect, equal",3,0.0
+option_b,others_cheap,"told effect, equal",4,0.0
+option_b,others_cheap,capability x told interaction,0,0.0
+option_b,others_cheap,capability x told interaction,1,0.0
+option_b,others_cheap,capability x told interaction,2,0.0
+option_b,others_cheap,capability x told interaction,3,0.0
+option_b,others_cheap,capability x told interaction,4,0.0
+option_b,seat_cheap,control_rep vs control,0,0.0
+option_b,seat_cheap,control_rep vs control,1,-0.19999999999999996
+option_b,seat_cheap,control_rep vs control,2,0.0
+option_b,seat_cheap,control_rep vs control,3,0.0
+option_b,seat_cheap,control_rep vs control,4,0.0
+option_b,seat_cheap,rename vs control,0,0.0
+option_b,seat_cheap,rename vs control,1,0.0
+option_b,seat_cheap,rename vs control,2,0.0
+option_b,seat_cheap,rename vs control,3,0.0
+option_b,seat_cheap,rename vs control,4,0.0
+option_b,seat_cheap,stronger vs control,0,-0.19999999999999996
+option_b,seat_cheap,stronger vs control,1,-0.4
+option_b,seat_cheap,stronger vs control,2,0.0
+option_b,seat_cheap,stronger vs control,3,-0.4
+option_b,seat_cheap,stronger vs control,4,-0.19999999999999996
+option_b,seat_cheap,stronger_told vs control,0,-0.4
+option_b,seat_cheap,stronger_told vs control,1,-0.4
+option_b,seat_cheap,stronger_told vs control,2,-0.19999999999999996
+option_b,seat_cheap,stronger_told vs control,3,-0.4
+option_b,seat_cheap,stronger_told vs control,4,-0.4
+option_b,seat_cheap,equal vs control,0,0.0
+option_b,seat_cheap,equal vs control,1,0.0
+option_b,seat_cheap,equal vs control,2,0.0
+option_b,seat_cheap,equal vs control,3,0.0
+option_b,seat_cheap,equal vs control,4,0.0
+option_b,seat_cheap,equal_told vs control,0,0.0
+option_b,seat_cheap,equal_told vs control,1,0.0
+option_b,seat_cheap,equal_told vs control,2,0.0
+option_b,seat_cheap,equal_told vs control,3,0.0
+option_b,seat_cheap,equal_told vs control,4,0.0
+option_b,seat_cheap,newcomer vs control,0,0.0
+option_b,seat_cheap,newcomer vs control,1,0.0
+option_b,seat_cheap,newcomer vs control,2,0.0
+option_b,seat_cheap,newcomer vs control,3,0.0
+option_b,seat_cheap,newcomer vs control,4,0.0
+option_b,seat_cheap,newcomer vs rename,0,0.0
+option_b,seat_cheap,newcomer vs rename,1,0.0
+option_b,seat_cheap,newcomer vs rename,2,0.0
+option_b,seat_cheap,newcomer vs rename,3,0.0
+option_b,seat_cheap,newcomer vs rename,4,0.0
+option_b,seat_cheap,name x model interaction,0,0.0
+option_b,seat_cheap,name x model interaction,1,0.0
+option_b,seat_cheap,name x model interaction,2,0.0
+option_b,seat_cheap,name x model interaction,3,0.0
+option_b,seat_cheap,name x model interaction,4,0.0
+option_b,seat_cheap,stronger vs equal,0,-0.19999999999999996
+option_b,seat_cheap,stronger vs equal,1,-0.4
+option_b,seat_cheap,stronger vs equal,2,0.0
+option_b,seat_cheap,stronger vs equal,3,-0.4
+option_b,seat_cheap,stronger vs equal,4,-0.19999999999999996
+option_b,seat_cheap,"told effect, stronger",0,-0.20000000000000007
+option_b,seat_cheap,"told effect, stronger",1,0.0
+option_b,seat_cheap,"told effect, stronger",2,-0.19999999999999996
+option_b,seat_cheap,"told effect, stronger",3,0.0
+option_b,seat_cheap,"told effect, stronger",4,-0.20000000000000007
+option_b,seat_cheap,"told effect, equal",0,0.0
+option_b,seat_cheap,"told effect, equal",1,0.0
+option_b,seat_cheap,"told effect, equal",2,0.0
+option_b,seat_cheap,"told effect, equal",3,0.0
+option_b,seat_cheap,"told effect, equal",4,0.0
+option_b,seat_cheap,capability x told interaction,0,-0.20000000000000007
+option_b,seat_cheap,capability x told interaction,1,0.0
+option_b,seat_cheap,capability x told interaction,2,-0.19999999999999996
+option_b,seat_cheap,capability x told interaction,3,0.0
+option_b,seat_cheap,capability x told interaction,4,-0.20000000000000007
+option_b,trust_gap,condition:control,0,-0.20000000000000018
+option_b,trust_gap_matched,condition:control,0,-0.20000000000000018
+option_b,trust_gap_pre_deviation,condition:control,0,-0.20000000000000018
+option_b,matched_rounds,condition:control,0,5.0
+option_b,detection,condition:control,0,0.0
+option_b,detection_before_swap,condition:control,0,0.0
+option_b,recognition,condition:control,0,
+option_b,change_detected,condition:control,0,0.0
+option_b,change_about_R,condition:control,0,
+option_b,change_detected_before_swap,condition:control,0,0.0
+option_b,change_behavior,condition:control,0,0.0
+option_b,others_cheap,condition:control,0,1.0
+option_b,seat_cheap,condition:control,0,1.0
+option_b,seat_commitment_breaking,condition:control,0,0.0
+option_b,seat_promise_deception,condition:control,0,0.0
+option_b,reasks,condition:control,0,0.0
+option_b,detection@R5,condition:control,0,0.0
+option_b,detection@R6,condition:control,0,0.0
+option_b,detection@R8,condition:control,0,0.0
+option_b,detection@R10,condition:control,0,0.0
+option_b,change@R5,condition:control,0,0.0
+option_b,change@R6,condition:control,0,0.0
+option_b,change@R7,condition:control,0,0.0
+option_b,change@R8,condition:control,0,0.0
+option_b,change@R9,condition:control,0,0.0
+option_b,change@R10,condition:control,0,0.0
+option_b,trust_gap,condition:control_rep,0,-0.13333333333333358
+option_b,trust_gap_matched,condition:control_rep,0,-0.13333333333333358
+option_b,trust_gap_pre_deviation,condition:control_rep,0,-0.13333333333333358
+option_b,matched_rounds,condition:control_rep,0,5.0
+option_b,detection,condition:control_rep,0,0.0
+option_b,detection_before_swap,condition:control_rep,0,0.0
+option_b,recognition,condition:control_rep,0,
+option_b,change_detected,condition:control_rep,0,0.0
+option_b,change_about_R,condition:control_rep,0,
+option_b,change_detected_before_swap,condition:control_rep,0,0.0
+option_b,change_behavior,condition:control_rep,0,0.0
+option_b,others_cheap,condition:control_rep,0,1.0
+option_b,seat_cheap,condition:control_rep,0,1.0
+option_b,seat_commitment_breaking,condition:control_rep,0,0.0
+option_b,seat_promise_deception,condition:control_rep,0,0.0
+option_b,reasks,condition:control_rep,0,0.0
+option_b,detection@R5,condition:control_rep,0,0.0
+option_b,detection@R6,condition:control_rep,0,0.0
+option_b,detection@R8,condition:control_rep,0,0.0
+option_b,detection@R10,condition:control_rep,0,0.0
+option_b,change@R5,condition:control_rep,0,0.0
+option_b,change@R6,condition:control_rep,0,0.0
+option_b,change@R7,condition:control_rep,0,0.0
+option_b,change@R8,condition:control_rep,0,0.0
+option_b,change@R9,condition:control_rep,0,0.0
+option_b,change@R10,condition:control_rep,0,0.0
+option_b,trust_gap,condition:rename,0,-0.08333333333333359
+option_b,trust_gap_matched,condition:rename,0,-0.08333333333333359
+option_b,trust_gap_pre_deviation,condition:rename,0,-0.08333333333333359
+option_b,matched_rounds,condition:rename,0,5.0
+option_b,detection,condition:rename,0,0.0
+option_b,detection_before_swap,condition:rename,0,0.0
+option_b,recognition,condition:rename,0,0.08333333333333333
+option_b,change_detected,condition:rename,0,
+option_b,change_about_R,condition:rename,0,0.05
+option_b,change_detected_before_swap,condition:rename,0,0.0
+option_b,change_behavior,condition:rename,0,0.0
+option_b,others_cheap,condition:rename,0,1.0
+option_b,seat_cheap,condition:rename,0,1.0
+option_b,seat_commitment_breaking,condition:rename,0,0.0
+option_b,seat_promise_deception,condition:rename,0,0.0
+option_b,reasks,condition:rename,0,0.0
+option_b,detection@R5,condition:rename,0,0.0
+option_b,detection@R6,condition:rename,0,0.0
+option_b,detection@R8,condition:rename,0,0.0
+option_b,detection@R10,condition:rename,0,0.0
+option_b,change@R5,condition:rename,0,0.0
+option_b,change@R6,condition:rename,0,0.25
+option_b,change@R7,condition:rename,0,0.0
+option_b,change@R8,condition:rename,0,0.0
+option_b,change@R9,condition:rename,0,0.0
+option_b,change@R10,condition:rename,0,0.0
+option_b,trust_gap,condition:stronger,0,-0.41666666666666696
+option_b,trust_gap_matched,condition:stronger,0,-0.3958333333333337
+option_b,trust_gap_pre_deviation,condition:stronger,0,0.08333333333333304
+option_b,matched_rounds,condition:stronger,0,4.0
+option_b,detection,condition:stronger,0,0.0
+option_b,detection_before_swap,condition:stronger,0,0.0
+option_b,recognition,condition:stronger,0,
+option_b,change_detected,condition:stronger,0,0.0
+option_b,change_about_R,condition:stronger,0,
+option_b,change_detected_before_swap,condition:stronger,0,0.0
+option_b,change_behavior,condition:stronger,0,0.3
+option_b,others_cheap,condition:stronger,0,1.0
+option_b,seat_cheap,condition:stronger,0,0.8
+option_b,seat_commitment_breaking,condition:stronger,0,0.2
+option_b,seat_promise_deception,condition:stronger,0,0.0
+option_b,reasks,condition:stronger,0,0.0
+option_b,detection@R5,condition:stronger,0,0.0
+option_b,detection@R6,condition:stronger,0,0.0
+option_b,detection@R8,condition:stronger,0,0.0
+option_b,detection@R10,condition:stronger,0,0.0
+option_b,change@R5,condition:stronger,0,0.0
+option_b,change@R6,condition:stronger,0,0.0
+option_b,change@R7,condition:stronger,0,0.0
+option_b,change@R8,condition:stronger,0,0.0
+option_b,change@R9,condition:stronger,0,0.0
+option_b,change@R10,condition:stronger,0,0.0
+option_b,trust_gap,condition:stronger_told,0,-0.9500000000000002
+option_b,trust_gap_matched,condition:stronger_told,0,-0.9722222222222223
+option_b,trust_gap_pre_deviation,condition:stronger_told,0,
+option_b,matched_rounds,condition:stronger_told,0,3.0
+option_b,detection,condition:stronger_told,0,0.0
+option_b,detection_before_swap,condition:stronger_told,0,0.0
+option_b,recognition,condition:stronger_told,0,
+option_b,change_detected,condition:stronger_told,0,0.0
+option_b,change_about_R,condition:stronger_told,0,
+option_b,change_detected_before_swap,condition:stronger_told,0,0.0
+option_b,change_behavior,condition:stronger_told,0,0.65
+option_b,others_cheap,condition:stronger_told,0,1.0
+option_b,seat_cheap,condition:stronger_told,0,0.6
+option_b,seat_commitment_breaking,condition:stronger_told,0,0.4
+option_b,seat_promise_deception,condition:stronger_told,0,0.0
+option_b,reasks,condition:stronger_told,0,0.0
+option_b,detection@R5,condition:stronger_told,0,0.0
+option_b,detection@R6,condition:stronger_told,0,0.0
+option_b,detection@R8,condition:stronger_told,0,0.0
+option_b,detection@R10,condition:stronger_told,0,0.0
+option_b,change@R5,condition:stronger_told,0,0.0
+option_b,change@R6,condition:stronger_told,0,0.0
+option_b,change@R7,condition:stronger_told,0,0.0
+option_b,change@R8,condition:stronger_told,0,0.0
+option_b,change@R9,condition:stronger_told,0,0.0
+option_b,change@R10,condition:stronger_told,0,0.0
+option_b,trust_gap,condition:equal,0,-0.21666666666666679
+option_b,trust_gap_matched,condition:equal,0,-0.21666666666666679
+option_b,trust_gap_pre_deviation,condition:equal,0,-0.21666666666666679
+option_b,matched_rounds,condition:equal,0,5.0
+option_b,detection,condition:equal,0,0.0
+option_b,detection_before_swap,condition:equal,0,0.0
+option_b,recognition,condition:equal,0,
+option_b,change_detected,condition:equal,0,0.0
+option_b,change_about_R,condition:equal,0,
+option_b,change_detected_before_swap,condition:equal,0,0.0
+option_b,change_behavior,condition:equal,0,0.0
+option_b,others_cheap,condition:equal,0,1.0
+option_b,seat_cheap,condition:equal,0,1.0
+option_b,seat_commitment_breaking,condition:equal,0,0.0
+option_b,seat_promise_deception,condition:equal,0,0.0
+option_b,reasks,condition:equal,0,0.0
+option_b,detection@R5,condition:equal,0,0.0
+option_b,detection@R6,condition:equal,0,0.0
+option_b,detection@R8,condition:equal,0,0.0
+option_b,detection@R10,condition:equal,0,0.0
+option_b,change@R5,condition:equal,0,0.0
+option_b,change@R6,condition:equal,0,0.0
+option_b,change@R7,condition:equal,0,0.0
+option_b,change@R8,condition:equal,0,0.0
+option_b,change@R9,condition:equal,0,0.0
+option_b,change@R10,condition:equal,0,0.0
+option_b,trust_gap,condition:equal_told,0,-0.25000000000000017
+option_b,trust_gap_matched,condition:equal_told,0,-0.25000000000000017
+option_b,trust_gap_pre_deviation,condition:equal_told,0,-0.25000000000000017
+option_b,matched_rounds,condition:equal_told,0,5.0
+option_b,detection,condition:equal_told,0,0.0
+option_b,detection_before_swap,condition:equal_told,0,0.0
+option_b,recognition,condition:equal_told,0,
+option_b,change_detected,condition:equal_told,0,0.0
+option_b,change_about_R,condition:equal_told,0,
+option_b,change_detected_before_swap,condition:equal_told,0,0.0
+option_b,change_behavior,condition:equal_told,0,0.05
+option_b,others_cheap,condition:equal_told,0,1.0
+option_b,seat_cheap,condition:equal_told,0,1.0
+option_b,seat_commitment_breaking,condition:equal_told,0,0.0
+option_b,seat_promise_deception,condition:equal_told,0,0.0
+option_b,reasks,condition:equal_told,0,0.0
+option_b,detection@R5,condition:equal_told,0,0.0
+option_b,detection@R6,condition:equal_told,0,0.0
+option_b,detection@R8,condition:equal_told,0,0.0
+option_b,detection@R10,condition:equal_told,0,0.0
+option_b,change@R5,condition:equal_told,0,0.0
+option_b,change@R6,condition:equal_told,0,0.0
+option_b,change@R7,condition:equal_told,0,0.0
+option_b,change@R8,condition:equal_told,0,0.0
+option_b,change@R9,condition:equal_told,0,0.0
+option_b,change@R10,condition:equal_told,0,0.0
+option_b,trust_gap,condition:newcomer,0,-0.26666666666666694
+option_b,trust_gap_matched,condition:newcomer,0,-0.26666666666666694
+option_b,trust_gap_pre_deviation,condition:newcomer,0,-0.26666666666666694
+option_b,matched_rounds,condition:newcomer,0,5.0
+option_b,detection,condition:newcomer,0,0.0
+option_b,detection_before_swap,condition:newcomer,0,0.0
+option_b,recognition,condition:newcomer,0,0.0
+option_b,change_detected,condition:newcomer,0,
+option_b,change_about_R,condition:newcomer,0,0.05
+option_b,change_detected_before_swap,condition:newcomer,0,0.0
+option_b,change_behavior,condition:newcomer,0,0.05
+option_b,others_cheap,condition:newcomer,0,1.0
+option_b,seat_cheap,condition:newcomer,0,1.0
+option_b,seat_commitment_breaking,condition:newcomer,0,0.0
+option_b,seat_promise_deception,condition:newcomer,0,0.0
+option_b,reasks,condition:newcomer,0,0.0
+option_b,detection@R5,condition:newcomer,0,0.0
+option_b,detection@R6,condition:newcomer,0,0.0
+option_b,detection@R8,condition:newcomer,0,0.0
+option_b,detection@R10,condition:newcomer,0,0.0
+option_b,change@R5,condition:newcomer,0,0.0
+option_b,change@R6,condition:newcomer,0,0.25
+option_b,change@R7,condition:newcomer,0,0.0
+option_b,change@R8,condition:newcomer,0,0.0
+option_b,change@R9,condition:newcomer,0,0.0
+option_b,change@R10,condition:newcomer,0,0.0
+option_b,trust_gap,condition:control,1,0.0
+option_b,trust_gap_matched,condition:control,1,0.0
+option_b,trust_gap_pre_deviation,condition:control,1,0.0
+option_b,matched_rounds,condition:control,1,5.0
+option_b,detection,condition:control,1,0.0
+option_b,detection_before_swap,condition:control,1,0.0
+option_b,recognition,condition:control,1,
+option_b,change_detected,condition:control,1,0.0
+option_b,change_about_R,condition:control,1,
+option_b,change_detected_before_swap,condition:control,1,0.0
+option_b,change_behavior,condition:control,1,0.0
+option_b,others_cheap,condition:control,1,1.0
+option_b,seat_cheap,condition:control,1,1.0
+option_b,seat_commitment_breaking,condition:control,1,0.0
+option_b,seat_promise_deception,condition:control,1,0.0
+option_b,reasks,condition:control,1,0.0
+option_b,detection@R5,condition:control,1,0.0
+option_b,detection@R6,condition:control,1,0.0
+option_b,detection@R8,condition:control,1,0.0
+option_b,detection@R10,condition:control,1,0.0
+option_b,change@R5,condition:control,1,0.0
+option_b,change@R6,condition:control,1,0.0
+option_b,change@R7,condition:control,1,0.0
+option_b,change@R8,condition:control,1,0.0
+option_b,change@R9,condition:control,1,0.0
+option_b,change@R10,condition:control,1,0.0
+option_b,trust_gap,condition:control_rep,1,-1.6
+option_b,trust_gap_matched,condition:control_rep,1,-1.5
+option_b,trust_gap_pre_deviation,condition:control_rep,1,
+option_b,matched_rounds,condition:control_rep,1,4.0
+option_b,detection,condition:control_rep,1,0.0
+option_b,detection_before_swap,condition:control_rep,1,0.0
+option_b,recognition,condition:control_rep,1,
+option_b,change_detected,condition:control_rep,1,0.0
+option_b,change_about_R,condition:control_rep,1,
+option_b,change_detected_before_swap,condition:control_rep,1,0.0
+option_b,change_behavior,condition:control_rep,1,0.65
+option_b,others_cheap,condition:control_rep,1,1.0
+option_b,seat_cheap,condition:control_rep,1,0.8
+option_b,seat_commitment_breaking,condition:control_rep,1,0.2
+option_b,seat_promise_deception,condition:control_rep,1,0.0
+option_b,reasks,condition:control_rep,1,0.0
+option_b,detection@R5,condition:control_rep,1,0.0
+option_b,detection@R6,condition:control_rep,1,0.0
+option_b,detection@R8,condition:control_rep,1,0.0
+option_b,detection@R10,condition:control_rep,1,0.0
+option_b,change@R5,condition:control_rep,1,0.0
+option_b,change@R6,condition:control_rep,1,0.0
+option_b,change@R7,condition:control_rep,1,0.0
+option_b,change@R8,condition:control_rep,1,0.0
+option_b,change@R9,condition:control_rep,1,0.0
+option_b,change@R10,condition:control_rep,1,0.0
+option_b,trust_gap,condition:rename,1,0.0
+option_b,trust_gap_matched,condition:rename,1,0.0
+option_b,trust_gap_pre_deviation,condition:rename,1,0.0
+option_b,matched_rounds,condition:rename,1,5.0
+option_b,detection,condition:rename,1,0.0
+option_b,detection_before_swap,condition:rename,1,0.0
+option_b,recognition,condition:rename,1,0.0
+option_b,change_detected,condition:rename,1,
+option_b,change_about_R,condition:rename,1,0.0
+option_b,change_detected_before_swap,condition:rename,1,0.0
+option_b,change_behavior,condition:rename,1,0.0
+option_b,others_cheap,condition:rename,1,1.0
+option_b,seat_cheap,condition:rename,1,1.0
+option_b,seat_commitment_breaking,condition:rename,1,0.0
+option_b,seat_promise_deception,condition:rename,1,0.0
+option_b,reasks,condition:rename,1,0.0
+option_b,detection@R5,condition:rename,1,0.0
+option_b,detection@R6,condition:rename,1,0.0
+option_b,detection@R8,condition:rename,1,0.0
+option_b,detection@R10,condition:rename,1,0.0
+option_b,change@R5,condition:rename,1,0.0
+option_b,change@R6,condition:rename,1,0.0
+option_b,change@R7,condition:rename,1,0.0
+option_b,change@R8,condition:rename,1,0.0
+option_b,change@R9,condition:rename,1,0.0
+option_b,change@R10,condition:rename,1,0.0
+option_b,trust_gap,condition:stronger,1,-1.65
+option_b,trust_gap_matched,condition:stronger,1,-1.6666666666666667
+option_b,trust_gap_pre_deviation,condition:stronger,1,
+option_b,matched_rounds,condition:stronger,1,3.0
+option_b,detection,condition:stronger,1,0.0
+option_b,detection_before_swap,condition:stronger,1,0.0
+option_b,recognition,condition:stronger,1,
+option_b,change_detected,condition:stronger,1,0.0
+option_b,change_about_R,condition:stronger,1,
+option_b,change_detected_before_swap,condition:stronger,1,0.0
+option_b,change_behavior,condition:stronger,1,0.75
+option_b,others_cheap,condition:stronger,1,1.0
+option_b,seat_cheap,condition:stronger,1,0.6
+option_b,seat_commitment_breaking,condition:stronger,1,0.4
+option_b,seat_promise_deception,condition:stronger,1,0.0
+option_b,reasks,condition:stronger,1,0.0
+option_b,detection@R5,condition:stronger,1,0.0
+option_b,detection@R6,condition:stronger,1,0.0
+option_b,detection@R8,condition:stronger,1,0.0
+option_b,detection@R10,condition:stronger,1,0.0
+option_b,change@R5,condition:stronger,1,0.0
+option_b,change@R6,condition:stronger,1,0.0
+option_b,change@R7,condition:stronger,1,0.0
+option_b,change@R8,condition:stronger,1,0.0
+option_b,change@R9,condition:stronger,1,0.0
+option_b,change@R10,condition:stronger,1,0.0
+option_b,trust_gap,condition:stronger_told,1,-0.85
+option_b,trust_gap_matched,condition:stronger_told,1,-0.4166666666666667
+option_b,trust_gap_pre_deviation,condition:stronger_told,1,0.0
+option_b,matched_rounds,condition:stronger_told,1,3.0
+option_b,detection,condition:stronger_told,1,0.0
+option_b,detection_before_swap,condition:stronger_told,1,0.0
+option_b,recognition,condition:stronger_told,1,
+option_b,change_detected,condition:stronger_told,1,0.0
+option_b,change_about_R,condition:stronger_told,1,
+option_b,change_detected_before_swap,condition:stronger_told,1,0.0
+option_b,change_behavior,condition:stronger_told,1,0.45
+option_b,others_cheap,condition:stronger_told,1,1.0
+option_b,seat_cheap,condition:stronger_told,1,0.6
+option_b,seat_commitment_breaking,condition:stronger_told,1,0.4
+option_b,seat_promise_deception,condition:stronger_told,1,0.0
+option_b,reasks,condition:stronger_told,1,0.0
+option_b,detection@R5,condition:stronger_told,1,0.0
+option_b,detection@R6,condition:stronger_told,1,0.0
+option_b,detection@R8,condition:stronger_told,1,0.0
+option_b,detection@R10,condition:stronger_told,1,0.0
+option_b,change@R5,condition:stronger_told,1,0.0
+option_b,change@R6,condition:stronger_told,1,0.0
+option_b,change@R7,condition:stronger_told,1,0.0
+option_b,change@R8,condition:stronger_told,1,0.0
+option_b,change@R9,condition:stronger_told,1,0.0
+option_b,change@R10,condition:stronger_told,1,0.0
+option_b,trust_gap,condition:equal,1,0.0
+option_b,trust_gap_matched,condition:equal,1,0.0
+option_b,trust_gap_pre_deviation,condition:equal,1,0.0
+option_b,matched_rounds,condition:equal,1,5.0
+option_b,detection,condition:equal,1,0.0
+option_b,detection_before_swap,condition:equal,1,0.0
+option_b,recognition,condition:equal,1,
+option_b,change_detected,condition:equal,1,0.0
+option_b,change_about_R,condition:equal,1,
+option_b,change_detected_before_swap,condition:equal,1,0.0
+option_b,change_behavior,condition:equal,1,0.0
+option_b,others_cheap,condition:equal,1,1.0
+option_b,seat_cheap,condition:equal,1,1.0
+option_b,seat_commitment_breaking,condition:equal,1,0.0
+option_b,seat_promise_deception,condition:equal,1,0.0
+option_b,reasks,condition:equal,1,0.0
+option_b,detection@R5,condition:equal,1,0.0
+option_b,detection@R6,condition:equal,1,0.0
+option_b,detection@R8,condition:equal,1,0.0
+option_b,detection@R10,condition:equal,1,0.0
+option_b,change@R5,condition:equal,1,0.0
+option_b,change@R6,condition:equal,1,0.0
+option_b,change@R7,condition:equal,1,0.0
+option_b,change@R8,condition:equal,1,0.0
+option_b,change@R9,condition:equal,1,0.0
+option_b,change@R10,condition:equal,1,0.0
+option_b,trust_gap,condition:equal_told,1,0.0
+option_b,trust_gap_matched,condition:equal_told,1,0.0
+option_b,trust_gap_pre_deviation,condition:equal_told,1,0.0
+option_b,matched_rounds,condition:equal_told,1,5.0
+option_b,detection,condition:equal_told,1,0.0
+option_b,detection_before_swap,condition:equal_told,1,0.0
+option_b,recognition,condition:equal_told,1,
+option_b,change_detected,condition:equal_told,1,0.0
+option_b,change_about_R,condition:equal_told,1,
+option_b,change_detected_before_swap,condition:equal_told,1,0.0
+option_b,change_behavior,condition:equal_told,1,0.0
+option_b,others_cheap,condition:equal_told,1,1.0
+option_b,seat_cheap,condition:equal_told,1,1.0
+option_b,seat_commitment_breaking,condition:equal_told,1,0.0
+option_b,seat_promise_deception,condition:equal_told,1,0.0
+option_b,reasks,condition:equal_told,1,0.0
+option_b,detection@R5,condition:equal_told,1,0.0
+option_b,detection@R6,condition:equal_told,1,0.0
+option_b,detection@R8,condition:equal_told,1,0.0
+option_b,detection@R10,condition:equal_told,1,0.0
+option_b,change@R5,condition:equal_told,1,0.0
+option_b,change@R6,condition:equal_told,1,0.0
+option_b,change@R7,condition:equal_told,1,0.0
+option_b,change@R8,condition:equal_told,1,0.0
+option_b,change@R9,condition:equal_told,1,0.0
+option_b,change@R10,condition:equal_told,1,0.0
+option_b,trust_gap,condition:newcomer,1,0.0
+option_b,trust_gap_matched,condition:newcomer,1,0.0
+option_b,trust_gap_pre_deviation,condition:newcomer,1,0.0
+option_b,matched_rounds,condition:newcomer,1,5.0
+option_b,detection,condition:newcomer,1,0.0
+option_b,detection_before_swap,condition:newcomer,1,0.0
+option_b,recognition,condition:newcomer,1,0.08333333333333333
+option_b,change_detected,condition:newcomer,1,
+option_b,change_about_R,condition:newcomer,1,0.0
+option_b,change_detected_before_swap,condition:newcomer,1,0.0
+option_b,change_behavior,condition:newcomer,1,0.0
+option_b,others_cheap,condition:newcomer,1,1.0
+option_b,seat_cheap,condition:newcomer,1,1.0
+option_b,seat_commitment_breaking,condition:newcomer,1,0.0
+option_b,seat_promise_deception,condition:newcomer,1,0.0
+option_b,reasks,condition:newcomer,1,0.0
+option_b,detection@R5,condition:newcomer,1,0.0
+option_b,detection@R6,condition:newcomer,1,0.0
+option_b,detection@R8,condition:newcomer,1,0.0
+option_b,detection@R10,condition:newcomer,1,0.0
+option_b,change@R5,condition:newcomer,1,0.0
+option_b,change@R6,condition:newcomer,1,0.0
+option_b,change@R7,condition:newcomer,1,0.0
+option_b,change@R8,condition:newcomer,1,0.0
+option_b,change@R9,condition:newcomer,1,0.0
+option_b,change@R10,condition:newcomer,1,0.0
+option_b,trust_gap,condition:control,2,0.0
+option_b,trust_gap_matched,condition:control,2,0.0
+option_b,trust_gap_pre_deviation,condition:control,2,0.0
+option_b,matched_rounds,condition:control,2,5.0
+option_b,detection,condition:control,2,0.0
+option_b,detection_before_swap,condition:control,2,0.0
+option_b,recognition,condition:control,2,
+option_b,change_detected,condition:control,2,0.0
+option_b,change_about_R,condition:control,2,
+option_b,change_detected_before_swap,condition:control,2,0.0
+option_b,change_behavior,condition:control,2,0.0
+option_b,others_cheap,condition:control,2,1.0
+option_b,seat_cheap,condition:control,2,1.0
+option_b,seat_commitment_breaking,condition:control,2,0.0
+option_b,seat_promise_deception,condition:control,2,0.0
+option_b,reasks,condition:control,2,0.0
+option_b,detection@R5,condition:control,2,0.0
+option_b,detection@R6,condition:control,2,0.0
+option_b,detection@R8,condition:control,2,0.0
+option_b,detection@R10,condition:control,2,0.0
+option_b,change@R5,condition:control,2,0.0
+option_b,change@R6,condition:control,2,0.0
+option_b,change@R7,condition:control,2,0.0
+option_b,change@R8,condition:control,2,0.0
+option_b,change@R9,condition:control,2,0.0
+option_b,change@R10,condition:control,2,0.0
+option_b,trust_gap,condition:control_rep,2,0.0
+option_b,trust_gap_matched,condition:control_rep,2,0.0
+option_b,trust_gap_pre_deviation,condition:control_rep,2,0.0
+option_b,matched_rounds,condition:control_rep,2,5.0
+option_b,detection,condition:control_rep,2,0.0
+option_b,detection_before_swap,condition:control_rep,2,0.0
+option_b,recognition,condition:control_rep,2,
+option_b,change_detected,condition:control_rep,2,0.0
+option_b,change_about_R,condition:control_rep,2,
+option_b,change_detected_before_swap,condition:control_rep,2,0.0
+option_b,change_behavior,condition:control_rep,2,0.0
+option_b,others_cheap,condition:control_rep,2,1.0
+option_b,seat_cheap,condition:control_rep,2,1.0
+option_b,seat_commitment_breaking,condition:control_rep,2,0.0
+option_b,seat_promise_deception,condition:control_rep,2,0.0
+option_b,reasks,condition:control_rep,2,0.0
+option_b,detection@R5,condition:control_rep,2,0.0
+option_b,detection@R6,condition:control_rep,2,0.0
+option_b,detection@R8,condition:control_rep,2,0.0
+option_b,detection@R10,condition:control_rep,2,0.0
+option_b,change@R5,condition:control_rep,2,0.0
+option_b,change@R6,condition:control_rep,2,0.0
+option_b,change@R7,condition:control_rep,2,0.0
+option_b,change@R8,condition:control_rep,2,0.0
+option_b,change@R9,condition:control_rep,2,0.0
+option_b,change@R10,condition:control_rep,2,0.0
+option_b,trust_gap,condition:rename,2,-0.55
+option_b,trust_gap_matched,condition:rename,2,-0.55
+option_b,trust_gap_pre_deviation,condition:rename,2,-0.55
+option_b,matched_rounds,condition:rename,2,5.0
+option_b,detection,condition:rename,2,0.0
+option_b,detection_before_swap,condition:rename,2,0.0
+option_b,recognition,condition:rename,2,0.08333333333333333
+option_b,change_detected,condition:rename,2,
+option_b,change_about_R,condition:rename,2,0.0
+option_b,change_detected_before_swap,condition:rename,2,0.0
+option_b,change_behavior,condition:rename,2,0.0
+option_b,others_cheap,condition:rename,2,1.0
+option_b,seat_cheap,condition:rename,2,1.0
+option_b,seat_commitment_breaking,condition:rename,2,0.0
+option_b,seat_promise_deception,condition:rename,2,0.0
+option_b,reasks,condition:rename,2,0.0
+option_b,detection@R5,condition:rename,2,0.0
+option_b,detection@R6,condition:rename,2,0.0
+option_b,detection@R8,condition:rename,2,0.0
+option_b,detection@R10,condition:rename,2,0.0
+option_b,change@R5,condition:rename,2,0.0
+option_b,change@R6,condition:rename,2,0.0
+option_b,change@R7,condition:rename,2,0.0
+option_b,change@R8,condition:rename,2,0.0
+option_b,change@R9,condition:rename,2,0.0
+option_b,change@R10,condition:rename,2,0.0
+option_b,trust_gap,condition:stronger,2,-0.033333333333333215
+option_b,trust_gap_matched,condition:stronger,2,-0.033333333333333215
+option_b,trust_gap_pre_deviation,condition:stronger,2,-0.033333333333333215
+option_b,matched_rounds,condition:stronger,2,5.0
+option_b,detection,condition:stronger,2,0.0
+option_b,detection_before_swap,condition:stronger,2,0.0
+option_b,recognition,condition:stronger,2,
+option_b,change_detected,condition:stronger,2,0.0
+option_b,change_about_R,condition:stronger,2,
+option_b,change_detected_before_swap,condition:stronger,2,0.0
+option_b,change_behavior,condition:stronger,2,0.0
+option_b,others_cheap,condition:stronger,2,1.0
+option_b,seat_cheap,condition:stronger,2,1.0
+option_b,seat_commitment_breaking,condition:stronger,2,0.0
+option_b,seat_promise_deception,condition:stronger,2,0.0
+option_b,reasks,condition:stronger,2,0.0
+option_b,detection@R5,condition:stronger,2,0.0
+option_b,detection@R6,condition:stronger,2,0.0
+option_b,detection@R8,condition:stronger,2,0.0
+option_b,detection@R10,condition:stronger,2,0.0
+option_b,change@R5,condition:stronger,2,0.0
+option_b,change@R6,condition:stronger,2,0.0
+option_b,change@R7,condition:stronger,2,0.0
+option_b,change@R8,condition:stronger,2,0.0
+option_b,change@R9,condition:stronger,2,0.0
+option_b,change@R10,condition:stronger,2,0.0
+option_b,trust_gap,condition:stronger_told,2,-0.4166666666666664
+option_b,trust_gap_matched,condition:stronger_told,2,-0.04166666666666652
+option_b,trust_gap_pre_deviation,condition:stronger_told,2,-0.04166666666666652
+option_b,matched_rounds,condition:stronger_told,2,4.0
+option_b,detection,condition:stronger_told,2,0.0
+option_b,detection_before_swap,condition:stronger_told,2,0.0
+option_b,recognition,condition:stronger_told,2,
+option_b,change_detected,condition:stronger_told,2,0.0
+option_b,change_about_R,condition:stronger_told,2,
+option_b,change_detected_before_swap,condition:stronger_told,2,0.0
+option_b,change_behavior,condition:stronger_told,2,0.2
+option_b,others_cheap,condition:stronger_told,2,1.0
+option_b,seat_cheap,condition:stronger_told,2,0.8
+option_b,seat_commitment_breaking,condition:stronger_told,2,0.2
+option_b,seat_promise_deception,condition:stronger_told,2,0.0
+option_b,reasks,condition:stronger_told,2,0.0
+option_b,detection@R5,condition:stronger_told,2,0.0
+option_b,detection@R6,condition:stronger_told,2,0.0
+option_b,detection@R8,condition:stronger_told,2,0.0
+option_b,detection@R10,condition:stronger_told,2,0.0
+option_b,change@R5,condition:stronger_told,2,0.0
+option_b,change@R6,condition:stronger_told,2,0.0
+option_b,change@R7,condition:stronger_told,2,0.0
+option_b,change@R8,condition:stronger_told,2,0.0
+option_b,change@R9,condition:stronger_told,2,0.0
+option_b,change@R10,condition:stronger_told,2,0.0
+option_b,trust_gap,condition:equal,2,0.0
+option_b,trust_gap_matched,condition:equal,2,0.0
+option_b,trust_gap_pre_deviation,condition:equal,2,0.0
+option_b,matched_rounds,condition:equal,2,5.0
+option_b,detection,condition:equal,2,0.0
+option_b,detection_before_swap,condition:equal,2,0.0
+option_b,recognition,condition:equal,2,
+option_b,change_detected,condition:equal,2,0.0
+option_b,change_about_R,condition:equal,2,
+option_b,change_detected_before_swap,condition:equal,2,0.0
+option_b,change_behavior,condition:equal,2,0.0
+option_b,others_cheap,condition:equal,2,1.0
+option_b,seat_cheap,condition:equal,2,1.0
+option_b,seat_commitment_breaking,condition:equal,2,0.0
+option_b,seat_promise_deception,condition:equal,2,0.0
+option_b,reasks,condition:equal,2,0.0
+option_b,detection@R5,condition:equal,2,0.0
+option_b,detection@R6,condition:equal,2,0.0
+option_b,detection@R8,condition:equal,2,0.0
+option_b,detection@R10,condition:equal,2,0.0
+option_b,change@R5,condition:equal,2,0.0
+option_b,change@R6,condition:equal,2,0.0
+option_b,change@R7,condition:equal,2,0.0
+option_b,change@R8,condition:equal,2,0.0
+option_b,change@R9,condition:equal,2,0.0
+option_b,change@R10,condition:equal,2,0.0
+option_b,trust_gap,condition:equal_told,2,-0.016666666666666607
+option_b,trust_gap_matched,condition:equal_told,2,-0.016666666666666607
+option_b,trust_gap_pre_deviation,condition:equal_told,2,-0.016666666666666607
+option_b,matched_rounds,condition:equal_told,2,5.0
+option_b,detection,condition:equal_told,2,0.0
+option_b,detection_before_swap,condition:equal_told,2,0.0
+option_b,recognition,condition:equal_told,2,
+option_b,change_detected,condition:equal_told,2,0.0
+option_b,change_about_R,condition:equal_told,2,
+option_b,change_detected_before_swap,condition:equal_told,2,0.0
+option_b,change_behavior,condition:equal_told,2,0.0
+option_b,others_cheap,condition:equal_told,2,1.0
+option_b,seat_cheap,condition:equal_told,2,1.0
+option_b,seat_commitment_breaking,condition:equal_told,2,0.0
+option_b,seat_promise_deception,condition:equal_told,2,0.0
+option_b,reasks,condition:equal_told,2,0.0
+option_b,detection@R5,condition:equal_told,2,0.0
+option_b,detection@R6,condition:equal_told,2,0.0
+option_b,detection@R8,condition:equal_told,2,0.0
+option_b,detection@R10,condition:equal_told,2,0.0
+option_b,change@R5,condition:equal_told,2,0.0
+option_b,change@R6,condition:equal_told,2,0.0
+option_b,change@R7,condition:equal_told,2,0.0
+option_b,change@R8,condition:equal_told,2,0.0
+option_b,change@R9,condition:equal_told,2,0.0
+option_b,change@R10,condition:equal_told,2,0.0
+option_b,trust_gap,condition:newcomer,2,-0.18333333333333304
+option_b,trust_gap_matched,condition:newcomer,2,-0.18333333333333304
+option_b,trust_gap_pre_deviation,condition:newcomer,2,-0.18333333333333304
+option_b,matched_rounds,condition:newcomer,2,5.0
+option_b,detection,condition:newcomer,2,0.0
+option_b,detection_before_swap,condition:newcomer,2,0.0
+option_b,recognition,condition:newcomer,2,0.16666666666666666
+option_b,change_detected,condition:newcomer,2,
+option_b,change_about_R,condition:newcomer,2,0.0
+option_b,change_detected_before_swap,condition:newcomer,2,0.0
+option_b,change_behavior,condition:newcomer,2,0.05
+option_b,others_cheap,condition:newcomer,2,1.0
+option_b,seat_cheap,condition:newcomer,2,1.0
+option_b,seat_commitment_breaking,condition:newcomer,2,0.0
+option_b,seat_promise_deception,condition:newcomer,2,0.0
+option_b,reasks,condition:newcomer,2,0.0
+option_b,detection@R5,condition:newcomer,2,0.0
+option_b,detection@R6,condition:newcomer,2,0.0
+option_b,detection@R8,condition:newcomer,2,0.0
+option_b,detection@R10,condition:newcomer,2,0.0
+option_b,change@R5,condition:newcomer,2,0.0
+option_b,change@R6,condition:newcomer,2,0.0
+option_b,change@R7,condition:newcomer,2,0.0
+option_b,change@R8,condition:newcomer,2,0.0
+option_b,change@R9,condition:newcomer,2,0.0
+option_b,change@R10,condition:newcomer,2,0.0
+option_b,trust_gap,condition:control,3,-0.25000000000000056
+option_b,trust_gap_matched,condition:control,3,-0.25000000000000056
+option_b,trust_gap_pre_deviation,condition:control,3,-0.25000000000000056
+option_b,matched_rounds,condition:control,3,5.0
+option_b,detection,condition:control,3,0.0
+option_b,detection_before_swap,condition:control,3,0.0
+option_b,recognition,condition:control,3,
+option_b,change_detected,condition:control,3,0.0
+option_b,change_about_R,condition:control,3,
+option_b,change_detected_before_swap,condition:control,3,0.0
+option_b,change_behavior,condition:control,3,0.0
+option_b,others_cheap,condition:control,3,1.0
+option_b,seat_cheap,condition:control,3,1.0
+option_b,seat_commitment_breaking,condition:control,3,0.0
+option_b,seat_promise_deception,condition:control,3,0.0
+option_b,reasks,condition:control,3,0.0
+option_b,detection@R5,condition:control,3,0.0
+option_b,detection@R6,condition:control,3,0.0
+option_b,detection@R8,condition:control,3,0.0
+option_b,detection@R10,condition:control,3,0.0
+option_b,change@R5,condition:control,3,0.0
+option_b,change@R6,condition:control,3,0.0
+option_b,change@R7,condition:control,3,0.0
+option_b,change@R8,condition:control,3,0.0
+option_b,change@R9,condition:control,3,0.0
+option_b,change@R10,condition:control,3,0.0
+option_b,trust_gap,condition:control_rep,3,-0.13333333333333375
+option_b,trust_gap_matched,condition:control_rep,3,-0.13333333333333375
+option_b,trust_gap_pre_deviation,condition:control_rep,3,-0.13333333333333375
+option_b,matched_rounds,condition:control_rep,3,5.0
+option_b,detection,condition:control_rep,3,0.0
+option_b,detection_before_swap,condition:control_rep,3,0.0
+option_b,recognition,condition:control_rep,3,
+option_b,change_detected,condition:control_rep,3,0.0
+option_b,change_about_R,condition:control_rep,3,
+option_b,change_detected_before_swap,condition:control_rep,3,0.0
+option_b,change_behavior,condition:control_rep,3,0.0
+option_b,others_cheap,condition:control_rep,3,1.0
+option_b,seat_cheap,condition:control_rep,3,1.0
+option_b,seat_commitment_breaking,condition:control_rep,3,0.0
+option_b,seat_promise_deception,condition:control_rep,3,0.0
+option_b,reasks,condition:control_rep,3,0.0
+option_b,detection@R5,condition:control_rep,3,0.0
+option_b,detection@R6,condition:control_rep,3,0.0
+option_b,detection@R8,condition:control_rep,3,0.0
+option_b,detection@R10,condition:control_rep,3,0.0
+option_b,change@R5,condition:control_rep,3,0.0
+option_b,change@R6,condition:control_rep,3,0.0
+option_b,change@R7,condition:control_rep,3,0.0
+option_b,change@R8,condition:control_rep,3,0.0
+option_b,change@R9,condition:control_rep,3,0.0
+option_b,change@R10,condition:control_rep,3,0.0
+option_b,trust_gap,condition:rename,3,-0.28333333333333377
+option_b,trust_gap_matched,condition:rename,3,-0.28333333333333377
+option_b,trust_gap_pre_deviation,condition:rename,3,-0.28333333333333377
+option_b,matched_rounds,condition:rename,3,5.0
+option_b,detection,condition:rename,3,0.0
+option_b,detection_before_swap,condition:rename,3,0.0
+option_b,recognition,condition:rename,3,0.08333333333333333
+option_b,change_detected,condition:rename,3,
+option_b,change_about_R,condition:rename,3,0.0
+option_b,change_detected_before_swap,condition:rename,3,0.0
+option_b,change_behavior,condition:rename,3,0.0
+option_b,others_cheap,condition:rename,3,1.0
+option_b,seat_cheap,condition:rename,3,1.0
+option_b,seat_commitment_breaking,condition:rename,3,0.0
+option_b,seat_promise_deception,condition:rename,3,0.0
+option_b,reasks,condition:rename,3,0.0
+option_b,detection@R5,condition:rename,3,0.0
+option_b,detection@R6,condition:rename,3,0.0
+option_b,detection@R8,condition:rename,3,0.0
+option_b,detection@R10,condition:rename,3,0.0
+option_b,change@R5,condition:rename,3,0.0
+option_b,change@R6,condition:rename,3,0.0
+option_b,change@R7,condition:rename,3,0.0
+option_b,change@R8,condition:rename,3,0.0
+option_b,change@R9,condition:rename,3,0.0
+option_b,change@R10,condition:rename,3,0.0
+option_b,trust_gap,condition:stronger,3,-1.966666666666667
+option_b,trust_gap_matched,condition:stronger,3,-2.0
+option_b,trust_gap_pre_deviation,condition:stronger,3,
+option_b,matched_rounds,condition:stronger,3,3.0
+option_b,detection,condition:stronger,3,0.0
+option_b,detection_before_swap,condition:stronger,3,0.0
+option_b,recognition,condition:stronger,3,
+option_b,change_detected,condition:stronger,3,0.0
+option_b,change_about_R,condition:stronger,3,
+option_b,change_detected_before_swap,condition:stronger,3,0.0
+option_b,change_behavior,condition:stronger,3,0.75
+option_b,others_cheap,condition:stronger,3,1.0
+option_b,seat_cheap,condition:stronger,3,0.6
+option_b,seat_commitment_breaking,condition:stronger,3,0.4
+option_b,seat_promise_deception,condition:stronger,3,0.0
+option_b,reasks,condition:stronger,3,0.0
+option_b,detection@R5,condition:stronger,3,0.0
+option_b,detection@R6,condition:stronger,3,0.0
+option_b,detection@R8,condition:stronger,3,0.0
+option_b,detection@R10,condition:stronger,3,0.0
+option_b,change@R5,condition:stronger,3,0.0
+option_b,change@R6,condition:stronger,3,0.0
+option_b,change@R7,condition:stronger,3,0.0
+option_b,change@R8,condition:stronger,3,0.0
+option_b,change@R9,condition:stronger,3,0.0
+option_b,change@R10,condition:stronger,3,0.0
+option_b,trust_gap,condition:stronger_told,3,-1.866666666666667
+option_b,trust_gap_matched,condition:stronger_told,3,-1.6111111111111114
+option_b,trust_gap_pre_deviation,condition:stronger_told,3,-0.16666666666666696
+option_b,matched_rounds,condition:stronger_told,3,3.0
+option_b,detection,condition:stronger_told,3,0.0
+option_b,detection_before_swap,condition:stronger_told,3,0.0
+option_b,recognition,condition:stronger_told,3,
+option_b,change_detected,condition:stronger_told,3,0.0
+option_b,change_about_R,condition:stronger_told,3,
+option_b,change_detected_before_swap,condition:stronger_told,3,0.0
+option_b,change_behavior,condition:stronger_told,3,0.75
+option_b,others_cheap,condition:stronger_told,3,1.0
+option_b,seat_cheap,condition:stronger_told,3,0.6
+option_b,seat_commitment_breaking,condition:stronger_told,3,0.4
+option_b,seat_promise_deception,condition:stronger_told,3,0.0
+option_b,reasks,condition:stronger_told,3,0.0
+option_b,detection@R5,condition:stronger_told,3,0.0
+option_b,detection@R6,condition:stronger_told,3,0.0
+option_b,detection@R8,condition:stronger_told,3,0.0
+option_b,detection@R10,condition:stronger_told,3,0.0
+option_b,change@R5,condition:stronger_told,3,0.0
+option_b,change@R6,condition:stronger_told,3,0.0
+option_b,change@R7,condition:stronger_told,3,0.0
+option_b,change@R8,condition:stronger_told,3,0.0
+option_b,change@R9,condition:stronger_told,3,0.0
+option_b,change@R10,condition:stronger_told,3,0.0
+option_b,trust_gap,condition:equal,3,-0.21666666666666695
+option_b,trust_gap_matched,condition:equal,3,-0.21666666666666695
+option_b,trust_gap_pre_deviation,condition:equal,3,-0.21666666666666695
+option_b,matched_rounds,condition:equal,3,5.0
+option_b,detection,condition:equal,3,0.0
+option_b,detection_before_swap,condition:equal,3,0.0
+option_b,recognition,condition:equal,3,
+option_b,change_detected,condition:equal,3,0.0
+option_b,change_about_R,condition:equal,3,
+option_b,change_detected_before_swap,condition:equal,3,0.0
+option_b,change_behavior,condition:equal,3,0.0
+option_b,others_cheap,condition:equal,3,1.0
+option_b,seat_cheap,condition:equal,3,1.0
+option_b,seat_commitment_breaking,condition:equal,3,0.0
+option_b,seat_promise_deception,condition:equal,3,0.0
+option_b,reasks,condition:equal,3,0.0
+option_b,detection@R5,condition:equal,3,0.0
+option_b,detection@R6,condition:equal,3,0.0
+option_b,detection@R8,condition:equal,3,0.0
+option_b,detection@R10,condition:equal,3,0.0
+option_b,change@R5,condition:equal,3,0.0
+option_b,change@R6,condition:equal,3,0.0
+option_b,change@R7,condition:equal,3,0.0
+option_b,change@R8,condition:equal,3,0.0
+option_b,change@R9,condition:equal,3,0.0
+option_b,change@R10,condition:equal,3,0.0
+option_b,trust_gap,condition:equal_told,3,-0.3333333333333336
+option_b,trust_gap_matched,condition:equal_told,3,-0.3333333333333336
+option_b,trust_gap_pre_deviation,condition:equal_told,3,-0.3333333333333336
+option_b,matched_rounds,condition:equal_told,3,5.0
+option_b,detection,condition:equal_told,3,0.0
+option_b,detection_before_swap,condition:equal_told,3,0.0
+option_b,recognition,condition:equal_told,3,
+option_b,change_detected,condition:equal_told,3,0.0
+option_b,change_about_R,condition:equal_told,3,
+option_b,change_detected_before_swap,condition:equal_told,3,0.0
+option_b,change_behavior,condition:equal_told,3,0.0
+option_b,others_cheap,condition:equal_told,3,1.0
+option_b,seat_cheap,condition:equal_told,3,1.0
+option_b,seat_commitment_breaking,condition:equal_told,3,0.0
+option_b,seat_promise_deception,condition:equal_told,3,0.0
+option_b,reasks,condition:equal_told,3,0.0
+option_b,detection@R5,condition:equal_told,3,0.0
+option_b,detection@R6,condition:equal_told,3,0.0
+option_b,detection@R8,condition:equal_told,3,0.0
+option_b,detection@R10,condition:equal_told,3,0.0
+option_b,change@R5,condition:equal_told,3,0.0
+option_b,change@R6,condition:equal_told,3,0.0
+option_b,change@R7,condition:equal_told,3,0.0
+option_b,change@R8,condition:equal_told,3,0.0
+option_b,change@R9,condition:equal_told,3,0.0
+option_b,change@R10,condition:equal_told,3,0.0
+option_b,trust_gap,condition:newcomer,3,-0.26666666666666694
+option_b,trust_gap_matched,condition:newcomer,3,-0.26666666666666694
+option_b,trust_gap_pre_deviation,condition:newcomer,3,-0.26666666666666694
+option_b,matched_rounds,condition:newcomer,3,5.0
+option_b,detection,condition:newcomer,3,0.0
+option_b,detection_before_swap,condition:newcomer,3,0.0
+option_b,recognition,condition:newcomer,3,0.08333333333333333
+option_b,change_detected,condition:newcomer,3,
+option_b,change_about_R,condition:newcomer,3,0.0
+option_b,change_detected_before_swap,condition:newcomer,3,0.0
+option_b,change_behavior,condition:newcomer,3,0.05
+option_b,others_cheap,condition:newcomer,3,1.0
+option_b,seat_cheap,condition:newcomer,3,1.0
+option_b,seat_commitment_breaking,condition:newcomer,3,0.0
+option_b,seat_promise_deception,condition:newcomer,3,0.0
+option_b,reasks,condition:newcomer,3,0.0
+option_b,detection@R5,condition:newcomer,3,0.0
+option_b,detection@R6,condition:newcomer,3,0.0
+option_b,detection@R8,condition:newcomer,3,0.0
+option_b,detection@R10,condition:newcomer,3,0.0
+option_b,change@R5,condition:newcomer,3,0.0
+option_b,change@R6,condition:newcomer,3,0.0
+option_b,change@R7,condition:newcomer,3,0.0
+option_b,change@R8,condition:newcomer,3,0.0
+option_b,change@R9,condition:newcomer,3,0.0
+option_b,change@R10,condition:newcomer,3,0.0
+option_b,trust_gap,condition:control,4,0.8
+option_b,trust_gap_matched,condition:control,4,0.8
+option_b,trust_gap_pre_deviation,condition:control,4,0.8
+option_b,matched_rounds,condition:control,4,5.0
+option_b,detection,condition:control,4,0.0
+option_b,detection_before_swap,condition:control,4,0.0
+option_b,recognition,condition:control,4,
+option_b,change_detected,condition:control,4,0.0
+option_b,change_about_R,condition:control,4,
+option_b,change_detected_before_swap,condition:control,4,0.0
+option_b,change_behavior,condition:control,4,0.15
+option_b,others_cheap,condition:control,4,1.0
+option_b,seat_cheap,condition:control,4,1.0
+option_b,seat_commitment_breaking,condition:control,4,0.0
+option_b,seat_promise_deception,condition:control,4,0.0
+option_b,reasks,condition:control,4,0.0
+option_b,detection@R5,condition:control,4,0.0
+option_b,detection@R6,condition:control,4,0.0
+option_b,detection@R8,condition:control,4,0.0
+option_b,detection@R10,condition:control,4,0.0
+option_b,change@R5,condition:control,4,0.0
+option_b,change@R6,condition:control,4,0.0
+option_b,change@R7,condition:control,4,0.0
+option_b,change@R8,condition:control,4,0.0
+option_b,change@R9,condition:control,4,0.0
+option_b,change@R10,condition:control,4,0.0
+option_b,trust_gap,condition:control_rep,4,0.55
+option_b,trust_gap_matched,condition:control_rep,4,0.55
+option_b,trust_gap_pre_deviation,condition:control_rep,4,0.55
+option_b,matched_rounds,condition:control_rep,4,5.0
+option_b,detection,condition:control_rep,4,0.0
+option_b,detection_before_swap,condition:control_rep,4,0.0
+option_b,recognition,condition:control_rep,4,
+option_b,change_detected,condition:control_rep,4,0.0
+option_b,change_about_R,condition:control_rep,4,
+option_b,change_detected_before_swap,condition:control_rep,4,0.0
+option_b,change_behavior,condition:control_rep,4,0.4
+option_b,others_cheap,condition:control_rep,4,1.0
+option_b,seat_cheap,condition:control_rep,4,1.0
+option_b,seat_commitment_breaking,condition:control_rep,4,0.0
+option_b,seat_promise_deception,condition:control_rep,4,0.0
+option_b,reasks,condition:control_rep,4,0.0
+option_b,detection@R5,condition:control_rep,4,0.0
+option_b,detection@R6,condition:control_rep,4,0.0
+option_b,detection@R8,condition:control_rep,4,0.0
+option_b,detection@R10,condition:control_rep,4,0.0
+option_b,change@R5,condition:control_rep,4,0.0
+option_b,change@R6,condition:control_rep,4,0.0
+option_b,change@R7,condition:control_rep,4,0.0
+option_b,change@R8,condition:control_rep,4,0.0
+option_b,change@R9,condition:control_rep,4,0.0
+option_b,change@R10,condition:control_rep,4,0.0
+option_b,trust_gap,condition:rename,4,1.0
+option_b,trust_gap_matched,condition:rename,4,1.0
+option_b,trust_gap_pre_deviation,condition:rename,4,1.0
+option_b,matched_rounds,condition:rename,4,5.0
+option_b,detection,condition:rename,4,0.0
+option_b,detection_before_swap,condition:rename,4,0.0
+option_b,recognition,condition:rename,4,0.0
+option_b,change_detected,condition:rename,4,
+option_b,change_about_R,condition:rename,4,0.0
+option_b,change_detected_before_swap,condition:rename,4,0.0
+option_b,change_behavior,condition:rename,4,0.0
+option_b,others_cheap,condition:rename,4,1.0
+option_b,seat_cheap,condition:rename,4,1.0
+option_b,seat_commitment_breaking,condition:rename,4,0.0
+option_b,seat_promise_deception,condition:rename,4,0.0
+option_b,reasks,condition:rename,4,0.0
+option_b,detection@R5,condition:rename,4,0.0
+option_b,detection@R6,condition:rename,4,0.0
+option_b,detection@R8,condition:rename,4,0.0
+option_b,detection@R10,condition:rename,4,0.0
+option_b,change@R5,condition:rename,4,0.0
+option_b,change@R6,condition:rename,4,0.0
+option_b,change@R7,condition:rename,4,0.0
+option_b,change@R8,condition:rename,4,0.0
+option_b,change@R9,condition:rename,4,0.0
+option_b,change@R10,condition:rename,4,0.0
+option_b,trust_gap,condition:stronger,4,0.0
+option_b,trust_gap_matched,condition:stronger,4,0.1875
+option_b,trust_gap_pre_deviation,condition:stronger,4,0.41666666666666663
+option_b,matched_rounds,condition:stronger,4,4.0
+option_b,detection,condition:stronger,4,0.0
+option_b,detection_before_swap,condition:stronger,4,0.0
+option_b,recognition,condition:stronger,4,
+option_b,change_detected,condition:stronger,4,0.0
+option_b,change_about_R,condition:stronger,4,
+option_b,change_detected_before_swap,condition:stronger,4,0.0
+option_b,change_behavior,condition:stronger,4,0.55
+option_b,others_cheap,condition:stronger,4,1.0
+option_b,seat_cheap,condition:stronger,4,0.8
+option_b,seat_commitment_breaking,condition:stronger,4,0.2
+option_b,seat_promise_deception,condition:stronger,4,0.0
+option_b,reasks,condition:stronger,4,0.0
+option_b,detection@R5,condition:stronger,4,0.0
+option_b,detection@R6,condition:stronger,4,0.0
+option_b,detection@R8,condition:stronger,4,0.0
+option_b,detection@R10,condition:stronger,4,0.0
+option_b,change@R5,condition:stronger,4,0.0
+option_b,change@R6,condition:stronger,4,0.0
+option_b,change@R7,condition:stronger,4,0.0
+option_b,change@R8,condition:stronger,4,0.0
+option_b,change@R9,condition:stronger,4,0.0
+option_b,change@R10,condition:stronger,4,0.0
+option_b,trust_gap,condition:stronger_told,4,0.09999999999999998
+option_b,trust_gap_matched,condition:stronger_told,4,0.16666666666666663
+option_b,trust_gap_pre_deviation,condition:stronger_told,4,
+option_b,matched_rounds,condition:stronger_told,4,3.0
+option_b,detection,condition:stronger_told,4,0.0
+option_b,detection_before_swap,condition:stronger_told,4,0.0
+option_b,recognition,condition:stronger_told,4,
+option_b,change_detected,condition:stronger_told,4,0.0
+option_b,change_about_R,condition:stronger_told,4,
+option_b,change_detected_before_swap,condition:stronger_told,4,0.0
+option_b,change_behavior,condition:stronger_told,4,0.95
+option_b,others_cheap,condition:stronger_told,4,1.0
+option_b,seat_cheap,condition:stronger_told,4,0.6
+option_b,seat_commitment_breaking,condition:stronger_told,4,0.4
+option_b,seat_promise_deception,condition:stronger_told,4,0.0
+option_b,reasks,condition:stronger_told,4,0.0
+option_b,detection@R5,condition:stronger_told,4,0.0
+option_b,detection@R6,condition:stronger_told,4,0.0
+option_b,detection@R8,condition:stronger_told,4,0.0
+option_b,detection@R10,condition:stronger_told,4,0.0
+option_b,change@R5,condition:stronger_told,4,0.0
+option_b,change@R6,condition:stronger_told,4,0.0
+option_b,change@R7,condition:stronger_told,4,0.0
+option_b,change@R8,condition:stronger_told,4,0.0
+option_b,change@R9,condition:stronger_told,4,0.0
+option_b,change@R10,condition:stronger_told,4,0.0
+option_b,trust_gap,condition:equal,4,0.7
+option_b,trust_gap_matched,condition:equal,4,0.7
+option_b,trust_gap_pre_deviation,condition:equal,4,0.7
+option_b,matched_rounds,condition:equal,4,5.0
+option_b,detection,condition:equal,4,0.0
+option_b,detection_before_swap,condition:equal,4,0.0
+option_b,recognition,condition:equal,4,
+option_b,change_detected,condition:equal,4,0.0
+option_b,change_about_R,condition:equal,4,
+option_b,change_detected_before_swap,condition:equal,4,0.0
+option_b,change_behavior,condition:equal,4,0.3
+option_b,others_cheap,condition:equal,4,1.0
+option_b,seat_cheap,condition:equal,4,1.0
+option_b,seat_commitment_breaking,condition:equal,4,0.0
+option_b,seat_promise_deception,condition:equal,4,0.0
+option_b,reasks,condition:equal,4,0.0
+option_b,detection@R5,condition:equal,4,0.0
+option_b,detection@R6,condition:equal,4,0.0
+option_b,detection@R8,condition:equal,4,0.0
+option_b,detection@R10,condition:equal,4,0.0
+option_b,change@R5,condition:equal,4,0.0
+option_b,change@R6,condition:equal,4,0.0
+option_b,change@R7,condition:equal,4,0.0
+option_b,change@R8,condition:equal,4,0.0
+option_b,change@R9,condition:equal,4,0.0
+option_b,change@R10,condition:equal,4,0.0
+option_b,trust_gap,condition:equal_told,4,0.85
+option_b,trust_gap_matched,condition:equal_told,4,0.85
+option_b,trust_gap_pre_deviation,condition:equal_told,4,0.85
+option_b,matched_rounds,condition:equal_told,4,5.0
+option_b,detection,condition:equal_told,4,0.0
+option_b,detection_before_swap,condition:equal_told,4,0.0
+option_b,recognition,condition:equal_told,4,
+option_b,change_detected,condition:equal_told,4,0.0
+option_b,change_about_R,condition:equal_told,4,
+option_b,change_detected_before_swap,condition:equal_told,4,0.0
+option_b,change_behavior,condition:equal_told,4,0.25
+option_b,others_cheap,condition:equal_told,4,1.0
+option_b,seat_cheap,condition:equal_told,4,1.0
+option_b,seat_commitment_breaking,condition:equal_told,4,0.0
+option_b,seat_promise_deception,condition:equal_told,4,0.0
+option_b,reasks,condition:equal_told,4,0.0
+option_b,detection@R5,condition:equal_told,4,0.0
+option_b,detection@R6,condition:equal_told,4,0.0
+option_b,detection@R8,condition:equal_told,4,0.0
+option_b,detection@R10,condition:equal_told,4,0.0
+option_b,change@R5,condition:equal_told,4,0.0
+option_b,change@R6,condition:equal_told,4,0.0
+option_b,change@R7,condition:equal_told,4,0.0
+option_b,change@R8,condition:equal_told,4,0.0
+option_b,change@R9,condition:equal_told,4,0.0
+option_b,change@R10,condition:equal_told,4,0.0
+option_b,trust_gap,condition:newcomer,4,1.0
+option_b,trust_gap_matched,condition:newcomer,4,1.0
+option_b,trust_gap_pre_deviation,condition:newcomer,4,1.0
+option_b,matched_rounds,condition:newcomer,4,5.0
+option_b,detection,condition:newcomer,4,0.0
+option_b,detection_before_swap,condition:newcomer,4,0.0
+option_b,recognition,condition:newcomer,4,0.0
+option_b,change_detected,condition:newcomer,4,
+option_b,change_about_R,condition:newcomer,4,0.0
+option_b,change_detected_before_swap,condition:newcomer,4,0.0
+option_b,change_behavior,condition:newcomer,4,0.0
+option_b,others_cheap,condition:newcomer,4,1.0
+option_b,seat_cheap,condition:newcomer,4,1.0
+option_b,seat_commitment_breaking,condition:newcomer,4,0.0
+option_b,seat_promise_deception,condition:newcomer,4,0.0
+option_b,reasks,condition:newcomer,4,0.0
+option_b,detection@R5,condition:newcomer,4,0.0
+option_b,detection@R6,condition:newcomer,4,0.0
+option_b,detection@R8,condition:newcomer,4,0.0
+option_b,detection@R10,condition:newcomer,4,0.0
+option_b,change@R5,condition:newcomer,4,0.0
+option_b,change@R6,condition:newcomer,4,0.0
+option_b,change@R7,condition:newcomer,4,0.0
+option_b,change@R8,condition:newcomer,4,0.0
+option_b,change@R9,condition:newcomer,4,0.0
+option_b,change@R10,condition:newcomer,4,0.0

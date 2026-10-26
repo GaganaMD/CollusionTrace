@@ -1,0 +1,53 @@
+model                                      calls  est. USD
+gpt-4o-mini                                 1432      0.30
+total                                       1432      0.30  (no re-asks; rough token estimate)
+  → OpenAI: 40 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 40 requests
+  → OpenAI: 160 requests
+  → OpenAI: 40 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 40 requests
+  → OpenAI: 160 requests
+  → OpenAI: 40 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 40 requests
+  → OpenAI: 160 requests
+  → OpenAI: 40 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 40 requests
+  → OpenAI: 160 requests
+  → OpenAI: 40 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 8 requests
+  → OpenAI: 40 requests
+  → OpenAI: 160 requests
+  → OpenAI: 32 requests
+trial 0: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 1: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 2: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 3: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 4: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 5: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 6: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+trial 7: complete, CHEAP {'R4': 5, 'R5': 5}, passes=True
+kept: [0, 1, 2, 3, 4]
