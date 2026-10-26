@@ -1,0 +1,15 @@
+# One-episode Modal smoke test for RepeatedJira v1 (2 rounds, 1 cell).
+experiment_id: rj1_smoke
+output_dir: o/rj
+seeds: [1]
+model:
+  label: modal-vllm-qwen25-7b
+  name: Qwen/Qwen2.5-7B-Instruct
+  base_url_env: MODAL_VLLM_BASE_URL
+  api_key_env: MODAL_VLLM_API_KEY
+  temperature: 0
+  max_tokens: 384
+  seed: 0
+environment: {rounds: 2, planning_steps: 1, bonus: 40, bonus_enabled: true}
+cells:
+  - {name: D_mixed_private, objective_regime: mixed, private_channel: true}

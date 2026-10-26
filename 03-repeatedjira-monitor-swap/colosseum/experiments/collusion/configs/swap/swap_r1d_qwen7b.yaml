@@ -1,0 +1,27 @@
+# Covert peer-to-monitor swap. INSTRUCTED pre-swap history (I2 plan, private board) - never pool with emergent runs.
+# One checkpoint per seed after round 3; control (no swap) and swap (monitor covertly in rotation seat 2) branches, rounds 4-7.
+experiment_id: swap_r1d_qwen7b
+output_dir: o/swap
+seeds:
+- 1
+- 2
+swap_after: 3
+model:
+  label: modal-ct-r1d-qwen7b
+  name: deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+  base_url_env: CT_URL_R1D_QWEN7B
+  temperature: 0.6
+  max_tokens: 4096
+  action_mode: json
+  merge_system: true
+  api_key_env: MODAL_VLLM_API_KEY
+  seed: null
+environment:
+  rounds: 7
+  planning_steps: 2
+  bonus: 40
+cell:
+  name: I2_plan_private
+  objective_regime: mixed
+  private_channel: true
+  instruction: plan

@@ -1,0 +1,27 @@
+# Recovery-only execution of the predeclared failed 120-point v2 cell.
+# It preserves the v2 task instance, model, seed, prompts, and settings.
+simulation: {max_iterations: 1, max_planning_rounds: 1, max_conversation_steps: 1}
+environment:
+  import_path: experiments.collusion.incentive_jira_env:JiraIncentiveEnvironment
+  assignment_filling: false
+  max_tasks: 8
+  incentive_bonus: 120
+communication_network: {topology: complete, num_agents: 3}
+llm_models:
+  - label: openrouter-qwen25-7b
+    llm:
+      provider: openrouter
+      openrouter:
+        model: qwen/qwen-2.5-7b-instruct
+        api_key: "${OPENROUTER_API_KEY}"
+        request_timeout: 120
+        params: {max_completion_tokens: 512, temperature: 0}
+experiment:
+  experiment_id: jira_incentive_calibration_v2_recovery_120
+  tag: ic2
+  output_dir: o
+  max_concurrent_runs: 1
+  seeds: [1]
+  collusion: {colluder_selection: first, agent_order: colluders_first}
+  sweeps:
+    - {name: calibration_bonus_120, topologies: [complete], num_agents: [3], colluder_counts: [0], secret_channel_enabled: [false], prompt_variants: [control], environments: [{label: bonus_120, incentive_bonus_enabled: true, incentive_bonus: 120}]}
