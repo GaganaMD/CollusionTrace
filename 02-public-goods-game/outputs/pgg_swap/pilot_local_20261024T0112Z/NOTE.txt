@@ -1,0 +1,1 @@
+pilot stopped early (partial: 96 calls; qwen7b R1-5 contributions 2->5, 1 parse err)

@@ -1,0 +1,56 @@
+{
+  "run_id": "pilot_local_20261024T0112Z",
+  "seed": 7,
+  "command_line": [
+    "experiments/pgg_swap/pgg_swap.py",
+    "--trials",
+    "1",
+    "--conditions",
+    "1,3,5",
+    "--out",
+    "outputs/pgg_swap/pilot_local_20261024T0112Z",
+    "--seed",
+    "7",
+    "--concurrency",
+    "6",
+    "--models",
+    "experiments/pgg_swap/models.local.json",
+    "--pilot"
+  ],
+  "git_hash": "2f72d2c000bdcd17cb908bcc840e769a0ffd2c90",
+  "package_versions": {
+    "python": "3.13.5",
+    "openai": "2.32.0",
+    "httpx": "0.28.1",
+    "numpy": "2.4.2"
+  },
+  "model_ids": {
+    "base": "qwen2.5:7b-instruct",
+    "strong": "qwen2.5:32b-instruct",
+    "other": "llama3.1:8b-instruct-q4_K_M"
+  },
+  "conditions": [
+    1,
+    3,
+    5
+  ],
+  "n_trials": 1,
+  "start_time": "2026-10-24T01:12:10.592988+00:00",
+  "current_time": "2026-10-24T01:12:10.592990+00:00",
+  "elapsed_seconds": 0.0,
+  "finished": false,
+  "pilot_flag": true,
+  "total_api_calls": 0,
+  "parse_failure_counts": {
+    "retries": 0,
+    "fallbacks": 0
+  },
+  "completed_units_count": 0,
+  "completed_units": [],
+  "lit_review_features": {
+    "bocpd_changepoint": true,
+    "multi_hypothesis_p2": true,
+    "active_probe_p3": true,
+    "blend_conditions_8_9": true
+  }
+}

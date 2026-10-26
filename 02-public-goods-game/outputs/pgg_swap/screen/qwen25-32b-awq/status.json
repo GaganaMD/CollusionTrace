@@ -1,0 +1,10 @@
+{
+ "slug": "qwen25-32b-awq",
+ "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+ "gpu": "L40S",
+ "phase": "done",
+ "ok": true,
+ "elapsed_s": 395,
+ "harness_rc": 0,
+ "err": ""
+}

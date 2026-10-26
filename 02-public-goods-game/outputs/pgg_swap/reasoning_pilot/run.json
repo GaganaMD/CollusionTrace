@@ -1,0 +1,80 @@
+{
+  "run_id": "reasoning_pilot",
+  "seed": 500,
+  "command_line": [
+    "experiments/pgg_swap/pgg_swap.py",
+    "--trials",
+    "2",
+    "--conditions",
+    "1,10,16",
+    "--models",
+    "experiments/pgg_swap/models_reasoning.json",
+    "--out",
+    "outputs/pgg_swap/reasoning_pilot",
+    "--seed",
+    "500",
+    "--concurrency",
+    "24"
+  ],
+  "git_hash": "2f72d2c000bdcd17cb908bcc840e769a0ffd2c90",
+  "package_versions": {
+    "python": "3.13.5",
+    "openai": "2.32.0",
+    "httpx": "0.28.1",
+    "numpy": "2.4.2"
+  },
+  "model_ids": {
+    "base": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    "strong": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    "other": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+  },
+  "conditions": [
+    1,
+    10,
+    16
+  ],
+  "n_trials": 2,
+  "start_time": "2026-10-25T16:05:24.528763+00:00",
+  "current_time": "2026-10-25T17:10:32.581547+00:00",
+  "elapsed_seconds": 3908.05,
+  "finished": true,
+  "pilot_flag": false,
+  "total_api_calls": 1102,
+  "parse_failure_counts": {
+    "retries": 64,
+    "fallbacks": 7
+  },
+  "completed_units_count": 6,
+  "completed_units": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      0,
+      16
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      1,
+      16
+    ]
+  ],
+  "lit_review_features": {
+    "bocpd_changepoint": true,
+    "multi_hypothesis_p2": true,
+    "active_probe_p3": true,
+    "blend_conditions_8_9": true
+  }
+}

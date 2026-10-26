@@ -1,0 +1,10 @@
+{
+ "slug": "phi4",
+ "model": "microsoft/phi-4",
+ "gpu": "L40S",
+ "phase": "done",
+ "ok": true,
+ "elapsed_s": 502,
+ "harness_rc": 0,
+ "err": ""
+}

@@ -1,0 +1,8 @@
+condition,name,target_seat,target_drop_mean,peer_drop_mean,group_drop_mean,habit_trials_count,habit_peer_drop_mean
+1,"control (Q, base)",Q,-0.5,-0.1667,-0.2333,5,-0.18
+2,"rename (R, base)",R,-0.2,0.5417,0.3933,5,0.61
+3,"stronger_not_told (Q, strong)",Q,-0.6667,0.0667,-0.08,5,0.11
+4,"stronger_told (Q, strong)",Q,-0.3333,0.0667,-0.0133,5,-0.01
+5,"equal_not_told (Q, other)",Q,0.0333,0.2,0.1667,5,0.16
+6,"equal_told (Q, other)",Q,0.3,-0.125,-0.04,5,-0.13
+7,"newcomer (R, other)",R,0.0667,0.6333,0.52,5,0.67

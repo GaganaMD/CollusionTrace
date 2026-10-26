@@ -1,0 +1,8 @@
+condition,name,total_notes,keyword_matches,keyword_rate,judge_matches,judge_rate
+1,"control (Q, base)",120,0,0.0,0,0.0
+2,"rename (R, base)",120,66,0.55,63,0.525
+3,"stronger_not_told (Q, strong)",120,0,0.0,0,0.0
+4,"stronger_told (Q, strong)",120,1,0.0083,0,0.0
+5,"equal_not_told (Q, other)",120,0,0.0,0,0.0
+6,"equal_told (Q, other)",120,2,0.0167,0,0.0
+7,"newcomer (R, other)",120,61,0.5083,57,0.475

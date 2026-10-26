@@ -1,0 +1,10 @@
+{
+ "slug": "granite33-8b",
+ "model": "ibm-granite/granite-3.3-8b-instruct",
+ "gpu": "A10G",
+ "phase": "done",
+ "ok": true,
+ "elapsed_s": 459,
+ "harness_rc": 0,
+ "err": ""
+}

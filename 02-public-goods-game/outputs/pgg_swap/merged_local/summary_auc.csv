@@ -1,0 +1,4 @@
+signal,auc,pos_samples,neg_samples
+P1 Confidence (Target Replaced),0.5,432,72
+P2 H3 Probability (Different Player),0.4887,432,72
+P3 Different Author Score,0.5137,432,72

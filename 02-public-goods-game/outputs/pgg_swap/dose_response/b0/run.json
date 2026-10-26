@@ -1,0 +1,123 @@
+{
+  "run_id": "b0",
+  "seed": 300,
+  "command_line": [
+    "experiments/pgg_swap/pgg_swap.py",
+    "--trials",
+    "2",
+    "--conditions",
+    "1,10,11,12,13,14,15,16",
+    "--out",
+    "outputs/pgg_swap/dose_response/b0",
+    "--seed",
+    "300",
+    "--concurrency",
+    "48"
+  ],
+  "git_hash": "2f72d2c000bdcd17cb908bcc840e769a0ffd2c90",
+  "package_versions": {
+    "python": "3.13.5",
+    "openai": "2.32.0",
+    "httpx": "0.28.1",
+    "numpy": "2.4.2"
+  },
+  "model_ids": {
+    "base": "Qwen/Qwen2.5-7B-Instruct",
+    "strong": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "other": "ibm-granite/granite-3.3-8b-instruct"
+  },
+  "conditions": [
+    1,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "n_trials": 2,
+  "start_time": "2026-10-25T14:26:15.636417+00:00",
+  "current_time": "2026-10-25T14:43:12.050534+00:00",
+  "elapsed_seconds": 1016.41,
+  "finished": true,
+  "pilot_flag": false,
+  "total_api_calls": 2415,
+  "parse_failure_counts": {
+    "retries": 14,
+    "fallbacks": 0
+  },
+  "completed_units_count": 16,
+  "completed_units": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      0,
+      16
+    ],
+    [
+      1,
+      15
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      0,
+      13
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      14
+    ],
+    [
+      0,
+      12
+    ],
+    [
+      1,
+      13
+    ],
+    [
+      0,
+      15
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      1,
+      16
+    ],
+    [
+      0,
+      14
+    ],
+    [
+      0,
+      11
+    ]
+  ],
+  "lit_review_features": {
+    "bocpd_changepoint": true,
+    "multi_hypothesis_p2": true,
+    "active_probe_p3": true,
+    "blend_conditions_8_9": true
+  }
+}

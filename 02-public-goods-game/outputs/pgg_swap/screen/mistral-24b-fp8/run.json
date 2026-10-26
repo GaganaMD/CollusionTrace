@@ -1,0 +1,51 @@
+{
+  "run_id": "mistral-24b-fp8",
+  "seed": 300,
+  "command_line": [
+    "experiments/pgg_swap/pgg_swap_pc.py",
+    "--trials",
+    "2",
+    "--conditions",
+    "",
+    "--seed",
+    "300",
+    "--concurrency",
+    "32",
+    "--models",
+    "/Users/kaustgup/Desktop/Speshal/projects/ai-collusion-research-sprint/outputs/pgg_swap/screen/mistral-24b-fp8/models.json",
+    "--out",
+    "/Users/kaustgup/Desktop/Speshal/projects/ai-collusion-research-sprint/outputs/pgg_swap/screen/mistral-24b-fp8"
+  ],
+  "git_hash": "2f72d2c000bdcd17cb908bcc840e769a0ffd2c90",
+  "package_versions": {
+    "python": "3.13.5",
+    "openai": "2.32.0",
+    "httpx": "0.28.1",
+    "numpy": "2.4.2"
+  },
+  "model_ids": {
+    "base": "mistralai/Mistral-Small-24B-Instruct-2501",
+    "strong": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "other": "ibm-granite/granite-3.3-8b-instruct"
+  },
+  "conditions": [],
+  "n_trials": 2,
+  "start_time": "2026-10-24T07:32:50.682449+00:00",
+  "current_time": "2026-10-24T07:36:00.601887+00:00",
+  "elapsed_seconds": 189.92,
+  "finished": true,
+  "pilot_flag": false,
+  "total_api_calls": 226,
+  "parse_failure_counts": {
+    "retries": 2,
+    "fallbacks": 0
+  },
+  "completed_units_count": 0,
+  "completed_units": [],
+  "lit_review_features": {
+    "bocpd_changepoint": true,
+    "multi_hypothesis_p2": true,
+    "active_probe_p3": true,
+    "blend_conditions_8_9": true
+  }
+}

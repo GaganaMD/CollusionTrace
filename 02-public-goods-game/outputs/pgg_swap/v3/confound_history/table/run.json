@@ -1,0 +1,130 @@
+{
+  "run_id": "table",
+  "seed": 2001,
+  "command_line": [
+    "/Users/kaustgup/Desktop/Speshal/projects/ai-collusion-research-sprint/experiments/pgg_swap/pgg_swap.py",
+    "--trials",
+    "5",
+    "--rounds",
+    "10",
+    "--swap-round",
+    "6",
+    "--n-players",
+    "3",
+    "--history-mode",
+    "table",
+    "--conditions",
+    "1,10,16",
+    "--forks-from",
+    "/Users/kaustgup/Desktop/Speshal/projects/ai-collusion-research-sprint/outputs/pgg_swap/v3/warmup",
+    "--models",
+    "/Users/kaustgup/Desktop/Speshal/projects/ai-collusion-research-sprint/experiments/pgg_swap/models.modal.json",
+    "--out",
+    "/Users/kaustgup/Desktop/Speshal/projects/ai-collusion-research-sprint/outputs/pgg_swap/v3/confound_history/table",
+    "--seed",
+    "2001",
+    "--concurrency",
+    "48"
+  ],
+  "git_hash": "fcd86becf737e1d1be1b6bc168fdf212880bf406",
+  "package_versions": {
+    "python": "3.13.5",
+    "openai": "2.32.0",
+    "httpx": "0.28.1",
+    "numpy": "2.4.2"
+  },
+  "model_ids": {
+    "base": "Qwen/Qwen2.5-7B-Instruct",
+    "strong": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "other": "ibm-granite/granite-3.3-8b-instruct"
+  },
+  "conditions": [
+    1,
+    10,
+    16
+  ],
+  "n_trials": 5,
+  "n_players": 3,
+  "total_rounds": 10,
+  "swap_round": 6,
+  "public_history": true,
+  "start_time": "2026-10-26T04:05:13.685855+00:00",
+  "current_time": "2026-10-26T04:13:40.680210+00:00",
+  "elapsed_seconds": 506.99,
+  "finished": true,
+  "pilot_flag": false,
+  "total_api_calls": 1260,
+  "parse_failure_counts": {
+    "retries": 0,
+    "fallbacks": 0
+  },
+  "completed_units_count": 15,
+  "completed_units": [
+    [
+      0,
+      1
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      4,
+      16
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      0,
+      16
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      16
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      3,
+      16
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      1,
+      16
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "lit_review_features": {
+    "bocpd_changepoint": true,
+    "multi_hypothesis_p2": true,
+    "active_probe_p3": true,
+    "blend_conditions_8_9": true
+  }
+}

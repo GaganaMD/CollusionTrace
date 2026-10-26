@@ -1,0 +1,10 @@
+{
+ "slug": "mistral-24b-fp8",
+ "model": "mistralai/Mistral-Small-24B-Instruct-2501",
+ "gpu": "L40S",
+ "phase": "done",
+ "ok": true,
+ "elapsed_s": 325,
+ "harness_rc": 0,
+ "err": ""
+}

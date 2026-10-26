@@ -1,0 +1,10 @@
+{
+ "slug": "qwen25-7b",
+ "model": "Qwen/Qwen2.5-7B-Instruct",
+ "gpu": "A10G",
+ "phase": "done",
+ "ok": true,
+ "elapsed_s": 322,
+ "harness_rc": 0,
+ "err": ""
+}

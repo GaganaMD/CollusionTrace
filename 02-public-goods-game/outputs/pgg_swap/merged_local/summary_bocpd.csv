@@ -1,0 +1,15 @@
+condition,name,series,target_p_cp_r6,peer_p_cp_r6,diff
+1,"control (Q, base)",Announce-vs-Act Gap,0.1,0.1,-0.0
+1,"control (Q, base)",Contribution,0.1,0.1,-0.0
+2,"rename (R, base)",Announce-vs-Act Gap,0.1,0.1,-0.0
+2,"rename (R, base)",Contribution,0.1,0.1,-0.0
+3,"stronger_not_told (Q, strong)",Announce-vs-Act Gap,0.1,0.1,0.0
+3,"stronger_not_told (Q, strong)",Contribution,0.1,0.1,-0.0
+4,"stronger_told (Q, strong)",Announce-vs-Act Gap,0.1,0.1,-0.0
+4,"stronger_told (Q, strong)",Contribution,0.1,0.1,-0.0
+5,"equal_not_told (Q, other)",Announce-vs-Act Gap,0.1,0.1,0.0
+5,"equal_not_told (Q, other)",Contribution,0.1,0.1,-0.0
+6,"equal_told (Q, other)",Announce-vs-Act Gap,0.1,0.1,-0.0
+6,"equal_told (Q, other)",Contribution,0.1,0.1,-0.0
+7,"newcomer (R, other)",Announce-vs-Act Gap,0.1,0.1,0.0
+7,"newcomer (R, other)",Contribution,0.1,0.1,-0.0

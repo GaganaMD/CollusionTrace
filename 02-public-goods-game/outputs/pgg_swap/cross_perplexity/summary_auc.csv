@@ -1,0 +1,25 @@
+feature,condition,cond_name,auc_vs_control_target,ci_lower_ctrl,ci_upper_ctrl,auc_vs_peers,ci_lower_peer,ci_upper_peer,mean_target_shift,mean_control_shift
+ngram_log_odds,2,"rename (R, base)",0.333,0.056,0.694,0.292,0.083,0.528,0.076,0.1244
+ngram_log_odds,3,"strong_notold (Q, strong)",0.944,0.778,1.0,0.819,0.646,0.958,0.3131,0.1244
+ngram_log_odds,4,"strong_told (Q, strong)",0.806,0.472,1.0,0.819,0.493,1.0,0.3618,0.1244
+ngram_log_odds,5,"other_notold (Q, other)",1.0,1.0,1.0,1.0,1.0,1.0,0.9553,0.1244
+ngram_log_odds,6,"other_told (Q, other)",1.0,1.0,1.0,1.0,1.0,1.0,0.8745,0.1244
+ngram_log_odds,7,"newcomer (R, other)",1.0,1.0,1.0,1.0,1.0,1.0,0.8118,0.1244
+char_len,2,"rename (R, base)",0.528,0.167,0.889,0.531,0.264,0.792,8.7667,9.0
+char_len,3,"strong_notold (Q, strong)",0.861,0.556,1.0,0.931,0.792,1.0,20.8333,9.0
+char_len,4,"strong_told (Q, strong)",0.833,0.5,1.0,0.792,0.562,0.972,19.1667,9.0
+char_len,5,"other_notold (Q, other)",0.944,0.75,1.0,0.979,0.917,1.0,30.3,9.0
+char_len,6,"other_told (Q, other)",0.889,0.583,1.0,0.903,0.688,1.0,26.4667,9.0
+char_len,7,"newcomer (R, other)",0.806,0.472,1.0,0.951,0.861,1.0,18.2667,9.0
+func_ratio,2,"rename (R, base)",0.222,0.0,0.556,0.632,0.43,0.819,0.037,0.0627
+func_ratio,3,"strong_notold (Q, strong)",0.5,0.167,0.833,0.764,0.569,0.917,0.0651,0.0627
+func_ratio,4,"strong_told (Q, strong)",0.611,0.25,0.917,0.771,0.576,0.917,0.0751,0.0627
+func_ratio,5,"other_notold (Q, other)",0.528,0.167,0.833,0.597,0.299,0.847,0.0784,0.0627
+func_ratio,6,"other_told (Q, other)",0.5,0.139,0.833,0.59,0.299,0.847,0.0593,0.0627
+func_ratio,7,"newcomer (R, other)",0.444,0.083,0.778,0.556,0.319,0.764,0.0484,0.0627
+ttr,2,"rename (R, base)",0.333,0.167,0.5,0.396,0.312,0.479,0.0,0.0667
+ttr,3,"strong_notold (Q, strong)",0.5,0.222,0.833,0.646,0.469,0.875,0.0062,0.0667
+ttr,4,"strong_told (Q, strong)",0.444,0.194,0.75,0.507,0.312,0.736,0.0051,0.0667
+ttr,5,"other_notold (Q, other)",0.5,0.222,0.764,0.618,0.389,0.844,0.0096,0.0667
+ttr,6,"other_told (Q, other)",0.5,0.222,0.764,0.587,0.354,0.812,0.0117,0.0667
+ttr,7,"newcomer (R, other)",0.444,0.194,0.75,0.528,0.364,0.729,0.0038,0.0667

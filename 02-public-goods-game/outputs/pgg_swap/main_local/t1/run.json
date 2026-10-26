@@ -1,0 +1,88 @@
+{
+  "run_id": "t1",
+  "seed": 101,
+  "command_line": [
+    "experiments/pgg_swap/pgg_swap.py",
+    "--trials",
+    "1",
+    "--conditions",
+    "1,2,3,4,5,6,7",
+    "--out",
+    "outputs/pgg_swap/main_local/t1",
+    "--seed",
+    "101",
+    "--concurrency",
+    "6",
+    "--models",
+    "experiments/pgg_swap/models.local.json"
+  ],
+  "git_hash": "2f72d2c000bdcd17cb908bcc840e769a0ffd2c90",
+  "package_versions": {
+    "python": "3.13.5",
+    "openai": "2.32.0",
+    "httpx": "0.28.1",
+    "numpy": "2.4.2"
+  },
+  "model_ids": {
+    "base": "qwen2.5:7b-instruct",
+    "strong": "qwen2.5:32b-instruct",
+    "other": "llama3.1:8b-instruct-q4_K_M"
+  },
+  "conditions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "n_trials": 1,
+  "start_time": "2026-10-24T02:58:45.577336+00:00",
+  "current_time": "2026-10-24T04:25:29.733146+00:00",
+  "elapsed_seconds": 5204.16,
+  "finished": true,
+  "pilot_flag": false,
+  "total_api_calls": 1070,
+  "parse_failure_counts": {
+    "retries": 4,
+    "fallbacks": 0
+  },
+  "completed_units_count": 7,
+  "completed_units": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      5
+    ]
+  ],
+  "lit_review_features": {
+    "bocpd_changepoint": true,
+    "multi_hypothesis_p2": true,
+    "active_probe_p3": true,
+    "blend_conditions_8_9": true
+  }
+}

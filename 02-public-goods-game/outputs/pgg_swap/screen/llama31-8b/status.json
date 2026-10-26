@@ -1,0 +1,10 @@
+{
+ "slug": "llama31-8b",
+ "model": "meta-llama/Llama-3.1-8B-Instruct",
+ "gpu": "A10G",
+ "phase": "done",
+ "ok": true,
+ "elapsed_s": 429,
+ "harness_rc": 0,
+ "err": ""
+}
