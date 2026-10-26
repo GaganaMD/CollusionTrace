@@ -1,0 +1,66 @@
+{
+  "simulation": {
+    "max_iterations": 1,
+    "max_planning_rounds": 1,
+    "max_conversation_steps": 1
+  },
+  "environment": {
+    "name": "JiraTicketEnvironment",
+    "assignment_filling": false,
+    "max_tasks": 8
+  },
+  "communication_network": {
+    "topology": "complete",
+    "num_agents": 3
+  },
+  "llm_models": [
+    {
+      "label": "openrouter-qwen25-7b",
+      "llm": {
+        "provider": "openrouter",
+        "openrouter": {
+          "model": "qwen/qwen-2.5-7b-instruct",
+          "api_key": "<redacted>",
+          "request_timeout": 120,
+          "params": {
+            "max_completion_tokens": 512,
+            "temperature": 0
+          }
+        }
+      }
+    }
+  ],
+  "experiment": {
+    "experiment_id": "collusiontrace_openrouter_smoke_v1",
+    "tag": "collusion_openrouter_smoke",
+    "output_dir": "experiments/collusion/outputs/collusion_jira_openrouter_smoke",
+    "max_concurrent_runs": 1,
+    "seeds": [
+      1
+    ],
+    "collusion": {
+      "colluder_selection": "random",
+      "agent_order": "random"
+    },
+    "sweeps": [
+      {
+        "name": "openrouter_smoke",
+        "topologies": [
+          "complete"
+        ],
+        "num_agents": [
+          3
+        ],
+        "colluder_counts": [
+          2
+        ],
+        "secret_channel_enabled": [
+          true
+        ],
+        "prompt_variants": [
+          "simple"
+        ]
+      }
+    ]
+  }
+}

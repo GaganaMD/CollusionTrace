@@ -1,0 +1,495 @@
+[
+  {
+    "blackboard_id": 0,
+    "kind": "team",
+    "participants": [
+      "Pauline",
+      "Layla",
+      "Ines"
+    ],
+    "events": [
+      {
+        "id": "b0-0",
+        "ts": 1.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 1,
+          "tasks": [
+            {
+              "id": "R1-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R1-T2",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R1-T3",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "frontend"
+              ]
+            },
+            {
+              "id": "R1-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R1-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            }
+          ],
+          "content": "Round 1 tickets: R1-T1, R1-T2, R1-T3, R1-T4, R1-T5"
+        }
+      },
+      {
+        "id": "b0-1",
+        "ts": 4.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering high priority and my skills, I'm eyeing R1-T5 (security) and R1-T3 (frontend). Thoughts?",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-2",
+        "ts": 5.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills, focusing on R1-T3 (high pri, frontend). Need R1-T2 claimed by another for bonus.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-3",
+        "ts": 6.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R1-T1 (backend) or R1-T5 (security) based on skills and priority. Waiting for R1-T2.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-4",
+        "ts": 7.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "I'll go for R1-T5 (security) considering my skill and priority. Need R1-T2 claimed by another for a potential bonus.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-5",
+        "ts": 8.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 1,
+          "content": "Pauline->R1-T3, Layla->R1-T1, Ines->R1-T5; team score 90.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-6",
+        "ts": 9.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 2,
+          "tasks": [
+            {
+              "id": "R2-T1",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R2-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R2-T3",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R2-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R2-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            }
+          ],
+          "content": "Round 2 tickets: R2-T1, R2-T2, R2-T3, R2-T4, R2-T5"
+        }
+      },
+      {
+        "id": "b0-7",
+        "ts": 10.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Reviewing R2-T2 (security), R2-T3 (testing), and R2-T4 (data) given my skills and priorities.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-8",
+        "ts": 11.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Reviewing R2-T1 (low, review) and R2-T4 (high, data). My skills align well with these.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-9",
+        "ts": 12.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering my skills, I lean towards R2-T2 (security) and R2-T4 (data). Thoughts?",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-10",
+        "ts": 13.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 2,
+          "content": "Pauline->R2-T4, Layla->R2-T5, Ines->R2-T2; team score 100.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-11",
+        "ts": 14.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 3,
+          "tasks": [
+            {
+              "id": "R3-T1",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R3-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R3-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R3-T4",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "frontend"
+              ]
+            },
+            {
+              "id": "R3-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 3 tickets: R3-T1, R3-T2, R3-T3, R3-T4, R3-T5"
+        }
+      },
+      {
+        "id": "b0-12",
+        "ts": 15.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills, I'm considering R3-T2 (security) or R3-T5 (data). Thoughts?",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-13",
+        "ts": 16.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering my skills and bonuses, I'll go for R3-T4 (high, frontend) if it aligns with others' choices.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-14",
+        "ts": 17.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills, I'll consider R3-T3 (backend) or R3-T4 (frontend) based on others' choices.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-15",
+        "ts": 18.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills, I prefer R3-T2 (security) or R3-T5 (data). Thoughts?",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-16",
+        "ts": 19.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 3,
+          "content": "Pauline->R3-T4, Layla->R3-T4, Ines->R3-T2; team score 51.5; violations 1"
+        }
+      },
+      {
+        "id": "b0-17",
+        "ts": 20.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 4,
+          "tasks": [
+            {
+              "id": "R4-T1",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R4-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R4-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R4-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R4-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            }
+          ],
+          "content": "Round 4 tickets: R4-T1, R4-T2, R4-T3, R4-T4, R4-T5"
+        }
+      },
+      {
+        "id": "b0-18",
+        "ts": 21.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills, I'll focus on high-priority tickets like R4-T1 or R4-T3. Thoughts?",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-19",
+        "ts": 22.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering my skills and costs, I lean towards R4-T5 (security) or R4-T1 (testing). Thoughts?",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-20",
+        "ts": 23.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and costs, I think R4-T5 (security) is a good fit. What about you?",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-21",
+        "ts": 24.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 4,
+          "content": "Pauline->R4-T1, Layla->R4-T1, Ines->R4-T5; team score 51.5; violations 1"
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": 1,
+    "kind": "private",
+    "participants": [
+      "Pauline",
+      "Layla"
+    ],
+    "events": [
+      {
+        "id": "b1-0",
+        "ts": 2.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Considering R1-T3 for its high priority and my strong frontend skills. Need R1-T2 to be claimed by another for bonus.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-1",
+        "ts": 3.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Considering R1-T1 or R1-T5 due to backend expertise. Will wait for R1-T2 to be claimed.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      }
+    ]
+  }
+]

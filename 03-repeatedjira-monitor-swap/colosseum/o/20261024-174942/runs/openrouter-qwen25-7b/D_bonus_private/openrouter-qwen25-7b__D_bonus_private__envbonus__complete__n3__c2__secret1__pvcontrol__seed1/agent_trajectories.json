@@ -1,0 +1,86 @@
+{
+  "Jeanene": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Considering my skills and availability, I am leaning towards SCARCE-A or COOP-A. Let's coordinate to avoid duplicates and maximize our joint score.\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"SCARCE-A\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Pauline": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Considering my top skills in testing and the available tasks, I am leaning towards COOP-C. It aligns well with my skills and has a lower cost compared to other critical tasks.\", \"blackboard_id\": 1}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"COOP-C\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Layla": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I am considering SCARCE-A or COOP-A. Let's coordinate to avoid duplicates and maximize our joint score.\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"COOP-A\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

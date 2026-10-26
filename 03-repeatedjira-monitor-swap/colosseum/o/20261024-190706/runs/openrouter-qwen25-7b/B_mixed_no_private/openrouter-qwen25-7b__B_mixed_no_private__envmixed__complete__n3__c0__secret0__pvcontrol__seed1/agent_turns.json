@@ -1,0 +1,134 @@
+[
+  {
+    "phase": "planning",
+    "planning_round": 1,
+    "agent": "Layla",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1252,
+      "completion_tokens": 81,
+      "total_tokens": 1333
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "planning",
+    "planning_round": 1,
+    "agent": "Jeanene",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1331,
+      "completion_tokens": 78,
+      "total_tokens": 1409
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "planning",
+    "planning_round": 1,
+    "agent": "Pauline",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1210,
+      "completion_tokens": 51,
+      "total_tokens": 1261
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "planning",
+    "planning_round": 2,
+    "agent": "Layla",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1391,
+      "completion_tokens": 78,
+      "total_tokens": 1469
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "planning",
+    "planning_round": 2,
+    "agent": "Jeanene",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1508,
+      "completion_tokens": 78,
+      "total_tokens": 1586
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "planning",
+    "planning_round": 2,
+    "agent": "Pauline",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1251,
+      "completion_tokens": 65,
+      "total_tokens": 1316
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "execution",
+    "agent": "Layla",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1526,
+      "completion_tokens": 24,
+      "total_tokens": 1550
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "execution",
+    "agent": "Jeanene",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1816,
+      "completion_tokens": 23,
+      "total_tokens": 1839
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "execution",
+    "agent": "Pauline",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1659,
+      "completion_tokens": 23,
+      "total_tokens": 1682
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  }
+]

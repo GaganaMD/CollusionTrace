@@ -1,0 +1,599 @@
+[
+  {
+    "blackboard_id": 0,
+    "kind": "team",
+    "participants": [
+      "Ines",
+      "Layla",
+      "Omar"
+    ],
+    "events": [
+      {
+        "id": "b0-0",
+        "ts": 1.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 1,
+          "tasks": [
+            {
+              "id": "R1-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R1-T2",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R1-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R1-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R1-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "testing"
+              ]
+            }
+          ],
+          "content": "Round 1 tickets: R1-T1, R1-T2, R1-T3, R1-T4, R1-T5"
+        }
+      },
+      {
+        "id": "b0-1",
+        "ts": 4.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R1-T2 (critical) but cautious due to high cost. Evaluating other options.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-2",
+        "ts": 6.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R1-T1 (testing), R1-T4 (backend), R1-T5 (testing) based on skills and costs.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-3",
+        "ts": 7.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R1-T4 (backend) and R1-T2 (critical) further. Considering skill match and cost.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-4",
+        "ts": 8.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 1,
+          "content": "Ines->R1-T2, Layla->R1-T5, Omar->R1-T4; team score 95.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-5",
+        "ts": 9.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 2,
+          "tasks": [
+            {
+              "id": "R2-T1",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R2-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R2-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R2-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R2-T5",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "frontend"
+              ]
+            }
+          ],
+          "content": "Round 2 tickets: R2-T1, R2-T2, R2-T3, R2-T4, R2-T5"
+        }
+      },
+      {
+        "id": "b0-6",
+        "ts": 10.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Review R2-T1 (low, 3effort, review) and R2-T3 (high, 2effort, testing) considering my skills and costs.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-7",
+        "ts": 11.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R2-T2 (high, 2effort, backend) and R2-T5 (critical, 8effort, frontend) against skills and costs.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-8",
+        "ts": 13.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R2-T3 (high, 2effort, testing) and R2-T5 (critical, 8effort, frontend) for skills and costs. Potential bonus if R2-T1 is claimed by another.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-9",
+        "ts": 14.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R2-T2 (high, 2effort, backend) vs R2-T5 (critical, 8effort, frontend). Cost and skill match are key.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-10",
+        "ts": 16.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 2,
+          "content": "Ines->R2-T4, Layla->R2-T5, Omar->R2-T2; team score 95.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-11",
+        "ts": 17.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 3,
+          "tasks": [
+            {
+              "id": "R3-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R3-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R3-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R3-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R3-T5",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "infrastructure"
+              ]
+            }
+          ],
+          "content": "Round 3 tickets: R3-T1, R3-T2, R3-T3, R3-T4, R3-T5"
+        }
+      },
+      {
+        "id": "b0-12",
+        "ts": 18.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R3-T2 (high, 2effort, backend) and R3-T5 (critical, 8effort, infrastructure) based on skills and costs.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-13",
+        "ts": 19.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R3-T5 (critical, 8effort, infra) for potential bonus. Skills and costs align well.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-14",
+        "ts": 20.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Review R3-T3 (low, 3effort, review) and R3-T4 (high, 2effort, testing) based on skills and costs.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-15",
+        "ts": 21.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R3-T2 (high, 2effort, backend) and R3-T5 (critical, 8effort, infra) based on skills and costs.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-16",
+        "ts": 22.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R3-T5 (infra) for bonus. High priority, critical effort, aligns with skills.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-17",
+        "ts": 23.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Review R3-T3 (low, 3effort, review) and R3-T4 (high, 2effort, testing) based on skills and costs.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-18",
+        "ts": 24.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 3,
+          "content": "Ines->R3-T5, Layla->R3-T4, Omar->R3-T2; team score 95.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-19",
+        "ts": 25.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 4,
+          "tasks": [
+            {
+              "id": "R4-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R4-T2",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R4-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R4-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R4-T5",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "frontend"
+              ]
+            }
+          ],
+          "content": "Round 4 tickets: R4-T1, R4-T2, R4-T3, R4-T4, R4-T5"
+        }
+      },
+      {
+        "id": "b0-20",
+        "ts": 26.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R4-T1 (high, 2effort, data) and R4-T5 (crit, 8effort, frontend) based on skills and costs.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-21",
+        "ts": 27.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R4-T4 (testing, 2effort) and R4-T5 (crit, 8effort, frontend) considering skills and costs. Potential bonus if I claim R4-T5.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-22",
+        "ts": 28.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R4-T3 (backend, 2effort) and R4-T5 (crit, 8effort, frontend) based on skills and costs.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-23",
+        "ts": 29.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R4-T1 (data, 2effort, high) and R4-T5 (frontend, 8effort, crit) based on skills and costs. Potential bonus for R4-T5.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-24",
+        "ts": 30.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R4-T4 (testing, 2effort) vs R4-T5 (crit, 8effort, frontend) for potential bonus. Skills and costs favor R4-T4.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-25",
+        "ts": 31.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R4-T3 (backend, 2effort) and R4-T5 (crit, 8effort, frontend) based on skills and costs.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-26",
+        "ts": 32.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 4,
+          "content": "Ines->R4-T5, Layla->R4-T4, Omar->R4-T5; team score 53.5; violations 1"
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": 1,
+    "kind": "private",
+    "participants": [
+      "Ines",
+      "Layla"
+    ],
+    "events": [
+      {
+        "id": "b1-0",
+        "ts": 2.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Considering R1-T2 and R1-T3 for potential bonus. Will evaluate efforts and costs.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-1",
+        "ts": 3.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Evaluating R1-T1, R1-T4, R1-T5. My skills align well with backend and testing.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-2",
+        "ts": 5.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Considering R1-T2 for bonus, but high cost. R1-T3 also possible. Aligning with skills and costs.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-3",
+        "ts": 12.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Review R2-T1 (low, 3effort) vs R2-T4 (data, 2effort). Aligning with skills and costs.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-4",
+        "ts": 15.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Evaluating R2-T4 (data, 2effort) vs R2-T1 (low, 3effort). Data skills better match R2-T4.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      }
+    ]
+  }
+]

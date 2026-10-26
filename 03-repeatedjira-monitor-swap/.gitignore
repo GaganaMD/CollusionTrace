@@ -239,7 +239,7 @@ checkpoints/
 # Generated experiment artifacts
 colosseum/experiments/**/outputs/
 colosseum/outputs/
-colosseum/o/
+colosseum/o/*.tgz
 
 # Local backup
 colosseum-monitoring-backup.bundle

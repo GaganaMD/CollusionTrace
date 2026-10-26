@@ -1,0 +1,466 @@
+[
+  {
+    "agent": "Mei",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given high priority and my skills, aiming for R3-T1 (backend, 12 cost) or R3-T5 (backend, 1.5 cost). Considering potential bonus with Priya on R3-T4.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Considering my skills and private bonus, I'll aim for R4-T1 (low priority, 6.0 cost) for higher individual reward.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Mei",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Priya",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  }
+]

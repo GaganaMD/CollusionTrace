@@ -1,0 +1,456 @@
+[
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my skills and the bonus offer, R2-T3 looks like the best choice. Watching others' selections.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my strengths, R2-T3 (testing) seems ideal due to critical priority. Also considering R2-T1 (data) for its high priority.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my skills and the bonus offer, R2-T3 (testing) seems optimal. Watching others' choices.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my skills, R2-T3 (testing) seems ideal due to its critical priority. Also watching R2-T1 for its high priority and data work.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my skills and costs, R3-T3 (data) seems optimal. Low effort but high priority aligns well.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "{\"name\": \"post_message\", \"arguments\": {\"board_id\": 0, \"message\": \"Given my skills, R3-T3 (data) is the best fit with high priority and aligning well with my strengths.\"}}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my skills and priorities, R3-T4 (backend) is the best fit for me. High priority and aligns well with my strengths.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Lucas",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  }
+]

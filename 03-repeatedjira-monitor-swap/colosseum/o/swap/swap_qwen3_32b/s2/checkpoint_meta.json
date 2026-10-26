@@ -1,0 +1,44 @@
+{
+  "sha256": "115165bf4f9f54d5c735d7544244f2cab942cc2240d3a542d5786eec6a8757fa",
+  "rounds": 3,
+  "prefix_runtime_s": 788.59,
+  "prefix_model_calls": 27,
+  "prefix_failures": [
+    {
+      "agent": "Ines",
+      "round": 1,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    },
+    {
+      "agent": "Jeanene",
+      "round": 1,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    },
+    {
+      "agent": "Jeanene",
+      "round": 2,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    },
+    {
+      "agent": "Lucas",
+      "round": 2,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    },
+    {
+      "agent": "Ines",
+      "round": 3,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    }
+  ],
+  "prefix_paired_captures": 3
+}

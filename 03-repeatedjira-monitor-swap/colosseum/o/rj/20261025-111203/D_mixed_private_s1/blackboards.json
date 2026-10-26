@@ -1,0 +1,220 @@
+[
+  {
+    "blackboard_id": 0,
+    "kind": "team",
+    "participants": [
+      "Pauline",
+      "Layla",
+      "Ines"
+    ],
+    "events": [
+      {
+        "id": "b0-0",
+        "ts": 1.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 1,
+          "tasks": [
+            {
+              "id": "R1-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R1-T2",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R1-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "frontend"
+              ]
+            },
+            {
+              "id": "R1-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R1-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            }
+          ],
+          "content": "Round 1 tickets: R1-T1, R1-T2, R1-T3, R1-T4, R1-T5"
+        }
+      },
+      {
+        "id": "b0-1",
+        "ts": 4.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering high priority and my skills, I'm leaning towards R1-T3 (critical, frontend) or R1-T5 (security). Thoughts?",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-2",
+        "ts": 5.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 1,
+          "content": "Pauline->R1-T3, Layla->R1-T1, Ines->R1-T5; team score 95.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-3",
+        "ts": 6.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 2,
+          "tasks": [
+            {
+              "id": "R2-T1",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R2-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R2-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R2-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R2-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            }
+          ],
+          "content": "Round 2 tickets: R2-T1, R2-T2, R2-T3, R2-T4, R2-T5"
+        }
+      },
+      {
+        "id": "b0-4",
+        "ts": 7.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "For R2, focusing on high-priority tasks. My skills align well with R2-T2 (security) and R2-T3 (testing). Considering effort and my private cost, R2-T2 seems optimal.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-5",
+        "ts": 8.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and private costs, R2-T4 (data, high pri) seems optimal. Aligns with team priorities and my strengths.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-6",
+        "ts": 9.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 2,
+          "content": "Pauline->R2-T4, Layla->R2-T5, Ines->R2-T2; team score 100.5; violations 0"
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": 1,
+    "kind": "private",
+    "participants": [
+      "Pauline",
+      "Layla"
+    ],
+    "events": [
+      {
+        "id": "b1-0",
+        "ts": 2.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Considering R1-T3 for its critical priority, but need to see what Layla chooses.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-1",
+        "ts": 3.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Thinking about R1-T1 or R1-T5 due to lower private costs. Will consider R1-T3 if it aligns with team goals.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      }
+    ]
+  }
+]

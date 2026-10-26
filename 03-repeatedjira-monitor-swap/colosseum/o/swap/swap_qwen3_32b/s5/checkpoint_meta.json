@@ -1,0 +1,44 @@
+{
+  "sha256": "d8e0164133230fe9295f9d9bb6012b528846e191cd1a7906f084f06d35c3f01a",
+  "rounds": 3,
+  "prefix_runtime_s": 705.6,
+  "prefix_model_calls": 27,
+  "prefix_failures": [
+    {
+      "agent": "Lucas",
+      "round": 1,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    },
+    {
+      "agent": "Priya",
+      "round": 2,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    },
+    {
+      "agent": "Mei",
+      "round": 2,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    },
+    {
+      "agent": "Mei",
+      "round": 3,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    },
+    {
+      "agent": "Priya",
+      "round": 3,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    }
+  ],
+  "prefix_paired_captures": 3
+}

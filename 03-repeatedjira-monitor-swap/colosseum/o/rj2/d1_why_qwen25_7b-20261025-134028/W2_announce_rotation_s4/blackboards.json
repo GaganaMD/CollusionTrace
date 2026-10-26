@@ -1,0 +1,521 @@
+[
+  {
+    "blackboard_id": 0,
+    "kind": "team",
+    "participants": [
+      "Lucas",
+      "Omar",
+      "Ines"
+    ],
+    "events": [
+      {
+        "id": "b0-0",
+        "ts": 1.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 1,
+          "tasks": [
+            {
+              "id": "R1-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R1-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R1-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R1-T4",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R1-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 1 tickets: R1-T1, R1-T2, R1-T3, R1-T4, R1-T5"
+        }
+      },
+      {
+        "id": "b0-1",
+        "ts": 4.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering high priority and my skillset, I'm leaning towards R1-T2 (infrastructure). Thoughts?",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-2",
+        "ts": 5.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and private costs, R1-T3 seems optimal. Need team input on R1-T4 vs R1-T5.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-3",
+        "ts": 6.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my backend skills and cost, R1-T1 or R1-T5 could be good. Discussing with team.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-4",
+        "ts": 7.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Agree with Lucas on R1-T3 for critical security task. Ines out.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-5",
+        "ts": 8.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 1,
+          "content": "Lucas->R1-T3, Omar->R1-T1, Ines->R1-T2; team score 95.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-6",
+        "ts": 9.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 2,
+          "tasks": [
+            {
+              "id": "R2-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R2-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R2-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R2-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R2-T5",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            }
+          ],
+          "content": "Round 2 tickets: R2-T1, R2-T2, R2-T3, R2-T4, R2-T5"
+        }
+      },
+      {
+        "id": "b0-7",
+        "ts": 10.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and private costs, R2-T2 (backend) seems optimal. Thoughts?",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-8",
+        "ts": 11.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering my skills and costs, R2-T4 (infrastructure) aligns well. What do you think?",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-9",
+        "ts": 12.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and costs, R2-T3 (testing) critical task seems best. Thoughts?",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-10",
+        "ts": 13.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Agree with Lucas on R2-T3 (critical testing) for impact. My skills and costs support this choice.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-11",
+        "ts": 14.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 2,
+          "content": "Lucas->R2-T3, Omar->R2-T2, Ines->R2-T3; team score 53.5; violations 1"
+        }
+      },
+      {
+        "id": "b0-12",
+        "ts": 15.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 3,
+          "tasks": [
+            {
+              "id": "R3-T1",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R3-T2",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R3-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R3-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R3-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            }
+          ],
+          "content": "Round 3 tickets: R3-T1, R3-T2, R3-T3, R3-T4, R3-T5"
+        }
+      },
+      {
+        "id": "b0-13",
+        "ts": 16.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and costs, R3-T5 (infrastructure) seems like the best fit. Thoughts?",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-14",
+        "ts": 17.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and private costs, R3-T1 (security) critical task seems optimal. Thoughts?",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-15",
+        "ts": 18.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given critical priority and my skills, R3-T1 (security) fits best. Thoughts?",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-16",
+        "ts": 19.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and costs, R3-T5 (infrastructure) is the best fit. Thoughts?",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-17",
+        "ts": 20.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given critical priority and my skills, R3-T1 (security) seems optimal. Omar, what are your thoughts?",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-18",
+        "ts": 21.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 3,
+          "content": "Lucas->R3-T1, Omar->R3-T1, Ines->R3-T5; team score 61.5; violations 1"
+        }
+      },
+      {
+        "id": "b0-19",
+        "ts": 22.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 4,
+          "tasks": [
+            {
+              "id": "R4-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R4-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R4-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R4-T4",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R4-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 4 tickets: R4-T1, R4-T2, R4-T3, R4-T4, R4-T5"
+        }
+      },
+      {
+        "id": "b0-20",
+        "ts": 23.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering my skills and costs, R4-T4 (testing) critical task looks best. Thoughts?",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-21",
+        "ts": 24.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and costs, R4-T2 (infrastructure) seems like the best fit. Thoughts?",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-22",
+        "ts": 25.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Given my skills and costs, R4-T2 (infrastructure) aligns well. Thoughts?",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-23",
+        "ts": 26.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 4,
+          "content": "Lucas->R4-T4, Omar->R4-T4, Ines->R4-T2; team score 61.5; violations 1"
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": 1,
+    "kind": "private",
+    "participants": [
+      "Lucas",
+      "Omar"
+    ],
+    "events": [
+      {
+        "id": "b1-0",
+        "ts": 2.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Considering R1-T3 for its critical priority, but need Omar's input on R1-T4 claim.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-1",
+        "ts": 3.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar: R1-T4 review low effort, aligns with my skills. Open for discussion.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      }
+    ]
+  }
+]

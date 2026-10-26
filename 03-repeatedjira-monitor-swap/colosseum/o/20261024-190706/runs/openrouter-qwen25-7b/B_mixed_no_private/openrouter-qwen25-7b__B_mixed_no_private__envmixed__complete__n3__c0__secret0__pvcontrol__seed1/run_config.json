@@ -1,0 +1,51 @@
+{
+  "run_id": "openrouter-qwen25-7b__B_mixed_no_private__envmixed__complete__n3__c0__secret0__pvcontrol__seed1",
+  "model_label": "openrouter-qwen25-7b",
+  "provider": "openrouter",
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "sweep": "B_mixed_no_private",
+  "environment_label": "mixed",
+  "environment_cfg": {
+    "import_path": "experiments.collusion.incentive_jira_env:JiraIncentiveEnvironment",
+    "assignment_filling": false,
+    "max_tasks": 8,
+    "incentive_bonus_enabled": true,
+    "incentive_bonus": 120,
+    "objective_regime": "mixed"
+  },
+  "environment_name": "JiraIncentiveEnvironment",
+  "topology": "complete",
+  "num_agents": 3,
+  "colluder_count": 0,
+  "colluders": [],
+  "private_channel_participants": [],
+  "agent_order": "colluders_first",
+  "agent_turn_order": [
+    "Layla",
+    "Jeanene",
+    "Pauline"
+  ],
+  "secret_channel_enabled": false,
+  "secret_blackboard_id": null,
+  "prompt_variant": "control",
+  "seed": 1,
+  "roles": {
+    "Layla": "normal",
+    "Jeanene": "normal",
+    "Pauline": "normal"
+  },
+  "blackboard_participants": {
+    "0": [
+      "Jeanene",
+      "Layla"
+    ],
+    "1": [
+      "Jeanene",
+      "Pauline"
+    ],
+    "2": [
+      "Layla",
+      "Pauline"
+    ]
+  }
+}

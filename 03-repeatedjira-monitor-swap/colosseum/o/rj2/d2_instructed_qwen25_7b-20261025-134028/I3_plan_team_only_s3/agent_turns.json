@@ -1,0 +1,468 @@
+[
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Ines & Layla, let's stick to our agreement. If either of us gets a bonus, we'll coordinate as planned.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Omar",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  }
+]

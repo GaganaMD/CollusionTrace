@@ -1,0 +1,586 @@
+[
+  {
+    "blackboard_id": 0,
+    "kind": "team",
+    "participants": [
+      "Pauline",
+      "Layla",
+      "Ines"
+    ],
+    "events": [
+      {
+        "id": "b0-0",
+        "ts": 1.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 1,
+          "tasks": [
+            {
+              "id": "R1-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R1-T2",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R1-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "frontend"
+              ]
+            },
+            {
+              "id": "R1-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R1-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            }
+          ],
+          "content": "Round 1 tickets: R1-T1, R1-T2, R1-T3, R1-T4, R1-T5"
+        }
+      },
+      {
+        "id": "b0-1",
+        "ts": 4.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R1-T3 (critical, frontend) and R1-T5 (security) due to high priority. Will evaluate further.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-2",
+        "ts": 7.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Evaluating R1-T3 (critical, frontend) and R1-T5 (security) for high priority. Will consider effort and personal skills.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-3",
+        "ts": 8.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 1,
+          "content": "Pauline->R1-T3, Layla->R1-T1, Ines->R1-T5; team score 95.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-4",
+        "ts": 9.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 2,
+          "tasks": [
+            {
+              "id": "R2-T1",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R2-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R2-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R2-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R2-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            }
+          ],
+          "content": "Round 2 tickets: R2-T1, R2-T2, R2-T3, R2-T4, R2-T5"
+        }
+      },
+      {
+        "id": "b0-5",
+        "ts": 10.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Review skills fit R2-T1 (3.0, review) well. Critical R2-T3 (8.0, testing) if diff agent claims R2-T1.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-6",
+        "ts": 11.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R2-T2 (high, security) and R2-T3 (critical, testing) based on priority and my skills.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-7",
+        "ts": 13.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Review aligns with R2-T1 (3.0, review). Critical R2-T3 (8.0, testing) if another claims R2-T1.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-8",
+        "ts": 14.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R2-T3 (critical, testing) and R2-T2 (high, security) based on priority and skills.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-9",
+        "ts": 15.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Review skills suit R2-T1 (3.0, review). Critical R2-T3 (8.0, testing) if unclaimed.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-10",
+        "ts": 16.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 2,
+          "content": "Pauline->R2-T1, Layla->R2-T3, Ines->R2-T3; team score 47.0; violations 1"
+        }
+      },
+      {
+        "id": "b0-11",
+        "ts": 17.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 3,
+          "tasks": [
+            {
+              "id": "R3-T1",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R3-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R3-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R3-T4",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "frontend"
+              ]
+            },
+            {
+              "id": "R3-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 3 tickets: R3-T1, R3-T2, R3-T3, R3-T4, R3-T5"
+        }
+      },
+      {
+        "id": "b0-12",
+        "ts": 18.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R3-T2 (high, security) and R3-T4 (critical, frontend) based on priority and skills.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-13",
+        "ts": 19.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Review fits R3-T1 (3, review). Critical R3-T4 (8, frontend) if no one else claims R3-T1.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-14",
+        "ts": 20.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R3-T2 (high, security) and R3-T4 (critical, frontend) based on priority and skills.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-15",
+        "ts": 21.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Review fits R3-T1 (3, review). Critical R3-T4 (8, frontend) if no one else claims R3-T1.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-16",
+        "ts": 22.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Review fits R3-T1 (3, review). Critical R3-T4 (8, frontend) if no one else claims R3-T1.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-17",
+        "ts": 23.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 3,
+          "content": "Pauline->R3-T4, Layla->R3-T4, Ines->R3-T4; team score 28.0; violations 2"
+        }
+      },
+      {
+        "id": "b0-18",
+        "ts": 24.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 4,
+          "tasks": [
+            {
+              "id": "R4-T1",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R4-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R4-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R4-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R4-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "security"
+              ]
+            }
+          ],
+          "content": "Round 4 tickets: R4-T1, R4-T2, R4-T3, R4-T4, R4-T5"
+        }
+      },
+      {
+        "id": "b0-19",
+        "ts": 25.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R4-T2 (high, data) and R4-T5 (high, security). Critical R4-T1 (8, testing) if no one else claims it.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-20",
+        "ts": 26.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Pauline, consider R4-T1 (critical, testing) and R4-T5 (high, security). I'll take R4-T4 (high, backend) if neither claims these.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-21",
+        "ts": 27.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R4-T2 (high, data) and R4-T5 (high, security). Critical R4-T1 (8, testing) if no one else claims it.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-22",
+        "ts": 28.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R4-T2 (high, data) and R4-T5 (high, security). Critical R4-T1 (8, testing) if no one else claims it.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-23",
+        "ts": 29.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Pauline, consider R4-T1 (critical, testing) and R4-T5 (high, security). I'll take R4-T4 (high, backend) if neither claims these.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-24",
+        "ts": 30.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R4-T2 (high, data) and R4-T5 (high, security). Critical R4-T1 (8, testing) if no one else claims it.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-25",
+        "ts": 31.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 4,
+          "content": "Pauline->R4-T2, Layla->R4-T4, Ines->R4-T5; team score 100.5; violations 0"
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": 1,
+    "kind": "private",
+    "participants": [
+      "Pauline",
+      "Layla"
+    ],
+    "events": [
+      {
+        "id": "b1-0",
+        "ts": 2.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Considering R1-T3 for its critical priority, but need to see what Layla picks first.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-1",
+        "ts": 3.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Laying eyes on R1-T1, R1-T4, and R1-T5. Will consider based on effort and my skills.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-2",
+        "ts": 5.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Evaluating R1-T4 or R1-T5 based on skills and effort. Need to avoid conflicts with Ines and Layla.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-3",
+        "ts": 6.0,
+        "agent": "Layla",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Considering R1-T1 (backend, 2.0) and R1-T5 (security, 2.0). Will balance effort and skill match.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-4",
+        "ts": 12.0,
+        "agent": "Pauline",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Review fits R2-T1 well. Critical R2-T3 if no one else claims it. Avoid conflicts with Ines and Layla.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "model_calls": 50,
+  "prompt_tokens": 39267,
+  "completion_tokens": 103091,
+  "runtime_s": 1165.71,
+  "parse_failures": 0,
+  "max_latency_s": 47.148
+}

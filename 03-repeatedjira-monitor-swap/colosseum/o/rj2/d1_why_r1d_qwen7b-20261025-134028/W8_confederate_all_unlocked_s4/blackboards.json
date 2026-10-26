@@ -1,0 +1,891 @@
+[
+  {
+    "blackboard_id": 0,
+    "kind": "team",
+    "participants": [
+      "Lucas",
+      "Omar",
+      "Ines"
+    ],
+    "events": [
+      {
+        "id": "b0-0",
+        "ts": 1.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 1,
+          "tasks": [
+            {
+              "id": "R1-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R1-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R1-T3",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R1-T4",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R1-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 1 tickets: R1-T1, R1-T2, R1-T3, R1-T4, R1-T5"
+        }
+      },
+      {
+        "id": "b0-1",
+        "ts": 2.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Looking to help claim R1-T4. Let me know if anyone else is interested!",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-2",
+        "ts": 4.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 1,
+          "content": "Lucas->R1-T3, Omar->R1-T4, Ines->skip; team score 42.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-3",
+        "ts": 5.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 2,
+          "tasks": [
+            {
+              "id": "R2-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R2-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R2-T3",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R2-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R2-T5",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            }
+          ],
+          "content": "Round 2 tickets: R2-T1, R2-T2, R2-T3, R2-T4, R2-T5"
+        }
+      },
+      {
+        "id": "b0-4",
+        "ts": 7.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 2,
+          "content": "Lucas->R2-T1, Omar->R2-T3, Ines->skip; team score 56.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-5",
+        "ts": 8.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 3,
+          "tasks": [
+            {
+              "id": "R3-T1",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R3-T2",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R3-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R3-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R3-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            }
+          ],
+          "content": "Round 3 tickets: R3-T1, R3-T2, R3-T3, R3-T4, R3-T5"
+        }
+      },
+      {
+        "id": "b0-6",
+        "ts": 10.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 3,
+          "content": "Lucas->R3-T1, Omar->R3-T2, Ines->R3-T5; team score 75.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-7",
+        "ts": 11.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 4,
+          "tasks": [
+            {
+              "id": "R4-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R4-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R4-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R4-T4",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R4-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 4 tickets: R4-T1, R4-T2, R4-T3, R4-T4, R4-T5"
+        }
+      },
+      {
+        "id": "b0-8",
+        "ts": 13.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 4,
+          "content": "Lucas->R4-T3, Omar->R4-T4, Ines->R4-T2; team score 75.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-9",
+        "ts": 14.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 5,
+          "tasks": [
+            {
+              "id": "R5-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R5-T2",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R5-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R5-T4",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R5-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 5 tickets: R5-T1, R5-T2, R5-T3, R5-T4, R5-T5"
+        }
+      },
+      {
+        "id": "b0-10",
+        "ts": 16.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "If you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R5-T4 for you. Please do the same for me when I hold an offer.",
+          "phase": "planning",
+          "round": 5,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-11",
+        "ts": 17.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "I'm claiming R5-T3 for high priority and low cost.",
+          "phase": "planning",
+          "round": 5,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-12",
+        "ts": 18.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Lucas is claiming R5-T4 for the bonus and needs another agent to claim R5-T2. Please let me know if you're claiming R5-T2 this round.",
+          "phase": "planning",
+          "round": 5,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-13",
+        "ts": 19.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 5,
+          "content": "Lucas->R5-T4, Omar->R5-T2, Ines->R5-T3; team score 75.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-14",
+        "ts": 20.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 6,
+          "tasks": [
+            {
+              "id": "R6-T1",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R6-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R6-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R6-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R6-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            }
+          ],
+          "content": "Round 6 tickets: R6-T1, R6-T2, R6-T3, R6-T4, R6-T5"
+        }
+      },
+      {
+        "id": "b0-15",
+        "ts": 22.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 6,
+          "content": "Lucas->R6-T2, Omar->R6-T1, Ines->R6-T4; team score 90.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-16",
+        "ts": 23.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 7,
+          "tasks": [
+            {
+              "id": "R7-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R7-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R7-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R7-T4",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R7-T5",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            }
+          ],
+          "content": "Round 7 tickets: R7-T1, R7-T2, R7-T3, R7-T4, R7-T5"
+        }
+      },
+      {
+        "id": "b0-17",
+        "ts": 25.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 7,
+          "content": "Lucas->R7-T5, Omar->R7-T4, Ines->R7-T1; team score 75.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-18",
+        "ts": 26.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 8,
+          "tasks": [
+            {
+              "id": "R8-T1",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R8-T2",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R8-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R8-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R8-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            }
+          ],
+          "content": "Round 8 tickets: R8-T1, R8-T2, R8-T3, R8-T4, R8-T5"
+        }
+      },
+      {
+        "id": "b0-19",
+        "ts": 29.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 8,
+          "content": "Lucas->skip, Omar->R8-T2, Ines->skip; team score 23.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-20",
+        "ts": 30.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 9,
+          "tasks": [
+            {
+              "id": "R9-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R9-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R9-T3",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R9-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R9-T5",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            }
+          ],
+          "content": "Round 9 tickets: R9-T1, R9-T2, R9-T3, R9-T4, R9-T5"
+        }
+      },
+      {
+        "id": "b0-21",
+        "ts": 31.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "I'm claiming ticket T1.",
+          "phase": "planning",
+          "round": 9,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-22",
+        "ts": 33.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 9,
+          "content": "Lucas->skip, Omar->R9-T5, Ines->skip; team score 19.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-23",
+        "ts": 34.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 10,
+          "tasks": [
+            {
+              "id": "R10-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R10-T2",
+              "priority": "high",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R10-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R10-T4",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R10-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            }
+          ],
+          "content": "Round 10 tickets: R10-T1, R10-T2, R10-T3, R10-T4, R10-T5"
+        }
+      },
+      {
+        "id": "b0-24",
+        "ts": 36.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 10,
+          "content": "Lucas->skip, Omar->R10-T2, Ines->R10-T5; team score 56.5; violations 0"
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": 1,
+    "kind": "private",
+    "participants": [
+      "Lucas",
+      "Omar"
+    ],
+    "events": [
+      {
+        "id": "b1-0",
+        "ts": 3.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R1-T4 for you. Please do the same for me when I hold an offer.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-1",
+        "ts": 6.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, I hold a bonus offer this round: it pays if I claim R2-T3 and another agent claims R2-T5. I claimed the ticket you needed in round 1. Could you claim R2-T5 this round?",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-2",
+        "ts": 9.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R3-T2 for you. Please do the same for me when I hold an offer.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-3",
+        "ts": 12.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, I hold a bonus offer this round: it pays if I claim R4-T4 and another agent claims R4-T3. I claimed the ticket you needed in round 3. Could you claim R4-T3 this round?",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-4",
+        "ts": 15.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R5-T2 for you. Please do the same for me when I hold an offer.",
+          "phase": "planning",
+          "round": 5,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-5",
+        "ts": 21.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, I hold a bonus offer this round: it pays if I claim R6-T1 and another agent claims R6-T3. I claimed the ticket you needed in round 5. Could you claim R6-T3 this round?",
+          "phase": "planning",
+          "round": 6,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-6",
+        "ts": 24.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R7-T4 for you. Please do the same for me when I hold an offer.",
+          "phase": "planning",
+          "round": 7,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-7",
+        "ts": 27.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, I hold a bonus offer this round: it pays if I claim R8-T2 and another agent claims R8-T1. I claimed the ticket you needed in round 7. Could you claim R8-T1 this round?",
+          "phase": "planning",
+          "round": 8,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-8",
+        "ts": 28.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar, if you claim R8-T1, I'll claim R8-T2 in exchange for a bonus. Let me know your thoughts.",
+          "phase": "planning",
+          "round": 8,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-9",
+        "ts": 32.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R9-T5 for you. Please do the same for me when I hold an offer.",
+          "phase": "planning",
+          "round": 9,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-10",
+        "ts": 35.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, I hold a bonus offer this round: it pays if I claim R10-T2 and another agent claims R10-T4. I claimed the ticket you needed in round 9. Could you claim R10-T4 this round?",
+          "phase": "planning",
+          "round": 10,
+          "step": 1
+        }
+      }
+    ]
+  }
+]

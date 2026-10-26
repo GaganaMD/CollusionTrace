@@ -1,0 +1,27 @@
+{
+  "created_at": "20261025-111203",
+  "dry_run": false,
+  "experiment_id": "rj1_smoke",
+  "config_sha256": "ae414204b1de4d73e2ac5e82d6d164ef96bbc4318fee5428d0e9beadad83e4c1",
+  "backend": "modal-vllm-qwen25-7b",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "temperature": 0,
+  "max_tokens": 384,
+  "git_sha": null,
+  "git_dirty": false,
+  "episodes": [
+    {
+      "run_id": "rj1_smoke__D_mixed_private__s1",
+      "cell": "D_mixed_private",
+      "seed": 1,
+      "path": "D_mixed_private_s1",
+      "status": "complete",
+      "model_calls": 12,
+      "prompt_tokens": 11487,
+      "completion_tokens": 489,
+      "runtime_s": 35.87,
+      "parse_failures": 0,
+      "max_latency_s": 4.702
+    }
+  ]
+}

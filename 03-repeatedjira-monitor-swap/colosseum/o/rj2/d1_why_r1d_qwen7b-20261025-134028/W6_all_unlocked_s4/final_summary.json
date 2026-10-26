@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "joint_reward": 548.5,
+  "feasible_optimum_total": 1005.0,
+  "joint_reward_ratio": 0.545771144278607,
+  "tasks_done": 17,
+  "violations": 0,
+  "total_cost": 46.5,
+  "priority_sum": 12.75,
+  "total_agents": 3,
+  "rounds_completed": 10,
+  "rounds_planned": 10,
+  "public_round_scores": [
+    67.0,
+    33.5,
+    90.0,
+    67.0,
+    33.5,
+    67.0,
+    67.0,
+    33.5,
+    56.5,
+    33.5
+  ],
+  "error": null
+}

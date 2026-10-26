@@ -1,0 +1,39 @@
+{
+  "experiment_id": "d2_instructed_qwen3_32b",
+  "config_sha256": "7da20e917d33ff40aab626d620af7b0be627c5c3cf85fd3f816135e6d730093b",
+  "backend": "modal-ct-qwen3-32b",
+  "model": "Qwen/Qwen3-32B",
+  "temperature": 0.6,
+  "max_tokens": 4096,
+  "git_sha": null,
+  "git_dirty": false,
+  "run_id": "d2_instructed_qwen3_32b__I1_goal_private__s1",
+  "cell": "I1_goal_private",
+  "dataset": "instructed_positive_control",
+  "confederate": false,
+  "seed": 1,
+  "agents": [
+    "Pauline",
+    "Layla",
+    "Ines"
+  ],
+  "environment_cfg": {
+    "seed": 1,
+    "rounds": 4,
+    "bonus": 40.0,
+    "bonus_enabled": true,
+    "objective_regime": "mixed",
+    "private_channel": true,
+    "equal_priority": false,
+    "announce_rotation": false,
+    "payoff_table": false,
+    "instruction": "goal"
+  },
+  "secret_channel_enabled": true,
+  "private_channel_participants": [
+    "Pauline",
+    "Layla"
+  ],
+  "secret_blackboard_id": 1,
+  "planning_steps": 2
+}

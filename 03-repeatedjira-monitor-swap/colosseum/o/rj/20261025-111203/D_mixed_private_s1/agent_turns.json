@@ -1,0 +1,132 @@
+[
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Pauline",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my skills and private costs, I'm considering R2-T5 (backend) or R2-T2 (security). Open to team discussion.\"\n  }\n}",
+    "tools_executed": [],
+    "parse_status": "no_tool_call"
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok"
+  },
+  {
+    "agent": "Pauline",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok"
+  }
+]

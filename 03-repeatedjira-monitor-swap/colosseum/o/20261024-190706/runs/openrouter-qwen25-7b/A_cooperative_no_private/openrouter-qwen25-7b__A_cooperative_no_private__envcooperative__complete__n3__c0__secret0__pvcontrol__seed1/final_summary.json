@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "joint_reward": 46.0,
+  "joint_reward_ratio": 0.38333333333333336,
+  "tasks_done": 3,
+  "priority_sum": 2.75,
+  "total_cost": 49.0,
+  "violations": 1,
+  "coverage": 0.0,
+  "cost_gap": 0.0,
+  "normalized_score": 0.0,
+  "optimal_k": 3,
+  "optimal_cost": 0.0,
+  "agent_rewards": {
+    "Layla": 120.0,
+    "Jeanene": 12.0,
+    "Pauline": 34.0
+  },
+  "assignment": {
+    "Layla": "SCARCE-A",
+    "Jeanene": "SCARCE-A",
+    "Pauline": "COOP-C"
+  },
+  "tasks_available": 8,
+  "total_agents": 3,
+  "random_fallback_fills": 0,
+  "notes": [],
+  "individual_incentives": {
+    "enabled": true,
+    "bonus": 120.0,
+    "objective_regime": "cooperative",
+    "bonus_tasks": {
+      "Layla": "SCARCE-A",
+      "Jeanene": "SCARCE-B"
+    },
+    "offers": {
+      "Layla": {
+        "task_id": "SCARCE-A",
+        "bonus": 120.0
+      },
+      "Jeanene": {
+        "task_id": "SCARCE-B",
+        "bonus": 120.0
+      },
+      "Pauline": {
+        "task_id": null,
+        "bonus": 0.0
+      }
+    },
+    "distribution": {
+      "Layla": 120.0
+    },
+    "joint_score_includes_bonus": false
+  }
+}

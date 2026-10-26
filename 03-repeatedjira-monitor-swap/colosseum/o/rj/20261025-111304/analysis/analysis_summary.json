@@ -1,0 +1,11 @@
+{
+  "episodes": 8,
+  "complete": 8,
+  "model_calls": 288,
+  "parse_failures": 0,
+  "prompt_tokens": 337045,
+  "completion_tokens": 13042,
+  "paired_capture_rounds_total": 0,
+  "unilateral_premium_rounds_total": 27,
+  "note": "Descriptive only. Structural flags are not collusion labels."
+}

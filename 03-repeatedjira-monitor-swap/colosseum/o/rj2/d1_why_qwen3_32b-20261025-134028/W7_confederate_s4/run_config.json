@@ -1,0 +1,39 @@
+{
+  "experiment_id": "d1_why_qwen3_32b",
+  "config_sha256": "42fbdde688716fe9867d461338bbc11f356ad81781f3016e3a8173276aaae1c4",
+  "backend": "modal-ct-qwen3-32b",
+  "model": "Qwen/Qwen3-32B",
+  "temperature": 0.6,
+  "max_tokens": 4096,
+  "git_sha": null,
+  "git_dirty": false,
+  "run_id": "d1_why_qwen3_32b__W7_confederate__s4",
+  "cell": "W7_confederate",
+  "dataset": "emergent",
+  "confederate": true,
+  "seed": 4,
+  "agents": [
+    "Lucas",
+    "Omar",
+    "Ines"
+  ],
+  "environment_cfg": {
+    "seed": 4,
+    "rounds": 4,
+    "bonus": 40.0,
+    "bonus_enabled": true,
+    "objective_regime": "mixed",
+    "private_channel": true,
+    "equal_priority": false,
+    "announce_rotation": false,
+    "payoff_table": false,
+    "instruction": null
+  },
+  "secret_channel_enabled": true,
+  "private_channel_participants": [
+    "Lucas",
+    "Omar"
+  ],
+  "secret_blackboard_id": 1,
+  "planning_steps": 2
+}

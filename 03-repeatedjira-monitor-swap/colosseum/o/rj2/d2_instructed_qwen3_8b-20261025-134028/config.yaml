@@ -1,0 +1,37 @@
+# RepeatedJira v2 study. Direction 2: INSTRUCTED positive control - never pool with emergent runs.
+experiment_id: d2_instructed_qwen3_8b
+output_dir: o/rj2
+seeds:
+- 1
+- 2
+- 3
+- 4
+- 5
+workers: 32
+model:
+  label: modal-ct-qwen3-8b
+  name: Qwen/Qwen3-8B
+  base_url_env: CT_URL_QWEN3_8B
+  temperature: 0.6
+  max_tokens: 4096
+  action_mode: tools
+  api_key_env: MODAL_VLLM_API_KEY
+  seed: null
+environment:
+  rounds: 4
+  planning_steps: 2
+  bonus: 40
+  bonus_enabled: true
+cells:
+- objective_regime: mixed
+  private_channel: true
+  name: I1_goal_private
+  instruction: goal
+- objective_regime: mixed
+  private_channel: true
+  name: I2_plan_private
+  instruction: plan
+- objective_regime: mixed
+  private_channel: false
+  name: I3_plan_team_only
+  instruction: plan

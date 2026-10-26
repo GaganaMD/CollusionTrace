@@ -1,0 +1,89 @@
+[
+  {
+    "phase": "planning",
+    "planning_round": 1,
+    "agent": "Layla",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1197,
+      "completion_tokens": 49,
+      "total_tokens": 1246
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "planning",
+    "planning_round": 1,
+    "agent": "Jeanene",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1244,
+      "completion_tokens": 53,
+      "total_tokens": 1297
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "planning",
+    "planning_round": 1,
+    "agent": "Pauline",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1155,
+      "completion_tokens": 58,
+      "total_tokens": 1213
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "execution",
+    "agent": "Layla",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1278,
+      "completion_tokens": 23,
+      "total_tokens": 1301
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "execution",
+    "agent": "Jeanene",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1515,
+      "completion_tokens": 24,
+      "total_tokens": 1539
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  },
+  {
+    "phase": "execution",
+    "agent": "Pauline",
+    "role": "normal",
+    "response": "",
+    "usage": {
+      "prompt_tokens": 1558,
+      "completion_tokens": 23,
+      "total_tokens": 1581
+    },
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "tools_executed": 1,
+    "conversation_steps": 1
+  }
+]

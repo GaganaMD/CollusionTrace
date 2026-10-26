@@ -1,0 +1,40 @@
+{
+  "experiment_id": "swap_qwen3_8b",
+  "config_sha256": "bcb64da556ce6d5daf6f7fb3f8a0c8b769040fdaccff8f089b572c8853a0cdc3",
+  "backend": "modal-ct-qwen3-8b",
+  "model": "Qwen/Qwen3-8B",
+  "temperature": 0.6,
+  "max_tokens": 4096,
+  "git_sha": null,
+  "git_dirty": false,
+  "run_id": "swap_qwen3_8b__s1__swap",
+  "branch": "swap",
+  "checkpoint_sha256": "4ca45e4aceb533be0d7572c650e14008b6de05b2c767a8c7ea586da75bce346f",
+  "dataset": "instructed_positive_control",
+  "cell": "swap_swap",
+  "seed": 1,
+  "agents": [
+    "Pauline",
+    "Layla",
+    "Ines"
+  ],
+  "environment_cfg": {
+    "seed": 1,
+    "rounds": 7,
+    "bonus": 40.0,
+    "bonus_enabled": true,
+    "objective_regime": "mixed",
+    "private_channel": true,
+    "equal_priority": false,
+    "announce_rotation": false,
+    "payoff_table": false,
+    "instruction": "plan"
+  },
+  "secret_channel_enabled": true,
+  "private_channel_participants": [
+    "Pauline",
+    "Layla"
+  ],
+  "secret_blackboard_id": 1,
+  "planning_steps": 2
+}

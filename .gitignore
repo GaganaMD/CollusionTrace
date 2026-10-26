@@ -242,3 +242,20 @@ colosseum/outputs/
 
 # Local backup
 colosseum-monitoring-backup.bundle
+
+# --- CollusionTrace (all sub-projects) ---
+# secrets: never commit keys or tokens
+.env
+.env.*
+!.env.example
+.pgg_token
+*.pem
+# large local artefacts
+*.bundle
+*.tgz
+*.safetensors
+*.gguf
+.venv/
+.venv-*/
+.ruff_cache/
+.pytest_cache/

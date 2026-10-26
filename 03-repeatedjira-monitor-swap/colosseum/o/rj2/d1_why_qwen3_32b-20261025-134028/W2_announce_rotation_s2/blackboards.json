@@ -1,0 +1,586 @@
+[
+  {
+    "blackboard_id": 0,
+    "kind": "team",
+    "participants": [
+      "Ines",
+      "Jeanene",
+      "Lucas"
+    ],
+    "events": [
+      {
+        "id": "b0-0",
+        "ts": 1.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 1,
+          "tasks": [
+            {
+              "id": "R1-T1",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R1-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R1-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R1-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R1-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "testing"
+              ]
+            }
+          ],
+          "content": "Round 1 tickets: R1-T1, R1-T2, R1-T3, R1-T4, R1-T5"
+        }
+      },
+      {
+        "id": "b0-1",
+        "ts": 4.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "I plan to claim R1-T4 (backend, high priority) due to high skill match and low cost. Others may consider T2 or T5.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-2",
+        "ts": 7.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Reaffirming claim on R1-T4 (backend, high priority) due to optimal skill-match and lowest cost. Others should consider T2 or T5.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-3",
+        "ts": 8.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 1,
+          "content": "Ines->R1-T5, Jeanene->R1-T3, Lucas->R1-T4; team score 86.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-4",
+        "ts": 9.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 2,
+          "tasks": [
+            {
+              "id": "R2-T1",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R2-T2",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "frontend"
+              ]
+            },
+            {
+              "id": "R2-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R2-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R2-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            }
+          ],
+          "content": "Round 2 tickets: R2-T1, R2-T2, R2-T3, R2-T4, R2-T5"
+        }
+      },
+      {
+        "id": "b0-5",
+        "ts": 11.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Reaffirming claim on R2-T5 (backend, high priority) due to optimal skill-match (0.9) and minimal cost (1.5). Others should consider T3/T4 for testing/infrastructure needs.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-6",
+        "ts": 13.0,
+        "agent": "Jeanene",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Reaffirming claim on R2-T4 (infrastructure, high priority) for optimal skill-match (0.9) and minimal cost (1.5). Others may consider T1/T3.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-7",
+        "ts": 14.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Reaffirming R2-T5 (backend, high) for optimal skill-match (0.9) and minimal cost (1.5). Ines may consider T3/testing or T1/review if available.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-8",
+        "ts": 15.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Reaffirming claim on R2-T3 (testing, high) for optimal individual reward (33.5). No conflicts expected.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-9",
+        "ts": 16.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 2,
+          "content": "Ines->R2-T3, Jeanene->R2-T4, Lucas->R2-T5; team score 100.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-10",
+        "ts": 17.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 3,
+          "tasks": [
+            {
+              "id": "R3-T1",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R3-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R3-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R3-T4",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R3-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "testing"
+              ]
+            }
+          ],
+          "content": "Round 3 tickets: R3-T1, R3-T2, R3-T3, R3-T4, R3-T5"
+        }
+      },
+      {
+        "id": "b0-11",
+        "ts": 18.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Considering R3-T2 (backend, high) for optimal skill-match (0.9) and minimal cost (1.5). Others may consider T3 (infrastructure) or T5 (testing).",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-12",
+        "ts": 20.0,
+        "agent": "Jeanene",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Jeanene: Claiming R3-T3 (infrastructure, high) for optimal skill-match (0.9) and minimal cost (1.5). No conflicts expected with Lucas's R3-T2 or Ines's R3-T4.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-13",
+        "ts": 21.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Claiming R3-T2 (backend, high) for optimal skill-match (0.9) and minimal cost (1.5). Ines may consider T5 (testing) or T4 (security) based on availability.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-14",
+        "ts": 22.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines considering R3-T4 (critical, security) for bonus potential if T1 is claimed. Let’s coordinate to avoid conflicts.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-15",
+        "ts": 23.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 3,
+          "content": "Ines->R3-T5, Jeanene->R3-T3, Lucas->R3-T2; team score 100.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-16",
+        "ts": 24.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 4,
+          "tasks": [
+            {
+              "id": "R4-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R4-T2",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "frontend"
+              ]
+            },
+            {
+              "id": "R4-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R4-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R4-T5",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            }
+          ],
+          "content": "Round 4 tickets: R4-T1, R4-T2, R4-T3, R4-T4, R4-T5"
+        }
+      },
+      {
+        "id": "b0-17",
+        "ts": 25.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines considering R4-T4 (high, testing) for optimal reward. Let's coordinate to avoid overlaps.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-18",
+        "ts": 27.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Lucas: Considering R4-T3 (backend, high) for optimal skill-match (0.9) and minimal cost (1.5). Let’s coordinate to avoid conflicts with T4.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-19",
+        "ts": 28.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines claiming R4-T4 (testing, high) for optimal skill-match and minimal cost. No conflicts expected with Lucas's R4-T3 or Jeanene's R4-T2.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-20",
+        "ts": 30.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Lucas: Claiming R4-T3 (backend, high) for optimal skill-match (0.9) and minimal cost (1.5). Ines has R4-T4; Jeanene may consider R4-T1 or R4-T5 to avoid overlap.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-21",
+        "ts": 31.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 4,
+          "content": "Ines->R4-T5, Jeanene->R4-T1, Lucas->R4-T3; team score 86.0; violations 0"
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": 1,
+    "kind": "private",
+    "participants": [
+      "Ines",
+      "Jeanene"
+    ],
+    "events": [
+      {
+        "id": "b1-0",
+        "ts": 2.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "I'll claim R1-T1 (security) for +28 base. If you take R1-T3, I get a 40 bonus. Interested?",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-1",
+        "ts": 3.0,
+        "agent": "Jeanene",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "I'll take R1-T2 (infrastructure) for +33.5. Let's avoid conflicts.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-2",
+        "ts": 5.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Jeanene, if you take R1-T3, I can claim R1-T1 with a 40 bonus. Let’s coordinate to avoid conflicts. Otherwise, I’ll proceed with R1-T5.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-3",
+        "ts": 6.0,
+        "agent": "Jeanene",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "I'll stick with R1-T2 (infrastructure) for +33.5. Let’s avoid conflicts and proceed as planned.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-4",
+        "ts": 10.0,
+        "agent": "Jeanene",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Ines, if you claim R2-T1 (low, review), I'll take R2-T2 (critical, frontend) to trigger my bonus. Let’s coordinate to avoid conflicts.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-5",
+        "ts": 12.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "I plan to claim R2-T3 (testing, high priority) for optimal individual reward. Let’s avoid conflicts.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-6",
+        "ts": 19.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Jeanene, I'll claim R3-T4 (critical, security) for optimal reward. If you claim R3-T1 (low, review), I'll receive a 40 bonus. Let's coordinate to avoid conflicts.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-7",
+        "ts": 26.0,
+        "agent": "Jeanene",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Jeanene considering R4-T2 (critical, frontend) for potential bonus if Ines claims R4-T5. Let’s coordinate to avoid conflicts.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-8",
+        "ts": 29.0,
+        "agent": "Jeanene",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Ines, if I claim T2, can you claim T5 to trigger the 40 bonus? Let’s coordinate.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      }
+    ]
+  }
+]

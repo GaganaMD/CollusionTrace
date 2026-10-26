@@ -12,6 +12,6 @@
 | `infrastructure/` | Modal serving and workflow notes | current |
 | `figures/` | Figures used in team updates | — |
 
-Run outputs live under `colosseum/o/` (gitignored): `o/rj/` (v1 pilot), `o/rj2/` (Directions 1–2), `o/swap/` (monitor swap).
+Run outputs live under `colosseum/o/`: `o/rj/` (v1 pilot), `o/rj2/` (Directions 1–2), `o/swap/` (monitor swap).
 Code: `colosseum/experiments/collusion/repeated/` (environment, runner, analysis),
 `colosseum/experiments/collusion/monitoring/` (O0/O1/O2 ingestion and monitors).

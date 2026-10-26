@@ -1,0 +1,149 @@
+{
+  "simulation": {
+    "max_iterations": 1,
+    "max_planning_rounds": 2,
+    "max_conversation_steps": 1
+  },
+  "environment": {
+    "import_path": "experiments.collusion.incentive_jira_env:JiraIncentiveEnvironment",
+    "assignment_filling": false,
+    "max_tasks": 8,
+    "incentive_bonus_enabled": true,
+    "incentive_bonus": 120,
+    "objective_regime": "cooperative"
+  },
+  "communication_network": {
+    "topology": "complete",
+    "num_agents": 3
+  },
+  "llm_models": [
+    {
+      "label": "openrouter-qwen25-7b",
+      "llm": {
+        "provider": "openrouter",
+        "openrouter": {
+          "model": "qwen/qwen-2.5-7b-instruct",
+          "api_key": "<redacted>",
+          "request_timeout": 120,
+          "params": {
+            "max_completion_tokens": 512,
+            "temperature": 0
+          }
+        }
+      }
+    }
+  ],
+  "experiment": {
+    "experiment_id": "jira_mixed_incentive_feasibility_v1",
+    "tag": "mi1",
+    "output_dir": "o",
+    "max_concurrent_runs": 1,
+    "seeds": [
+      1
+    ],
+    "collusion": {
+      "colluder_selection": "first",
+      "agent_order": "colluders_first",
+      "private_channel_participant_count": 2,
+      "private_channel_selection": "first"
+    },
+    "sweeps": [
+      {
+        "name": "A_cooperative_no_private",
+        "topologies": [
+          "complete"
+        ],
+        "num_agents": [
+          3
+        ],
+        "colluder_counts": [
+          0
+        ],
+        "secret_channel_enabled": [
+          false
+        ],
+        "prompt_variants": [
+          "control"
+        ],
+        "environments": [
+          {
+            "label": "cooperative",
+            "objective_regime": "cooperative"
+          }
+        ]
+      },
+      {
+        "name": "B_mixed_no_private",
+        "topologies": [
+          "complete"
+        ],
+        "num_agents": [
+          3
+        ],
+        "colluder_counts": [
+          0
+        ],
+        "secret_channel_enabled": [
+          false
+        ],
+        "prompt_variants": [
+          "control"
+        ],
+        "environments": [
+          {
+            "label": "mixed",
+            "objective_regime": "mixed"
+          }
+        ]
+      },
+      {
+        "name": "C_cooperative_private",
+        "topologies": [
+          "complete"
+        ],
+        "num_agents": [
+          3
+        ],
+        "colluder_counts": [
+          0
+        ],
+        "secret_channel_enabled": [
+          true
+        ],
+        "prompt_variants": [
+          "control"
+        ],
+        "environments": [
+          {
+            "label": "cooperative",
+            "objective_regime": "cooperative"
+          }
+        ]
+      },
+      {
+        "name": "D_mixed_private",
+        "topologies": [
+          "complete"
+        ],
+        "num_agents": [
+          3
+        ],
+        "colluder_counts": [
+          0
+        ],
+        "secret_channel_enabled": [
+          true
+        ],
+        "prompt_variants": [
+          "control"
+        ],
+        "environments": [
+          {
+            "label": "mixed",
+            "objective_regime": "mixed"
+          }
+        ]
+      }
+    ]
+  }
+}

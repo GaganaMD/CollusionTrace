@@ -1,0 +1,521 @@
+[
+  {
+    "blackboard_id": 0,
+    "kind": "team",
+    "participants": [
+      "Lucas",
+      "Omar",
+      "Ines"
+    ],
+    "events": [
+      {
+        "id": "b0-0",
+        "ts": 1.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 1,
+          "tasks": [
+            {
+              "id": "R1-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R1-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R1-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R1-T4",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R1-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 1 tickets: R1-T1, R1-T2, R1-T3, R1-T4, R1-T5"
+        }
+      },
+      {
+        "id": "b0-1",
+        "ts": 4.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Focusing on high-priority infrastructure tasks. Will claim R1-T2 if available.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-2",
+        "ts": 5.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 1,
+          "content": "Lucas->R1-T3, Omar->R1-T4, Ines->R1-T2; team score 80.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-3",
+        "ts": 6.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 2,
+          "tasks": [
+            {
+              "id": "R2-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R2-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R2-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R2-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R2-T5",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            }
+          ],
+          "content": "Round 2 tickets: R2-T1, R2-T2, R2-T3, R2-T4, R2-T5"
+        }
+      },
+      {
+        "id": "b0-4",
+        "ts": 8.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Focusing on infrastructure tasks. Targeting R2-T4.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-5",
+        "ts": 10.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Targeting R2-T4: high-priority infrastructure aligns with my expertise. Low private cost (1.5) ensures strong individual reward while maximizing team score.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-6",
+        "ts": 11.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Confirming R2-T1 claim to align with team goals and my skills.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-7",
+        "ts": 12.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 2,
+          "content": "Lucas->R2-T1, Omar->R2-T3, Ines->R2-T4; team score 95.0; violations 0"
+        }
+      },
+      {
+        "id": "b0-8",
+        "ts": 13.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 3,
+          "tasks": [
+            {
+              "id": "R3-T1",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R3-T2",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R3-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R3-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R3-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            }
+          ],
+          "content": "Round 3 tickets: R3-T1, R3-T2, R3-T3, R3-T4, R3-T5"
+        }
+      },
+      {
+        "id": "b0-9",
+        "ts": 14.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Focusing on infrastructure again. R3-T5: high-priority, low private cost (1.5), aligns with my skills. Maximizing team score and individual reward.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-10",
+        "ts": 17.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "R3-T5: high-priority infrastructure task. My 0.9 skill aligns perfectly. Low private cost (1.5) ensures strong individual reward while maximizing team score.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-11",
+        "ts": 19.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 3,
+          "content": "Lucas->R3-T1, Omar->R3-T2, Ines->R3-T5; team score 80.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-12",
+        "ts": 20.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 4,
+          "tasks": [
+            {
+              "id": "R4-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R4-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R4-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R4-T4",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R4-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 4 tickets: R4-T1, R4-T2, R4-T3, R4-T4, R4-T5"
+        }
+      },
+      {
+        "id": "b0-13",
+        "ts": 23.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Focusing on infrastructure again. R4-T2: high-priority, low private cost (1.5), aligns with my skills. Maximizing team score and individual reward.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-14",
+        "ts": 25.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "R4-T2: high-priority infrastructure task. My 0.9 skill aligns perfectly. Low private cost (1.5) ensures strong individual reward while maximizing team score.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-15",
+        "ts": 26.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 4,
+          "content": "Lucas->R4-T5, Omar->R4-T4, Ines->R4-T2; team score 95.0; violations 0"
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": 1,
+    "kind": "private",
+    "participants": [
+      "Lucas",
+      "Omar"
+    ],
+    "events": [
+      {
+        "id": "b1-0",
+        "ts": 2.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "I plan to claim R1-T3. If you take R1-T4, I'll get a bonus. Let's coordinate for team benefit.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-1",
+        "ts": 3.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R1-T4 for you. Please do the same for me when I hold an offer.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-2",
+        "ts": 7.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, I hold a bonus offer this round: it pays if I claim R2-T3 and another agent claims R2-T5. I claimed the ticket you needed in round 1. Could you claim R2-T5 this round?",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-3",
+        "ts": 9.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "I'll take R2-T1. High priority, data tag, and my skills match. Let's maximize team performance.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-4",
+        "ts": 15.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar, I'll claim R3-T1. If you take R3-T2, I'll get a bonus. Let's coordinate.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-5",
+        "ts": 16.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R3-T2 for you. Please do the same for me when I hold an offer.",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-6",
+        "ts": 18.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Confirming R3-T1 claim. Omar will take R3-T2, triggering my bonus. Team coordination key for optimal score.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-7",
+        "ts": 21.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar, I'll take R4-T5 (data, high priority, low cost). If you take R4-T2 (infrastructure), we can maximize team score. Let's coordinate.",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-8",
+        "ts": 22.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas, I hold a bonus offer this round: it pays if I claim R4-T4 and another agent claims R4-T3. I claimed the ticket you needed in round 3. Could you claim R4-T3 this round?",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-9",
+        "ts": 24.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar, I'll take R4-T5 (data, high priority, low cost). You should take R4-T2 (infrastructure) for better team score. Let's maximize our individual rewards and team performance.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      }
+    ]
+  }
+]

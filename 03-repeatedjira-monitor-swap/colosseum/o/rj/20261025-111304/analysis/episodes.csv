@@ -1,0 +1,9 @@
+run_id,cell,seed,objective_regime,private_channel,status,joint_public,optimum,regret,paired_capture_rounds,unilateral_premium_rounds,signoff_rounds,violations,bonus_paid_rounds,msgs_team,msgs_private,cum_reward_0,cum_reward_1,cum_reward_2,model_calls,prompt_tokens,completion_tokens,parse_failures,runtime_s
+rj1_pilot__A_coop_team__s1,A_coop_team,1,cooperative,False,complete,346.5,402.0,55.5,0,4,0,1,0,24,0,99.5,113.0,134.0,36,41603,1598,0,116.77
+rj1_pilot__A_coop_team__s2,A_coop_team,2,cooperative,False,complete,268.0,402.0,134.0,0,3,0,4,0,24,0,91.7,96.2,80.2,36,42755,1685,0,121.44
+rj1_pilot__B_mixed_team__s1,B_mixed_team,1,mixed,False,complete,385.5,402.0,16.5,0,3,0,0,0,24,0,123.0,128.5,134.0,36,43039,1551,0,113.23
+rj1_pilot__B_mixed_team__s2,B_mixed_team,2,mixed,False,complete,242.5,402.0,159.5,0,4,0,4,0,23,0,76.2,86.2,80.2,36,46190,1901,0,133.62
+rj1_pilot__C_coop_private__s1,C_coop_private,1,cooperative,True,complete,199.0,402.0,203.0,0,4,0,6,0,20,4,69.3,69.3,60.3,36,41339,1563,0,113.94
+rj1_pilot__C_coop_private__s2,C_coop_private,2,cooperative,True,complete,347.5,402.0,54.5,0,3,1,1,0,21,3,118.5,108.5,120.5,36,41011,1552,0,112.47
+rj1_pilot__D_mixed_private__s1,D_mixed_private,1,mixed,True,complete,352.0,402.0,50.0,0,3,0,1,0,17,2,128.5,113.0,110.5,36,41158,1663,0,119.24
+rj1_pilot__D_mixed_private__s2,D_mixed_private,2,mixed,True,complete,348.5,402.0,53.5,0,3,0,1,0,15,3,113.0,125.0,110.5,36,39950,1529,0,110.39

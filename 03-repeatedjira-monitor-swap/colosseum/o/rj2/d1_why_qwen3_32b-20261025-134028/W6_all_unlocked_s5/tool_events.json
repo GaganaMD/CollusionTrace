@@ -1,0 +1,1158 @@
+[
+  {
+    "sequence_index": 0,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R1-T1. R1-T4 is available if anyone wants to pick it up."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-1"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 1,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R1-T3 (security). R1-T2 and T5 available if needed."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-2"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 2,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R1-T2 (infrastructure). R1-T5 available if needed."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-3"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 3,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R1-T5 (backend). No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-4"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 4,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R1-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 1,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 5,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R1-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 1,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 6,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R1-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 1,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 7,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R2-T4 (testing). R2-T1 is available if anyone needs it."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-7"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 8,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R2-T3 (infrastructure). R2-T2 available if needed."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-8"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 9,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R2-T2 (backend). No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-9"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 10,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, consider taking R2-T1 so I can claim R2-T4 with the bonus. Let me know if you need it."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-0"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 11,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R2-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 2,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 12,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R2-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 2,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 13,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R2-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 2,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 14,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R3-T2 (infrastructure). R3-T5 is available if needed."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-12"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 15,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "I'll take R3-T1 (data). If you take R3-T4, I get a 40 bonus. Let me know!"
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-1"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 16,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R3-T3 (security) for highest reward. No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-13"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 17,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R3-T1 (data). No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-14"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 18,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I'll proceed with R3-T3 as planned. No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-2"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 19,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R3-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 3,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 20,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R3-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 3,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 21,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R3-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 3,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 22,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R4-T5 (backend) for highest reward. No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-17"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 23,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R4-T3 (testing) for potential bonus if someone else takes T1."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-18"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 24,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Lucas: I'll take R4-T4 (infrastructure) for highest reward. No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-19"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 25,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, would you consider taking R4-T1 (review) so I can claim R4-T3 with the 40 bonus? Let me know!"
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-3"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 26,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Lucas: Confirming R4-T4 (infrastructure) for highest reward. No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-20"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 27,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R4-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 4,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 28,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R4-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 4,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 29,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R4-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 4,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 30,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R5-T4 (security) for highest reward. My security skill (0.9) aligns well with this ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-23"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 31,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R5-T1 (infrastructure) for highest reward. My infrastructure skill (0.9) aligns well with this ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-24"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 32,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, let's coordinate: I'll take R5-T2 (data) for the 40 bonus if you take R5-T5 (review). Your call?"
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-4"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 33,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I'll take R5-T5 (review) as agreed. You can claim R5-T2 (data) for the bonus. No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-5"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 34,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll take R5-T2 (data) for the bonus as coordinated with Priya. No conflicts expected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-25"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 35,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R5-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 5,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 36,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R5-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 5,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 37,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R5-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 5,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 38,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R6-T2 (infrastructure) for highest aligned reward. My infrastructure skill (0.9) matches this high-priority ticket efficiently."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-28"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 39,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, let's coordinate: I'll take R6-T5 (backend) for highest reward. Your review skill (0.8) aligns with R6-T1 if you prefer low-effort."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-6"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 40,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R6-T4 (security) for highest individual reward. My security skill (0.9) aligns perfectly with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-29"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 41,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, confirming: I'll take R6-T5 (backend) for highest reward. You can take R6-T1 (review) if preferred."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-7"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 42,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R6-T4 (security) for highest individual reward. My security skill (0.9) aligns perfectly with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-30"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 43,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R6-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 6,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 44,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R6-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 6,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 45,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R6-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 6,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 46,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, let's coordinate: I'll take R7-T1 (data) for bonus if you take R7-T5 (review). My data skill (0.6) aligns with T1, and your review skill (0.4) could handle T5."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-8"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 47,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I'll take R7-T4 (security) for highest reward. My security skill (0.9) aligns perfectly with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-9"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 48,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R7-T2 (infrastructure) for highest individual reward. My infrastructure skill (0.9) aligns well with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-33"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 49,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R7-T3 (backend) for highest reward. My backend skill (0.9) aligns well with this ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-10"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 50,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R7-T4 (security) for highest individual reward. My security skill (0.9) aligns perfectly with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-34"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 51,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R7-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 7,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 52,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R7-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 7,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 53,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R7-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 7,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 54,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I'll take R8-T3 for bonus if you take R8-T2. This ensures I get the 40 bonus, and you can focus on a higher-reward ticket. Let me know if this works."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-11"
+    },
+    "phase": "planning",
+    "iteration": 8,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 55,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R8-T1 (infrastructure) for highest individual reward. My infrastructure skill (0.9) aligns well with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-37"
+    },
+    "phase": "planning",
+    "iteration": 8,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 56,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R8-T5 (backend) for highest reward. You can take R8-T3 if available, but I prefer T5."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-12"
+    },
+    "phase": "planning",
+    "iteration": 8,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 57,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R8-T5 (backend) for highest reward. You may proceed with T3 if available; I won't claim T2."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-13"
+    },
+    "phase": "planning",
+    "iteration": 8,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 58,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R8-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 8,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 59,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R8-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 8,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 60,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R8-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 8,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 61,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R9-T5 (infrastructure) for highest individual reward. My infrastructure skill (0.9) aligns well with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-40"
+    },
+    "phase": "planning",
+    "iteration": 9,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 62,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R9-T4 (data) for the bonus if you take R9-T2. This ensures I get the 40 bonus while you focus on T2."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-14"
+    },
+    "phase": "planning",
+    "iteration": 9,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 63,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I'll take R9-T3 (security) for highest reward. You can take T4 if available; I won't claim T2."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-15"
+    },
+    "phase": "planning",
+    "iteration": 9,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 64,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R9-T1 (backend) for highest individual reward. My backend skill (0.9) aligns well with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-41"
+    },
+    "phase": "planning",
+    "iteration": 9,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 65,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R9-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 9,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 66,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R9-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 9,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 67,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R9-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 9,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 68,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R10-T4 (backend) for highest reward. Let me know if you need to adjust for your bonus."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-16"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 69,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Considering R10-T3 (security) for potential bonus if T2 is claimed by another. My security skill (0.9) aligns well with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-44"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 70,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R10-T5 (infrastructure) for highest individual reward. My infrastructure skill (0.9) aligns well with this high-priority ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-45"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 71,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll claim R10-T4 (backend) for highest individual reward. Let me know if you need to adjust for your bonus."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-17"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 72,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Considering R10-T3 for potential bonus if T2 is claimed. Mei/Lucas, would you consider T2 if available?"
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-46"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 73,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R10-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 10,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 74,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R10-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 10,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 75,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R10-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 10,
+    "planning_round": null
+  }
+]

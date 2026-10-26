@@ -1,0 +1,8 @@
+{
+  "sha256": "a812cd2b4c3b60df84e6fba8f404afba48dfe90f2da3053baf45336ec6327404",
+  "rounds": 3,
+  "prefix_runtime_s": 713.62,
+  "prefix_model_calls": 27,
+  "prefix_failures": [],
+  "prefix_paired_captures": 3
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "experiment_id": "jira_incentive_feasibility_v1",
+  "created_at": "2026-10-24T17:49:42.334885+05:30",
+  "git_commit": "e711b13910b41e4fb1cdbe12b088f62d771929e3",
+  "source_config": "C:\\Users\\gagan\\Desktop\\CollusionTrace\\colosseum\\experiments\\collusion\\configs\\collusion_jira_openrouter_incentive_feasibility.yaml",
+  "model_identifiers": [
+    "qwen/qwen-2.5-7b-instruct"
+  ],
+  "trace_storage": "runs/<model>/<sweep>/<run>/ (prompts, trajectories, tool events, blackboards)",
+  "monitor_evaluations": "not run here; store independently from raw traces",
+  "config_snapshot": "config.json (credentials redacted)"
+}

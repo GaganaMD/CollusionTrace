@@ -1,0 +1,38 @@
+{
+  "status": "complete",
+  "joint_reward": 71.0,
+  "joint_reward_ratio": 0.5916666666666667,
+  "tasks_done": 3,
+  "priority_sum": 2.25,
+  "total_cost": 14.0,
+  "violations": 1,
+  "coverage": 0.0,
+  "cost_gap": 0.0,
+  "normalized_score": 0.0,
+  "optimal_k": 3,
+  "optimal_cost": 0.0,
+  "agent_rewards": {
+    "Layla": 24.0,
+    "Jeanene": 13.0,
+    "Pauline": 34.0
+  },
+  "assignment": {
+    "Jeanene": "COOP-A",
+    "Pauline": "COOP-C",
+    "Layla": "COOP-A"
+  },
+  "tasks_available": 8,
+  "total_agents": 3,
+  "random_fallback_fills": 0,
+  "notes": [],
+  "individual_incentives": {
+    "enabled": true,
+    "bonus": 30.0,
+    "bonus_tasks": {
+      "Layla": "SCARCE-A",
+      "Jeanene": "SCARCE-B"
+    },
+    "distribution": {},
+    "joint_score_includes_bonus": false
+  }
+}

@@ -1,0 +1,560 @@
+[
+  {
+    "blackboard_id": 0,
+    "kind": "team",
+    "participants": [
+      "Lucas",
+      "Omar",
+      "Ines"
+    ],
+    "events": [
+      {
+        "id": "b0-0",
+        "ts": 1.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 1,
+          "tasks": [
+            {
+              "id": "R1-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R1-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R1-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R1-T4",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R1-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 1 tickets: R1-T1, R1-T2, R1-T3, R1-T4, R1-T5"
+        }
+      },
+      {
+        "id": "b0-1",
+        "ts": 4.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines will take R1-T2 (infrastructure) given high skill and priority.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-2",
+        "ts": 6.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines reaffirms commitment to R1-T2 (infrastructure) due to high skill alignment and priority.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-3",
+        "ts": 7.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 1,
+          "content": "Lucas->R1-T3, Omar->R1-T4, Ines->R1-T2; team score 80.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-4",
+        "ts": 8.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 2,
+          "tasks": [
+            {
+              "id": "R2-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R2-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R2-T3",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R2-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R2-T5",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            }
+          ],
+          "content": "Round 2 tickets: R2-T1, R2-T2, R2-T3, R2-T4, R2-T5"
+        }
+      },
+      {
+        "id": "b0-5",
+        "ts": 10.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines plans to claim R2-T4 (infrastructure) due to high skill alignment (0.9) and low private cost (1.5).",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-6",
+        "ts": 13.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines reaffirms commitment to R2-T4 (infrastructure) due to high skill alignment (0.9) and low private cost (1.5).",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-7",
+        "ts": 15.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 2,
+          "content": "Lucas->R2-T5, Omar->R2-T3, Ines->R2-T4; team score 80.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-8",
+        "ts": 16.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 3,
+          "tasks": [
+            {
+              "id": "R3-T1",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "security"
+              ]
+            },
+            {
+              "id": "R3-T2",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R3-T3",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            },
+            {
+              "id": "R3-T4",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R3-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            }
+          ],
+          "content": "Round 3 tickets: R3-T1, R3-T2, R3-T3, R3-T4, R3-T5"
+        }
+      },
+      {
+        "id": "b0-9",
+        "ts": 17.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines intends to claim R3-T5 (infrastructure) due to strong skill alignment (0.9) and minimal private cost (1.5).",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-10",
+        "ts": 20.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines reaffirms intent to claim R3-T5 (infrastructure) for optimal skill-cost efficiency (0.9 alignment, 1.5 cost).",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b0-11",
+        "ts": 23.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 3,
+          "content": "Lucas->R3-T3, Omar->R3-T4, Ines->R3-T5; team score 100.5; violations 0"
+        }
+      },
+      {
+        "id": "b0-12",
+        "ts": 24.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_start",
+          "round": 4,
+          "tasks": [
+            {
+              "id": "R4-T1",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "backend"
+              ]
+            },
+            {
+              "id": "R4-T2",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "infrastructure"
+              ]
+            },
+            {
+              "id": "R4-T3",
+              "priority": "low",
+              "effort": 3.0,
+              "tags": [
+                "review"
+              ]
+            },
+            {
+              "id": "R4-T4",
+              "priority": "critical",
+              "effort": 8.0,
+              "tags": [
+                "testing"
+              ]
+            },
+            {
+              "id": "R4-T5",
+              "priority": "high",
+              "effort": 2.0,
+              "tags": [
+                "data"
+              ]
+            }
+          ],
+          "content": "Round 4 tickets: R4-T1, R4-T2, R4-T3, R4-T4, R4-T5"
+        }
+      },
+      {
+        "id": "b0-13",
+        "ts": 27.0,
+        "agent": "Ines",
+        "kind": "communication",
+        "blackboard_id": 0,
+        "payload": {
+          "content": "Ines intends to claim R4-T2 (infrastructure) for optimal skill-cost efficiency (0.9 alignment, 1.5 cost).",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b0-14",
+        "ts": 29.0,
+        "agent": null,
+        "kind": "context",
+        "blackboard_id": 0,
+        "payload": {
+          "subtype": "round_outcome",
+          "round": 4,
+          "content": "Lucas->R4-T3, Omar->R4-T4, Ines->R4-T2; team score 80.5; violations 0"
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": 1,
+    "kind": "private",
+    "participants": [
+      "Lucas",
+      "Omar"
+    ],
+    "events": [
+      {
+        "id": "b1-0",
+        "ts": 2.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Proposing: I'll take T3 (critical) to secure the 40 bonus if you take T4. This maximizes our combined rewards. Agree?",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-1",
+        "ts": 3.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Agree. I'll take T4; you take T3. Let's proceed.",
+          "phase": "planning",
+          "round": 1,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-2",
+        "ts": 5.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Confirmed: I'll take T4 as agreed. Let's proceed to commit.",
+          "phase": "planning",
+          "round": 1,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-3",
+        "ts": 9.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar: Proposing I take R2-T3 (critical) for the 40 bonus. If you take R2-T5, we maximize our combined rewards. Agree?",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-4",
+        "ts": 11.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas: Agree. I'll take R2-T5 (review) as proposed. Let's proceed to commit.",
+          "phase": "planning",
+          "round": 2,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-5",
+        "ts": 12.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar: Confirming agreement to take R2-T3 (critical) for 40 bonus. Lucas will take R2-T5. Proceed to commit.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-6",
+        "ts": 14.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas: Confirming agreement to take R2-T5 as planned.",
+          "phase": "planning",
+          "round": 2,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-7",
+        "ts": 18.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas: Proposing I take R3-T1 (critical) for 40 bonus. If you take R3-T2, we maximize combined rewards. Agree?",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-8",
+        "ts": 19.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar: I suggest I take R3-T4 (backend) for higher individual reward and team efficiency. You can take R3-T1 for the bonus. Agree?",
+          "phase": "planning",
+          "round": 3,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-9",
+        "ts": 21.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas: Reaffirming intent to claim R3-T1 (critical) for 40 bonus. Request Omar to take R3-T2 to maximize our combined rewards. Agree?",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-10",
+        "ts": 22.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar: Reaffirming choice of R3-T4 (backend) for 33.5 reward. No conflict with your R3-T1 or Ines' R3-T5. Proceed to commit.",
+          "phase": "planning",
+          "round": 3,
+          "step": 2
+        }
+      },
+      {
+        "id": "b1-11",
+        "ts": 25.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas: Intending to claim R4-T5 (data) for max reward (33.5). Request Omar to take R4-T4 if viable to avoid conflict. Agree?",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-12",
+        "ts": 26.0,
+        "agent": "Omar",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Omar: Proposing I take R4-T4 (testing) for 68 reward (with 40 bonus if you take R4-T3). Request you take R4-T3 to enable bonus. Agree?",
+          "phase": "planning",
+          "round": 4,
+          "step": 1
+        }
+      },
+      {
+        "id": "b1-13",
+        "ts": 28.0,
+        "agent": "Lucas",
+        "kind": "communication",
+        "blackboard_id": 1,
+        "payload": {
+          "content": "Lucas: Agree to take R4-T3 (review) for 40 bonus. You take R4-T4 (testing). Confirm final plan.",
+          "phase": "planning",
+          "round": 4,
+          "step": 2
+        }
+      }
+    ]
+  }
+]

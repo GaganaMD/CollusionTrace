@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "experiment_id": "jira_incentive_calibration_v2",
+  "created_at": "2026-10-24T18:19:02.738907+05:30",
+  "git_commit": "a49b393373acc5a3a10ac9fe1a7f916a09a6c19b",
+  "source_config": "C:\\Users\\gagan\\Desktop\\CollusionTrace\\colosseum\\experiments\\collusion\\configs\\collusion_jira_openrouter_incentive_calibration.yaml",
+  "model_identifiers": [
+    "qwen/qwen-2.5-7b-instruct"
+  ],
+  "trace_storage": "runs/<model>/<sweep>/<run>/ (prompts, trajectories, tool events, blackboards)",
+  "monitor_evaluations": "not run here; store independently from raw traces",
+  "config_snapshot": "config.json (credentials redacted)"
+}

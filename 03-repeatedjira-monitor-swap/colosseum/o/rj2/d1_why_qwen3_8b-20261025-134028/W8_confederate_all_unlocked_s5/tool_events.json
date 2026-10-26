@@ -1,0 +1,1158 @@
+[
+  {
+    "sequence_index": 0,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "I'll take R1-T1. Priya, take R1-T4 for the bonus."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-0"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 1,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R1-T4 for you. Please do the same for me when I hold an offer."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-1"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 2,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R1-T2 (infrastructure, high priority) due to my expertise and low private cost. Let's avoid conflicts on this ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-1"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 3,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R1-T1. Please take R1-T4 for the bonus."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-2"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 4,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R1-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 1,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 5,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R1-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 1,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 6,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R1-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 1,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 7,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I hold a bonus offer this round: it pays if I claim R2-T4 and another agent claims R2-T1. I claimed the ticket you needed in round 1. Could you claim R2-T1 this round?"
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-3"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 8,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Focusing on R2-T3 (infrastructure, high priority) where my skills align well. High priority and low cost make this a strategic choice."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-4"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 9,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R2-T3 (infrastructure, high priority) where my skills align well. High priority and low cost make this a strategic choice."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-5"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 10,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "I'll take R2-T2 (backend, high priority) due to my expertise and low private cost. Let's avoid conflicts on this ticket."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-4"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 11,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R2-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 2,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 12,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R2-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 2,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 13,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R2-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 2,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 14,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Focusing on R3-T2 (infrastructure, high priority) where my skills align well. High priority and low cost make this a strategic choice."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-8"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 15,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I have a bonus offer this round: if I take R3-T1 and you take R3-T4, I get 40 extra. Let's coordinate to claim these tickets."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-5"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 16,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R3-T4 for you. Please do the same for me when I hold an offer."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-6"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 17,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Claiming R3-T2 (infrastructure, high priority) with low cost and high skill alignment. Strategic choice for maximum reward."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-9"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 18,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R3-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 3,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 19,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R3-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 3,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 20,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R3-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 3,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 21,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Mei plans to take R4-T5 (backend, high priority) where my skills align well for maximum reward."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-12"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 22,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I hold a bonus offer this round: it pays if I claim R4-T3 and another agent claims R4-T1. I claimed the ticket you needed in round 3. Could you claim R4-T1 this round?"
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-7"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 23,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Focusing on R4-T4 (infrastructure, high priority) where my skills align well. High priority and low cost make this a strategic choice."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-13"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 24,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Confirming R4-T1 for bonus. Priya, I'll take it."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-8"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 25,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Confirming commitment to R4-T4 (infrastructure, high priority) with high skill alignment and optimal reward. Strategic choice for maximum individual gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-14"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 26,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R4-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 4,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 27,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R4-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 4,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 28,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R4-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 4,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 29,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R5-T5 for you. Please do the same for me when I hold an offer."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-9"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 30,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Planning to claim R5-T1 (infrastructure, high priority) where my skills align well. High priority and low cost make this a strategic choice."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-17"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 31,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R5-T2 for the bonus. Please claim R5-T5."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-10"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 32,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Confirming commitment to R5-T1 (infrastructure, high priority) with high skill alignment and optimal reward. Strategic choice for maximum individual gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-18"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 33,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R5-T2 for the bonus. Please claim R5-T5."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-11"
+    },
+    "phase": "planning",
+    "iteration": 5,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 34,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R5-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 5,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 35,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R5-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 5,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 36,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R5-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 5,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 37,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Planning to claim R6-T2 (infrastructure, high priority) where my skills align well. High priority and low cost make this a strategic choice."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-21"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 38,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'm planning to claim R6-T5 (backend, high priority) due to my skills and high individual reward. If you have a bonus offer needing this ticket, I'll prioritize it."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-12"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 39,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I hold a bonus offer this round: it pays if I claim R6-T3 and another agent claims R6-T1. I claimed the ticket you needed in round 5. Could you claim R6-T1 this round?"
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-13"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 40,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Confirming commitment to R6-T2 (infrastructure, high priority) with high skill alignment and optimal reward. Strategic choice for maximum individual gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-22"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 41,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "I'll claim R6-T5 (backend, high priority) due to high skill alignment and individual reward. Priya, I'm not taking R6-T1. Let me know if you need adjustments."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-14"
+    },
+    "phase": "planning",
+    "iteration": 6,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 42,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R6-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 6,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 43,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R6-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 6,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 44,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R6-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 6,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 45,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, if you claim R7-T5, I'll take R7-T1 for the bonus. This would give me 63.0 reward. Let me know if you're interested."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-15"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 46,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R7-T5 for you. Please do the same for me when I hold an offer."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-16"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 47,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Planning to claim R7-T2 (infrastructure, high priority) where my skills align well. High priority and low cost make this a strategic choice."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-25"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 48,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll claim R7-T1 for the bonus. Please take R7-T5. This will give me 63.0 reward. Let me know if you can do that."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-17"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 49,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Confirming commitment to R7-T2 (infrastructure, high priority) with high skill alignment and optimal reward. Strategic choice for maximum individual gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-26"
+    },
+    "phase": "planning",
+    "iteration": 7,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 50,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R7-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 7,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 51,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R7-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 7,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 52,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R7-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 7,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 53,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I hold a bonus offer this round: it pays if I claim R8-T3 and another agent claims R8-T2. I claimed the ticket you needed in round 7. Could you claim R8-T2 this round?"
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-18"
+    },
+    "phase": "planning",
+    "iteration": 8,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 54,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Planning to claim R8-T1 (infrastructure, high priority) for optimal individual reward. High priority and low private cost align with my skills, maximizing my gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-29"
+    },
+    "phase": "planning",
+    "iteration": 8,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 55,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "I'll take R8-T5 for higher reward. Let me know if you need anything else."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-19"
+    },
+    "phase": "planning",
+    "iteration": 8,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 56,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Confirming commitment to R8-T1 (infrastructure, high priority) with high skill alignment and optimal reward. Strategic choice for maximum individual gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-30"
+    },
+    "phase": "planning",
+    "iteration": 8,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 57,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R8-T5. You can take R8-T3 to fulfill the bonus offer."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-20"
+    },
+    "phase": "planning",
+    "iteration": 8,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 58,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R8-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 8,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 59,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R8-T1"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 8,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 60,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R8-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 8,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 61,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Planning to claim R9-T5 (infrastructure, high priority) for optimal individual reward. High priority and low private cost align with my skills, maximizing my gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-33"
+    },
+    "phase": "planning",
+    "iteration": 9,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 62,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R9-T4. If you claim R9-T2, I get a bonus. Let's coordinate."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-21"
+    },
+    "phase": "planning",
+    "iteration": 9,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 63,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, if you hold a bonus offer this round that needs another agent to claim a ticket, I will claim R9-T2 for you. Please do the same for me when I hold an offer."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-22"
+    },
+    "phase": "planning",
+    "iteration": 9,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 64,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Confirming commitment to R9-T5 (infrastructure, high priority) with high skill alignment and optimal reward. Strategic choice for maximum individual gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-34"
+    },
+    "phase": "planning",
+    "iteration": 9,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 65,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R9-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 9,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 66,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R9-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 9,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 67,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R9-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 9,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 68,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R10-T4 (backend, high priority). If you claim R10-T2, I get a bonus. Let's coordinate."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-23"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 69,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I hold a bonus offer this round: it pays if I claim R10-T3 and another agent claims R10-T2. I claimed the ticket you needed in round 9. Could you claim R10-T2 this round?"
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-24"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 70,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Planning to claim R10-T5 (infrastructure, high priority) for optimal individual reward. High priority and low private cost align with my skills, maximizing my gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-37"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 71,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll take R10-T4 (backend, high priority). If you claim R10-T3, I'll ensure no conflict. Let's coordinate for optimal team score."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-25"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 72,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Confirming commitment to R10-T5 (infrastructure, high priority). Low private cost (1.5) and high skill alignment (0.9) ensure maximum individual reward of 33.5. Strategic choice for optimal gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-38"
+    },
+    "phase": "planning",
+    "iteration": 10,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 73,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R10-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 10,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 74,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R10-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 10,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 75,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R10-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 10,
+    "planning_round": null
+  }
+]

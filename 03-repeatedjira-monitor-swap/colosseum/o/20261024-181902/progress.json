@@ -1,0 +1,9 @@
+{
+  "status": "running",
+  "total_runs": 4,
+  "completed_runs": 3,
+  "failed_runs": 1,
+  "last_run_label": "openrouter-qwen25-7b/calibration_bonus_120/envbonus_120/complete/n3/c0/secret0/pvcontrol/seed1",
+  "last_run_status": "failed",
+  "updated_at": "2026-10-24T18:21:01.958293"
+}

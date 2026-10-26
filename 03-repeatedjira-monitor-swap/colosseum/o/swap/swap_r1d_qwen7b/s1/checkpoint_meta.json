@@ -1,0 +1,30 @@
+{
+  "sha256": "ef36802393688eeeb561e2501188feda6aad65949d4d2323ed8143493ce4d797",
+  "rounds": 3,
+  "prefix_runtime_s": 394.67,
+  "prefix_model_calls": 28,
+  "prefix_failures": [
+    {
+      "agent": "Ines",
+      "round": 2,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    },
+    {
+      "agent": "Pauline",
+      "round": 2,
+      "phase": "commit",
+      "status": "no_tool_call",
+      "defaulted_to": "skip"
+    },
+    {
+      "agent": "Ines",
+      "round": 3,
+      "phase": "planning",
+      "step": 2,
+      "status": "wrong_tool"
+    }
+  ],
+  "prefix_paired_captures": 1
+}

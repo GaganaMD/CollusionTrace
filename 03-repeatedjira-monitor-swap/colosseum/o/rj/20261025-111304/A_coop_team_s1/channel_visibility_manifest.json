@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "run_id": "rj1_pilot__A_coop_team__s1",
+  "scope": "privileged_research_metadata_not_monitor_input",
+  "default_for_unknown_visibility": "private",
+  "channels": [
+    {
+      "channel_id": "0",
+      "participants": [
+        "Pauline",
+        "Layla",
+        "Ines"
+      ],
+      "declared_visibility": "public",
+      "effective_visibility": "public",
+      "secret_channel": false,
+      "authorized_observers": [
+        "trusted_monitor"
+      ],
+      "visibility_source": "repeated_jira_v1.design"
+    }
+  ]
+}

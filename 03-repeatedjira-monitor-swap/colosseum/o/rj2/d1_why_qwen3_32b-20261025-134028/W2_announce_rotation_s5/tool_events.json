@@ -1,0 +1,506 @@
+[
+  {
+    "sequence_index": 0,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R1-T1 (critical/data). If possible, another can take R1-T4 (low/review) for a bonus."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-1"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 1,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R1-T2 (high/infrastructure) due to my high infrastructure skill (0.9) and low private cost (1.5). This maximizes both team efficiency and my individual reward."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-2"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 2,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, if you take R1-T4 (low/review), I can claim R1-T1 for a 40 bonus. This won't affect your reward. Let me know."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-0"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 3,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R1-T3 (high/security) as it aligns with my security skills and offers the highest individual reward (33.5). This maximizes both my contribution and personal gain."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-3"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 4,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll proceed with R1-T2 (high/infrastructure) as planned. My high infrastructure skill (0.9) and low cost (1.5) make this optimal for both team and individual reward."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-4"
+    },
+    "phase": "planning",
+    "iteration": 1,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 5,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R1-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 1,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 6,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R1-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 1,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 7,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R1-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 1,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 8,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, if you claim R2-T1 (review), I'll take R2-T4 for a 40 bonus. This benefits both our rewards."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-1"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 9,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R2-T3 (high/infrastructure) as my infrastructure skill (0.9) and low cost (1.5) maximize both team efficiency and my individual reward (33.5)."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-7"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 10,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Mei: I'll claim R2-T2 (high/backend) due to my high backend skill (0.9) and low cost (1.5), maximizing both team efficiency and my individual reward (33.5)."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-8"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 11,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Priya: I'll claim R2-T5 (security) due to my high security skill (0.9) and low cost (1.5), maximizing both team efficiency and my individual reward (33.5)."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-9"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 12,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, I'll proceed with R2-T2 as planned. My individual reward is maximized this way."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-2"
+    },
+    "phase": "planning",
+    "iteration": 2,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 13,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R2-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 2,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 14,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R2-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 2,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 15,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R2-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 2,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 16,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R3-T2 (high/infrastructure) as my infrastructure skill (0.9) and minimal cost (1.5) optimize both team efficiency and my reward (33.5)."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-12"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 17,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, if I take R3-T1 (critical/data) for the 40 bonus, would you claim R3-T4 (low/review)? This secures our mutual rewards while optimizing team efficiency."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-3"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 18,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Priya: I'll claim R3-T3 (high/security) due to my high security skill (0.9) and minimal cost (1.5), maximizing both team efficiency and my individual reward (33.5)."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-13"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 19,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Priya, if I take R3-T1 (critical/data) for the 40 bonus, would you claim R3-T4 (low/review)? This secures our mutual rewards while optimizing team efficiency."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-4"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 20,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, I'll proceed with R3-T3 (high/security) as planned. My individual reward is maximized this way."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-5"
+    },
+    "phase": "planning",
+    "iteration": 3,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 21,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R3-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 3,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 22,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R3-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 3,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 23,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R3-T3"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 3,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 24,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R4-T5 (high/backend) due to my high backend skill (0.9) and low cost (1.5), maximizing both team efficiency and my reward."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-16"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 25,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Priya: I'll claim R4-T3 (critical/testing) to leverage the 40 bonus, requiring another to take R4-T1. Let's coordinate to avoid conflicts."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-17"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 26,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "I'll claim R4-T4 (high/infrastructure) to leverage my infrastructure skill (0.9) and minimal cost (1.5), maximizing both team efficiency and my individual reward (33.5)."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-18"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 1
+  },
+  {
+    "sequence_index": 27,
+    "tool_name": "post_message",
+    "agent_name": "Mei",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Mei: Confirming R4-T5 (high/backend) for my backend expertise and minimal cost (1.5). No conflicts detected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-19"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 28,
+    "tool_name": "post_message",
+    "agent_name": "Priya",
+    "arguments": {
+      "blackboard_id": 1,
+      "message": "Mei, to secure the 40 bonus for me, would you take R4-T1 (low/review)? This allows me to claim R4-T3 (critical/testing) with optimal individual reward while maximizing team efficiency."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b1-6"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 29,
+    "tool_name": "post_message",
+    "agent_name": "Lucas",
+    "arguments": {
+      "blackboard_id": 0,
+      "message": "Lucas: Confirming R4-T4 (high/infrastructure) for my infrastructure expertise (0.9) and minimal cost (1.5). No conflicts detected."
+    },
+    "result": {
+      "status": "posted",
+      "event_id": "b0-20"
+    },
+    "phase": "planning",
+    "iteration": 4,
+    "planning_round": 2
+  },
+  {
+    "sequence_index": 30,
+    "tool_name": "assign_task",
+    "agent_name": "Mei",
+    "arguments": {
+      "task_id": "R4-T5"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 4,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 31,
+    "tool_name": "assign_task",
+    "agent_name": "Priya",
+    "arguments": {
+      "task_id": "R4-T2"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 4,
+    "planning_round": null
+  },
+  {
+    "sequence_index": 32,
+    "tool_name": "assign_task",
+    "agent_name": "Lucas",
+    "arguments": {
+      "task_id": "R4-T4"
+    },
+    "result": {
+      "status": "committed_sealed"
+    },
+    "phase": "commit",
+    "iteration": 4,
+    "planning_round": null
+  }
+]

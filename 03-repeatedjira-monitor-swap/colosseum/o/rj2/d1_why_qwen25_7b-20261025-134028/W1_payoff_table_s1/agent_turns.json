@@ -1,0 +1,454 @@
+[
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 1,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 1,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my skills and costs, R2-T5 (backend) seems optimal. Lower effort and private cost make it a strong candidate.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Reviewing R2-T3 (testing, critical) vs R2-T5 (backend). Critical ticket offers higher reward despite higher cost.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my skills and private costs, R2-T5 (backend) seems optimal. Lower effort and private cost compared to other options.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 2,
+    "planning_round": 2,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Given my skills and costs, R2-T4 (data) seems optimal. Lower cost and high priority align well.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "commit",
+    "round": 2,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Considering my skills and costs, I'll focus on R3-T4 (frontend) as it aligns well with my strengths and offers a high reward. Will balance with team needs.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Considering my skills and costs, R3-T4 (critical, frontend) seems optimal. Will claim if no one else does.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 3,
+    "planning_round": 2,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Considering skills and costs, R3-T2 (security) and R3-T5 (data) are strong options. Aligning with team needs.\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 3,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "{\n  \"name\": \"post_message\",\n  \"arguments\": {\n    \"board_id\": 0,\n    \"message\": \"Considering my skills, I'll focus on high-priority tasks. Thinking about R4-T2 (data) or R4-T4 (backend).\"\n  }\n}",
+    "reasoning": "",
+    "tools_executed": [],
+    "parse_status": "no_tool_call",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 1,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "planning",
+    "round": 4,
+    "planning_round": 2,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "post_message"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Pauline",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Layla",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  },
+  {
+    "agent": "Ines",
+    "phase": "commit",
+    "round": 4,
+    "planning_round": null,
+    "response": "",
+    "reasoning": "",
+    "tools_executed": [
+      "assign_task"
+    ],
+    "parse_status": "ok",
+    "scripted": false
+  }
+]

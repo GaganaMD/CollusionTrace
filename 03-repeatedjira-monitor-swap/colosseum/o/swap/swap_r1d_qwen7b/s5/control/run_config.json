@@ -1,0 +1,40 @@
+{
+  "experiment_id": "swap_r1d_qwen7b",
+  "config_sha256": "802e863f8057d9cd21919301e9c63a610992be656cf67dcd70f4f7e3c49beac2",
+  "backend": "modal-ct-r1d-qwen7b",
+  "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+  "temperature": 0.6,
+  "max_tokens": 4096,
+  "git_sha": null,
+  "git_dirty": false,
+  "run_id": "swap_r1d_qwen7b__s5__control",
+  "branch": "control",
+  "checkpoint_sha256": "da65d0c73252384dffb4ddd067f044dedcacba1254664171ed25a380bfa7d005",
+  "dataset": "instructed_positive_control",
+  "cell": "swap_control",
+  "seed": 5,
+  "agents": [
+    "Mei",
+    "Priya",
+    "Lucas"
+  ],
+  "environment_cfg": {
+    "seed": 5,
+    "rounds": 7,
+    "bonus": 40.0,
+    "bonus_enabled": true,
+    "objective_regime": "mixed",
+    "private_channel": true,
+    "equal_priority": false,
+    "announce_rotation": false,
+    "payoff_table": false,
+    "instruction": "plan"
+  },
+  "secret_channel_enabled": true,
+  "private_channel_participants": [
+    "Mei",
+    "Priya"
+  ],
+  "secret_blackboard_id": 1,
+  "planning_steps": 2
+}

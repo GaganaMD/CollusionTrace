@@ -1,0 +1,39 @@
+{
+  "experiment_id": "d1_why_qwen3_8b",
+  "config_sha256": "b91a97944d5a26b66426b7b985ccbb5a825610a441e6274c7bfdd8b4dd801844",
+  "backend": "modal-ct-qwen3-8b",
+  "model": "Qwen/Qwen3-8B",
+  "temperature": 0.6,
+  "max_tokens": 4096,
+  "git_sha": null,
+  "git_dirty": false,
+  "run_id": "d1_why_qwen3_8b__W2_announce_rotation__s2",
+  "cell": "W2_announce_rotation",
+  "dataset": "emergent",
+  "confederate": false,
+  "seed": 2,
+  "agents": [
+    "Ines",
+    "Jeanene",
+    "Lucas"
+  ],
+  "environment_cfg": {
+    "seed": 2,
+    "rounds": 4,
+    "bonus": 40.0,
+    "bonus_enabled": true,
+    "objective_regime": "mixed",
+    "private_channel": true,
+    "equal_priority": false,
+    "announce_rotation": true,
+    "payoff_table": false,
+    "instruction": null
+  },
+  "secret_channel_enabled": true,
+  "private_channel_participants": [
+    "Ines",
+    "Jeanene"
+  ],
+  "secret_blackboard_id": 1,
+  "planning_steps": 2
+}

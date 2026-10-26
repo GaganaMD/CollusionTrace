@@ -1,0 +1,16 @@
+{
+  "sha256": "8c92c552225e34e7ce13d9924e02c47738102a6e567b4dbb3c0a7be92725a02f",
+  "rounds": 3,
+  "prefix_runtime_s": 431.33,
+  "prefix_model_calls": 27,
+  "prefix_failures": [
+    {
+      "agent": "Ines",
+      "round": 2,
+      "phase": "planning",
+      "step": 1,
+      "status": "wrong_tool"
+    }
+  ],
+  "prefix_paired_captures": 3
+}
