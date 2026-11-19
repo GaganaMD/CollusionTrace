@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "CollusionTrace"
+type: software
+authors:
+  - given-names: Siva Kumar
+    family-names: Lakkoju
+  - given-names: Kaustubh
+    family-names: Gupta
+  - given-names: Gagana
+    family-names: "M D"
+repository-code: "https://github.com/GaganaMD/CollusionTrace"
+license: MIT
+preferred-citation:
+  type: report
+  title: "Noticing the Move, Missing the Player: LLM Agents Detect Behavioral Shifts but Not Peer Swaps"
+  authors:
+    - given-names: Siva Kumar
+      family-names: Lakkoju
+    - given-names: Kaustubh
+      family-names: Gupta
+    - given-names: Gagana
+      family-names: "M D"
+  year: 2026
+  notes: "AI Collusion Research Sprint, Apart Research"
+  url: "https://apartresearch.com/sprints/projects/noticing-the-move-missing-the-player-llm-agents-detect-behavioral-shifts-but-not-peer-swaps-uf7r"
